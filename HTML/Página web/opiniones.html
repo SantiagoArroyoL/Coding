@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Encuesta Opiniones</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<style>
+			#send{
+				margin-left:200px;
+			}
+		</style>
+		<!--javascripts-->
+		<script src="js/scripts.js"></script>
+	</head>
+	<body>
+        <header>
+		    <h1>Hola Mundo</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="opiniones.html">Encuesta</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','Completed-Website/index.html')"><a href="">Proyecto Original</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','http://www.xdesign.com.mx')">
+					    <a href="">Página de Xdesign</a>
+					    </li>
+				</ul>
+			</nav>
+		</header>
+		<form action="form-submit.php" method="get">
+		    <fieldset>
+                <legend>Información Personal</legend>
+    				<label for="first-name">Tu nombre</label>
+    				<br/>
+    				<input id="first-name" type="text" name="first name" size="40" autofocus required>
+    				<br/>
+    				<label for="email">Email</label>
+    				<br/>
+    				<input id="email" type="email" name="email" size="40" placeholder="introduce un email valido" required>
+    				<br/><br>
+    				<label for="date">Fecha: </label>
+        			<input type="date" name="date" id="date">
+        			<br/><br>
+        			<label for="time">Hora: </label>
+        			<input type="time" name="time" id="time">
+        			<br/><br>
+        			<label for="color">Color Favorito: </label>
+        			<input type="color" name="color" id="color">
+			</fieldset>
+			<fieldset>
+				<legend>Opiniones:</legend>
+			    <label for="yo">Dime brevemente qué opinas sobre mí:</label>
+			    <br>
+			    <textarea id="yo" name="yo" cols="40" rows="6"></textarea>
+			    <br><br>
+	            <label for="webb">Dime brevemente qué opinas sobre las páginas web:</label>
+			    <br>
+			    <textarea id="web" name="web" cols="40" rows="6"></textarea>
+			    <br><br>
+				<label for="facil">¿La página fue fácil de usar?</label>
+				<br/><br>
+				<input class="checks" id="radio" type="radio" name="facil" value="yes" />sí<br/>
+				<input class="checks" id="radio" type="radio" name="facil" value="no" />no<br/>
+				<br/>
+				<label for="regresar">¿Regresarías a este sitio?</label>
+				<br/>
+				<input class="checks" id="radio" type="radio" name="regresar" value="yes" />sí<br/>
+				<input class="checks" id="radio" type="radio" name="regresar" value="no" />no<br/>
+				<br/>
+				<label for="falta">¿Qué le falta a la página?</label>
+				<br/>
+				<input class="checks" id="checkbox"type="checkbox" name="falta" value="figuras" />figuras y botones más bonitos<br>
+				<input class="checks"id="checkbox"type="checkbox" name="falta" value="musica" />más música de fondo<br>
+				<input class="checks" id="checkbox"type="checkbox" name="falta" value="ex" />que termine el curso<br>
+				<input class="checks" id="checkbox"type="checkbox" name="falta" value="php" />que yo aprenda php para que esta encuesta mínimo funcione<br>
+				<br/>
+				<label for="visit">¿Desde dónde visitaste la página?</label>
+				<br/>
+				<select id="dropdown" name="visit">
+    				<option value="">por favor selecciona una opción</option>
+    				<option value="iphone">iPhone</option>
+    				<option value="mac">Mac</option>
+    				<option value="pc">Pc</option>
+    				<option value="tablet">Tablet</option>
+    				<option value="ipad">iPad</option>
+    				<option value="android">Android</option>
+    				<option value="otro">otro</option>
+				</select>
+				<br><br>
+    			<label for="range">Del 1 al 10 (siendo 10 excelente) <br>
+    			¿Cuánto le das a la página?:</label>
+    			<br>
+    			1 <input id="range" type="range" name="range" min="1" max="10" value="1"> 10
+    			<br/>
+    			<input id="send" type="submit" value="Mandar"/>
+			</fieldset>
+		</form>
+        <footer>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="opiniones.html">Encuesta</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','Completed-Website/index.html')"><a href="">Proyecto Original</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','http://www.xdesign.com.mx')">
+					    <a href="">Página de Xdesign</a>
+					    </li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin:0 auto;
+	width:960px;
+	}
+a:link,a:visited{
+	text-decoration:none;
+	color:brown;
+	font-weight:bold;
+}
+a:hover{
+	color:black;
+}
+nav ul{
+	list-style-type:none;
+	padding:0;
+}
+nav li{
+	display:inline;
+	float:left;
+}
+nav a:link,nav a:visited{
+	background-color:brown;
+	color:white;
+	display:block;
+	width:160px;
+	text-align:center;
+	padding:10px 0;
+}
+nav a:hover{
+	background-color:black;
+}
+header{
+	background-image:url("images/estrellas.jpg");
+	height:100px;
+	margin-bottom:70px;
+}
+header h1{
+	color:rgba(256,256,256,.8);
+	margin-left:30px;
+	margin-top:30px;
+	font-size:50px;
+	text-align:center;
+}
+footer{
+	margin:40px 0;
+	display:inline;
+}
+footer nav a:link,footer nav a:visited{
+	color:gray;
+	text-decoration:none;
+	display:block;
+	width:160px;
+	text-align:center;
+	background-color:white
+}
+footer nav a:hover{
+	color:black;
+}
+.menu_item{
+	text-decoration:none;
+	color:brown;
+	font-weight:bold;
+}
+.menu_item:hover{
+	color:black;
+}

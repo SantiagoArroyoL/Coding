@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Imagenes</title>
+	</head>
+	<body>
+		<!--<img
+			src="img/novia.jpg"
+			srcset="img/pajaros.jpg 500w,
+					img/paisaje.jpg 800w"
+		>-->
+
+		<picture>
+			<source srcset="img/paisaje.jpg" media="(min-width: 500px)">
+			<source srcset="img/pajaro.jpg" media="(min-width: 800px)">
+			<img src="img/novia.jpg" alt="una novia">
+		</picture>
+	</body>
+</html>

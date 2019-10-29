@@ -1,0 +1,20 @@
+ public static void GuardarRegistro(Datos cancion){
+       
+         numreg="select count(*) as tot from canciones";
+        
+        try{
+            resultadoNum=Conexion.ejecutarSQLSelect(numreg);  
+            totReg = Integer.parseInt(resultadoNum.getString("tot"));
+        }catch (Exception e)
+        {
+            
+             e.printStackTrace();
+        }
+           
+           
+        sql="insert into canciones values('"+cancion.nombre+"','"+cancion.artista+"','"+cancion.album+"','"+cancion.duracion+"','"+cancion.año+"','"+cancion.genero+"','"+totReg+"')";
+       if(Conexion.ejecutarSQL(sql)){
+            JOptionPane.showMessageDialog(null, "Se ha agregado correctamente la cancion");
+        }
+    }
+

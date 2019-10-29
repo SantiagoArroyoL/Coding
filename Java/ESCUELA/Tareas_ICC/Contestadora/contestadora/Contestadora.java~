@@ -1,0 +1,102 @@
+import java.util.Scanner;
+
+public class Contestadora {
+    
+    /**
+     *  Este arreglo almacenara los mensajes que se encuentren
+     *  en nuestra contestadora.
+     */
+    private Mensaje[] mensajes;
+    private Scanner in;
+    
+    /**
+     *  Metodo que agrega un nuevo mensaje a la contestadora.
+     *  El nuevo mensaje debe de ser agregado en el primer espacio
+     *  que se encuentre disponible, es decir, en el primer lugar del arreglo
+     *  en el que se encuentre un mensaje "no escuchado" o que sea nulo.
+     *  En caso de que la contestadora este llena, debera de imprimir
+     *  en pantalla una leyenda indicando que no se pudo agregar el
+     *  nuevo mensaje.
+     *  @param nuevoMensaje Nuevo mensaje que sera agregado a la contestadora.
+     */
+    private void agregarMensaje(Mensaje nuevoMensaje){
+
+    }
+    
+    /**
+     *  Metodo que imprime en pantalla el contenido de la contestadora.
+     *  Solamente se deben de desplegar los mensajes que no hayan sido
+     *  escuchados previamente.
+     *  Al final del despliegue, se debera de indicar el numero de mensajes
+     *  leeidos o, en caso de que la contestadora haya estado vacia,
+     *  se debera de desplegar que no habia ningun mensaje.
+     */
+    private void escucharMensajes(){
+
+    }
+    
+    
+    
+    
+    /*
+     *  *************************************************************
+     *
+     *              NO MODIFICAR A PARTIR DE AQUI
+     *
+     *  *************************************************************
+     */
+    
+    public Contestadora() {
+        in = new Scanner(System.in);
+        mensajes = new Mensaje[10];
+    }   
+    
+    public static void main(String pps[]){
+        Contestadora miContestadora = new Contestadora();
+        int opcion = 0;
+        while(opcion != 3){
+            opcion = miContestadora.menu();
+            switch(opcion){
+                case 1:
+                    miContestadora.agregarMensaje(new Mensaje(miContestadora.leerMensaje()));
+                    break;
+                case 2:
+                    miContestadora.escucharMensajes();
+                    break;
+                default:
+                    System.out.println("\n\nFin del Programa");
+                    break;
+            }
+        }
+    }
+    
+    private String leerMensaje(){
+        System.out.print("\nIntroduce Mensaje --> ");
+        return in.nextLine();
+    }
+    
+    private int menu(){
+        System.out.println("\nContestadora");
+        System.out.println("1. Agregar mensaje");
+        System.out.println("2. Revisar mensajes");
+        System.out.println("3. Salir");
+        System.out.print("Seleccione la opcion  --> ");
+        int opcion = 0;
+        boolean validacion = true;
+        do{
+            validacion = true;
+            try{
+                opcion = in.nextInt();
+            }catch(Exception e){
+                validacion = false;
+            }
+            if(opcion < 1 || opcion > 3){
+                validacion = false;
+            }
+            if(!validacion){
+                System.out.println("\nOpcion invalida.\nIntroduzca 1, 2 o 3.\n\n");
+            }
+        }while(!validacion);
+        return opcion;
+    }
+}

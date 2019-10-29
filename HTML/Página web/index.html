@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>¡Bienvenidos a mi página!</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet" type="text/css">
+		<style>
+		    h1{
+		        text-align:center;
+		    }
+		    #sugerencias{
+		        position:fixed;
+			    right:20px;
+			    bottom:100px;
+			    background-color:orange;
+            	color:white;
+            	display:block;
+            	width:160px;
+            	text-align:center;
+            	padding:10px 0;
+		    }
+		    #block1{
+		        background-color:lightblue;
+		        padding:10px;
+		        margin:20px;
+		        height:250px;
+		        width:300px;
+		        float:left;
+		    }
+		    #block2{
+		        background-color:lightgreen;
+		        padding:10px;
+		        margin:20px;
+		        height:250px;
+		        width:300px;
+		        float:left;
+		    }
+		    #block3{
+		        background-color:pink;
+		        padding:10px;
+		        margin:20px;
+		        height:250px;
+		        width:300px;
+		        float:left;
+		    }
+		    #block4{
+		        background-color:red;
+		        padding:10px;
+		        margin:20px;
+		        height:250px;
+		        width:300px;
+		        float:left;
+		    }
+			section{
+			    margin:20px;
+			}
+		</style>
+
+		<!--javascripts-->
+		<script src="js/scripts.js"></script>
+
+	</head>
+	<body>
+	    <header>
+		    <h1>Hola Mundo</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="opiniones.html">Encuesta</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','Completed-Website/index.html')"><a href="">Proyecto Original</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','http://www.xdesign.com.mx')">
+					    <a href="">Página de Xdesign</a>
+					    </li>
+
+				</ul>
+			</nav>
+		</header>
+        <section>
+            <h2>¿De qué se trata esta página?</h2>
+            <p>Sencillo, esta página es para demostrar mis habilidades en el desarrollo de páginas web con html y css. Tambien sirve para dar un pequeño recordatorio a cierta página que hice en la prepa cuando mis habilidades todavía no estaban tan avanzadas. Agradezco de antemano a mi tío Agustín porque él fue el que me alentó y me dió los curso para comenzar a programar más formalmente.</p>
+            <h2>¿Qué opciones hay en el menú de arriba?</h2>
+            <p>En el menú tienes varias opciones, puedes apoyarme resolviendo una encuesta que hice sobre el rendimiento en general de la página, tienes el proyecto original que hice en el curso de HTML en el cual verás le copié pequeños rasgos y los implementé en esta página, por último tendrás un link a Xdesing, la empresa donde trabajan mis tíos. Donde diseñan páginas web, logos y libros para empresas grandes, sus itio lo explica mejor que yo.</p>
+           <h2>Información sobre mí y la página:</h2>
+            <p>Actualmente estudio la prepa, pero en serio me apasiona muchísimo la programación, por eso ahora en mis vacaciones y en mis tiempos libres me he dedicado a estudiar HTML5 y CSS3. Gracias a esos dos lenguajes de programación pude hacer la página que tienen ante ustedes.</p>
+            <h2>El Host de la página</h2>
+            <p>Para los que no sepan qué es un Host, la definición según Wikipedia es:<blockquote> <em>El término host o anfitrión se usa en informática para referirse a las computadoras u otros dispositivos conectados a una red que proveen y utilizan servicios de ella. Comúnmente descrito como el lugar donde reside un sitio web. Un anfitrión de Internet tiene una dirección de Internet única (dirección IP) y un nombre de dominio único o nombre de anfitrión (host name).</em></blockquote><br>
+                El Host que estoy utilizando es gratuito y se llama Webhost000. Lo conocí en la carrera técnica de la prepa y a pesar de que sus recursos,su base de datos y la capacidad de datos es limitada, es la herramienta perfecta para aprender a diseñar y programar páginas web con lenguaje HTML puro.</p>
+        </section>
+        <div id="block1">
+            <h2>¿Qué debes de hacer ahora? </h2>
+            <p> Muy sencillo, sólo ve al menú de navegación para que viajes al sitio de tu interes. Actualmente hay 3 botones en el menú pero proximamente habrá muchos más.</p>
+        </div>
+        <div id="block2">
+            <h2>¿Por qué llegó esto a mis manos?</h2>
+            <p> Porque eres importante para mí o compartimos la pasión por la programación y la tecnología, así que decidí enviarte el URL para que evalúes mi trabajo.</p>
+        </div>
+        <div id="block3">
+            <h2>¿Es difícil hacer páginas web?</h2>
+            <p>No mucho realmente, requiere de paciencia ya que puede llegar a ser muy tedioso, una vez que conoces bien el lenguaje se vuelve sencillo</p>
+        </div>
+        <div id="block4">
+            <h2>Datos curiosos:</h2>
+            <ul>
+                <li>Hice esta página en aproximadamente una hora</li><br>
+                <li>Ver las fotos viejas de mi útlimo año me insipiró a hacer la página</li><br>
+                <li>Hice esta página antes de terminar el curso</li><br>
+            </ul>
+        </div>
+        <div class="sugerencias">
+            <a href="mailto:santiago.arroyo01@gmail.com?Subject=Sugerencia Sitio Web">Da click aquí para mandarme sugerencias</a>
+        </div>
+
+        <footer>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="opiniones.html">Encuesta</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','Completed-Website/index.html')"><a href="">Proyecto Original</a></li>
+					<li onclick="confirmarUrl('Deseas salir?','http://www.xdesign.com.mx')">
+					    <a href="">Página de Xdesign</a>
+					    </li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>

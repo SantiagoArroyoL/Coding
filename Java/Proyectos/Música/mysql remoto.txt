@@ -1,0 +1,4 @@
+Agregar:
+
+[mysqld]
+skip-grant-tables
