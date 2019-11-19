@@ -29,8 +29,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
     }
-   
-    
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -227,7 +227,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         manejador.showSaveDialog(this);
         nombreArchivo = manejador.getSelectedFile().getAbsolutePath();
         BufferedOutputStream salidaDatos;
-        
+
         try{
             StyledDocument doc = (StyledDocument) txtpTextos.getDocument();
             RTFEditorKit kit = new RTFEditorKit();
@@ -244,8 +244,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void CapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CapActionPerformed
         // TODO add your handling code here:
-        
-        
+
+
     }//GEN-LAST:event_CapActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -253,32 +253,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        Ci = Integer.parseInt(Cap.getText());
        i = Integer.parseInt(ti.getText());
        n = Integer.parseInt(Peri.getText());
-        
+
         double Salvacion = Math.pow((1+i),n);
         Cf = Ci*Salvacion;
         System.out.println("El resultado es: "+Salvacion);
-        txtpTextos.setText(""+Salvacion);
+        txtpTextos.setText(""+ Salvacion);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tiActionPerformed
         // TODO add your handling code here:
-         
+
     }//GEN-LAST:event_tiActionPerformed
 
     private void PeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PeriActionPerformed
         // TODO add your handling code here:
-         
+
     }//GEN-LAST:event_PeriActionPerformed
 
     private void acercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeActionPerformed
-        
+
 
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_acercaDeActionPerformed
 
     private void acercaDeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acercaDeMousePressed
- 
+
     }//GEN-LAST:event_acercaDeMousePressed
 
     private void acercaDeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acercaDeMouseReleased
@@ -302,7 +302,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 + "\n\n Desarrollado por: "
                                 + "\n Arroyo Lozano Santiago"
                                 + "\n Pérez García Dulce"  );
-          
+
     }//GEN-LAST:event_infoActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
@@ -313,11 +313,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
