@@ -5,7 +5,8 @@
  */
 package app;
 
-import tetris.*;
+import tetris.Malla;
+import tetris.Tetramino;
 import java.io.File;
 import processing.core.*;
 import processing.event.*;
@@ -30,41 +31,40 @@ import javax.sound.sampled.AudioInputStream;
  */
 public class Tetris extends PApplet {
 
-    private int tmntxt = 20;
-    private int tiempoTrans = millis();
-    private int cols, filas,dt;
-    private Boolean gameOn = false;
+    private int dt = 500; //Valor en milisegundos de la diferencia de tiempo
+    private Tetramino pieza; //Referencia a la pieza ya existente en la clase casilla
+    private Boolean gameOn = false; //Variables que nos dirán si el juego ya terminó o no
     private Boolean gameOver = false;
-    private Casillas malla = new Casillas(); //Esta clase todavía no esta terminada XD
-    private int altura = displayHeight * 4 / 5;
-    private int textColor = color(34, 230, 190);
-    // Tetramino pieza = new Tetramino();
+    private Malla malla = new Malla(); //La malla del juego
+    private int tiempoTrans = millis(); //Valor en milisegundos del tiempo actual
 
     public static void main(String[] args) {
       PApplet.main("app.Tetris");
-      musica("/resources/Tetris.wav");
+      musica("/../../resources/Tetris.wav");
     }
 
     /**
-     *Configuramos la serializacion del objeto
-     */
-    @Override
-    public void setup() {
-        textSize(20);
-        try (var in = new ObjectInputStream(new FileInputStream("juego"))) {
-             malla = (Casillas) in.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            // malla = Casillas.obtenerInstancia();
-        }
-    } //Cierre del método
-
-    /**
-     *Configuramos el tamaño de la ventana
-     */
+    * Método que configura
+    */
     @Override
     public void settings() {
-        size(altura, altura);
-    }//Cierre del método
+       //Diferenciamos entre pantallas de 16:9 y 4:3
+       size(displayHeight * 4 / 5, displayHeight * 4 / 5);
+    }
+
+
+    /**
+    * Método que configura
+    */
+    @Override
+    public void setup() {
+        try (var in = new ObjectInputStream(new FileInputStream("juego"))) {
+            malla = (Malla) in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            // malla = malla.obtenerInstancia();
+            // System.exit(0);
+        }
+    }
 
 
     /**
@@ -73,20 +73,50 @@ public class Tetris extends PApplet {
     @Override
     public void draw() {
 
-        background(0xffffffff);
+        background(0xFF262525);
 
-          for (int i = 0; i < 20; i++) {
-              for (int j = 0; j < 10; j++) {
-                  stroke(0xff000000);
-                  strokeWeight(1);
-                  if ((i + j) % 2 == 0) {
-                      fill(0xffffffff);
-                  } else {
-                      fill(0x44000000);
-                  }
-                  rect(j * (height / 8), i * (height / 8), height / 8, height / 8);
-              }
-          }
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 10; j++) {
+                stroke(0xffffffff);
+                strokeWeight(1);
+                if ((i + j) % 2 == 0) {
+					fill(0xFF262525);
+				}
+                rect(j * (height / 20), i * (height / 20), height / 10, height / 10);
+            }
+        }
+
+
+        if (gameOn) {
+            int actual = millis();
+            if (actual - tiempoTrans > dt) {
+                tiempoTrans = actual;
+                pieza.drop();
+            }
+        } else {
+            // System.out.println("Presiona espacio para iniciar");
+            //No será un println pero bueno
+        }
+
+        // if (pieza != null) {
+        //     switch (pieza.obtenerColor()) {
+        //         case 0:
+        //         case 1:
+        //         case 2:
+        //         case 3:
+        //         case 4:
+        //         case 5:
+        //     }
+        // }
+
+        // if (pieza.tetris()) {
+        //     for (int i = 0; i < 4; i++) {
+        //         for (int j = 0; j < 10; j++) {
+        //             fill(0xffffff00);
+        //             r
+        //         }
+        //     }
+        // }
 
     }//Cierre del método
 
