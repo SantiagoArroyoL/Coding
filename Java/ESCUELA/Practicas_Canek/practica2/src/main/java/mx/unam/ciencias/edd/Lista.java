@@ -1,5 +1,6 @@
 package mx.unam.ciencias.edd;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -30,7 +31,7 @@ public class Lista<T> implements Coleccion<T> {
             // Aquí va su código.
 			this.elemento = elemento;
         }
-    }//Cierre de la clase Nodo
+    }
 
     /* Clase interna privada para iteradores. */
     private class Iterador implements IteradorLista<T> {
@@ -91,8 +92,7 @@ public class Lista<T> implements Coleccion<T> {
 			siguiente = null;
 			anterior = rabo;
         }
-
-    }//Cierre de la clase Iterador
+    }
 
     /* Primer elemento de la lista. */
     private Nodo cabeza;
@@ -433,7 +433,6 @@ public class Lista<T> implements Coleccion<T> {
         // Aquí va su código.
 		if (longitud == 0)
 			return "[]";
-		int cont = 0;
 		Nodo n = cabeza;
 		String cadenaFinal = "[";
 		while (n != rabo) {
@@ -450,7 +449,7 @@ public class Lista<T> implements Coleccion<T> {
      *         <code>false</code> en otro caso.
      */
     @Override public boolean equals(Object objeto) {
-        if (objeto == null || getClass() != objeto.getClass())
+		if (objeto == null || getClass() != objeto.getClass())
             return false;
         @SuppressWarnings("unchecked") Lista<T> lista = (Lista<T>) objeto;
         // Aquí va su código.
@@ -485,7 +484,129 @@ public class Lista<T> implements Coleccion<T> {
         return new Iterador();
     }
 
-	//Funciones Auxiliares
+    /**
+     * Regresa una copia de la lista, pero ordenada. Para poder hacer el
+     * ordenamiento, el método necesita una instancia de {@link Comparator} para
+     * poder comparar los elementos de la lista.
+     * @param comparador el comparador que la lista usará para hacer el
+     *                   ordenamiento.
+     * @return una copia de la lista, pero ordenada.
+     */
+    public Lista<T> mergeSort(Comparator<T> comparador) {
+		Lista<T> copia = copia();
+		return mergeSortAux(copia, comparador);
+	}
+
+	/**
+     * Método Auxiliar recursivo para MergeSort
+     * @param lista La lista a ser ordenada
+     * @param comparador el comparador que la lista usará para hacer el ordenamiento.
+     * @return una copia de la lista recibida, pero ordenada.
+     */
+	private  Lista<T> mergeSortAux(Lista<T> lista, Comparator<T> comparador){
+        // Aquí va su código
+		if(lista.longitud <= 1)
+			return lista;
+	    Lista<T> listaIzquierda = new Lista<>();
+	    Lista<T> listaDerecha = new Lista<>();
+	    Nodo a = lista.cabeza;
+	    Nodo b = a;
+	    for (int i = 0; i < lista.longitud; i++) {
+		    if (i < lista.longitud / 2) {
+		    	listaIzquierda.agrega(a.elemento);
+				a = a.siguiente;
+				b = a;
+		    } else {
+				listaDerecha.agrega(b.elemento);
+				b = b.siguiente;
+			}
+	    }
+		listaIzquierda = mergeSortAux(listaIzquierda, comparador);
+		listaDerecha = mergeSortAux(listaDerecha, comparador);
+		return mezcla(listaIzquierda, listaDerecha, comparador);
+    }
+
+	/**
+     * Método Auxiliar que junta dos listas ordenadas
+     * @param izquierda La lista 1 a ser mezclada
+     * @param derecha La lista 2 a ser mezclada
+     * @param comparador el comparador que la lista usará para hacer el ordenamiento.
+     * @return La unión de las 2 listas anteriores ordenada
+     */
+    private Lista<T> mezcla(Lista<T> izquierda, Lista<T> derecha, Comparator<T> comparador) {
+		Lista<T> ordenada = new Lista<T>();
+		Nodo i = izquierda.cabeza;
+		Nodo j = derecha.cabeza;
+		while (i != null && j != null) {
+			if (comparador.compare(i.elemento, j.elemento) <= 0) {
+				ordenada.agrega(i.elemento);
+				i = i.siguiente;
+			} else {
+				ordenada.agrega(j.elemento);
+				j = j.siguiente;
+			}
+		}
+		if (i == null) {
+			while (j != null) {
+				ordenada.agrega(j.elemento);
+				j = j.siguiente;
+			}
+		} else {
+			while (i != null) {
+				ordenada.agrega(i.elemento);
+				i = i.siguiente;
+			}
+		}
+		return ordenada;
+    }
+
+    /**
+     * Regresa una copia de la lista recibida, pero ordenada. La lista recibida
+     * tiene que contener nada más elementos que implementan la interfaz {@link
+     * Comparable}.
+     * @param <T> tipo del que puede ser la lista.
+     * @param lista la lista que se ordenará.
+     * @return una copia de la lista recibida, pero ordenada.
+     */
+    public static <T extends Comparable<T>> Lista<T> mergeSort(Lista<T> lista) {
+        return lista.mergeSort((a, b) -> a.compareTo(b));
+    }
+
+    /**
+     * Busca un elemento en la lista ordenada, usando el comparador recibido. El
+     * método supone que la lista está ordenada usando el mismo comparador.
+     * @param elemento el elemento a buscar.
+     * @param comparador el comparador con el que la lista está ordenada.
+     * @return <code>true</code> si el elemento está contenido en la lista,
+     *         <code>false</code> en otro caso.
+     */
+    public boolean busquedaLineal(T elemento, Comparator<T> comparador) {
+        // Aquí va su código.
+		// Lista<T> copia = copia();
+		for (T temp : this){
+			if (comparador.compare(elemento, temp) < 0)
+				return false;
+			if (comparador.compare(elemento, temp) == 0)
+				return true;
+		}
+		return false;
+    }
+
+    /**
+     * Busca un elemento en una lista ordenada. La lista recibida tiene que
+     * contener nada más elementos que implementan la interfaz {@link
+     * Comparable}, y se da por hecho que está ordenada.
+     * @param <T> tipo del que puede ser la lista.
+     * @param lista la lista donde se buscará.
+     * @param elemento el elemento a buscar.
+     * @return <code>true</code> si el elemento está contenido en la lista,
+     *         <code>false</code> en otro caso.
+     */
+    public static <T extends Comparable<T>> boolean busquedaLineal(Lista<T> lista, T elemento) {
+        return lista.busquedaLineal(elemento, (a, b) -> a.compareTo(b));
+    }
+
+	/***************************************Funciones Auxiliares********************************************/
 
 	/**
 	 * Busca un nodo dentro de la lista basandose en el elemento que contenga.
@@ -513,4 +634,4 @@ public class Lista<T> implements Coleccion<T> {
 		return (n.elemento.equals(elemento)) ? cont : indiceDe(elemento, n.siguiente, ++cont);
     }
 
-}//Cierre de la clase Lista
+}
