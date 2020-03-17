@@ -433,6 +433,7 @@ public class Lista<T> implements Coleccion<T> {
         // Aquí va su código.
 		if (longitud == 0)
 			return "[]";
+		int cont = 0;
 		Nodo n = cabeza;
 		String cadenaFinal = "[";
 		while (n != rabo) {
@@ -449,7 +450,7 @@ public class Lista<T> implements Coleccion<T> {
      *         <code>false</code> en otro caso.
      */
     @Override public boolean equals(Object objeto) {
-		if (objeto == null || getClass() != objeto.getClass())
+        if (objeto == null || getClass() != objeto.getClass())
             return false;
         @SuppressWarnings("unchecked") Lista<T> lista = (Lista<T>) objeto;
         // Aquí va su código.
@@ -493,9 +494,9 @@ public class Lista<T> implements Coleccion<T> {
      * @return una copia de la lista, pero ordenada.
      */
     public Lista<T> mergeSort(Comparator<T> comparador) {
-		Lista<T> copia = copia();
-		return mergeSortAux(copia, comparador);
-	}
+        // Aquí va su código.
+		return mergeSortAux(copia(), comparador);
+    }
 
 	/**
      * Método Auxiliar recursivo para MergeSort
@@ -617,7 +618,6 @@ public class Lista<T> implements Coleccion<T> {
 	    if (n == null)
 		    return null;
 	    return n.elemento.equals(e) ? n : buscaNodo(e, n.siguiente);
-		//Como elemento es de tipo genérico, el método equals dependerá de cada tipo
     }
 
 	/**
@@ -632,5 +632,4 @@ public class Lista<T> implements Coleccion<T> {
 		    return -1;
 		return (n.elemento.equals(elemento)) ? cont : indiceDe(elemento, n.siguiente, ++cont);
     }
-
 }

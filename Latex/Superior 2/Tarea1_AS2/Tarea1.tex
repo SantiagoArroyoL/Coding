@@ -1,0 +1,546 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{Tarea Álgebra Superior \|}
+\author{Arroyo Lozano Santiago \\ Arévalo Gaytán Rodrigo \\  González Domínguez Saúl Fernando \\ Luévano Ballesteros Ricardo Adrián}
+\date{Marzo 2020}
+
+\begin{document}
+
+	\maketitle
+
+	\section{Sean \( (a,b),(c,d),(e, f) \in \mathbb{N} \times \mathbb{N}/\sim. \) Demuestra las siguientes afirmaciones utilizando las definiciones de suma, producto y orden.}
+	    \subsection{$(a, b) \cdot(\overline{(c, d)}+\overline{(e, f)})=(\overline{(a, b)} \cdot \overline{(c, d)})+(\overline{(a, b)} \cdot \overline{(e, f)})$}
+	        P.D $\overline{(a,b)} \cdot [ \overline{(c,d)} + \overline{(e,f)} = [\overline{(a,b)} \cdot \overline{(c,d)} ] + [\overline{(a,b)} \cdot \overline{(e,f)} ]$
+	        \begin{align}
+	             \tag{Definición de suma} \overline{(a,b)} \cdot [ \overline{(c,d)} + \overline{(e,f)}] &= \overline{(a,b)} \overline{(c+e,d+f)} \\
+	             \tag{Distributividad} &=\overline{(a(c+e)+b(d+f),a(d+f)+b(c+e))} \\
+	             \tag{Distributividad en $\mathbb{N}$} &= \overline{(ac+ae+bd+bf,ad+af+bc+be)}
+	        \end{align}
+	        Por otro lado
+	        \begin{align}
+	            \tag{Por definición de producto} [\overline{(a,b)} \cdot \overline{(c,d)} ] + [\overline{(a,b)} \cdot \overline{(e,f)} ] &= \overline{(ac+bd,ad+bc)} + \overline{ae+bf,af+be}  \\
+	             \tag{Por definición de suma} &= \overline{(ac+bd+ae+bf,ad+bc+af+be)}
+	        \end{align}
+	        Y como por ambos lados llegamos a la misma igualdad es claro que son lo mismo, por lo tanto queda demostrado \quad \blacksquare
+	    \subsection{Si $\overline{(a,b)} < \overline{(c,d)}$ y $\overline{(0,0)} < \overline{(e,f)}$ entonces $\overline{(a,b)}\cdot\overline{(e, f)} < \overline{(c,d)}\cdot\overline{(e,f)}$}
+	         \begin{align}
+	            \notag \overline{(a,b)}\cdot\overline{(e, f)} < \overline{(c,d)} \cdot \overline{(e,f)} = \overline{(ae + bf, af + be)} < \overline{(ce + df, cf + de)}
+	        \end{align}
+	        Consideremos a $\overline{(w,z)},\overline{(x,y)} \in \mathbb{Z}$ \\
+	        Sabemos que si \\
+	        \begin{equation}
+	        \begin{split} \notag
+	            \overline{(w,z)} < \overline{(x,y)} &\leftrightarrow 0 < \overline{(x,y)} - \overline{(w,z)} \\
+	            &\leftrightarrow 0 < \overline{(x,y)} + \overline{(z,w)} \\
+	            &\leftrightarrow 0 < \overline{(x+z,y+w)} \\
+	            &\leftrightarrow y + w < x+z \\
+	        \end{split}
+	        \end{equation}
+	        Por lo que tenemos que \\ \\
+	        \( \overline{(ae+bf,af+be)} < \overline{(ce+df,cf+de)} \leftrightarrow (cf+de) + (ae+bf) < (ce+df) + (af+be)\) \\ \\
+	        P.D. $(cf+de) + (ae+bf) < (ce+df) + (af+be)$ \\ \\
+	        Como $\overline{(0,0)} < \overline{(e,f)}$ entonces $f < e, $ al restar $f$ en ambos lados tenemos
+	        \begin{align}
+	            \notag f-f < e -f \leftrightarrow 0 < e-f
+	        \end{align}
+	        Como $\overline{(a,b)} < \overline{(c,d)}$, al restar $ \overline{(a,b)}$ en ambos lados tenemos \\
+	        \begin{equation}
+	        \begin{split} \notag
+	            \overline{(a,b)}-\overline{(a,b)} &< \overline{(c,d)} - \overline{(a,b)} \leftrightarrow \\
+	            0 &< \overline{(c,d)} - \overline{(a,b)} \leftrightarrow \\
+	            0 &< \overline{(c,d)} + \overline{(b,a)} \leftrightarrow \\
+	            0 &< \overline{(c+b,d+a)} \\
+	        \end{split}
+	        \end{equation}
+	        Y como la suma es un entero positivo, tenemos $a+d < c+b$ \\
+	        Al multiplicar ambos miembros por el $\mathbb{N}$ positivo $(e-f)$ tenemos
+	        \begin{align}
+	            \notag (a+d)(e-f) < (c+b)(e-f) \leftrightarrow ae-af+de-df < ce -cf +be -bf
+	        \end{align}
+	        Sumamos los naturales $af,df,cf$ y $bf$ a cada miembro
+	        \begin{align}
+	            \notag ae-af+af+de-df+df+cf+bf &< ce-cf+cf+be-bf+bf+af+df \\
+	            \tag{Por suma de inverso aditivo} ae+de+cf+bf &< ce+be+af+df \\
+	            \tag{Por Conmutatividad y Asociatividad}  (cf+de) + (ae+bf) &< (ce+df) + (af+be)
+	        \end{align}
+	        Que es lo que queríamos demostrar \blacksquare \\
+	    \subsection{Si $\overline{(a,b)} < \overline{(c,d)}$ y $\overline{(e, f)} < \overline{(0,0)}$ entonces $\overline{(c,d)}\cdot\overline{(e, f)} < \overline{(a,b)}\cdot\overline{(e, f)}$}
+	        P.D. $\overline{(ce+df,cf+de)} < \overline{(ae+bf,af+be)}$ \\
+	        Como se mencionó en 1.2 \\ \\
+	        P.D. $(ce+df) + (af+be)<(cf+de)+(ae+bf)$ \\
+	        Como $\overline{(e,f)}<\overline{(0,0)}$ entonces $e<f$, al restar ambos miembros, tenemos que: $e-e<f-e \leftrightarrow 0<f-e$ \\ \\
+	        Como $\overline{(a,b)} < \overline{(c,d)},$ es decir, $a+d<c+b$ con $a,b,c,d,e \in \mathbb{N}$ \\ \\
+	        Al multiplicar ambos miembros por el $\mathbb{N}$ positivo $(f-e)$, tenemos:
+	        \begin{align}
+	            \notag (a+d)(f-e) &< (c+b)(f-e) \\
+	            \notag af-ae+df-de &< cf-ce+cb-be
+	        \end{align}
+	        Sumamos los naturales $ae,de,ce,be$ a ambos miembros y resulta
+	        \begin{align}
+	            \notag af-ae+ae+df-de+de+ce+be &< cf-ce+ce+bf-be+be+ae+de \\
+	            \tag{Por suma de inverso aditivo} = af + df + ce + de + &< cf + bf + ae + de \\
+	            \tag{Por conmutatividad y Asociatividad} = (ce+df) + (af+be) &< (cf+de)+(ae+bf)
+	        \end{align}
+	        Que es lo que queríamos demostrar \blacksquare
+	    \subsection{Si $\overline{(a,b)}\cdot\overline{(c,d)} = \overline{(0,0)}$ entonces $\overline{(a,b)} = \overline{(0,0)}$ o $\overline{(c,d)} = \overline{(0,0)}$}
+	        P.D. $\overline{(a,b)} = \overline{(0,0)} \vee \overline{(c,d)} = \overline{(0,0)}$ \\
+	        P.D. $a+0 = b+0 \vee c+0 = d+0$ \\
+	        P.D. $a=b \vee c=d$ \\
+	        Como $\overline{(a,b)}\cdot\overline{(c,d)}=\overline{(0,0)}$ entonces por producto de $\mathbb{Z}$ tenemos:
+	        \begin{align}
+    	        \tag{Por Def. de producto en $\mathbb{Z}$} \overline{(ac+bd,ad+bc)} &= \overline{(0,0)} \\
+    	        \tag{Sumamos con la igualdad}ac+bd+0 &= ad+bc+0 \\
+    	        \tag{Elemento Neutro} ac+bd &= ad+bc
+	        \end{align}
+	    Si $a=b$, entonces $ac+ad = ad+ac$, lo cual es claro \\
+	    Si $c=d$, entonces $ac+bc = bc+ac$, lo cual es claro \\
+	    \therefore a=b \vee c=d \quad \blacksquare
+	\section{Sean $a,b \in \mathbb{Z}$ Demuestra las siguientes igualdades especificando las propiedades de la suma y el producto que vayas utilizando.}
+	    \subsection{$-(a+b)=-a-b$}
+	    \begin{proof}
+	          \begin{align}
+	          \notag
+	            -(a+b) + 0 \\ \tag{Suma de elemento neutro}
+	            &= -(a+b)+(a-a+b-b)\\ \tag{Conmutatividad de la suma}
+	            &= -(a+b)+(a+b-a-b)\\ \tag{Asociatividad}
+	            &= -(a+b)+(a+b)+(-a-b)\\ \tag{Porque $-(a+b)$ es el inverso aditivo de $(a+b)$}
+	            &= -a-b \quad \blacksquare
+	          \end{align}
+	        \end{proof}
+	    \subsection{$a\cdot 0 = 0\cdot a = 0$}
+	        \begin{proof}
+	          \begin{align}
+	          \tag{Como -b es el inverso aditivo de b, la suma es 0}
+	            &=  (b-b) \cdot a \\ \tag{Distributividad del producto}
+	            &= ba-ba \\ \tag{Inverso aditivo}
+	            &= 0
+	          \end{align}
+	          Como el producto es conmutativo el caso se hace análogamente para $a \cdot(b-b)$\blacksquare
+	        \end{proof}
+	    \subsection{$-(-a)=a$}
+	        \begin{proof}
+	          \begin{align}
+	          \tag{Sumamos elemento neutro}
+	            &=  -(-a) +a+(-a) \\ \tag{Conmutatividad}
+	            &= a+(-a)-(-a)\\ \tag{Por inverso aditivo}
+	            &= a+0\\ \tag{Por suma de elemento neutro}
+	            &= a \qquad \blacksquare
+	          \end{align}
+	        \end{proof}
+	    \subsection{$-(a\cdot b) = -a\cdot b = a \cdot (-b)$}
+	        \begin{proof}
+	          \begin{align}
+	           \tag{Sumamos elemento neutro}-a\cdot b &= -a \cdot b +(a\cdot b)-(a\cdot b) \\
+	           \tag{Asociatividad}&= (-a+a)b-(a\cdot b) \\
+	           \tag{Inverso Aditivo} &= (0)b-(a\cdot b) \\
+	           \tag{Neutro Aditivo}&= -(a \cdot b)
+	          \end{align}
+	          Por otro lado...
+	          \begin{align}
+	              \tag{Sumamos elemento neutro}a(-b) &= a(-b)+(a \cdot b)-(a \cdot b ) \\
+	              \tag{Asociatividad}&= (-b+b)a-(a\cdot b) \\
+	              \tag{Inverso Aditivo} &= (0)a-(a\cdot b) \\
+	              \tag{Neutro Aditivo}&= -(a\cdot b) \qquad \blacksquare
+	          \end{align}
+	        \end{proof}
+	    \subsection{$-a = -1 \cdot  a$}
+	        \begin{proof}
+	          \begin{align}
+	          \tag{Neutro Aditivo}
+	            -a &= -a +0\\ \tag{Inverso Aditivo}
+	            &= -a + (-1 \cdot a) + (1 \cdot a)\\  \tag{Neutro Multiplicativo}
+	            &= -a + (-1 \cdot a) +a \\ \tag{Inverso Aditivo}
+	            &= (-1 \cdot a) \qquad \blacksquare
+	          \end{align}
+	        \end{proof}
+	    \subsection{$ a \cdot b = (-a)\cdot (-b)$}
+	        \begin{proof}
+	          \begin{align}
+	            \tag{Sumamos elemento neutro}a \cdot b &= a \cdot b +(-a)(-b)-(-a)(-b)\\
+	            \tag{Por 2.5}&= a\cdot b + (-a)(-b)-(-1)a(-b)\\
+	            \tag{Ley de Signos}&= a\cdot b +(-a)(-b) + 1 \cdot a (-b)\\
+	            \tag{Neutro multiplicativo y conmutatividad}&= (-a)(-b) + a\cdot b+a(-b)\\
+	            \tag{Por 2.4} &= (-a)(-b) + a\cdot b - a\cdot b\\
+	            \tag{Inerso Aditivo}&= (-a)(-b) \qquad \blacksquare
+	          \end{align}
+	        \end{proof}
+	\section{Sean $a,b, c,d \in \mathbb{Z}.$ Demuestra las siguientes afirmaciones}
+	    \subsection{$a \leq b$ si y sólo si $-b \leq -a$}
+	    $\rightarrow$ \\
+	    P.D.  $a \leq b \rightarrow -b \leq -a$ \\
+	    Sumemos el inverso aditivo de $a$ y $b$ a ambos miembros de la ecuación y tenemos: \\
+	        \begin{proof}
+	            \begin{align}
+    	            \notag a-a-b &\leq b-b-a \\
+    	            \tag{Ley de cancelación} -b &\leq -a
+	            \end{align}
+	        \end{proof}
+	    $\leftarrow$ \\
+	    P.D. $-b \leq -a \rightarrow a \leq b$
+	        \begin{proof}
+	            \begin{align}
+    	            \notag a+b-b &\leq -a+a+b\\
+    	            \notag a &\leq b \\
+    	            \notag \therefore a \leq b &\leftrightarrow -b \leq -a  \qquad \blacksquare
+	            \end{align}
+	        \end{proof}
+	    \subsection{Si $0 \leq a \leq b$ entonces $a^n \leq b^n $ para toda $ n \in \mathbb{N}$}
+	        \begin{proof}
+    	        Por Inducción sobre n \\
+    	        Caso Base: n = 0
+    	        \begin{align}
+    	            \notag a^0 \leq b^0 \\
+    	            \tag{Por definición} 1 \leq 1
+    	        \end{align}
+    	        Se cumple el caso base \\
+    	        H.I. Si $0 \leq a \leq b$ entonces $a^n \leq b^n$  \\ \\
+    	        P.I. P.D. Se cumple para $a^{n+1} &\leq b^{n+1}$
+	            \begin{align}
+	                \notag a^{n+1} &\leq a^{n+1} \\
+	                \tag{Por HI} a^{n+1} = a \cdot a^n &\leq ab^n \\
+	                \notag a\cdot b^n &\leq b\cdot b^n = b^{n+1} \\
+	               \notag \therefore a^{n+1} &\leq b^{n+1}
+	            \end{align}
+	            Se cumplen el Caso Base y el Paso Inductivo, por lo tanto queda demostrado \forall n \in \mathbb{N} \quad \blacksquare
+	        \end{proof}
+	    \subsection{ Si $0 \leq a \leq b $ y $0 \leq c \leq d$ entonces $a \cdot c \leq b \cdot d$}
+    	    P.D $a \cdot c \leq b \cdot d$ \\
+    	    \begin{proof}
+        	    Como $a \leq b$ tenemos dos casos: \\ \\
+        	    $i) a = b$ \\
+        	    $ii) a < b$ \\ \\
+    	        Caso 1: \\
+    	        Si $a=b$ al multiplicar
+    	        \begin{align}
+    	            \notag a(c &\leq d) \\
+     	            \notag \text{Tenemos} \; ac &\leq ad \\
+     	            \notag \text{Que es lo mismo que } ac &\leq bd
+    	        \end{align}
+    	        Y terminamos \\
+    	        Caso 2: \\
+    	        Sabemos que \\
+    	        \begin{align}
+    	            \notag ac &\leq ad \\
+    	            \notag bc &\leq bd
+    	        \end{align}
+    	        Ya que $a,b \in \mathbb{Z^+} \bigcup$ \{$0$\} \\ \\
+    	        Veamos ahora los dos casos: \\
+    	        $i) ac \leq ad \leq bc \leq bd$ \\
+    	        $ii) ac \leq bc \leq ad \leq bd$ \\ \\
+    	        Como en ambos casos $ac \leq bd$, por transitividad: \\
+    	        $ac \leq bd$
+    	    \end{proof}
+	        \blacksquare
+	    \subsection{$a^2 \geq 0$}
+	        \begin{proof}
+    	        Tenemos 3 casos: \\
+	            $i) a=0$ \\
+	            $ii) a \in \mathbb{Z^+}$ \\
+	            $iii) a \in \mathbb{Z^-}$ \\ \\
+	            Si $a=0$ tenemos: \\
+	            \begin{align}
+	                \notag 0^2 &\geq 0 \\
+	                \notag0\cdot0 &\geq 0 \\
+	                \tag{Porque $0\cdot0 = 0$}0 &\geq 0
+	            \end{align}
+	            Si $a \in \mathbb{Z^+}$, como $\forall x \in \mathbb{Z^+}, x > 0$ y como $x^2 \geq x > 0$ entonces $x^2 \geq 0$ por transitividad. \\ \\
+                Si $a \in \mathbb{Z^-}$, con $a=-x$ tenemos: \\
+                \begin{align}
+                    \notag (-x)^2 &\geq 0 \\
+                    \notag (-x)(-x) &\geq 0 \\
+                    \tag{Por ley de signos, con $x\cdot x \in \mathbb{Z^+}$} x\cdot x &\geq 0
+                \end{align}
+                Y como $\forall z \in \mathbb{Z^+} z \geq 0$ entonces $x\cdot x \geq 0$ \blacksquare
+	        \end{proof}
+	\section{Sean $a,b,c,d \in \mathbb{Z}$. Demuestra las afirmaciones usando la siguiente definición de resta en $\mathbb{Z}$}
+	\begin{align}\notag \qquad a-b = a+(-b)\end{align}
+	    \subsection{$ a-a = 0$}
+	        \begin{proof}
+	          $a - a = a + (-a)$ por definición; como $(-a)$ es el inverso aditivo de $a$ y su suma es $0$, entonces $a + (-a) = 0$ \\
+	        $\therefore a - a = 0$ \blacksquare
+	        \end{proof}
+	    \subsection{$ (a-b) + (c-d) = (a+c)-(b+d)$}
+	        \begin{proof}
+	          \begin{align}
+	          \tag{Por definición de resta} (a-b)+(c-d) &= a+(-b)+c+(-d) \\
+	          \tag{Conmutatividad} &= a+c+(-b)+(-d) \\
+	          \tag{Neutro Multiplicativo} &= a+c+1 \cdot (-b) + 1 \cdot (-d) \\
+	            \tag{Por 2.4} &= a+c + (-1)(b) +(-1)(d) \\
+	            \tag{Distributividad} &= a+c+(-1)(b+d) \\
+	            \tag{Por definición} &= a+c-1 \cdot (b+d) \\
+	            \tag{Neutro multiplicativo} &= a+c -(b+d)
+	          \end{align}
+	          \blacksquare
+	        \end{proof}
+	    \subsection{$(a-b)\cdot(c-d) = (a \cdot c+b \cdot d)-(a \cdot d +b \cdot c)$}
+	        \begin{proof}
+	          \begin{align}
+	              \tag{Por 2.5 y definición de resta}(a-b)\cdot(c-d) &= (a+(-1\cdot b))\cdot (c+(-1 \cdot d)) \\
+	              \tag{Distributividad y definición de producto} &= a \cdot c + a(-1\cdot d) +(-1\cdot b)c+(-1\cdot b)(-1\cdot d) \\
+	              \tag{Distributividad en los paréntesis} &= a ´\cdot c + (-a \cdot d) +(-b \cdot c) + b \cdot d\\
+	              \tag{Por definición de resta} &= a \cdot c - a \cdot d - b \cdot c + b \cdot d\\
+	              \tag{Conmutatividad} &= a \cdot c + b \cdot d - a \cdot d - b \cdot c \\
+	              \tag{Por 2.4} &= a \cdot c + b \cdot d -1(a \cdot d) -1(b \cdot c) \\
+	              \tag{Distributividad} &= (a \cdot c + b \cdot d ) -( a \cdot d + b \cdot c)
+	          \end{align}
+	          \blacksquare
+        	\end{proof}
+    \section{El producto de tres números consecutivos es dividido  por 6}
+        \begin{proof}
+            Sabemos que de $n,n+1,n+2$ al menos uno será par. \\
+            Sabemos tambien que el anterior o el siguiente de ese entero par es impar. \\ \\
+            Sin pérdida de generalidad podemos asumir que n es par y n+1 impar, es decir: \\
+            $2|n$ y $2+1|n+1$ lo que implica que \\
+            $\exists k,l \in \mathbb{Z}$ tales que $2k=n$ y $(2+1)l = n+1$ \\
+            Notamos que
+            \begin{align}
+                \notag 2k &= n \\
+                \notag (2+1)l &= n+1 \\
+                \notag \line(1,0){45}&\line(1,0){60} \\
+                \notag 3l \cdot 2k &= n(n+1) \\
+                \notag 3 \cdot 2 \cdot l \cdot k &= n(n+1)  \\
+                \notag 6lk &= n(n+1)
+            \end{align}
+            Multiplicamos ambas igualdades por $(n+2) \in \mathbb{Z}$ y tenemos $6 \cdot lk \cdot (n+2) = n \cdot (n+1) \cdot (n+2)$ y como $lk(n+2) \in \mathbb{Z}$ \\ \\
+            $\therefore 6|n\cdot (n+1) \cdot (n+2)$ \quad \blacksquare
+        \end{proof}
+    \section{Sean $a,b \in \mathbb{Z}$ Si $a|b$ y $a|b+2$ entonces $|a| \in \{1,2\}$}
+    P.D. $|a| \in \{1,2\}$ \\
+    P.D. $|a| = 2 \vee |a| = 1$ \\
+        \begin{proof}
+            Como $a|b, \exists u \in \mathbb{Z} $ tal que $a \cdot u = b$ \\
+            Como $a|b+2 \; \exists v \in \mathbb{Z} $ tal que $a \cdot v = b+2$, \\
+            es decir $b=av-2$\\ \\
+            De manera que $au = av-2$\\
+            Es decir $2 = av-au = a(v-u)$ \\
+            entonces $a|2$\\
+            Notemos que para que $a|2$, $a$ tiene que ser $a=-1, a=1 ,a=-2$ ó $a=2$\\ \\
+            En los primeros casos $|a| = 1$, en los siguientes $|a|=2$\\
+            $\therefore |a|=1 \vee |a|=2$ \quad \blacksquare
+        \end{proof}
+    \section{Las siguientes afirmaciones son equivalentes para $a,b \in \mathbb{Z}$}
+    $a)$\quad $a|b$ \\
+    $b)$\quad $(a;b)=a$ \\
+    $c)$\quad $[a;b]=b$
+        \subsection{$a) \rightarrow b)$}
+            Sea $a|b$ \\
+            P.D. $(a;b)=a$ \\
+            P.D. $a|a$ y $a|b$ \\ \\
+            \begin{proof}
+                Es claro que si $a|a, \exists z = 1 \in \mathbb{Z}$ tal que $a \cdot z = a \cdot 1 = a$\\
+                Además, por hipotesis sabemos que $a|b$\\
+                \qquad \therefore $(a;b)=a$
+            \end{proof}
+        \subsection{$b) \rightarrow c)$}
+            Sea $(a;b)=a$, es decir $a|a$  y $a|b$\\
+            P.D. $[a;b]=b$ \\
+            P.D. $a|b$ y $b|b$ \\ \\
+            \begin{proof}
+                Es claro que si $b|b, \exists w =1 \in \mathbb{Z}$ tal que $b \cdot w = b \cdot 1 = b$ \\
+                Además, por hipotesis sabemos que $a|b$\\
+                \qquad \therefore $[a;b]=b$
+            \end{proof}
+        \subsection{$c) \rightarrow a)$}
+            Sea $[a;b]=b$, es decir $a|b$ y $b|b$ \\
+            P.D. $a|b$\\ \\
+            \begin{proof}
+                Es claro, por hipotesis, que $a|b$ \\
+                $\therefore a|b$ \\
+                $\therefore $ Los tres enunciados son equivalentes entre si \quad \blacksquare
+            \end{proof}
+    \section{Sean $a, b \in \mathbb{Z}$ tales que $(a;4)=2 \vee (b;4)=2$ \\ P.D $(a+b;4)=4$}
+        \begin{proof}
+            Por hipotesis tenemos que $2|a \vee 2|b$, lo que implica que $a$ y $b$ son pares y no son múltiplos de 4. \\
+            Sabemos que la suma de dos pares siempre dará como resultado un número par. \\
+            Entonces $\frac{a+b}{2}$ es posible y además sabemos que $\frac{4}{2}$ también.
+            \begin{align}
+                \tag{Por definición de mcd} \left( \frac{a+b}{2};\frac{4}{2} \right) &= 2 \\
+                \tag{Multiplicamos ambos lados por 2} 2 \left( \frac{a+b}{2};\frac{4}{2} \right) &= 2(2) \\
+                \tag{Por demostración del ejercicio 11} \left( 2 \frac{a+b}{2};2 \frac{4}{2} \right) &= 4
+            \end{align}
+            Como sabemos por la definición de división que existe un único entero tal que $ y  \left( \frac{x}{y} \right) = x $ podemos obtener la siguiente igualdad gracias a la unicidad de este número entero:
+            \begin{align}
+                \notag (a+b;4) &= 4 \quad \blacksquare
+            \end{align}
+        \end{proof}
+    \section{Sean $a,b \in \mathbb{Z}$ con $a > 0$, entonces $a|b$ si y sólo si existen $x,y \in \mathbb{Z}$ tales que $x+y = b$ y $(x;y)=a$}
+        $\rightarrow $\\
+        Sea $a|b$\\
+        P.D.  $ \exists x,y$ tales que $x+y=b$ y $(x;y)=a$ \\
+        \begin{proof}
+            Sea $x,(b-x) = y \in \mathbb{Z}$
+            \begin{align}
+                \notag x+b-x = b
+            \end{align}
+            \begin{align}
+                \tag{Como $a|b$ entonces $\exists k \in \mathbb{Z} \; t.q.\; b=ak$} (x;b-x) &= (x;ak-x)\\
+                \tag{Pues $x=a$} &= (a;ak-a) \\
+                \notag &= (a;a(k-1) \\
+                \tag{Por demostracíon del ejercicio 11} &= a(1;k-1) \\
+                \tag{Como el mcd de 1 y cualquier número entero es 1} &= a \cdot 1 \\
+                \tag{Por neutro multiplicativo} &= a
+            \end{align}
+            Queda así demostrado la existencia de dos enteros $x,y$ tales que cunplen $x+y = b \wedge (x;y)=a$ \\ \\
+        \end{proof}
+        $\leftarrow$ \\
+        Sean $x+y = b \wedge (x;y)=a$\\
+        P.D $a|b$ \\
+        \begin{proof}
+            Como $(x,y) = a$ entonces $a|x \wedge a|y$ \\
+            Por tanto existen $c,s \in \mathbb{Z}$ tales que $a \cdot c = x \wedge a \cdot s = y$ \\
+            Sumando ambas igualdades
+            \begin{align}
+                \notag (a \cdot c) + (a \cdot s) &= x + y \\
+                \tag{Distributividad} a(c+s)&=x+y
+            \end{align}
+            Por hipotesis tenemos que $x+y=b$ \\
+            $\therefore a|b$ \\
+            Como se cumple la ida y el regreso queda demostrada la doble implicación \quad \blacksquare
+        \end{proof}
+    \section{Si $a,b \in \mathbb{N}$ son tales que $(a;b)=[a;b]$, entonces $a=b$}
+        \begin{proof}
+            Como $(a;b)=[a;b]$ tenemos que \\
+            \begin{align}
+                \tag{Por definición de mcd} [a;b]|a &\wedge [a;b]|b\\
+                \tag{Por definición de mcm} a|(a;b) &\wedge b|(a;b)
+            \end{align}
+            Como $(a;b)=[a;b]$ podemos decir que $a|[a;b]$ y $b|[a;b]$ \\
+            Y como
+            \begin{align}
+                \tag{Por transitividad $b|a$} [a;b]|a &\wedge b|[a;b] \\
+                \tag{Por transitividad $a|b$} [a;b]|b &\wedge a|[a;b]
+            \end{align}
+            Y tenemos la propiedad de divisibilidad demostrada en clase que nos dice que \\
+            Si $a|b$ y $b|a \rightarrow a=b$ \\
+            \therefore a = b \quad \blacksquare
+        \end{proof}
+    \section{Sean $a,b,d \in \mathbb{Z}$ con $d > 0$ \\ P.D. $\left( \frac{a}{d};\frac{b}{d} \right) = \frac{(a;b)}{d}$}
+        $\mathcal{I)}$ Propiedad demostrada en clase: $(ca;cb)=c(a;b)$
+        \begin{proof}
+            Si $d|a \wedge d|b$ tenemos $\left( \frac{a}{d};\frac{b}{d} \right)$ \\
+            Aplicando $\mathcal{I}$ tenemos que:
+            \begin{align}
+                \notag (a;b) = \left( d \frac{a}{d} ; d \frac{b}{d} \right) = d \left( \frac{a}{d} ; \frac{b}{d} \right)
+            \end{align}
+            Como $(a;b)=d \; \exists z = 1 \in \mathbb{Z}$ tal que $(a;b) = d \cdot 1$ \\
+            Que es lo mismo a $1=\frac{(a;b)}{d}$
+            \begin{align}
+                \notag \frac{(a;b)}{d} = \frac{d \left( \frac{a}{d};\frac{b}{d} \right) }{d}
+            \end{align}
+            Como sabemos por la definición de división que existe un único entero tal que $ y  \left( \frac{x}{y} \right) = x $ podemos obtener la siguiente igualdad gracias a la unicidad de este número entero:
+            \begin{align}
+                \notag \therefore \left( \frac{a}{d};\frac{b}{d} \right) = \frac{(a;b)}{d} \quad \blacksquare
+            \end{align}
+        \end{proof}
+    \section{Para las siguientes parejas de números, encuentra el máximo común divisor usando el algoritmo de Euclides, exprésalo como combinación lineal de ambos y, finalmente encuentra el mínimo común multiplo}
+        \subsection{$527,765$}
+            \begin{equation*}
+                \begin{aligned}[c]
+                    M.C.D: \\
+                    765 &= 527 (1) + 238 \\
+                    527 &= 238 (2) +51 \\
+                    238 &= 51 (4) +34 \\
+                    51 &= 34(1) + 17 \\
+                    34 &= 17(2) + 0 \\
+                    (765;537) &= 17 \\
+                    M.C.M: \\
+                    \notag [765;527] &= \frac{|765 \cdot 527|}{(765;527)} = 23715
+                \end{aligned}
+                \begin{aligned}[c]
+                Combinacion \; Lineal: \\
+                    \notag 17 &= 51-34(1) \\
+                    \notag 17 &= 51-(238-51(4) \\
+                    \notag 17 &= 51(5) -238 \\
+                    \notag 17 &= (527 -238(2))(5)-238 \\
+                    \tag{Por Distributividad}17 &= 527(5)-238(11) \\
+                    \notag 17 &= 527(5)-(765(1)-527)(11) \\
+                    \notag 17 &= 527(5)-765(11)-527(11) \\
+                    \notag 17 &= 527(16)-765(11) \\
+                    \tag{Ley de Signos} 17 &= 527(16) + 765(-11) \\
+                \end{aligned}
+            \end{equation*}
+        \subsection{$132,-473$}
+            \begin{equation*}
+                \begin{aligned}[c]
+                    M.C.D: \\
+                    -473 &= 132 (-3) + 77 \\
+                    132 &= 77(1) + 55 \\
+                    77 &= 55(1) + 22 \\
+                    55 &= 22(2) + 11 \\
+                    22 &= 11(2) + 0 \\
+                    (132;-473) &= 11 \\
+                    M.C.M: \\
+                    \notag [132;-473] &= \frac{|132 \cdot -473|}{(132;-473)} = 5676
+                \end{aligned}
+                \begin{aligned}[c]
+                Combinacion \; Lineal: \\
+                    \notag 11 &= 55-22(2) \\
+                    \notag 11 &= 55-(77-55(1))(2) \\
+                    \tag{Distributividad} 11 &= 55-(77(2)-55(2)) \\
+                    \tag{Distributividad} 11 &= 55(3)-77(2) \\
+                    \notag 11 &= (132-77(1))(3)-77(2) \\
+                    \tag{Distributividad} 11 &=  132(3)-77(5)\\
+                    \notag 11 &=  132(3) + (-473-132(-3))(5)\\
+                    \tag{Distributividad} 11 &=  132(18)-473(5)\\
+                \end{aligned}
+            \end{equation*}
+        \subsection{$-1816,1789$}
+            \begin{equation*}
+                \begin{aligned}[c]
+                    M.C.D: \\
+                    -1816 &= 1789 (-1) + 27 \\
+                    1789 &= 27(66) + 7 \\
+                    27 &= 7(3) +6 \\
+                    7 &= 6(1)+1 \\
+                    6 &= 1(6) + 0 \\
+                    (-1816;1789) &= 1
+                    M.C.M: \\
+                    \notag [-1816;1789] &= \frac{|-1816 \cdot 1789|}{(-1816;1789)} = 3248824
+                \end{aligned}
+                \begin{aligned}[c]
+                Combinacion \; Lineal: \\
+                    \notag 1 &= 7-6(1) \\
+                    \notag 1 &= 7-(27-7(3)(1) \\
+                    \tag{Distributividad y Elemento Neutro} 1 &= 7(4)-27 \\
+                    \notag 1 &= (1789-27(66))(4)-27 \\
+                    \tag{Distributividad} 1 &= 1789(4)-27(265) \\
+                    \notag 1 &= 1789(4)+(-1816-1789(-1))(265) \\
+                    \tag{Distributividad} 1 &= 1789(4)-1816(265)+1789(265) \\
+                    \tag{Distributividad} 1 &= 1789(269) - 1816(265) \\
+                \end{aligned}
+            \end{equation*}
+        \subsection{$-2947,-3997$}
+            \begin{equation*}
+                \begin{aligned}[c]
+                    M.C.D: \\
+                    -3997 &= 2947(-1) - 1050 \\
+                    -2947 &= 1050(-2)-847\\
+                    1050 &= 847(1)+203 \\
+                    847 &= 203(4)+35 \\
+                    203 &= 35(5)+28 \\
+                    35 &= 28(1) +7 \\
+                    28 &= 7(4)+0 \\
+                    (-2947;3997) &= 7 \\
+                    M.C.M: \\
+                    \notag [-2947;3997] &= \frac{|-2947 \cdot -3997|}{(-2947;3997)} = 1682737
+                \end{aligned}
+                \begin{aligned}[c]
+                Combinacion \; Lineal: \\
+                    \notag 7 &= 35-28 \\
+                    \notag 7 &= 35 -(203-35(5)) \\
+                    \notag 7 &= 35(6) - 203 \\
+                    \notag 7 &= (847 - 203(4))(6)-203 \\
+                    \notag 7 &= 847(6)-203(25) \\
+                    \notag 7 &= 847(6) - (1050-847(1))(25) \\
+                    \notag 7 &= 847(6)-(1050-847(1))(25)\\
+                    \notag 7 &= (2947-1050(2))(31)-1050(25)\\
+                    \notag 7 &= 2947(31)+(-3997+2947(1)(87)\\
+                    \notag 7 &= 2947(31)+2947(87)-3997(87)\\
+                    \notag 7 &= 2947(118)-3997(87) \\
+                \end{aligned}
+            \end{equation*}
+\end{document}
