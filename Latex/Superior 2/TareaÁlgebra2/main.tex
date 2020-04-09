@@ -1,0 +1,231 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{Tarea Álgebra Superior \|}
+\author{Arroyo Lozano Santiago \\ Arévalo Gaytán Rodrigo \\  González Domínguez Saúl Fernando \\ Luévano Ballesteros Ricardo Adrián}
+\date{Abril 2020}
+
+\newcommand{\mysection}[2]{\setcounter{section}{#1}\addtocounter{section}{-1}\section{#2}}
+
+\begin{document}
+
+\maketitle
+
+\mysection{6}{Decimos que un entero de la forma $2^2^k + 1$ con $k \in \mathbb{N}$ es un número de Fermat. Las siguientes afirmaciones relacionan estos números con los primos:}
+    \subsection{Todo entero positivo $n$ se expresa de manera única como $n = 2mx$ para $x \in \mathbb{Z}$ impar.}
+        \begin{proof}
+            Demostramos por inducción sobre $n$ \\
+            Caso base $n = 1$\\
+            \begin{align}
+                \notag n = 1 = 1(1) = 2^0 \cdot 1
+            \end{align}
+            Paso Inductivo \\
+            Supongamos $n > 1$, se cumple la afirmación para todos los números mayoes que 1 y menos que n \\
+            Por algoritmo de la división: \\
+            $\exists ! q,r \in \mathbb{Z} | n = 2q+r, 0 \leq r \leq |2| = 2$
+            \begin{align}
+                \notag Si \; r &= 1\\
+                \notag r &= 2a+1 \\
+                \notag &= 2^0(2q+1)
+            \end{align}
+            Como $2q+1$ es único y es impar terminamos
+             \begin{align}
+                \notag Si \; r &= 0\\
+                \notag r &= 2q\\
+                \notag &= q+q
+            \end{align}
+            Como $2n > 1 > 0$ y $2 > 0$ entonces $q > 0$ y como $n = q+q$, $n > q$ \\
+            Por HI $q=2^mx$, con $x$ impar y único \\
+            \begin{align}
+                \notag \therefore n &= 2(2^mx) \\
+                \tag{Con $x$ impar y único} 2^{m+1}x
+            \end{align}
+            Como se cumple el Caso Base y el Paso inductivo, se cumple $\forall n \in \mathbb{N}$ \\ \\
+            Ahora demostraremos la unicidad: \\
+            Sean $m_1,m_2,x_1,x_2$ tales que $n = 2^{m_1}x_1$ y $n= 2^{m_2}x_2$ con $0 \leq m_1 \vee m_2$ y $x_1,x_2$ enteros impares positivos \\
+            Supongamos que $m_1 \leq m_2 \rightarrow 0 \leq (m_2-m_1)$ \\
+            Tenemos entonces que $2^{m_1}x_1 = 2^{m_2}x_2$ 
+            \begin{align}
+                \notag x_1 &= \frac{2^{m_2}x_2}{2^{m_1}} = 2^{(m_2-m_1)}x_2
+            \end{align}
+            Por hipotesis $x_1$ es un entero impar \\
+            Entonces $ 2^{(m_2-m_1)}x_2$ es impar. \\
+            \therefore $2^{m_2-m_1}$ y $x_2$ deben ser impares \\
+            Sabemos además que $\forall z \in \mathbb{Z} $ tal que $z \neq 0 2^z$ es un número par excepto en un único caso\\
+            Caso cuando $z=0$ tal que $2^0 = 1$, que es impar.\\
+            Luego $2^{m_2-m_1} = 2^0 = 1$ lo que implicaría que $m_1=m_2$ \\
+            Entonces $x_1 = 2^{m_2-m_1}x_2 = 1\cdot x_2 = x_2$ \\
+            Es claro que si $m_1=m_2 \rightarrow x_1=x_2$ \\
+            $\therefore$ Sólo existe una única expresión de esta forma para toda $n$ \\
+        \end{proof}
+        \\ Como se cumple la inducción y se demostró la unicidad, entonces demostramos que todo entero positivo $n$ se expresa de manera única como $n = 2mx$ para $x \in \mathbb{Z}$ impar. $\qquad \blacksquare$
+    \subsection{Si $n \in \mathbb{N}$ es tal que $2^n + 1$ es primo, entonces $2^n + 1$ es un número de Fermat} 
+        \begin{proof}
+            Si $n \in \mathbb{N}$ tal que $2^n+1$ es primo \\
+            Como $ n \in \mathbb{N}$, por 6.1 tenemos:
+            \begin{align}
+                \tag{Con $x$ único e impar} (2^{2^mx})&+1 \\
+                \notag (2^{2^mx})&+1^x \\  
+                \notag 2^{2^mx}&-(-1)^x \\
+                \tag{Por $Hint$} 2^{2^m}-(-1) &| 2^{2^mx} -(-1) = 2^{2^mx}+1 \\
+                \notag \therefore 2^{2^m}+1 &| 2^{2^mx}+1 \\
+                \tag{Por ser primo} 2^{2^m} + 1 &= 2^{2^mx}+1
+            \end{align}
+            Como tiene forma $2^n+1$ queda demostrado que es un número de Fermat $\qquad \blacksquare$
+        \end{proof}
+\mysection{8}{Supongamos que $a,b > 1$ pueden escribirse como $a = p_1^{\alpha_1}...p_n^{\alpha_n}$ y $ b =p_1^{\beta_1}...p_n^{\beta_n}$ con cada $n \in N$ y cada $p_i$ un entero primo.}
+    \begin{align}
+        \notag Sean \; a = \prod_{i=1}^{n} p_i^{\alpha^i}, \; a = \prod_{i=1}^{n} p_i^{\beta^i}
+    \end{align}
+    Tomamos en consideración entonces la propiedad demostrada en clase: 
+    \begin{align}
+        \tag{\MakeUppercase{\romannumeral 1}}a | b \leftrightarrow \alpha_i \leq \beta_i \forall i \in \mathbb{N}-\{0\}
+    \end{align}
+    \subsection{$(a;b) = p_1^{\gamma_1}...p_n^{\gamma_n}$ donde $\gamma_i = \min\{\alpha_i,\beta_i\} $}
+        \begin{proof}
+        Supongamos que $d = \displaystyle \prod_{i=1}^{n} p_i^{\gamma^i}$ donde $\gamma_i = \min\{\alpha_i,\beta_i\}$  tal que $d|a$ y $d|b$ \\
+        P.D. $d$ es el m.c.d. \\
+        Sea c = $\displaystyle \prod_{i=1}^{n} p_i^{\delta^i}$ tal que $c|a$ y $c|b$ \\
+        Por \MakeUppercase{\romannumeral 1} Sabemos que $\delta_i \leq \alpha_i$ y $\delta_i \leq \beta$ \\
+        Seguimos que $\delta_i \leq \min\{\alpha_i,\beta_i\}$, entonces $\delta \leq \gamma_i $, por lo que $c|d$, de esto podemos concluir que $d$ es el máximo común divisor \\
+        Como demostramos que $d$ es el m.c.d. y puede escribirse como $\displaystyle \prod_{i=1}^{n} p_i^{\gamma^i}$ donde $\gamma = \min\{\alpha_i,\beta_i\}$ queda demostrada la igualdad $\qquad \blacksquare$
+        \end{proof}
+    \subsection{$[a;b]= p_1^{\gamma_1}...p_n^{\gamma_n}$ donde $\gamma_i = \min\{\alpha_i,\beta_i\}$}
+        Supongamos que $d = \displaystyle \prod_{i=1}^{n} p_i^{\gamma^i}$ donde $\gamma = \max\{\alpha_i,\beta_i\}$  tal que $a|d$ y $b|d$ \\
+        P.D. $d$  es el m.c.m. \\
+        Sea $c = \displaystyle \prod_{i=1}^{n} p_i^{\delta^i}$ tal que $a|c$ y $b|c$ \\
+        Por \MakeUppercase{\romannumeral 1} Sabemos que $\alpha_i\leq\delta_i$ y $\beta_i\leq\delta_i$ \\
+        Seguimos que $\max\{\alpha_i,\beta_i\} \leq \delta_i$ entonces $\gamma_i \leq \delta_i$ por lo que $d$ es el mínimo común multiplo \\
+        Como demostramos que $d$ es el m.c.m. y que puede escribirse de la forma $\displaystyle \displaystyle \prod_{i=1}^{n} p_i^{\gamma^i}$ donde $\gamma = \max\{\alpha_i,\beta_i\}$ queda demostrada la igualdad $\qquad \blacksquare$
+\mysection{13}{Determina los valores de $c \in \mathbb{Z}$ con $10 < c < 25$ para los que $24x + 990y = c$ tiene solución y calcula las soluciones.}
+    \begin{align}
+        \notag (24;990) &= 4 \\
+        \notag 6 &= 990-24(4) \\
+        \notag 6 &= 990(1) +24(-4)
+    \end{align}
+    Por lo que $24x+990y = c$ sólo tiene solución si $6|c$ y $c \in \{12,18,24\}$
+    \begin{align}
+        \notag 24(-4) &+ 990(1) = 6 \\
+        \notag 24(-8) &+ 990(2) = 12 \\
+        \notag x_0 = -8 &\quad y_0 = 2 \\
+        \notag 24(-12-9+990(3) = 18 \\
+        \notag x_0 = -12 &\quad y_0 = 3 \\
+        \notag 24(-16) + 990(4) = 24 \\
+        \notag x_0 = -16 &\quad y_0 = 4 \\
+    \end{align}
+    Si $\frac{990}{6} = 165$ \qquad $\frac{24}{6} = 4$ \\ \\
+    Para $c = 12, x = -8 + 165t \wedge y =2+4t$ \\
+    Para $c = 18, x = -12 + 165t \wedge y =3+4t$ \\
+    Para $c = 24, x = -16 + 165t \wedge y =4+4t$ \\
+\mysection{20}{Sea $a \in \mathbb{Z}$ tal que $(a;7) = 1$. Entonces:}
+    \subsection{$a^6-1$ es divisible entre $7$}
+        Como $(a;7) = 1$ notamos que $7 \nmid  a$ por que en caso contrario tendríamos $(a;7)=7$ \\
+        Como $7$ es primo, por el Teorema de Fermat tenemos
+        \begin{align}
+            \notag a^7 &\stackrel{7}{\equiv} a \\
+            \notag a^6 &\stackrel{7}{\equiv} 1 \\
+            \tag{Por def. de congruencia} a^6- 1 &\in n\mathbb{Z}
+        \end{align}
+        Es decir, $7|a^6-1$
+    \subsection{Para cualquier $n \in \mathbb{N} $, a $6n -1$ es divisible entre $7$.}
+        Por Inducción sobre n
+        \begin{proof}
+            Caso Base $n=0$
+            \begin{align}
+                \notag a^6(0)-1 = 1-1 = 0 = 7(0)
+            \end{align}
+            Se cumple el caso base \\ \\
+            Hipotesis de Inducción: $7|a^6-1 \forall n \in \mathbb{N}$
+            Paso Inductivo: $n+1$
+            \begin{align}
+                \notag a^{6(n+1)}-1 &\stackrel{7}{\equiv} 1 \\
+                \notag a^{6n+6} &\stackrel{7}{\equiv} a^6 \\
+                \notag a^{6(n+1)} &\stackrel{7}{\equiv} a^6 \\
+            \end{align}
+                Pero por la demostración de 20.1 sabemos que $a^6 &\stackrel{7}{\equiv} 1$
+            \begin{align}
+                \tag{Por transitividad} a^{6(n+1)} &\stackrel{7}{\equiv} 1 
+            \end{align}
+            Como se cumple el casbo base y el paso inductivo se cumple para toda $n \qquad \blacksquare$
+        \end{proof}
+\mysection{21}{}
+    \subsection{Calcula $\varphi(25)$ y $\varphi(4)$}
+        \subsubsection{$\varphi(25)$}
+            \begin{equation*}
+                \begin{aligned}[c]
+                    \notag (1;25)&=1 \\
+                    \notag (2:25)&=1 \\
+                    \notag (3:25)&=1 \\
+                    \notag (4:25)&=1 \\
+                    \notag (5:25)&=5 \\
+                    \notag (6:25)&=1 \\
+                    \notag (7:25)&=1 \\
+                    \notag (8:25)&=1 \\
+                    \notag (9:25)&=1 \\
+                    \notag (10:25)&=5 \\
+                    \notag (11:25)&=1 \\
+                    \notag (12:25)&=1 \\
+                    \end{aligned}
+                    \qquad\qquad
+                    \begin{aligned}[c]
+                    \notag (13;25)&=1 \\
+                    \notag (14;25)&=1 \\
+                    \notag (15;25)&=5 \\
+                    \notag (16;25)&=1 \\
+                    \notag (17;25)&=1 \\
+                    \notag (18;25)&=1 \\
+                    \notag (19;25)&=1 \\
+                    \notag (20;25)&=5 \\
+                    \notag (21;25)&=1 \\
+                    \notag (22;25)&=1 \\
+                    \notag (23;25)&=1 \\
+                    \notag (24;25)&=1 \\
+                \end{aligned}
+            \end{equation*}
+            $\therefore \; \varphi(25) &= 20$
+        \subsubsection{$\varphi(4)$}
+        \begin{equation*}
+            \begin{aligned}[c]
+                \notag (1;4)&=1 \\
+                \notag (2;4)&=7 \\
+            \end{aligned}
+            \qquad\qquad
+            \begin{aligned}
+                \notag (3;4) &= 1 \\
+                \notag (2;4) &= 4
+            \end{aligned}
+        \end{equation*}
+        $\therefore \; \varphi(4) &= 3$
+    \subsection{Demuestra que $ 3^{20} \stackrel{25}{\equiv}1$ y $ 3^{20} \stackrel{4}{\equiv}1$}
+        Por 21.1 sabemos que $\varphi(4) = 3 \wedge \varphi(25)= 20$
+        \begin{proof}
+            Como $3 \nmid 25$
+            \begin{align}
+               \tag{Por Teorema de Euler} 3^{20} \stackrel{25}{\equiv} 1
+            \end{align}
+            Como $3 \nmid 4$
+            \begin{align}
+               \tag{Por Teorema de Euler} 3^{2} &\stackrel{4}{\equiv} 1 \\
+               \notag (3^2)^{10} &\stackrel{4}{\equiv} 1^{10} \\
+               \notag 3^20 &\stackrel{4}{\equiv} 1^{10} \equiv 1 \\
+               \therefore \; 3^{20} &\stackrel{4}{\equiv} 1
+            \end{align}
+            Quedan demostradas ambas congruencias $\qquad \blacksquare$
+        \end{proof}
+    \subsection{Demuestra que $100 | 3^{20} −1$}
+        De 21.2 sabemos que $3^{20} &\stackrel{25}{\equiv} 1 \wedge 3^{20} &\stackrel{4}{\equiv} 1$ \\
+        Como $(25;4) = 1$ entonces $3^{20} \stackrel{100}{\equiv} 1$ \\
+        $\therefore 100|3^{20}-1 \qquad \blacksquare$
+    \subsection{¿Cuáles son los dos últimos dígitos de $3^{400}$ en base $10$?}
+        Como de 21.3 sabemos que $3^{20} \stackrel{100}{\equiv} 1$ seguimos que: \\
+        \begin{align}
+            \notag \left(3^{20}\right)^{20} &\equiv 1^20 \\
+            \notag 3^{400} &\stackrel{100}{\equiv} 1 \\
+            \notag 3^{400}-1 &= 100x \\
+            \notag 3^400 &= 100x+1
+        \end{align}
+        $\therefore$ Los últimos dos digitos son $01$
+\end{document}
