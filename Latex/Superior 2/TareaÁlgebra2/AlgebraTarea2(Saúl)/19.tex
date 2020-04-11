@@ -1,0 +1,58 @@
+\section{\large La produccion diaria de huevos en una granja es inferior a 75. Cierto dia, el recolector informa que la cantidad de huevos recogida es tal que contados de tres en tres sobran dos huevos, contados de cinco en cinco sobran 4 y contados de siete en siete sobran 5}
+
+\begin{proof}
+    Nuestro sistema a resolver es:\\
+    \begin{align}
+        \notag x \stackrel{3}{\equiv} 2\\
+        \notag x \stackrel{5}{\equiv} 4\\
+        \notag x \stackrel{7}{\equiv} 5\\
+    \end{align}
+    Por lo que se puede resolver\\ \\
+    
+    Resolviendo:\\
+    \begin{align}
+        \notag x \stackrel{7}{\equiv} 5\\
+        \notag x \stackrel{5}{\equiv} 4\\
+    \end{align}
+    Llegamos a la ecuacion lineal: $7y\stackrel{5}{\equiv}4-5$\\
+Reduciendo: 7y=-1(mod 5)\\
+Pasandolo a su forma diofantina: 7y+5x=-\\
+Por algoritmo de euclides: \\
+5=7(0)  +5\\
+7=5(1)  +2\\
+5=2(2)  +1\\
+2=1(2)  +0\\
+(7,5)=1\\
+Expresandolo como una combinacion lineal:\\
+1=(5)(1)+(2)(-2)\\
+1=(5)(3)+(7)(-2)\\
+1=(5)(3)+(7)(-2)\\
+(y0', z0')=(3,-2)\\
+Y asi la solucion del sistema es (y0, z0)=(-3,2)\\
+Por lo que y0= -3\\
+De forma que y =-3+ (5/1)z\\
+y =-3+5z\\
+Entonces x =5+7(-3+5z)\\
+Pasandolo a congruencias: x=-16(mod35)\\
+Finalmente nuestro sistema de ecuaciones es:\\
+x = 2(mod3)\\
+x = -16(mod35)\\
+
+
+Resolviendo:\\ \ 
+x = -16(mod35)\\
+x = 2(mod3)\\
+Llegamos a la ecuacion lineal: 35y=2--16(mod 3)\\
+Reduciendo: 35y=18(mod 3)\\
+Pasandolo a su forma diofantina: 35y+3x=0\\
+Por lo que y0= 0\\
+De forma que y =0+ (3/1)z\\
+y =0+3z\\
+Entonces x =-16+35(0+3z)\\
+Pasandolo a congruencias: x=-16(mod105)\\
+Finalmente nuestro sistema de ecuaciones es:\\
+x = -16(mod105)\\
+x = 89(mod105)\\
+Por lo que no se puede realizar con esas condiciones, el capataz tiene razon
+
+\end{proof}

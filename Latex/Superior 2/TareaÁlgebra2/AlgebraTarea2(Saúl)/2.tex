@@ -1,0 +1,19 @@
+\section{Sean $p,a_1, ...,a_n \in \mathbb{Z} $ tales que $p $ es primo y $p | a_1...a_n $, entonces existe $i \in {1, ..,n} $ tal que $p | a_i $}
+    Sea $p $ un primo tal que $ p | a_1...a_n $ \\
+    Por inducción sobre $ n $:
+    \begin{proof}
+        Caso Base $ n = 0 $
+        \begin{align}
+            \tag{Es inmediato} p | a_1
+        \end{align}
+        Hipotesis de Inducción: Se cumple para $ a_n $ \\ 
+        Paso Inductivo: Sea $ p | a_1...a_n, \exists a_i$ tal que $ p|a_i $ 
+        \begin{align}
+            \notag Sea \; p|a_1...a_n \\
+            \notag pz &= a_1...a_n \\
+            \tag{Como $ g=z(a_{n+1}) \in \mathbb{Z} $} p(za_{n+1} &= a_1...a_{n+1} \\
+            \notag pg &= a_1...a_{n+1} \\ 
+            \notag \therefore p|a_1...a_n
+        \end{align}
+        Como se cumple el caso Base y se cumple el Paso Inductivo queda demostrada la inducción $\qquad \blacksquare$
+    \end{proof}

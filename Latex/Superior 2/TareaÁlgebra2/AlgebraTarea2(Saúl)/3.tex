@@ -1,0 +1,34 @@
+\section{Un entero $z > 1$ es compuesto si y sólo si existe $a \in \mathbb{Z}$ tal que $1 < a < z y a | z$}
+    \begin{proof}
+        $\rightarrow$ \\ \\
+        Sea $z > 1$ un número compuesto, por definición $\exists a \notin \{1,-1,z,-z\} \wedge a|p$ \\
+        Como $|a| > 0 \wdge a \neq 1$
+        \begin{align}
+            \notag |a| > 1
+        \end{align}
+        Como $a|z$ entonces $|a|$ divide a $z$ tal que $\exists k \in \mathbb{Z}$ tal que $z= |a|K$ \\
+        Como $z > 1 \wedge |a| > 1$ por cerradura de los positivos tenemos $k > 0$
+        \begin{align}
+            \notag \therefore k-1 &\geq 0 \\
+            \notag \therefore z &= |d|(k-1)+|a| \\
+            \tag{Como $z &= |d| > 1 \wedge k-1 \geq 0$} \therefore  |a|(k-1) &\in \mathbb{N} \\
+            \notag \therefore z &\geq |a|
+        \end{align}
+        Pero como $-z \neq a$, $z \neq -a$, $z \neq -a$, $z \neq a$ y $z \neq |a|$
+        \begin{align}
+            \notag z &> |a| > 1 \\
+            \notag \therefore |a|\; divide \; z \wedge z > |a| > 1
+        \end{align}
+        \\ $\leftarrow$ \\ \\
+        Sea $a \in \mathbb{Z}$ tal que $z>0>1 \wedge a|z$ \\
+        Como $z > a > 1$ \\
+        \begin{align}
+            \notag \a \neq z &\wdge a \neq 1 \\
+            \tag{Como $z > 1$} -z<1&<1<a \\
+            \notag \therefore a > -1 &\wedge a > -z \\
+            \notag \therefore a \neq 1 &\wedge a \neq -z \\
+            \notag \therefore a|z \wedge a \in \{1,-1,z,-z\} \in \mathbb{Z}
+        \end{align}
+        $\therefore$ z es compuesto \\
+        Se cumple la ida y el regreso, por lo tanto queda demostrado $\qquad \blacksquare$
+    \end{proof}
