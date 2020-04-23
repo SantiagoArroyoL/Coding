@@ -1,0 +1,7 @@
+PrePost.java
+
+El 17 se imprime dos veces porque al estar el operador "--" a la derecha de x la operación lógica de restarle uno a x se hace después de que el valor de se imprime el valor inicial de x. Por eso en la linea anterior, primero se hace la operación y luego se imprime x
+
+Operadores.java
+
+El primer resultado es obtenido por la división de un int sobre int, lo cual redondea el resultado. AL utilizar la variable Double en la segunda operación el decimal se queda exacto.

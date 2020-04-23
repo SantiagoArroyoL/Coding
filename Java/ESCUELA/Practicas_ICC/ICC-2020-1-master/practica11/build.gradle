@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'com.adarshr.test-logger' version '1.7.0'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.0-jre'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.1'
+    testImplementation 'com.google.truth:truth:1.0'
+    testImplementation 'com.google.truth.extensions:truth-java8-extension:1.0'
+}
+
+test {    
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}

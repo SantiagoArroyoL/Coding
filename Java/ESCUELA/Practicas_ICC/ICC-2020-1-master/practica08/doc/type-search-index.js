@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"geometria","l":"Circulo"},{"p":"geometria","l":"Punto"},{"p":"geometria","l":"Triangulo"}]

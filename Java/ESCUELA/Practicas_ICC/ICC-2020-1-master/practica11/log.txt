@@ -1,0 +1,106 @@
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test FAILED
+
+[0K[1malglin.PruebaMatriz[m
+
+[0K[1m  Test [22mtoString()[31m FAILED[31m
+
+  expected: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+  but was : ""
+      at alglin.PruebaMatriz.lambda$probarToString$0(PruebaMatriz.java:83)
+[m
+[0K[1m  Test [22mEliminar columna[31m FAILED[31m
+
+  java.lang.NegativeArraySizeException: -1
+      at alglin.PruebaMatriz.probarEliminarColumna(PruebaMatriz.java:152)
+[m
+[0K[1m  Test [22mSuma de matrices[31m FAILED[31m
+
+  expected: null
+  but was : ""
+      at alglin.PruebaMatriz.probarSuma(PruebaMatriz.java:102)
+[m
+[0K[1m  Test [22mConstructor[31m FAILED[31m
+
+  expected not to be: ""
+      at alglin.PruebaMatriz.probarConstructor(PruebaMatriz.java:60)
+[m
+[0K[1m  Test [22mObtener/asignar entrada[32m PASSED[m
+[0K[1m  Test [22mEliminar fila[31m FAILED[31m
+
+  java.lang.NegativeArraySizeException: -1
+      at alglin.PruebaMatriz.probarEliminarFila(PruebaMatriz.java:129)
+[m
+[0K[1m  Test [22mMultiplicación por escalar[31m FAILED[31m
+
+  java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+      at alglin.PruebaMatriz.probarEscalar(PruebaMatriz.java:119)
+[m
+[0K[1m  Test [22mDeterminante[31m FAILED[31m
+
+  java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
+      at alglin.PruebaMatriz.probarDeterminante(PruebaMatriz.java:187)
+[m
+
+[0K[1;31mFAILURE: [39mExecuted 8 tests in 795ms (7 failed)[m
+
+3 actionable tasks: 2 executed, 1 up-to-date
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test FAILED
+
+[0K[1malglin.PruebaMatriz[m
+
+[0K[1m  Test [22mtoString()[31m FAILED[31m
+
+  expected: 0.0 0.0 0.0 0.0
+  but was : ""
+      at alglin.PruebaMatriz.lambda$probarToString$0(PruebaMatriz.java:83)
+[m
+[0K[1m  Test [22mEliminar columna[31m FAILED[31m
+
+  java.lang.NegativeArraySizeException: -1
+      at alglin.PruebaMatriz.probarEliminarColumna(PruebaMatriz.java:152)
+[m
+[0K[1m  Test [22mSuma de matrices[31m FAILED[31m
+
+  expected: null
+  but was : ""
+      at alglin.PruebaMatriz.probarSuma(PruebaMatriz.java:102)
+[m
+[0K[1m  Test [22mConstructor[31m FAILED[31m
+
+  expected not to be: ""
+      at alglin.PruebaMatriz.probarConstructor(PruebaMatriz.java:60)
+[m
+[0K[1m  Test [22mObtener/asignar entrada[32m PASSED[m
+[0K[1m  Test [22mEliminar fila[31m FAILED[31m
+
+  java.lang.NegativeArraySizeException: -1
+      at alglin.PruebaMatriz.probarEliminarFila(PruebaMatriz.java:129)
+[m
+[0K[1m  Test [22mMultiplicación por escalar[31m FAILED[31m
+
+  java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+      at alglin.PruebaMatriz.probarEscalar(PruebaMatriz.java:119)
+[m
+[0K[1m  Test [22mDeterminante[31m FAILED[31m
+
+  java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
+      at alglin.PruebaMatriz.probarDeterminante(PruebaMatriz.java:187)
+[m
+
+[0K[1;31mFAILURE: [39mExecuted 8 tests in 774ms (7 failed)[m
+
+3 actionable tasks: 1 executed, 2 up-to-date
