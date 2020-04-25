@@ -7,12 +7,12 @@ public enum Svg {
 
     /** Inicia el XML versión 1 con encoding UTF_8 y además inicia la gráfica.
 	*    Notemos que los valores de 'width' y 'height' están por definirse */
-	INICIO("<?xml version=\'1.0\' encoding=\'UTF-8\' ?> \n<svg xmlns= \'http://www.w3.org/2000/svg\' xmlns:xlink ='http://www.w3.org/199/xlink' width='%d' height='%d'>\n \t<g>\n"),
+	INICIO("<?xml version=\'1.0\' encoding=\'UTF-8\' ?> \n<svg xmlns= \'http://www.w3.org/2000/svg\' xmlns:xlink ='http://www.w3.org/199/xlink' width='2000' height='2000'>\n \t<g>\n"),
 
 	/* Cerramos tanto la gráfica y el archivo XML */
 	CIERRA("\t</g>\n</svg>\n"),
 
-	POLYLINE("<polyline points=\"10,10 10,%d 45,%d 45,10\" style=\"fill:white;stroke:black;stroke-width:4\" />\n"),
+	POLYLINE("\t\t<polyline points=\"10,10 10,%d 45,%d 45,10\" style=\"fill:white;stroke:black;stroke-width:4\" />\n"),
 
 	/* Con este comando hacemos una rectangulo negro con interior blanco con valores por definirse*/
 	RECTANGULO("\t\t<rect x='%d' y='%d' width='%d' height='%d' stroke='black' fill='white'/>\n"),
@@ -23,11 +23,11 @@ public enum Svg {
 	/* Lo mismo que la línea anterior pero tamaño 12 */
 	TEXTOCHICO("\t\t<text font-family='sans-serif' font-size='12' x='%f' y='%f' ext-anchor='middle' fill='%s'>%s</text>\n"),
 
-	/* Dibujamos una doble fecha negra que conectará nuestros recángulos de lista */
-	CONECTOR_LISTA("\t\t<text fill='black' font-family='sans-serif' font-size='%d' x='%d' y='%d' text-anchor='middle'>%s</text>\n"),
+	/* Dibujamos una fecha negra que conectará nuestras estructuras lineales */
+	FLECHA("\t\t<text fill='black' font-family='sans-serif' font-size='%d' x='%d' y='%d' text-anchor='middle'>%s</text>\n"),
 
 	/* Creamos un circulo de color y valores por definir */
-	CIRCULO("\t\t<circle cx='%d' cy='%d' r='20' stroke='%s' fill='%s' />\n"),
+	CIRCULO("\t\t<circle cx='%d' cy='%d' r='20' stroke='black' fill='%s' />\n"),
 
 	/* Creamos una línea negra que unirá los circulos de los árboles */
 	LINEA("\t\t<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black'/>\n"),

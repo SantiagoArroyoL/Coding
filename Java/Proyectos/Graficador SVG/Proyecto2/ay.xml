@@ -1,15 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns= 'http://www.w3.org/2000/svg' xmlns:xlink ='http://www.w3.org/199/xlink' width='1000' height='200'>
+<svg xmlns= 'http://www.w3.org/2000/svg' xmlns:xlink ='http://www.w3.org/199/xlink' width='2000' height='2000'>
  	<g>
-		<circle cx='30' cy='30' r='20' stroke='red' fill='red' />
-		<text font-family='sans-serif' font-size='18' x='30' y='30' text-anchor='middle' fill='white'>2</text>
-		<circle cx='80' cy='60' r='20' stroke='red' fill='red' />
-		<text font-family='sans-serif' font-size='18' x='80' y='60' text-anchor='middle' fill='white'>1</text>
-		<circle cx='130' cy='60' r='20' stroke='red' fill='red' />
-		<text font-family='sans-serif' font-size='18' x='130' y='60' text-anchor='middle' fill='white'>4</text>
-		<circle cx='180' cy='60' r='20' stroke='red' fill='red' />
-		<text font-family='sans-serif' font-size='18' x='180' y='60' text-anchor='middle' fill='white'>3</text>
-		<circle cx='230' cy='60' r='20' stroke='red' fill='red' />
-		<text font-family='sans-serif' font-size='18' x='230' y='60' text-anchor='middle' fill='white'>5</text>
+		<line x1='0' y1='5' x2='350' y2='5' stroke='black'/>
+		<text font-family='sans-serif' font-size='18' x='25' y='25' text-anchor='middle' fill='black'>1</text>
+		<text font-family='sans-serif' font-size='18' x='85' y='25' text-anchor='middle' fill='black'>2</text>
+		<text font-family='sans-serif' font-size='18' x='145' y='25' text-anchor='middle' fill='black'>3</text>
+		<text font-family='sans-serif' font-size='18' x='205' y='25' text-anchor='middle' fill='black'>4</text>
+		<text font-family='sans-serif' font-size='18' x='265' y='25' text-anchor='middle' fill='black'>5</text>
+		<line x1='0' y1='30' x2='350' y2='30' stroke='black'/>
+		<text fill='black' font-family='sans-serif' font-size='10000' x='355' y='25' text-anchor='middle'>&#x2190;</text>
 	</g>
 </svg>

@@ -196,7 +196,7 @@ public class ArbolAVL<T extends Comparable<T>> extends ArbolBinarioOrdenado<T> {
                                                 "usuario.");
     }
 
-	/***************************************Funciones Auxiliares********************************************/
+	/***************************************FuncionesAuxiliares********************************************/
 
 	/**
 	 * Método auxiliar que nos regresa la altura de un vertice o -1 si este es nulo
@@ -209,7 +209,7 @@ public class ArbolAVL<T extends Comparable<T>> extends ArbolBinarioOrdenado<T> {
     }
 
 	/**
-	 * Calcula la altura del vertice que es el máximo de la diferencia de sus dos subarboles 
+	 * Calcula la altura del vertice que es el máximo de la diferencia de sus dos subarboles
 	 * @param vertice el vertice a evaluar
 	 * @return el valor entero de la altura calculada
 	 */

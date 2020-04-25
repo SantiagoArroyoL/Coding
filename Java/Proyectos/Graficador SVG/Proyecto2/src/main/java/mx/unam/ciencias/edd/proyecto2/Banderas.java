@@ -79,7 +79,6 @@ public class Banderas {
 		Lista<Integer> nuevaLista = new Lista<>();
 		for (int i = 1; i < elementos.length; i++) {
 			try {
-				// System.out.println(elementos[i]);
 				nuevaLista.agrega(Integer.parseInt(elementos[i]));
 			} catch (NumberFormatException e) {
 				System.out.println("Asegurate de escribir sólo números");
@@ -88,9 +87,4 @@ public class Banderas {
 		}
 		return nuevaLista;
 	}
-
-	// private boolean esEspacio(String str) {
-	// 	if (str.)
-	// }
-
 }//Cierre de la clase Banderas
