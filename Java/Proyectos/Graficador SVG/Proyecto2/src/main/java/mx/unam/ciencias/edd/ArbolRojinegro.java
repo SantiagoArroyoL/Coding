@@ -104,7 +104,9 @@ public class ArbolRojinegro<T extends Comparable<T>> extends ArbolBinarioOrdenad
      */
     public Color getColor(VerticeArbolBinario<T> vertice) {
         // Aquí va su código.
-		if (vertice.getClass() != this.raiz.getClass())
+		VerticeRojinegro temp = nuevoVertice(vertice.get());
+		/* Esto para que incluso un arbol vacío pueda usar el método */
+		if (vertice.getClass() != temp.getClass())
 			throw new ClassCastException("El vertice no es instancia de VerticeRojinegro!");
 		VerticeRojinegro v = (VerticeRojinegro) vertice;
 		return v.color;
@@ -298,7 +300,7 @@ public class ArbolRojinegro<T extends Comparable<T>> extends ArbolBinarioOrdenad
                                                 "por el usuario.");
     }
 
-	/***************************************Funciones Auxiliares********************************************/
+	/***************************************FuncionesAuxiliares********************************************/
 
 	/**
      * Método auxiliar que nos dice si el color del vértice es negro.

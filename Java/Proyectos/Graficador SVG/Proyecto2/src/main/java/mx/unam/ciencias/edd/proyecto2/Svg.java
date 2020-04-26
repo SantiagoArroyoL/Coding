@@ -7,12 +7,12 @@ public enum Svg {
 
     /** Inicia el XML versión 1 con encoding UTF_8 y además inicia la gráfica.
 	*    Notemos que los valores de 'width' y 'height' están por definirse */
-	INICIO("<?xml version=\'1.0\' encoding=\'UTF-8\' ?> \n<svg xmlns= \'http://www.w3.org/2000/svg\' xmlns:xlink ='http://www.w3.org/199/xlink' width='2000' height='2000'>\n \t<g>\n"),
+	INICIO("<?xml version=\'1.0\' encoding=\'UTF-8\' ?> \n<svg xmlns= \'http://www.w3.org/2000/svg\' xmlns:xlink ='http://www.w3.org/199/xlink' width='%d' height='%d'>\n \t<g>\n"),
 
 	/* Cerramos tanto la gráfica y el archivo XML */
 	CIERRA("\t</g>\n</svg>\n"),
 
-	POLYLINE("\t\t<polyline points=\"10,10 10,%d 45,%d 45,10\" style=\"fill:white;stroke:black;stroke-width:4\" />\n"),
+	POLYLINE("\t\t<polyline points=\"10,10 10,%d %d,%d %d,10\" style=\"fill:white;stroke:black;stroke-width:4\" />\n"),
 
 	/* Con este comando hacemos una rectangulo negro con interior blanco con valores por definirse*/
 	RECTANGULO("\t\t<rect x='%d' y='%d' width='%d' height='%d' stroke='black' fill='white'/>\n"),

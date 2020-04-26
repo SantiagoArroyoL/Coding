@@ -6,7 +6,6 @@ public class Graficador {
 
 	/* Cadena que define con qué clase estamos trabajando */
 	private String clase;
-	private VerticeArbolBinario<Integer> v;
 
 	/* Etiqueta para texto. */
 	private final String TEXTO = Svg.TEXTO.getLinea();
@@ -40,25 +39,21 @@ public class Graficador {
 	/**
 	 * @throws IllegalArgumentException si el elemento es <code>null</code> o ya
 	 */
-	public String graficaColeccion(Coleccion<Integer> listaFinal) {
+	public String graficaColeccion(Lista<Integer> listaFinal) {
 		switch (clase) {
-			case "Lista": {
-					return dibujaLista((Lista<Integer>)listaFinal);
-			} case "ArbolAVL": {
-				ArbolAVL<Integer> arbolAvl = new ArbolAVL<>(listaFinal);
-				return dibujaArbolBinario(arbolAvl);
-			} case "ArbolBinarioCompleto": {
-				ArbolBinarioCompleto<Integer> arbolCompleto = new ArbolBinarioCompleto<>(listaFinal);
-				return dibujaArbolBinario(arbolCompleto);
-			} case "ArbolBinarioOrdenado": {
-				ArbolBinarioOrdenado<Integer> arbolOrdenado = new ArbolBinarioOrdenado<>(listaFinal);
-				return dibujaArbolBinario(arbolOrdenado);
-			} case "ArbolRojinegro": {
-				ArbolRojinegro<Integer> arbolRojito = new ArbolRojinegro<>(listaFinal);
-				return dibujaArbolBinario(arbolRojito);
-			} case "Cola": {
+			case "Lista":
+					return dibujaLista(listaFinal);
+			case "ArbolAVL":
+				return dibujaArbolBinario(new ArbolAVL<>(listaFinal));
+			case "ArbolBinarioCompleto":
+				return dibujaArbolBinario(new ArbolBinarioCompleto<>(listaFinal));
+			case "ArbolBinarioOrdenado":
+				return dibujaArbolBinario(new ArbolBinarioOrdenado<>(listaFinal.reversa()));
+			case "ArbolRojinegro":
+				return dibujaArbolBinario(new ArbolRojinegro<>(listaFinal));
+			case "Cola": {
 				Cola<Integer> colaFinal = new Cola<>();
-				for (int i : listaFinal)
+				for (int i : listaFinal.reversa())
 					colaFinal.mete(i);
 				return dibujaMeteSaca(colaFinal);
 			} case "Pila": {
@@ -66,8 +61,32 @@ public class Graficador {
 				for (int i : listaFinal)
 					pilaFinal.mete(i);
 				return dibujaMeteSaca(pilaFinal);
+			} case "Grafica": {
+				System.out.println("ESTAS AQUI");
+				if (listaFinal.getElementos() % 2 != 0) {
+					System.err.println("Por favor introduce un número par de elementos");
+					System.exit(-1);
+				}
+				int temp = 0, i = 1;
+				Grafica<Integer> g = new Grafica<>();
+				for (int elemento : listaFinal) {
+					g.agrega(elemento);
+					if (i % 2 == 0)
+						g.conecta(temp, elemento);
+					i++;
+					temp = elemento;
+				}
+				return dibujaGrafica(g);
+			}case "MonticuloMinimo": {
+				int v = 0;
+				MonticuloMinimo<ValorIndexable<Integer>> monty = new MonticuloMinimo<>();
+				for (int i : listaFinal) {
+					monty.agrega(new ValorIndexable<Integer>(i,v));
+					v++;
+				}
+				return dibujaMonticulo(monty);
 			} default: {
-				System.out.println("La clase introducida no es válida");
+				System.err.println("La clase introducida no es válida");
 				System.exit(-1);
 			}
 		}//Cierre del switch
@@ -75,10 +94,10 @@ public class Graficador {
 	}
 
 	private String dibujaLista(Lista<Integer> listaFinal) {
-		String dibujo = INICIO;
 		int tamaño, i;
 		tamaño = 50*listaFinal.getLongitud() + 10*listaFinal.getLongitud()-1;
 		i = 1;
+		String dibujo = String.format(INICIO,tamaño+200,200);
 		/* Para cada elemento en el dibujo debemos crear el rectángulo
 		El indice i nos ayudará para saber en qué rectangulo vamos */
 		for (int elemento : listaFinal) {
@@ -94,37 +113,47 @@ public class Graficador {
 
 
 	public String dibujaMeteSaca(MeteSaca<Integer> instancia) {
-		String dibujo = INICIO;
+		int i = 0, x = 27;
+		int alturaTotal = 500, anchuraTotal = 0;
 		Lista<String> lineas = new Lista<String>();
-		int i = 0;
+		int anchura = 0;
 		if (clase.equals("Pila")) {
-			int alturaTotal;
 			while (!instancia.esVacia()) {
 				int elemento = instancia.saca();
-				lineas.agrega(String.format(TEXTO,27,(30*i)+35,"black",elemento));
+				if(String.valueOf(elemento).length() > anchuraTotal)
+					anchuraTotal = String.valueOf(elemento).length();
+				if (anchuraTotal > 3) {
+					anchura = anchuraTotal*13+13;
+					x = 30+anchuraTotal*3;
+				} else {
+					x = 27;
+					anchura = 45;
+				}
+				lineas.agrega(String.format(TEXTO,x,(30*i)+35,"black",elemento));
 				i++;
 			}
 			alturaTotal = 20*(i+1) + 10*i;
-			dibujo += String.format(POLYLINE,alturaTotal,alturaTotal);
+			String dibujo = String.format(INICIO,anchuraTotal*50,alturaTotal+30);
+			dibujo += String.format(POLYLINE,alturaTotal,anchura,alturaTotal,anchura);
 			for (String s : lineas)
 				dibujo += s;
 			dibujo += CIERRA;
 			return dibujo;
 		}
 		i = 1;
-		int anchuraTotal;
 		while (!instancia.esVacia()) {
 			int elemento = instancia.saca();
 			lineas.agrega(String.format(TEXTO,(60*i)+25,25,"black",elemento));
 			i++;
 		}
 		anchuraTotal = 50*i + 10*(i-1);
-		dibujo += String.format(FLECHA,30,55,25,"&#x2190;");
+		String dibujo = String.format(INICIO,anchuraTotal+50,alturaTotal);
+		dibujo += String.format(FLECHA,30,55,25,"&#x2192;");
 		dibujo += String.format(LINEA,60,5,anchuraTotal,5);
 		for (String s : lineas)
 			dibujo += s;
 		dibujo += String.format(LINEA,60,30,anchuraTotal,30);
-		dibujo += String.format(FLECHA,30,60*i-5,25,"&#x2190;");
+		dibujo += String.format(FLECHA,30,60*i-5,25,"&#x2192;");
 		dibujo += CIERRA;
 		return dibujo;
 	}
@@ -132,34 +161,49 @@ public class Graficador {
 
 	/**
 	* Dibuja un árbol binario de cualquier tipo.
+	* @param arbol El arbol a graficar
 	* @return el código SVG del árbol binario.
 	*/
 	public String dibujaArbolBinario(ArbolBinario<Integer> arbol) {
-		System.out.println(arbol);
-		Cola<VerticeArbolBinario<Integer>> colita = new Cola<>();
-		String dibujo = INICIO;
+		int y, a = arbol.altura();
+		String dibujo = String.format(INICIO,a*1000,a*125);
 		Lista<String> circulos = new Lista<String>();
-		v = arbol.raiz();
+		VerticeArbolBinario<Integer> v = arbol.raiz();
+		Lista<VerticeArbolBinario<Integer>> vertices = new Lista<>();
+		int[] padres = new int[arbol.getElementos()];
+		Cola<VerticeArbolBinario<Integer>> colita = new Cola<>();
+		int tempY = 100*v.profundidad()+30;
+		int x = 150*v.altura()+80;
+		if (clase.equals("ArbolBinarioOrdenado") && v.altura() > 6)
+		    x = 50*v.altura()+80;
+		int separacion = x+700;
 		colita.mete(v);
-		int x = 0,y = 0;
 		while (!colita.esVacia()) {
 			VerticeArbolBinario<Integer> temp = colita.saca();
-			if (cambiaAltura(temp)) {
-				v = temp;
-				x = 80*temp.altura()+60;
-			} else {
-				x += 160;
-			}
 			y = 100*temp.profundidad()+30;
-			if (temp.hayIzquierdo())
-				colita.mete(temp.izquierdo());
-			if (temp.hayDerecho())
-				colita.mete(temp.derecho());
-			if (temp.hayPadre())
-				if (esDerecho(temp))
-					dibujo += String.format(LINEA,x,y,x-80,y-100);
+			if (y != tempY)	{
+				separacion = separacion/2;
+				tempY = y;
+			}
+			if (temp.hayPadre()) {
+				int i = vertices.indiceDe(temp.padre());
+				if(esDerecho(temp))
+					x = padres[i]+separacion/2;
 				else
-					dibujo += String.format(LINEA,x,y,x+80,y-100);
+					x = padres[i]-separacion/2;
+			}
+			if (temp.hayIzquierdo()) {
+				colita.mete(temp.izquierdo());
+				dibujo += String.format(LINEA,x,y,x-(separacion/2)/2,y+100);
+			}
+			if (temp.hayDerecho()) {
+				colita.mete(temp.derecho());
+				dibujo += String.format(LINEA,x,y,x+(separacion/2)/2,y+100);
+			}
+			if (temp.hayDerecho() || temp.hayIzquierdo()){
+				vertices.agrega(temp);
+				padres[vertices.indiceDe(temp)] = x;
+			}
 			if (clase.equals("ArbolRojinegro"))
 				circulos.agrega(dibujaVerticeRojinegro(temp,x,y));
 			else
@@ -172,12 +216,6 @@ public class Graficador {
 		return dibujo;
 	}
 
-	private boolean cambiaAltura(VerticeArbolBinario<Integer> temp) {
-		if (!v.hayPadre())
-			return true;
-		return temp.padre() != v.padre();
-	}
-
 	private String dibujaVertice(VerticeArbolBinario<Integer> v, int x, int y) {
 		String dibujoAux = "";
 		String balance;
@@ -186,7 +224,12 @@ public class Graficador {
 		if (clase.equals("ArbolAVL")){
 			String[] temp = v.toString().split(" ");
 			balance = "[" + temp[1] + "]";
-			dibujoAux += String.format(TEXTO,x-35,y-15,"black",balance);
+			if (esDerecho(v))
+				dibujoAux += String.format(TEXTO,x+15,y-23,"black",balance);
+			else if (!v.hayPadre())
+				dibujoAux += String.format(TEXTO,x-35,y-15,"black",balance);
+			else
+				dibujoAux += String.format(TEXTO,x-15,y-23,"black",balance);
 		}
 		return dibujoAux;
 	}
@@ -194,7 +237,6 @@ public class Graficador {
 	private String dibujaVerticeRojinegro(VerticeArbolBinario<Integer> v, int x, int y) {
 		String color;
 		ArbolRojinegro<Integer> a = new ArbolRojinegro<>();
-		a.agrega(0);
 		if  (a.getColor(v) == Color.ROJO)
 			color = "red";
 		else
@@ -205,10 +247,6 @@ public class Graficador {
 		return dibujoAux;
 	}
 
-	private String dibujaGrafica(Grafica g) {
-		return "";
-	}
-
 	/**
 	 * Método que nos indica si el hijo es derecho
 	 * @param v El vertice a comparar
@@ -216,6 +254,8 @@ public class Graficador {
 	 */
 	private boolean esDerecho(VerticeArbolBinario<Integer> v) {
 		//Comparamos con == puesto que deben ser la misma referencia
+		if (!v.hayPadre())
+			return false;
 		VerticeArbolBinario<Integer> padre = v.padre();
 		if (padre.hayDerecho()) {
 			if (v.padre().derecho() == v)
@@ -226,5 +266,13 @@ public class Graficador {
 			return false;
 		}
     }
+
+	private String dibujaMonticulo(MonticuloMinimo<ValorIndexable<Integer>> monty) {
+		return "";
+	}
+
+	private String dibujaGrafica(Grafica<Integer> g) {
+		return g.toString();
+	}
 
 }

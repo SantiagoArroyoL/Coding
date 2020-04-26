@@ -50,7 +50,7 @@ public class Proyecto2 {
 					identificador = temp;
 				}
 			} catch (IOException io) {
-				System.out.println("Hubo un error al intentar leer lo que escribiste");
+				System.err.println("Hubo un error al intentar leer lo que escribiste");
 				System.exit(-1);
 			}
 		}
@@ -63,7 +63,7 @@ public class Proyecto2 {
 			/* Aquí comienza la magia de graficar el SVG */
 			Lista<Integer> listaFinal = bandera.interpretaElementos(cadena);
 			if (listaFinal.esVacia()) {
-				System.out.println("Por favor introduce una estructura no vacía");
+				System.err.println("Por favor introduce una estructura no vacía");
 			} else {
 				String dibujo = graficador.graficaColeccion(listaFinal);
 				System.out.println(dibujo);
