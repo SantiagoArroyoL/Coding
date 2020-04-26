@@ -81,7 +81,7 @@ public class Banderas {
 			try {
 				nuevaLista.agrega(Integer.parseInt(elementos[i]));
 			} catch (NumberFormatException e) {
-				System.out.println("Asegurate de escribir sólo números");
+				System.err.println("Asegurate de escribir sólo números");
 				System.exit(-1);
 			}
 		}

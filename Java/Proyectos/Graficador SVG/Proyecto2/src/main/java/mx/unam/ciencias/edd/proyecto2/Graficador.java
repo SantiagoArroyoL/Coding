@@ -1,6 +1,7 @@
 package mx.unam.ciencias.edd.proyecto2;
 
 import mx.unam.ciencias.edd.*;
+import java.lang.Math;
 
 public class Graficador {
 
@@ -11,13 +12,15 @@ public class Graficador {
 	private final String TEXTO = Svg.TEXTO.getLinea();
 	/* Etiqueta para línea. */
 	private final String LINEA = Svg.LINEA.getLinea();
+	/* Etiqueta para línea con valores double */
+	private final String LINEA_G = Svg.LINEA_G.getLinea();
 	/* Abre etiqueta svg. y gráfica */
 	private final String INICIO = Svg.INICIO.getLinea();
 	/* Cierra etiqueta g. */
 	private final String CIERRA = Svg.CIERRA.getLinea();
 	/* Etiqueta para conectar las estructuras lineales. */
 	private final String FLECHA = Svg.FLECHA.getLinea();
-	/* Etiqueta para círculo de gráfica y árboles */
+	/* Etiqueta para círculo de árboles y gráficas */
 	private final String CIRCULO = Svg.CIRCULO.getLinea();
 	/* Linea rvitraria para Pilas */
 	private final String POLYLINE = Svg.POLYLINE.getLinea();
@@ -41,28 +44,23 @@ public class Graficador {
 	 */
 	public String graficaColeccion(Lista<Integer> listaFinal) {
 		switch (clase) {
+			case "Arreglos":
+				return dibujaArreglo(listaFinal);
 			case "Lista":
-					return dibujaLista(listaFinal);
+				return dibujaLista(listaFinal);
 			case "ArbolAVL":
 				return dibujaArbolBinario(new ArbolAVL<>(listaFinal));
 			case "ArbolBinarioCompleto":
 				return dibujaArbolBinario(new ArbolBinarioCompleto<>(listaFinal));
 			case "ArbolBinarioOrdenado":
-				return dibujaArbolBinario(new ArbolBinarioOrdenado<>(listaFinal.reversa()));
+				return dibujaArbolBinario(new ArbolBinarioOrdenado<>(listaFinal));
 			case "ArbolRojinegro":
 				return dibujaArbolBinario(new ArbolRojinegro<>(listaFinal));
-			case "Cola": {
-				Cola<Integer> colaFinal = new Cola<>();
-				for (int i : listaFinal.reversa())
-					colaFinal.mete(i);
-				return dibujaMeteSaca(colaFinal);
-			} case "Pila": {
-				Pila<Integer> pilaFinal = new Pila<>();
-				for (int i : listaFinal)
-					pilaFinal.mete(i);
-				return dibujaMeteSaca(pilaFinal);
-			} case "Grafica": {
-				System.out.println("ESTAS AQUI");
+			case "Cola":
+				return dibujaMeteSaca(listaFinal);
+			case "Pila":
+				return dibujaMeteSaca(listaFinal);
+			case "Grafica": {
 				if (listaFinal.getElementos() % 2 != 0) {
 					System.err.println("Por favor introduce un número par de elementos");
 					System.exit(-1);
@@ -70,8 +68,15 @@ public class Graficador {
 				int temp = 0, i = 1;
 				Grafica<Integer> g = new Grafica<>();
 				for (int elemento : listaFinal) {
-					g.agrega(elemento);
-					if (i % 2 == 0)
+					try {
+						g.agrega(elemento);
+					} catch (IllegalArgumentException iae) {
+						/* No hacemos nada. Aumentaría la commplejidad si antes de agregar nos
+						 * seguramos que no contenga al vértice 2 veces porque habría que recorrer
+						 * la lista de vértices. Este error se dispara en los casos cuando el vértice
+						 * está sólo o cuando se agrega un nuevo arista al mismo vértice */
+					}
+					if (i % 2 == 0 && temp != elemento)
 						g.conecta(temp, elemento);
 					i++;
 					temp = elemento;
@@ -93,13 +98,29 @@ public class Graficador {
 		return "";
 	}
 
-	private String dibujaLista(Lista<Integer> listaFinal) {
+	private String dibujaArreglo(Lista<Integer> listaFinal) {
 		int tamaño, i;
 		tamaño = 50*listaFinal.getLongitud() + 10*listaFinal.getLongitud()-1;
-		i = 1;
 		String dibujo = String.format(INICIO,tamaño+200,200);
 		/* Para cada elemento en el dibujo debemos crear el rectángulo
 		El indice i nos ayudará para saber en qué rectangulo vamos */
+		i = 1;
+		for (int elemento : listaFinal) {
+			dibujo += String.format(RECTANGULO,60*i,10,60,20);
+			dibujo += String.format(TEXTO,60*i+30,26,"black",elemento);
+			i++;
+		}
+		dibujo += CIERRA;
+		return dibujo;
+	}
+
+	private String dibujaLista(Lista<Integer> listaFinal) {
+		int tamaño, i;
+		tamaño = 50*listaFinal.getLongitud() + 10*listaFinal.getLongitud()-1;
+		String dibujo = String.format(INICIO,tamaño+200,200);
+		/* Para cada elemento en el dibujo debemos crear el rectángulo
+		El indice i nos ayudará para saber en qué rectangulo vamos */
+		i = 1;
 		for (int elemento : listaFinal) {
 			dibujo += String.format(RECTANGULO,60*i,10,50,20);
 			if (i+1 < listaFinal.getLongitud()+1)
@@ -112,14 +133,17 @@ public class Graficador {
 	}
 
 
-	public String dibujaMeteSaca(MeteSaca<Integer> instancia) {
+	public String dibujaMeteSaca(Lista<Integer> listaFinal) {
+		Pila<Integer> pilaFinal = new Pila<>();
+		for (int i : listaFinal)
+			pilaFinal.mete(i);
 		int i = 0, x = 27;
 		int alturaTotal = 500, anchuraTotal = 0;
 		Lista<String> lineas = new Lista<String>();
 		int anchura = 0;
 		if (clase.equals("Pila")) {
-			while (!instancia.esVacia()) {
-				int elemento = instancia.saca();
+			while (!pilaFinal.esVacia()) {
+				int elemento = pilaFinal.saca();
 				if(String.valueOf(elemento).length() > anchuraTotal)
 					anchuraTotal = String.valueOf(elemento).length();
 				if (anchuraTotal > 3) {
@@ -141,8 +165,8 @@ public class Graficador {
 			return dibujo;
 		}
 		i = 1;
-		while (!instancia.esVacia()) {
-			int elemento = instancia.saca();
+		while (!pilaFinal.esVacia()) {
+			int elemento = pilaFinal.saca();
 			lineas.agrega(String.format(TEXTO,(60*i)+25,25,"black",elemento));
 			i++;
 		}
@@ -217,9 +241,8 @@ public class Graficador {
 	}
 
 	private String dibujaVertice(VerticeArbolBinario<Integer> v, int x, int y) {
-		String dibujoAux = "";
 		String balance;
-		dibujoAux += String.format(CIRCULO,x,y,"white");
+		String dibujoAux = String.format(CIRCULO,x,y,"white");
 		dibujoAux += String.format(TEXTO,x,y+5,"black",v.get());
 		if (clase.equals("ArbolAVL")){
 			String[] temp = v.toString().split(" ");
@@ -231,6 +254,12 @@ public class Graficador {
 			else
 				dibujoAux += String.format(TEXTO,x-15,y-23,"black",balance);
 		}
+		return dibujoAux;
+	}
+
+	private String dibujaVertice(VerticeGrafica<Integer> v, int x, int y) {
+		String dibujoAux = String.format(CIRCULO,x,y,"white");
+		dibujoAux += String.format(TEXTO,x,y+5,"black",v.get());
 		return dibujoAux;
 	}
 
@@ -267,12 +296,64 @@ public class Graficador {
 		}
     }
 
+	private String dibujaGrafica(Grafica<Integer> g) {
+		final double angulo = 360 / g.getElementos();
+    	final int radio = 40 * g.getElementos();
+    	final int centro = radio + 25;
+		final Lista<Integer> lista = new Lista<>();
+		final Lista<String> lineas = new Lista<>();
+		final int tamaño = g.getElementos()*250;
+		final double[] ang = {angulo};
+		for (int i : g)
+			lista.agrega(i);
+		g.paraCadaVertice((v) -> {
+
+			int x = calculaCoordenadaX(ang[0],radio);
+			int y = calculaCoordenadaY(ang[0],radio);
+
+			/* Verifica los vecinos de v. */
+			for(VerticeGrafica<Integer> vecino : v.vecinos()){
+				if(vecino.getColor() != Color.ROJO){
+					int i = lista.indiceDe(vecino.get());
+					int auxX = calculaCoordenadaX((i+1)*angulo,radio);
+					int auxY = calculaCoordenadaY((i+1)*angulo,radio);
+					/* Conecta las cordenadas del vertice v con las del vecino.*/
+					lineas.agrega(String.format(LINEA,centro+x,centro-y,centro+auxX, centro-auxY));
+				}
+			}
+			lineas.agrega(dibujaVertice(v,centro+x,centro-y));
+			double auxAng = ang[0];
+			auxAng += angulo;
+			ang[0] = auxAng;
+			g.setColor(v,Color.ROJO);
+		});
+		String dibujo = String.format(INICIO,tamaño,tamaño);
+		for (String str : lineas) {
+			dibujo += str;
+		}
+		dibujo += CIERRA;
+		return dibujo;
+	}
+
+	/**
+    * Método auxiliar que calcula las coordenadas de los vértices basándose en
+    * el ángulo que reciba. Se necesita mover en el eje X usando coseno.
+    * @return la coordenada X.
+	*/
+	private int calculaCoordenadaX(double angulo, int radio){
+		return (int) Math.floor(Math.cos(Math.toRadians(angulo)) * radio) ;
+	}
+
+	/**
+	* Método auxiliar que calcula las coordenadas de los vértices basándose en
+	* el ángulo que reciba. Se necesita mover en el eje Y usando seno.
+	* @return la coordenada Y.
+	*/
+	private int calculaCoordenadaY(double angulo, int radio){
+		return (int) Math.floor(Math.sin(Math.toRadians(angulo)) * radio);
+	}
+
 	private String dibujaMonticulo(MonticuloMinimo<ValorIndexable<Integer>> monty) {
 		return "";
 	}
-
-	private String dibujaGrafica(Grafica<Integer> g) {
-		return g.toString();
-	}
-
 }

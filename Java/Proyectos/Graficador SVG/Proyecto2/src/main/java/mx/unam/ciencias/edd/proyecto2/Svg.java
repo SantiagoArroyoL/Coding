@@ -32,6 +32,9 @@ public enum Svg {
 	/* Creamos una línea negra que unirá los circulos de los árboles */
 	LINEA("\t\t<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black'/>\n"),
 
+	/* Creamos una línea negra que unirá los circulos de las gráficas */
+	LINEA_G("\t\t<line x1='%f' y1='%f' x2='%f' y2='%f' stroke='black'/>\n"),
+
 	/* Lo mismo que la línea anterior pero de mayor tamaño */
 	LINEAGRANDE("\t\t<line x1='%f' y1='%f' x2='%f' y2='%f'"+ " stroke='black' stroke-width='1'/>\n");
 

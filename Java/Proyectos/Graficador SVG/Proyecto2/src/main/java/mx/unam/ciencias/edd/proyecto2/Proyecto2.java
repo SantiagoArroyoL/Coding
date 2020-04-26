@@ -50,24 +50,20 @@ public class Proyecto2 {
 					identificador = temp;
 				}
 			} catch (IOException io) {
-				System.err.println("Hubo un error al intentar leer lo que escribiste");
+				System.out.println("Hubo un error al intentar leer lo que escribiste");
 				System.exit(-1);
 			}
 		}
 
-		/* Creamos una grafica que, valga la redundancia, graficará la clase que reciba */
+		/* Creamos un graficador que, valga la redundancia, graficará la clase que reciba */
 		Graficador graficador = new Graficador(identificador);
-		if (identificador.equals("Grafica")) {
-
+		/* Aquí comienza la magia de graficar el SVG */
+		Lista<Integer> listaFinal = bandera.interpretaElementos(cadena);
+		if (listaFinal.esVacia()) {
+			System.err.println("Por favor introduce una estructura no vacía");
 		} else {
-			/* Aquí comienza la magia de graficar el SVG */
-			Lista<Integer> listaFinal = bandera.interpretaElementos(cadena);
-			if (listaFinal.esVacia()) {
-				System.err.println("Por favor introduce una estructura no vacía");
-			} else {
-				String dibujo = graficador.graficaColeccion(listaFinal);
-				System.out.println(dibujo);
-			}
+			String dibujo = graficador.graficaColeccion(listaFinal);
+			System.out.println(dibujo);
 		}
 	}//Cierre del método main
 }//Cierre de la clase Proyecto1
