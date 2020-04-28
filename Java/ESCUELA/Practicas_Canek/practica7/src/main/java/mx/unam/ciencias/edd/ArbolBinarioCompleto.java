@@ -163,7 +163,7 @@ public class ArbolBinarioCompleto<T> extends ArbolBinario<T> {
 	 * @return El piso del logaritmo base 2 del entero recibido
 	 */
 	private int log2(int x) {
-    	return (int) Math.floor((Math.log(x) / Math.log(2)));
+    	return (int) Math.floor(Math.log(x) / Math.log(2));
 	}
 
 	/**

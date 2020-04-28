@@ -4,9 +4,10 @@ import mx.unam.ciencias.edd.Lista;
 
 /**
  * Clase encargada de manejar las banderas contenidas en el arreglo de entrada
+ *
  * @author Arroyo Lozano Santiago
  * @version 1.0
- * @since 25/03/2020.
+ * @since 11/04/2020 - 28/04/2020.
  */
 public class Banderas {
 
@@ -18,17 +19,6 @@ public class Banderas {
 	 */
 	public String getIdentificador() {
 		return identificador;
-	}
-
-	public boolean esIdentificador(String temp) {
-		if (temp == null ^ identificador.equals(temp))
-	        return false;
-	    try {
-	        int d = Integer.parseInt(temp);
-	    } catch (NumberFormatException nfe) {
-	        return true;
-	    }
-	    return false;
 	}
 
 	/**
@@ -58,33 +48,44 @@ public class Banderas {
 	}
 
 	/**
-	 * Método que elimina las banderas e identificador si es que existen del arreglo
-	 * @param args El arreglo a manipular
-	 * @return Una lista que contiene los mismos elementos del arreglo original menos las Banderas
+	 * Método auxiliar que revisa si hay almohadillas en la línea que estamos revisando
+	 * @param str Cadena a revisar
+	 * @return true si contiene una almohadilla - false en caso contrario
 	 */
-	public Lista<String> eliminaAlmohadillas(String[] args) {
-		Lista<String> lista = new Lista<>();
-		for (String str : args)
-		if (!str.contains("#"))
-			lista.agrega(str);
-		return lista;
-	}
-
 	public boolean contieneAlmohadillas(String str) {
 		return str.contains("#");
 	}
 
-	public Lista<Integer> interpretaElementos(String cadena) {
+	/**
+	 * Método que transforma una cadena en una lista con elementos para la estructura
+	 * @param cadena La cadena a diseccionar
+	 * @return Una nueva lista de enteros pertenecientes a una estructura de datos a graficar
+	 */
+	public Lista<Integer> interpretaElementos(String cadena, boolean esEstandar) {
 		String[] elementos = cadena.split(" ");
 		Lista<Integer> nuevaLista = new Lista<>();
 		for (int i = 1; i < elementos.length; i++) {
 			try {
 				nuevaLista.agrega(Integer.parseInt(elementos[i]));
 			} catch (NumberFormatException e) {
-				System.err.println("Asegurate de escribir sólo números");
-				System.exit(-1);
+				/* Si se lanza esta excepción es porque o leímos una letra o un espacio en blanco
+				 * Si es una letra mandamos error, puesto que en ninguna de las dos entrdas debe haber letras */
+				if (!esEstandar || (!nuevaLista.esVacia() && !isBlank(elementos[i]))) {
+					System.err.println("Por favor introduce sólo números");
+					System.exit(-1);
+				}
 			}
 		}
 		return nuevaLista;
 	}
+	/**
+	 * Método que busca simular al método isBLank() de Java 11
+	 * Este método nos dice si una cadena sólo tiene espacios o tabulaciones
+	 * @param str La cadena a evaluar
+	 * @return true si sólo tiene espacios - false en caso contrario
+	 */
+	private boolean isBlank(String str) {
+    	return str == null || str.trim().isEmpty();
+	}
+
 }//Cierre de la clase Banderas
