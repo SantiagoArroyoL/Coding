@@ -351,6 +351,11 @@ public class Graficador {
 	 * @return El código XML para dibujar el SVG de la gráfica.
 	 */
 	private String dibujaGrafica(Lista<Integer> listaFinal) {
+		/* Revisamos que la lista tenga número par de elementos*/
+		if (listaFinal.getElementos() % 2 != 0) {
+			System.err.println("Por favor introduce un número par de elementos");
+			System.exit(-1);
+		}
 		/* Creamos la gráfica. */
 		int contador = 1, temp = 0;
 		Grafica<Integer> g = new Grafica<>();

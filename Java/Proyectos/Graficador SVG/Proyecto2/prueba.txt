@@ -1,5 +1,5 @@
 # Clase:
-        ArbolRojinegro
+        Grafica
     # Elementos:
     1 2 3 4
 # Más elementos
@@ -7,4 +7,4 @@
                         # Todavía MÁS elementos
                         9 10 11 12
     # Los últimos elementos
-    13 14 5
+    13 14

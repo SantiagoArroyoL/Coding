@@ -11,31 +11,6 @@ import mx.unam.ciencias.edd.Lista;
  */
 public class Banderas {
 
-	private String identificador = "";
-
-	/**
-	 * Método que regresa el identificador
-	 * @return String que contiene el valor del identificador
-	 */
-	public String getIdentificador() {
-		return identificador;
-	}
-
-	/**
-	 * Método Auxiliar que identifica con qué clase estamos trabajando
-	 * Notemos que si hay un # ignoramos esa línea
-	 * Sabemos que la primera entrada sin # del arreglo debe ser el nombre de la clase
-	 * Por lo tanto a la primera linea sin # que encontremos terminamos
-	 * @param args El arreglo a recorrer
-	 */
-	public void identifica(String[] args) {
-		for (int i = 0; i < args.length; i++)
-			if (!contieneAlmohadillas(args[i])) {
-				identificador = args[i];
-				return;
-			}
-	}
-
 	/**
 	 * Método que revisa si el arreglo recibido va a ser de la forma estándar o no
      * @param args el arreglo a revisar
@@ -61,16 +36,17 @@ public class Banderas {
 	 * @param cadena La cadena a diseccionar
 	 * @return Una nueva lista de enteros pertenecientes a una estructura de datos a graficar
 	 */
-	public Lista<Integer> interpretaElementos(String cadena, boolean esEstandar) {
+	public Lista<Integer> interpretaElementos(String cadena, String identificador) {
 		String[] elementos = cadena.split(" ");
 		Lista<Integer> nuevaLista = new Lista<>();
 		for (int i = 1; i < elementos.length; i++) {
 			try {
+				// System.out.println("INDICE["+i+"] "+ elementos[i]);
 				nuevaLista.agrega(Integer.parseInt(elementos[i]));
 			} catch (NumberFormatException e) {
 				/* Si se lanza esta excepción es porque o leímos una letra o un espacio en blanco
 				 * Si es una letra mandamos error, puesto que en ninguna de las dos entrdas debe haber letras */
-				if (!esEstandar || (!nuevaLista.esVacia() && !isBlank(elementos[i]))) {
+				if (!isBlank(elementos[i]) && !identificador.equals(elementos[i])) {
 					System.err.println("Por favor introduce sólo números");
 					System.exit(-1);
 				}
@@ -78,13 +54,14 @@ public class Banderas {
 		}
 		return nuevaLista;
 	}
+	
 	/**
 	 * Método que busca simular al método isBLank() de Java 11
 	 * Este método nos dice si una cadena sólo tiene espacios o tabulaciones
 	 * @param str La cadena a evaluar
 	 * @return true si sólo tiene espacios - false en caso contrario
 	 */
-	private boolean isBlank(String str) {
+	public boolean isBlank(String str) {
     	return str == null || str.trim().isEmpty();
 	}
 
