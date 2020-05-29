@@ -205,19 +205,23 @@ public class Graficador {
 	* @return El código XML para dibujar el SVG de el arbol binario.
 	*/
 	public String dibujaArbolBinario(ArbolBinario<Integer> arbol) {
+		String dibujo;
 		MeteSaca<VerticeArbolBinario<Integer>> instancia;
 		if (clase.equals("ArbolBinarioOrdenado"))
 			instancia = new Pila<>();
 		else
 			instancia = new Cola<>();
 		int y, a = arbol.altura();
-		String dibujo = String.format(INICIO,a*550,a*126,clase);
 		Lista<String> circulos = new Lista<String>();
 		VerticeArbolBinario<Integer> v = arbol.raiz();
 		Lista<VerticeArbolBinario<Integer>> vertices = new Lista<>();
 		int[] padres = new int[arbol.getElementos()];
 		int tempY = 100*v.profundidad()+30;
 		int x = 150*v.altura()+250;
+		if (arbol.getElementos() <= 3)
+			dibujo = String.format(INICIO,750,550,clase);
+		else
+			dibujo = String.format(INICIO,a*550,a*126,clase);
 		/* Los arbolesBinariosOrdenados en general son más altos */
 		if (clase.equals("ArbolBinarioOrdenado") && v.altura() > 6)
 		    x = 50*v.altura()+80;
@@ -457,6 +461,7 @@ public class Graficador {
 	 * @return El código XML para dibujar el SVG de el montículo
 	 */
 	private String dibujaMonticulo(Lista<Integer> listaFinal) {
+		String dibujo;
 		MonticuloMinimo<ValorIndexable<Integer>> monty = new MonticuloMinimo<>();
 		Cola<ValorIndexable<Integer>> colita = new Cola<>();
 		Lista<ValorIndexable<Integer>> vertices = new Lista<>();
@@ -467,7 +472,10 @@ public class Graficador {
 		int x = 150*altura+250;
 		int separacion = x+700;
 		Lista<String> circulos = new Lista<>();
-		String dibujo = String.format(INICIO,elementos*200,elementos*100,clase);
+		if (monty.getElementos() <= 3)
+			dibujo = String.format(INICIO,750,600,clase);
+		else
+			dibujo = String.format(INICIO,elementos*200,elementos*100,clase);
 		/* Construimos el montículo */
 		for (int i : listaFinal) {
 			if (tempEntero == i) {
