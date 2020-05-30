@@ -1,0 +1,3 @@
+Hola me llamo Santiago y soy un programador muy cool.
+
+NANIIIIIIIIIIIIIIIIIII debe ser el arista entre ambos archivos, al borrar esta no hay arista

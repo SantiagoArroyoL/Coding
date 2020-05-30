@@ -1,0 +1,45 @@
+.bar {
+	fill: #ffffff;
+	height: 21px;
+	transition: fill .3s ease;
+	cursor: pointer;
+	font-family: Helvetica, sans-serif;
+
+	text {
+		fill: #555;
+	}
+}
+
+.chart:hover,
+.chart:focus {
+	.bar {
+		fill: #aaa;
+	}
+}
+
+.bar:hover,
+.bar:focus {
+	fill: blue !important;
+
+	text {
+		fill: blue;
+	}
+}
+
+figcaption {
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 20px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	padding: 4rem;
+	background: #bbb;
+	text-align: center;
+}
+
+#pie {
+	height: 500px;
+	width: 500px;
+}
