@@ -3,13 +3,15 @@ package mx.unam.ciencias.edd.proyecto3;
 import java.text.Collator;
 
 /**
+ * Proyecto 3: Contador de textos
+ *
  * Clase encargada de simular el compartamiento de cada renglon recibido.
  * La clase tiene un atributo String cadena que es el valor en cadena de dicho renglon.
  * Sobreescribimos el método compareTo para poder comparar con los parámetros que queremos
  *
  * @author Arroyo Lozano Santiago
  * @version 2.0
- * @since 23/05/2020
+ * @since 23/05/2020 - 12/06/2020
  */
 public class Renglon implements Comparable<Renglon> {
 

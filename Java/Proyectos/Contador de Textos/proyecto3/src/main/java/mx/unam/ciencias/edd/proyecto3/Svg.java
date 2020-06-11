@@ -1,8 +1,8 @@
 package mx.unam.ciencias.edd.proyecto3;
 
 /**
- * Proyecto 2: Graficador SVG
-
+ * Proyecto 3: Contador de textos
+ *
  * Enum que contiene el código XML necesario para dibujar ciertas figuras tales como circulos y rectángulos
  * además de contener la metadata necesaria para crear un archivo XML.
  * El enum cuenta con un constructor, ya que cada enum recibe una cadena.
@@ -11,7 +11,7 @@ package mx.unam.ciencias.edd.proyecto3;
  *
  * @author Arroyo Lozano Santiago
  * @version 2.0
- * @since 23/05/2020
+ * @since 23/05/2020 - 12/06/2020
  */
 public enum Svg {
 
@@ -84,7 +84,7 @@ public enum Svg {
 	INDEX("\t\t<li><a href=\"%s\">Archivo %d</a></li>\n"),
 
 	/* Iniciamos el svg de la grafica de barras */
-	INICIO_BARRA("\t<svg class=\"chart\" width=\"%d\" height=\"%d\" aria-labelledby=\"title desc\" role=\"img\">\n"),
+	INICIO_BARRA("\t<svg class=\"chart\" width=\"1500\" height=\"200\" aria-labelledby=\"title desc\" role=\"img\">\n"),
 
 	/* Titulo de la grafica de Barras */
 	TITULO("\t\t<title id=\"title\">Grafica de barras</title>\n"),
@@ -100,6 +100,12 @@ public enum Svg {
 
 	/* La barra indiviual */
 	BARRA("\t\t\t<rect width=\"%d\" height=\"39\" y=\"%d\"></rect>\n"),
+
+	/* La etiqueta que genera la grafca de pastel */
+	PASTEL_INICIO("\t\t<circle r=\"25%%\" cx=\"50%%\" cy=\"50%%\" style=\"stroke-dasharray: %2f 100\"></circle>\n"),
+
+	/* Cada gajo de la gráfica de pastel */
+	PASTEL("\t\t<circle r=\"25%%\" cx=\"50%%\" cy=\"50%%\" style=\"stroke-dasharray: %2f 100; stroke: %s; stroke-dashoffset: %2f;\"></circle>\n"),
 
 	/* El texto que indica los valores de la barra */
 	TEXTO_BARRA("\t\t\t<text x=\"%d\" y=\"%d\" dy=\".35em\">%s</text>\n");

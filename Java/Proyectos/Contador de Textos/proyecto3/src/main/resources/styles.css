@@ -39,7 +39,21 @@ body {
 	text-align: center;
 }
 
-#pie {
-	height: 500px;
-	width: 500px;
+.pie {
+  width: 300px;
+  background: #f06;
+  border-radius: 50%;
+}
+
+.pie circle {
+  fill: none;
+  stroke: gold;
+  stroke-width: 32;
+  animation: rotate 1.5s ease-in;
+}
+
+@keyframes rotate {
+  to {
+    x
+  }
 }

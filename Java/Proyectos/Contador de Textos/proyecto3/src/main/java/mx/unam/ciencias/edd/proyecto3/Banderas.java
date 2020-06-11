@@ -5,11 +5,13 @@ import mx.unam.ciencias.edd.Diccionario;
 
 /** Proyecto 3: Ordenador de textos
 
-* Esta clase es la encargada de revisar el arreglo args y hacer la mayor parte del conteo
+* Esta clase es la encargada de revisar el arreglo args para identificar el directorio de salida y además crear
+* el diccionario que llevará las cuentas de cada palabra, donde la llave es la cadena y el valor será el entero que
+* marca las veces que la palabra se repite en el archivo
 *
 * @author Arroyo Lozano Santiago
 * @version 2.0
-* @since 23/05/2020
+* @since 23/05/2020 - 12/06/2020
 */
 public class Banderas {
 
@@ -29,7 +31,13 @@ public class Banderas {
 	public String[] interpreta(String[] args) {
 		try {
 			int i, j;
-			String[] temp = new String[args.length-2];
+			String[] temp = new String[2];
+			try {
+				temp = new String[args.length-2];
+			} catch(NegativeArraySizeException e) {
+				System.err.println("Por favor introduce un directorio");
+				System.exit(-1);
+			}
 			for (j = i = 0; i < args.length; i++)
 				if(args[i].equals("-o")) {
 					directorio = args[++i];
@@ -62,8 +70,13 @@ public class Banderas {
 			   		palabras[j]="0";   //Reemplazamos palabras reptidas por cero
 			   	}
 		   	}
-		   	if (palabras[i] != "0")
+			if (conteo.contiene(palabras[i])) {
+				int c = conteo.get(palabras[i]);
+				conteo.elimina(palabras[i]);
+				conteo.agrega(palabras[i],(repeticiones+c));
+			} else if (palabras[i] != "0") {
 			   	conteo.agrega(palabras[i],repeticiones); //Añadimos la palabra y su contador
+			}
 		   	repeticiones  = 1;
 		}
 	}
@@ -84,8 +97,12 @@ public class Banderas {
 		return directorio;
 	}
 
+	/**
+	 * Método que nos regresa la hoja de estilos, no importa donde esté
+	 * @return El inputstream listo para er leído para escribirse
+	 */
 	public InputStream getRecurso() {
-		return getClass().getResourceAsStream("styles.css");
+		return getClass().getClassLoader().getResourceAsStream("styles.css");
 	}
 
 }//Cierre de la clase Banderas

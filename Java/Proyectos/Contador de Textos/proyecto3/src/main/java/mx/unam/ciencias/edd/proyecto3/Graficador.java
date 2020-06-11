@@ -9,10 +9,12 @@ import mx.unam.ciencias.edd.*;
 
  * Esta clase es la encargada de generar el código XML para las estructuras de datos permitidas
  * Si se quiere graficar una clase que no es válida mandaremos error
+ * Esta clase también cuenta el total de palabras en todo un arhivo, NO cuántas veces se repite cada palabra,
+ * sólo el total del archivo.
  *
  * @author Arroyo Lozano Santiago
  * @version 2.0
- * @since 23/05/2020
+ * @since 23/05/2020 - 12/06/2020
  */
 public class Graficador {
 
@@ -71,51 +73,58 @@ public class Graficador {
 	private int cont = 0;
 	/* Lista de todos las palabras procesadas por la clase */
 	private Lista<Rengloncillo> comunes = new Lista<>();
+	/* Arreglo de cadenas, que contiene los colores que usaremos en las gráficas */
+	private final String[] colores = new String[]{"yellow","green","blue","orange","purple"};
 
+	/* Cerramos la etiqueta head de html */
+	private final String HEAD = Svg.HEAD.getLinea();
 	/* Etiqueta para texto. */
 	private final String TEXTO = Svg.TEXTO.getLinea();
 	/* Etiqueta para línea. */
 	private final String LINEA = Svg.LINEA.getLinea();
+	/* Indexamos un archivo html externo a index.html*/
+	private final String INDEX = Svg.INDEX.getLinea();
+	/* Un rectángulo que usareos exlusivamete para la gráfica de barras */
+	private final String BARRA = Svg.BARRA.getLinea();
 	/* Abre etiqueta svg. y gráfica */
 	private final String INICIO = Svg.INICIO.getLinea();
 	/* Cierra etiqueta g. */
 	private final String CIERRA = Svg.CIERRA.getLinea();
-	/* Etiqueta para conectar las estructuras lineales.*/
+	/* Etiqueta para conectar las estructuras lineales*/
 	private final String FLECHA = Svg.FLECHA.getLinea();
-	/* Etiqueta para círculo de árboles y gráficas */
-	private final String CIRCULO = Svg.CIRCULO.getLinea();
-	/* Etiqueta para circulo de árboles con radio */
-	private final String CIRCULO_R = Svg.CIRCULO_R.getLinea();
-	/* Linea arbitraria para Pilas */
-	private final String POLYLINE = Svg.POLYLINE.getLinea();
-	/* Etiqueta para rectángulos. */
-	private final String RECTANGULO = Svg.RECTANGULO.getLinea();
-	/* Cerramos el código HTML */
-	private final String FINAL_HTML = Svg.FINAL_HTML.getLinea();
-	/* Creamos un archivo HTML con todo lo necesario */
-	private final String INICIO_HTML = Svg.INICIO_HTML.getLinea();
-	/* Indexamos un archivo html externo a index.html */
-	private final String INDEX = Svg.INDEX.getLinea();
-	/* Creamos un archivo html con todo lo necesario para el index */
-	private final String INICIO_INDEX = Svg.INICIO_INDEX.getLinea();
-	/* Cerramos la etiqueta head de html */
-	private final String HEAD = Svg.HEAD.getLinea();
-	/* Espacio en la etiqueta head para importar estilos de css */
-	private final String ESTILO = Svg.ESTILO.getLinea();
-	/* Un rectángulo que usareos exlusivamete para la gráfica de barras */
-	private final String BARRA = Svg.BARRA.getLinea();
-	/* El texto de la gráfica de barras */
-	private final String TEXTO_BARRA = Svg.TEXTO_BARRA.getLinea();
-	/* Cerramos la etiqueta g */
-	private final String CIERRA_G = Svg.CIERRA_G.getLinea();
-	/* Cerramos la etiqueta svg */
-	private final String CIERRA_SVG = Svg.CIERRA_SVG.getLinea();
 	/* Abrimos la etiqueta g */
 	private final String ABRE_G = Svg.ABRE_G.getLinea();
-	/* Etiqueta que crea el xml necesario para la gráfica de arras */
-	private final String INICIO_BARRA = Svg.INICIO_BARRA.getLinea();
+	/* Espacio en la etiqueta head para importar estilos de css */
+	private final String ESTILO = Svg.ESTILO.getLinea();
 	/* Título de la gráffica de barras en xml */
 	private final String TITULO = Svg.TITULO.getLinea();
+	/* Etiqueta xml que genera un svg amplio para la gráfica de pastel */
+	private final String PASTEL = Svg.PASTEL.getLinea();
+	/* Etiqueta para círculo de árboles y gráficas */
+	private final String CIRCULO = Svg.CIRCULO.getLinea();
+	/* Linea arbitraria para Pilas */
+	private final String POLYLINE = Svg.POLYLINE.getLinea();
+	/* Cerramos la etiqueta g */
+	private final String CIERRA_G = Svg.CIERRA_G.getLinea();
+	/* Etiqueta para circulo de árboles con radio */
+	private final String CIRCULO_R = Svg.CIRCULO_R.getLinea();
+	/* Etiqueta para rectángulos. */
+	private final String RECTANGULO = Svg.RECTANGULO.getLinea();
+	/* Cerramos la etiqueta svg */
+	private final String CIERRA_SVG = Svg.CIERRA_SVG.getLinea();
+	/* Cerramos el código HTML */
+	private final String FINAL_HTML = Svg.FINAL_HTML.getLinea();
+	/* El texto de la gráfica de barras */
+	private final String TEXTO_BARRA = Svg.TEXTO_BARRA.getLinea();
+	/* Creamos un archivo HTML con todo lo necesario */
+	private final String INICIO_HTML = Svg.INICIO_HTML.getLinea();
+	/* Creamos un archivo html con todo lo necesario para el index */
+	private final String INICIO_INDEX = Svg.INICIO_INDEX.getLinea();
+	/* Etiqueta que crea el xml necesario para la gráfica de arras */
+	private final String INICIO_BARRA = Svg.INICIO_BARRA.getLinea();
+	/* Etiqueta de cada gajo de la gráfica de pastel */
+	private final String PASTEL_INICIO = Svg.PASTEL_INICIO.getLinea();
+
 
 	/**
 	 * Constructor de nuestra clase Grafica
@@ -410,7 +419,7 @@ public class Graficador {
 	 *		   Puede contener también estilos de css y además gráficos svg hechos con xml
 	 */
 	public String dibujaHTML(Diccionario<String,Integer> d, int index) {
-		/* Obtenemos la ruta del archivo css */
+		int c = 1;
 		Rengloncillo[] renglones = ordena(d,index);
 		ArbolRojinegro<Rengloncillo> rojillo = new ArbolRojinegro<>();
 		/* Construimos los arboles */
@@ -419,11 +428,35 @@ public class Graficador {
 			if (i == renglones.length-15)
 				break; // Sólo graficamos las 15 más usadas
 		}
+		Lista<String> temp = new Lista<>();
 		ArbolAVL<Rengloncillo> avl = new ArbolAVL<>(rojillo);
+		float[] porcentajes = calculaPorcentaje(renglones);
+		float resto = -porcentajes[0];
 		/* Empezamos a dibujar */
 		String dibujo = INICIO_HTML;
 		dibujo += String.format(ESTILO,"styles.css");
 		dibujo += HEAD;
+		dibujo += "\t<h1> Proyecto 3 EDD - Arroyo Lozano Santiago <br> Archivo: " + index + " </h1>\n";
+		dibujo += "\t<h1>Gráfica de pastel</h1>\n";
+		dibujo += "\t<svg viewBox=\"0 0 64 64\" class=\"pie\">\n";
+		dibujo += String.format(PASTEL_INICIO,porcentajes[0]);
+		temp.agrega(renglones[renglones.length-1].toString());
+		for (int i = renglones.length-2; i >= 0; i--) {
+			dibujo += String.format(PASTEL,porcentajes[c],colores[c],resto);
+			resto -= porcentajes[c];
+			temp.agrega(renglones[i].toString());
+			c++;
+			if (i == renglones.length-5)
+				break; // Sólo graficamos las 5 más usadas
+		}
+		c = 0;
+		dibujo += "\t</svg><br>\n";
+		for (String str : temp) {
+			dibujo += "\tPalabra: <p style=\"color:" + colores[c] + ";\">" + str + " - " + porcentajes[c] + "%</p>\n";
+			c++;
+		}
+		dibujo += "\t<p style=\"color: crimson;\"> Resto de palabras - " + (100+resto) + "%</p>\n";
+		dibujo += "\t<h1>Gráfica de Barras</h1>\n";
 		dibujo += dibujaBarras(renglones);
 		clase = "ArbolRojinegro";
 		dibujo += "\t<h1>Arbol Rojinegro</h1>\n";
@@ -462,6 +495,24 @@ public class Graficador {
 	}
 
 	/**
+	 * Método auxiliar que genera un arreglo de floats ue indican el procentaje de cada palabra (cuanto se repite)
+	 * El método acomoda el arreglo de tal manera que el primer elemento es el de mayor porcentaje
+	 * @param renglones el arreglo de renglones que contiene las palabras más usadas y cuántas veces se repiten
+	 * @return El arreglo float con los porcentajes de las 5 palabras más usadas
+	 */
+	private float[] calculaPorcentaje(Rengloncillo[] renglones) {
+		float[] porcentajes = new float[5];
+		int c = 0;
+		for (int i = renglones.length-1; i >= 0; i--) {
+			porcentajes[c] = (renglones[i].valor()*100)/cont;
+			if (i == renglones.length-5)
+				break; // Sólo calculamos las 5 más usadas
+			c++;
+		}
+		return porcentajes;
+	}
+
+	/**
 	 * Método auxiliar que dibuja una gráfica de barras en xml
 	 * @param renglones Un arreglo ordenado de renglones, el cual
 	 *					contiene las palabras y el valor entero de cuántas veces
@@ -470,15 +521,15 @@ public class Graficador {
 	 *		   de una gráfica de barras
 	 */
 	public String dibujaBarras(Rengloncillo[] renglones) {
-		String dibujo = String.format(INICIO_BARRA,400,200);
+		String dibujo = INICIO_BARRA;
 		dibujo += TITULO;
 		int k = 0;
 		for (int i = renglones.length-1; i >= 0; i--) {
-			int x = renglones[i].valor()*3+100;
+			int x = renglones[i].valor()*25+100;
 			int y = k*40;
 			dibujo += ABRE_G;
 			dibujo += String.format(BARRA,x,y);
-			dibujo += String.format(TEXTO_BARRA,x+5,y+20,renglones[i].toString());
+			dibujo += String.format(TEXTO_BARRA,x+5,y+20,renglones[i].toString() + " - " + renglones[i].valor() + " repeticiones");
 			dibujo += CIERRA_G;
 			if (i == renglones.length-5)
 				break; // Sólo graficamos las 5 más usadas

@@ -30,11 +30,9 @@ import mx.unam.ciencias.edd.*;
  *
  * @author Arroyo Lozano Santiago
  * @version 1.0
- * @since 23/05/2020
+ * @since 23/05/2020 - 12/06/2020
  */
 public class Proyecto3 {
-
-
 
 	public static void main(String[] args) {
 
