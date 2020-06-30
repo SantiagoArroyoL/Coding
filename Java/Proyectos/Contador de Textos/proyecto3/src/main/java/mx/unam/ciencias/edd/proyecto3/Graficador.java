@@ -125,7 +125,6 @@ public class Graficador {
 	/* Etiqueta de cada gajo de la gráfica de pastel */
 	private final String PASTEL_INICIO = Svg.PASTEL_INICIO.getLinea();
 
-
 	/**
 	 * Constructor de nuestra clase Grafica
 	 * @param clase String que define con qué clase estamos trabajando
@@ -509,6 +508,7 @@ public class Graficador {
 				break; // Sólo calculamos las 5 más usadas
 			c++;
 		}
+		System.out.println();
 		return porcentajes;
 	}
 
