@@ -44,7 +44,7 @@ public class GUI extends JFrame {
 
 	/**
 	  * En este método crearemos la matriz acorde con las i
-	  * @param Simular Cadena que indica la simulación a realizar
+	  * @param vecinos Es el arreglo unidimensional en el que se almacena la vecindad
 	*/
 	public void dibujarCelulas(String simular) {
 		for (int i = 0; i < nuevaX; i++) {
