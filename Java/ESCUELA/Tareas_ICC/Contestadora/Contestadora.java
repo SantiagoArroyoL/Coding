@@ -11,8 +11,8 @@ public class Contestadora {
    private Mensaje [] mensajes;
    private int indice,opcion;
 
- /**
-  * Metodo menú
+   /**
+   *  Metodo menú
   */
    private void menu(){
 
