@@ -4,6 +4,8 @@ Created on Tue Sep 29 00:18:03 2020
 
 TAREA 1 - Probabilidad
 @author: Santiago Arroyo
+@author: David Lázaro
+@author: Yonathan Berith Jaramillo Ramírez
 """
 
 def sumaMala(x):

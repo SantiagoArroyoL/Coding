@@ -28,7 +28,7 @@ area :: (Double, Double) -> (Double, Double) -> (Double, Double) -> Double
 area (x1,y1) (x2,y2) (x3,y3) = if total < 0
 	then total*(-1)
 	else total
-	where total = (((x1*y2)+(x2*y3)+(x3*y1))-((x1*y3)+(x3*y2)+(x2*y1)))*0.5
+	where total = (((x1*y2)+(x2*y3)+(x3*y1))-((x1*y3)+(x3*y2)+(x2*y1)))/2
 
 --heterograma. Función que recibe una cadena y lo convierte en un
 --             heterograma.

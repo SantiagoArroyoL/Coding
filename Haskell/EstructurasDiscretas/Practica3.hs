@@ -55,11 +55,11 @@ equivalencia (Prop x) = Prop x
 equivalencia (xs :=>: ys) = (Neg (xs) :|:  ys)
 equivalencia (xs :<=>:ys) = equivalencia (xs :=>: ys) :&: equivalencia (ys :=>: xs)
 equivalencia (xs :&: ys) = if xs == ys
-	then equivalencia xs
-	else (equivalencia xs) :&: (equivalencia ys)
+						   then equivalencia xs
+						   else (equivalencia xs) :&: (equivalencia ys)
 equivalencia (xs :|: ys) = if xs == ys
-   then equivalencia xs
-   else (equivalencia xs) :|: (equivalencia ys)
+   						   then equivalencia xs
+   			   			   else (equivalencia xs) :|: (equivalencia ys)
 
 --Función Auxiliar conjuncion
 conjuncion:: Bool->Bool->Bool
@@ -95,16 +95,15 @@ buscarVariable x ((y,b):ys) = if x == y
 interp:: Formula -> [(Var,Bool)]-> Bool
 interp (Prop x) xs = buscarVariable x xs
 interp (Neg xs) ys = not (interp xs ys)
-interp (xs :|: ys) zs =
-   if (interp xs zs) || (interp ys zs )
-   then True
-   else disyuncion (interp xs zs) (interp ys zs)
+interp (xs :|: ys) zs = if (interp xs zs) || (interp ys zs )
+						then True
+						else disyuncion (interp xs zs) (interp ys zs)
 interp (xs :&: ys) zs = if not (interp xs zs) || (interp ys zs )
-   then True
-   else conjuncion (interp xs zs) (interp ys zs)
+					    then True
+					    else conjuncion (interp xs zs) (interp ys zs)
 interp (xs :=>: ys) zs = if not (interp xs zs)
-   then True
-   else implicacion (interp xs zs) (interp ys zs)
+					     then True
+					     else implicacion (interp xs zs) (interp ys zs)
 interp (xs :<=>: ys) zs = dobleImplica (interp xs zs) (interp ys zs)
 
 -- Función Combinación************

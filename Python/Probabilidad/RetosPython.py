@@ -54,7 +54,7 @@ intentos = 0
 
 #Entramos en el loop de la adivinanza
 while guess != el_numero:
-    intentos = intentos+1 if intentos+1 < 10 else sys.exit('Has sobrepasado el máximo de intentos permitidos')
+    #intentos = intentos+1 if intentos+1 < 10 else sys.exit('Has sobrepasado el máximo de intentos permitidos')
     if guess > el_numero:
         print("Intenta con un número más bajo...")
     else:
