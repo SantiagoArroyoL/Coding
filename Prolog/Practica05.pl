@@ -35,6 +35,7 @@ ocurrir(X,[Y|YS],N) :- ocurrir(X,[Y],L), ocurrir(X,YS,M), N is L+M.
 /* 5.1.-ser. Relación reflexiva de ser un gato */
 ser(queso,queso).
 ser(shadow,shadow).
+ser(lola,lola).
 
 /* 5.2.1.-amigo Relación de que un gato es amigo de otro */
 amigo(shadow,queso).
@@ -44,10 +45,12 @@ amigo(queso,shadow).
 amigos(X,Y) :- ser(X,X),ser(Y,Y),amigo(X,Y).
 amigos(X,Y) :- ser(X,X),ser(Y,Y),amigo(Y,X).
 
-/*5.3.-masgrande. Relación transitiva entre dos gatos denotando que uno es más grande que otro */
-masgrande(shadow,queso).
-masgrande(queso,lola).
-masgrande(A,C) :- masgrande(A,B), masgrande(B,C), ser(A,A), ser(C,C).
+/*5.3.-masgrande. Relación transitiva entre dos gatos denotando que uno es más grande que otro 
+	masgrandeAux es una relación que nos ayudará a evitar errores de ciclos infinitos, pues la relación
+	masgrande sólo tiene casos recursivos 		*/
+masgrandeAux(shadow,queso).
+masgrandeAux(queso,lola).
+masgrande(A,C) :- masgrandeAux(A,B), masgrandeAux(B,C), ser(A,A), ser(C,C).
 
 /* 6.- in_order. función que nos regresa un arbol en su forma in orden*/
 % in_order(tree(X,empty, empty), X).
