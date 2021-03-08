@@ -1,0 +1,9 @@
+(**Goal forall (X : Type) (P Q R S T : X->Prop), 
+    (forall x : X, P x \/ Q x -> ~R x) -> (forall x : X, S x -> R x) -> (forall x : X, P x -> ~S x \/ T x).
+Proof.
+intros X P Q R S T.
+intros H1 H2 x H3.
+Qed. **)
+
+Hypothesis A1 : x+0 = 0.
+Hypothesis A2 : 

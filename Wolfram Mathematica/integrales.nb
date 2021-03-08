@@ -1,0 +1,1655 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     76357,       1645]
+NotebookOptionsPosition[     75566,       1622]
+NotebookOutlinePosition[     76045,       1640]
+CellTagsIndexPosition[     76002,       1637]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"WolframAlpha", "[", 
+  RowBox[{"\"\<int x sqrt(2ax-x^2) over x\>\"", ",", 
+   RowBox[{"PodStates", "\[Rule]", 
+    RowBox[{
+    "{", "\"\<IndefiniteIntegral__Step-by-step solution\>\"", "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.81229119067017*^9, 3.8122912111263213`*^9}, {
+  3.812291369926864*^9, 3.812291371086894*^9}, {3.8122984308650208`*^9, 
+  3.8122984314997416`*^9}, {3.812299419570159*^9, 3.812299420710248*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"618a9b78-59eb-4376-b54c-76438a7c2a95"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "int x sqrt(2ax-x^2) over x", 
+   Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, PodStates -> {"IndefiniteIntegral__Step-by-step solution"}},
+    Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Indefinite integrals", "scanner" -> "Integral", "id" -> 
+     "IndefiniteIntegral", "position" -> "100", "error" -> "false", 
+     "numsubpods" -> "2", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["minput", {}, {"Integrate[x Sqrt[2 a x - x^2], x]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              TagBox[
+               RowBox[{"\[Integral]", 
+                 RowBox[{
+                   RowBox[{"x", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"2", " ", "a", " ", "x"}], "-", 
+                    SuperscriptBox["x", "2"]}]]}], 
+                   RowBox[{"\[DifferentialD]", "x"}]}]}], HoldForm], 
+              "\[LongEqual]", 
+              StyleBox[
+               RowBox[{
+                 StyleBox[
+                  RowBox[{
+                    FractionBox["1", "6"], " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", "x"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"x", "-", 
+                    RowBox[{"2", " ", "a"}]}], ")"}]}]], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"6", " ", 
+                    SuperscriptBox["a", 
+                    RowBox[{"5", "/", "2"}]], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox[
+                    SqrtBox["x"], 
+                    RowBox[{
+                    SqrtBox["2"], " ", 
+                    SqrtBox["a"]}]], ")"}]}], 
+                    RowBox[{
+                    SqrtBox["x"], " ", 
+                    SqrtBox[
+                    RowBox[{"2", "-", 
+                    FractionBox["x", "a"]}]]}]], "-", 
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["a", "2"]}], "-", 
+                    RowBox[{"a", " ", "x"}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["x", "2"]}]}], ")"}]}], {
+                   GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                   LineIndent -> 0}], "+", 
+                 StyleBox[
+                 "\"constant\"", {
+                  Magnification -> 0.9 Inherited, FontFamily -> "Helvetica", 
+                   FontSize -> Inherited, 
+                   LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                   0}]}], {
+                GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                LineIndent -> 0}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["subpod", {"title" -> "Possible intermediate steps"}, {
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Take the integral:\""}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"x", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"2", " ", "a", " ", "x"}], "-", 
+                    SuperscriptBox["x", "2"]}]]}], 
+                    RowBox[{"\[DifferentialD]", "x"}]}]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{None}}, "Rows" -> {{0.5}}}], "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"For \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{"x", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"2", " ", "a", " ", "x"}], "-", 
+                    SuperscriptBox["x", "2"]}]]}], "\",\"", "\" \""}, 
+                    "RowDefault"], "\"complete \"", "\"the \"", 
+                    "\"square:\""}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"x", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"x", "-", "a"}], ")"}], "2"]}]]}], 
+                    RowBox[{"\[DifferentialD]", "x"}]}]}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"For \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{"x", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"x", "-", "a"}], ")"}], "2"]}]]}], "\",\"", 
+                    "\" \""}, "RowDefault"], "\"substitute \"", 
+                    TemplateBox[{
+                    RowBox[{"u", "\[LongEqual]", 
+                    RowBox[{"x", "-", "a"}]}], "\" \""}, "RowDefault"], 
+                    "\"and \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[DifferentialD]", "u"}], "\[LongEqual]", 
+                    "\"\""}], "\"\[ThinSpace]\""}, "RowDefault"], 
+                    TemplateBox[{
+                    RowBox[{"\[DifferentialD]", "x"}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"a", "+", "u"}], ")"}], " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox["u", "2"]}]]}], 
+                    RowBox[{"\[DifferentialD]", "u"}]}]}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"For \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"a", "+", "u"}], ")"}], " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox["u", "2"]}]]}], "\",\"", "\" \""}, 
+                    "RowDefault"], "\"(assuming \"", "\"all \"", 
+                    "\"variables \"", "\"are \"", "\"positive) \"", 
+                    "\"substitute \"", 
+                    TemplateBox[{
+                    RowBox[{"u", "\[LongEqual]", 
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}]}], "\" \""}, 
+                    "RowDefault"], "\"and \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[DifferentialD]", "u"}], "\[LongEqual]", 
+                    RowBox[{"a", " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}]}], "\"\[ThinSpace]\""}, 
+                    "RowDefault"], 
+                    TemplateBox[{
+                    RowBox[{"\[DifferentialD]", "s"}], "\".\"", "\" \""}, 
+                    "RowDefault"], "\"Then \"", 
+                    TemplateBox[{
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox["u", "2"]}]], "\" \""}, "RowDefault"], 
+                    "\"\[LongEqual] \"", 
+                    TemplateBox[{
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["a", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}]}]], 
+                    "\" \""}, "RowDefault"], "\"\[LongEqual] \"", 
+                    TemplateBox[{
+                    RowBox[{"a", " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "\" \""}, "RowDefault"],
+                     "\"and \"", 
+                    TemplateBox[{
+                    RowBox[{"s", "\[LongEqual]", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox["u", "a"], ")"}]}], "\":\""}, "RowDefault"]}, 
+                    "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{"a", 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"a", " ", 
+                    RowBox[{
+                    SuperscriptBox["cos", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}], "+", "a"}], ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}, "RowDefault"]}},
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{"\"Factor \"", "\"out \"", "\"constants:\""},
+                     "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    SuperscriptBox["a", "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["cos", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}], "+", "a"}], ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}, "RowDefault"]}},
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Write \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    SuperscriptBox["cos", "2"], "(", "s", ")"}], "\" \""}, 
+                    "RowDefault"], "\"as \"", 
+                    TemplateBox[{
+                    RowBox[{"1", "-", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    SuperscriptBox["a", "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}], "+", "a"}], ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}, "RowDefault"]}},
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Expanding \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}], ")"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}], "+", "a"}], ")"}]}], 
+                    "\" \""}, "RowDefault"], "\"gives \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{
+                    RowBox[{"a"}], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "3"], "(", "s", ")"}]}]}], "-", 
+                    RowBox[{"a", " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}], "+", 
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}], "+", "a"}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    SuperscriptBox["a", "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{
+                    RowBox[{"a"}], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "3"], "(", "s", ")"}]}]}], "-", 
+                    RowBox[{"a", " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}], "+", 
+                    RowBox[{"a", " ", 
+                    RowBox[{"sin", "(", "s", ")"}]}], "+", "a"}], ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}, "RowDefault"]}},
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Integrate \"", "\"the \"", "\"sum \"", "\"term \"", 
+                    "\"by \"", "\"term \"", "\"and \"", "\"factor \"", 
+                    "\"out \"", "\"constants:\""}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "3"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", "3"], "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "-", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["a", "3"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["a", "3"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"sin", "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["a", "3"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Use \"", "\"the \"", "\"reduction \"", "\"formula, \"", 
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", "m"], "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}], HoldForm], 
+                    "\" \""}, "RowDefault"], "\"= \"", 
+                    TemplateBox[{
+                    RowBox[{"-", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"cos", "(", "s", ")"}], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"m", "-", "1"}]], "(", "s", ")"}]}], "m"]}], 
+                    "\" \""}, "RowDefault"], "\"+ \"", 
+                    TemplateBox[{
+                    FractionBox[
+                    RowBox[{"m", "-", "1"}], "m"], 
+                    TagBox[
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "+", "m"}]], "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}], HoldForm], "\",\"",
+                     "\" \""}, "RowDefault"], "\"where \"", 
+                    TemplateBox[{
+                    RowBox[{"m", "\[LongEqual]", "3"}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["a", "3"], "3"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"sin", "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "-", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["a", "3"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["a", "3"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"integral \"", "\"of \"", 
+                    TemplateBox[{
+                    RowBox[{"sin", "(", "s", ")"}], "\" \""}, "RowDefault"], 
+                    "\"is \"", 
+                    TemplateBox[{
+                    RowBox[{"-", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["1", "3"]}], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "-", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["a", "3"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["a", "3"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Write \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], "\" \""}, 
+                    "RowDefault"], "\"as \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    FractionBox["1", "2"], "-", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"2", " ", "s"}], ")"}]}]}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["1", "3"]}], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "-", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["a", "3"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox["1", "2"], "-", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"2", " ", "s"}], ")"}]}]}], ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["a", "3"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Integrate \"", "\"the \"", "\"sum \"", "\"term \"", 
+                    "\"by \"", "\"term \"", "\"and \"", "\"factor \"", 
+                    "\"out \"", "\"constants:\""}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["1", "3"]}], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["a", "3"], "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"cos", "(", 
+                    RowBox[{"2", " ", "s"}], ")"}], 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}], "+", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["a", "3"], "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"For \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{"cos", "(", 
+                    RowBox[{"2", " ", "s"}], ")"}], "\",\"", "\" \""}, 
+                    "RowDefault"], "\"substitute \"", 
+                    TemplateBox[{
+                    RowBox[{"p", "\[LongEqual]", 
+                    RowBox[{"2", " ", "s"}]}], "\" \""}, "RowDefault"], 
+                    "\"and \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[DifferentialD]", "p"}], "\[LongEqual]", "2"}], 
+                    "\"\[ThinSpace]\""}, "RowDefault"], 
+                    TemplateBox[{
+                    RowBox[{"\[DifferentialD]", "s"}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["1", "3"]}], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["a", "3"], "4"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"cos", "(", "p", ")"}], 
+                    RowBox[{"\[DifferentialD]", "p"}]}]}]}], "+", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["a", "3"], "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"integral \"", "\"of \"", 
+                    TemplateBox[{
+                    RowBox[{"cos", "(", "p", ")"}], "\" \""}, "RowDefault"], 
+                    "\"is \"", 
+                    TemplateBox[{
+                    RowBox[{"sin", "(", "p", ")"}], "\":\""}, "RowDefault"]}, 
+                    "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["1", "3"]}], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "4"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"sin", "(", "p", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["a", "3"], "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"1", 
+                    RowBox[{"\[DifferentialD]", "s"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"integral \"", "\"of \"", 
+                    TemplateBox[{"1", "\" \""}, "RowDefault"], "\"is \"", 
+                    TemplateBox[{"s", "\":\""}, "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "4"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"sin", "(", "p", ")"}]}], "+", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["a", "3"], " ", "s"}], "2"], "-", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", "\"back \"", "\"for \"", 
+                    TemplateBox[{
+                    RowBox[{"p", "\[LongEqual]", 
+                    RowBox[{"2", " ", "s"}]}], "\":\""}, "RowDefault"]}, 
+                    "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["a", "3"], " ", "s"}], "2"], "+", 
+                    RowBox[{
+                    FractionBox["1", "4"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"2", " ", "s"}], ")"}]}], "-", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\[NoBreak]", "\"\[NoBreak]\"", 
+                    
+                    TemplateBox[{
+                    "\"Apply \"", "\"the \"", "\"double \"", "\"angle \"", 
+                    "\"formula \"", 
+                    RowBox[{
+                    RowBox[{"sin", "(", 
+                    RowBox[{"2", " ", "s"}], ")"}], "\[LongEqual]", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"sin", "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}]}]}, "RowDefault"], 
+                    "\":\""}, "RowWithSeparators"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["a", "3"], " ", "s"}], "2"], "-", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"sin", "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\[NoBreak]", "\"\[NoBreak]\"", 
+                    TemplateBox[{"\"Express \"", 
+                    TemplateBox[{
+                    RowBox[{"cos", "(", "s", ")"}], "\" \""}, "RowDefault"], 
+                    "\"in \"", "\"terms \"", "\"of \"", 
+                    TemplateBox[{
+                    RowBox[{"sin", "(", "s", ")"}], "\" \""}, "RowDefault"], 
+                    "\"using \"", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["cos", "2"], "(", "s", ")"}], 
+                    "\[LongEqual]", 
+                    RowBox[{"1", "-", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}]}]}, 
+                    "RowDefault"], "\":\""}, "RowWithSeparators"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["a", "3"], " ", "s"}], "2"], "+", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"sin", "(", "s", ")"}], " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}]}]]}], "-", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "s", ")"}], " ", 
+                    RowBox[{"cos", "(", "s", ")"}]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", "\"back \"", "\"for \"", 
+                    TemplateBox[{
+                    RowBox[{"s", "\[LongEqual]", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox["u", "a"], ")"}]}], "\":\""}, "RowDefault"]}, 
+                    "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "2"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox["u", "a"], ")"}]}], "-", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "2"], " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox["u", "2"]}]]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", "a", " ", "u", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox["u", "2"]}]]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["u", "2"], " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["a", "2"], "-", 
+                    SuperscriptBox["u", "2"]}]]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", "\"back \"", "\"for \"", 
+                    TemplateBox[{
+                    RowBox[{"u", "\[LongEqual]", 
+                    RowBox[{"x", "-", "a"}]}], "\":\""}, "RowDefault"]}, 
+                    "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "2"], " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox[
+                    RowBox[{"x", "-", "a"}], "a"], ")"}]}], "-", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["a", "2"], " ", 
+                    SqrtBox[
+                    RowBox[{"x", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "a"}], "-", "x"}], ")"}]}]]}], "-", 
+                    RowBox[{
+                    FractionBox["1", "2"], " ", "a", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"a", "-", "x"}], ")"}], " ", 
+                    SqrtBox[
+                    RowBox[{"x", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "a"}], "-", "x"}], ")"}]}]]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"a", "-", "x"}], ")"}], "2"], " ", 
+                    SqrtBox[
+                    RowBox[{"x", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "a"}], "-", "x"}], ")"}]}]]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Factor \"", "\"the \"", "\"answer \"", "\"a \"", 
+                    "\"different \"", "\"way:\""}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    FractionBox["1", "6"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["a", "3"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox[
+                    RowBox[{"x", "-", "a"}], "a"], ")"}]}], "-", 
+                    RowBox[{
+                    SqrtBox[
+                    RowBox[{"x", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "a"}], "-", "x"}], ")"}]}]], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    RowBox[{"a", " ", "x"}], "-", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["x", "2"]}]}], ")"}]}]}], ")"}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Which \"", "\"is \"", "\"equivalent \"", "\"for \"", 
+                    "\"restricted \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    TemplateBox[{",", "\",\"", "x"}, "RowWithSeparators"], 
+                    "\" \""}, "RowDefault"], "\"and \"", "a", "\" \""}, 
+                    "RowDefault"], "\"values \"", "\"to:\""}, "RowDefault"], 
+                    GrayLevel[0.3], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, {
+                    FrameBox[
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    TemplateBox[{"\"Answer:\""}, "RowDefault"], FontFamily -> 
+                    "Helvetica", FontSize -> 12, StripOnInput -> False], 
+                    "\[SpanFromLeft]"}, {"\"\"", 
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    FractionBox["1", "6"], " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", "x"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"x", "-", 
+                    RowBox[{"2", " ", "a"}]}], ")"}]}]], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"6", " ", 
+                    SuperscriptBox["a", 
+                    RowBox[{"5", "/", "2"}]], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", 
+                    RowBox[{"-", "1"}]], "(", 
+                    FractionBox[
+                    SqrtBox["x"], 
+                    RowBox[{
+                    SqrtBox["2"], " ", 
+                    SqrtBox["a"]}]], ")"}]}], 
+                    RowBox[{
+                    SqrtBox["x"], " ", 
+                    SqrtBox[
+                    RowBox[{"2", "-", 
+                    FractionBox["x", "a"]}]]}]], "-", 
+                    RowBox[{"3", " ", 
+                    SuperscriptBox["a", "2"]}], "-", 
+                    RowBox[{"a", " ", "x"}], "+", 
+                    RowBox[{"2", " ", 
+                    SuperscriptBox["x", "2"]}]}], ")"}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {2.5, Automatic}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {2, 0, 3}, "Rows" -> {1.5, 1, 2}}, 
+                    AllowScriptLevelChange -> False], "Grid"], FrameStyle -> {
+                    AbsoluteThickness[1], 
+                    RGBColor[0.52, 0.76, 0.86]}, Background -> 
+                    RGBColor[0.91, 0.98, 1], RoundingRadius -> 3, 
+                    FrameMargins -> 12, StripOnInput -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+              AllowScriptLevelChange -> False, DefaultBaseStyle -> "Column", 
+              GridBoxDividers -> {
+               "Columns" -> {{False}}, "Rows" -> {False, {True}, False}}, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{3}}}, FrameStyle -> 
+              GrayLevel[0.7]], "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}], 
+       XMLElement["infos", {"count" -> "1"}, {
+         XMLElement[
+         "info", {"text" -> "sin^(-1)(x) is the inverse sine function"}, {
+           XMLElement[
+           "link", {
+            "url" -> "http://reference.wolfram.com/language/ref/ArcSin.html", 
+             "text" -> "Documentation", "title" -> "Mathematica"}, {}], 
+           XMLElement[
+           "link", {
+            "url" -> 
+             "http://functions.wolfram.com/ElementaryFunctions/ArcSin", 
+             "text" -> "Properties", "title" -> 
+             "Wolfram Functions Site"}, {}], 
+           XMLElement[
+           "link", {
+            "url" -> "http://mathworld.wolfram.com/InverseSine.html", "text" -> 
+             "Definition", "title" -> "MathWorld"}, {}]}]}]}], 
+     XMLElement["expressiontypes", {"count" -> "2"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}], 
+     XMLElement["states", {"count" -> "2"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Approximate form", "input" -> 
+         "IndefiniteIntegral__Approximate form"}, {}], 
+       XMLElement[
+       "state", {
+        "name" -> "Hide steps", "input" -> 
+         "IndefiniteIntegral__Hide steps"}, {}]}]}], Typeset`aux1$$ = {
+   True, False, {False, False}, True}, Typeset`asyncpods$$ = {}, 
+   Typeset`nonpods$$ = {
+    XMLElement["assumptions", {"count" -> "1"}, {
+      XMLElement[
+      "assumption", {
+       "type" -> "Clash", "word" -> "int", "template" -> 
+        "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+        "2"}, {
+        XMLElement[
+        "value", {
+         "name" -> "IntegralsWord", "desc" -> "an integral", "input" -> 
+          "*C.int-_*IntegralsWord-"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "MathematicalFunctionIdentityPropertyClass", "desc" -> 
+          "a function property", "input" -> 
+          "*C.int-_*MathematicalFunctionIdentityPropertyClass-"}, {}]}]}]}, 
+   Typeset`initdone$$ = FrontEnd`SuppressEvaluationHash[True], 
+   Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "", "timedout" -> 
+    "Integral,MultiDimensionalIntegration,Series,Plot,Plotter,Simplification,\
+Sequence,Sum", "timedoutpods" -> "", "timing" -> "6.303", "parsetiming" -> 
+    "0.901", "parsetimedout" -> "false", "recalculated" -> 
+    "https://www5b.wolframalpha.com/api/v1/recalc.jsp?id=\
+MSPa126816e3bf39be8e5i9g000060aah1hfg6e0i62d6254748990062707630", "id" -> 
+    "MSP126916e3bf39be8e5i9g000068b12ga16fe137d8", "host" -> 
+    "https://www5b.wolframalpha.com", "server" -> "4", "related" -> 
+    "https://www5b.wolframalpha.com/api/v1/relatedQueries.jsp?id=\
+MSPa127016e3bf39be8e5i9g000013223b42fc7ef23h6254748990062707630", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> -5., 
+    "Date" -> {2020, 10, 21, 14, 47, 25.3234535`9.156097853506527}, "Line" -> 
+    2, "SessionID" -> 19198418138748280725}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "int x sqrt(2ax-x^2) over x"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{462., {1392., 1398.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     And[
+      Not[Typeset`initdone$$ === True], 
+      Not[Typeset`initdone$$ === FrontEnd`SuppressEvaluationHash[True]]], 
+     Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = FrontEnd`SuppressEvaluationHash[True]],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.8122914667809734`*^9, 3.812298445396291*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"12195b06-52e4-480f-9b3c-6a5b31bd0d78"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframAlpha", "[", 
+  RowBox[{"\"\<int_0^(2a) x sqrt(2ax-x^2) \>\"", ",", 
+   RowBox[{"PodStates", "\[Rule]", 
+    RowBox[{"{", "\"\<DefiniteIntegral__Step-by-step solution\>\"", "}"}]}]}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.8122994638337784`*^9, 3.8122994826432734`*^9}, 
+   3.812299539064141*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"8fa0657d-2e4c-47fa-9cc8-cdc9e2df89c8"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "int_0^(2a) x sqrt(2ax-x^2) ", 
+   Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, PodStates -> {"DefiniteIntegral__Step-by-step solution"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Input", "scanner" -> "Identity", "id" -> "Input", 
+     "position" -> "100", "error" -> "false", "numsubpods" -> "2", "primary" -> 
+     "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {"Integrate[x Sqrt[2 a x - x^2], {x, 0, 2 a}]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             RowBox[{
+               SubsuperscriptBox["\[Integral]", "0", 
+                RowBox[{"2", " ", "a"}]], 
+               RowBox[{
+                 RowBox[{"x", " ", 
+                   SqrtBox[
+                    RowBox[{
+                    RowBox[{"2", " ", "a", " ", "x"}], "-", 
+                    SuperscriptBox["x", "2"]}]]}], 
+                 RowBox[{"\[DifferentialD]", "x"}]}]}], 
+             PolynomialForm[#, TraditionalOrder -> False]& ], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["subpod", {"title" -> "", "primary" -> "true"}, {
+       XMLElement[
+       "minput", {}, {"Integrate[x Sqrt[2 a x - x^2], {x, 0, 2 a}]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             TagBox[
+              RowBox[{
+                SubsuperscriptBox["\[Integral]", "0", 
+                 RowBox[{"2", " ", "a"}]], 
+                RowBox[{
+                  RowBox[{"x", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"2", " ", "a", " ", "x"}], "-", 
+                    SuperscriptBox["x", "2"]}]]}], 
+                  RowBox[{"\[DifferentialD]", "x"}]}]}], HoldForm], Identity],
+             TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "2"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`aux1$$ = {True, False, {False, False}, True}, 
+   Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {}, Typeset`initdone$$ = 
+   FrontEnd`SuppressEvaluationHash[True], Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "", "timedout" -> "Integral", "timedoutpods" -> "", "timing" -> "3.867", 
+    "parsetiming" -> "0.808", "parsetimedout" -> "false", "recalculated" -> 
+    "https://www4f.wolframalpha.com/api/v1/recalc.jsp?id=\
+MSPa53801i45g5fc2b75e3id0000570c02g88ch56ggc4860434613275227831", "id" -> 
+    "MSP53811i45g5fc2b75e3id000042886aee7d4dd28b", "host" -> 
+    "https://www4f.wolframalpha.com", "server" -> "26", "related" -> 
+    "https://www4f.wolframalpha.com/api/v1/relatedQueries.jsp?id=\
+MSPa53821i45g5fc2b75e3id00002bc700h1304ifc1i4860434613275227831", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> -5., 
+    "Date" -> {2020, 10, 21, 15, 5, 48.4572747`9.437933843441712}, "Line" -> 
+    8, "SessionID" -> 19198418138748280725}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "int_0^(2a) x sqrt(2ax-x^2) "}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{462., {69.5, 75.5}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     And[
+      Not[Typeset`initdone$$ === True], 
+      Not[Typeset`initdone$$ === FrontEnd`SuppressEvaluationHash[True]]], 
+     Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = FrontEnd`SuppressEvaluationHash[True]],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.812299494720172*^9, 3.812299548468212*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"53ff6408-66f9-4062-bdd1-5d8540245073"]
+}, Open  ]]
+},
+WindowSize->{571.8, 524.4},
+WindowMargins->{{
+  98.39999999999999, Automatic}, {-22.799999999999955`, Automatic}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.1 para Microsoft Windows (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"95dea758-425e-47fd-89e7-a23c9f234258"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 533, 10, 44, "Input",ExpressionUUID->"618a9b78-59eb-4376-b54c-76438a7c2a95"],
+Cell[1116, 34, 66813, 1427, 2832, "Output",ExpressionUUID->"12195b06-52e4-480f-9b3c-6a5b31bd0d78"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67966, 1466, 408, 8, 80, "Input",ExpressionUUID->"8fa0657d-2e4c-47fa-9cc8-cdc9e2df89c8"],
+Cell[68377, 1476, 7173, 143, 164, "Output",ExpressionUUID->"53ff6408-66f9-4062-bdd1-5d8540245073"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
