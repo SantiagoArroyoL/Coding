@@ -38,14 +38,20 @@
 
 (define a 2)
 
+<<<<<<< HEAD
+=======
 a
+>>>>>>> bd51917ade4aee085b5b5f04da575abd71612615
 
 [a 2]
 
 (let ([d 8])
   d)
 
+<<<<<<< HEAD
+=======
 d
+>>>>>>> bd51917ade4aee085b5b5f04da575abd71612615
 
 ;; sub1 ::= (- n 1)
 ;; suman: number -> number
