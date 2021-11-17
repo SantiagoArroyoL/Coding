@@ -26,11 +26,19 @@
     empty
     (cons (scons-head l) (stake (sub1 n) (stail l)))))
 
-(define (sadd xs ys) (scons (+ (scons-head xs) (scons-head ys))
-                            (sadd (stail xs) (stail ys))))
 
-(define (fib)
-  (scons 0 (scons 1 (sadd (fib) (stail fib)))))
+;; Función que genera infinitamente Fibonacci,
+;; desde los valores iniciales x ,y
+;; FibAux : number number → Stream
+(define (fibAux x y)
+    (scons (+ x y) (thunk (fibAux y (+ x y)))))
 
+;; Función que genera un Stream llamando a Fibonacci desde 0
+;; fib : Stream
 (define (fib)
-  (scons 0 (scons 1 (map + (fib) (stail fib)))))
+  (scons 0 (thunk (scons 1 (thunk (fibAux 0 1))))))
+
+;; Función que genera una lista infinita ascendente
+;; FibAux : number number → Stream
+(define (infi n)
+  (scons n (thunk (infi (+ n 1)))))
