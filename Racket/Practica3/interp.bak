@@ -60,6 +60,13 @@
   (match bind
     [(binding id ast) (binding id (subst ast sub-id value))]))
 
+#|
+;; Funcion auxiliar que hace sustitución en el valor (ast) de un binding y si el id del binding es el mismo, cambiamos su valor
+(define (sust-ast bind sub-id value)
+  (match bind
+    [(binding id ast) (if (eq? id sub-id) (binding id value) (binding id (subst ast sub-id value)))]))
+|#
+
  ;;Análisis semántico
  ;;interp: AST → number
 (define (interp expr)
