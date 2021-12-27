@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ("8.2" ta6le ("680fe031811cac96f612174fa9c65796d979ea1e" . "112b20b8d1028c2e60ae07f3aed1530d836f8b61") #"/home/sal/Documentos/Coding/Racket/Practica3/grammars.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"plai" #"lang" #"reader.rkt") (collects #"plai" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (indirect collects #"racket" #"match" #"gen-match.rkt") (indirect collects #"racket" #"match" #"parse.rkt"))
+=======
+("8.2" ta6nt ("39b4ab4524dd31cbc8414381efd084ac495f8b50" . "e3759c1bfe92c29e7c85e98ee7e61a0f9edeb8a8") #"C:\\Users\\santi\\Documents\\Coding\\Racket\\Practica3\\grammars.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"plai" #"lang" #"reader.rkt") (collects #"plai" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (indirect collects #"racket" #"match" #"gen-match.rkt") (indirect collects #"racket" #"match" #"parse.rkt"))
+>>>>>>> 6e2f26b43cd0de96a071965e63b0233127a06f79
