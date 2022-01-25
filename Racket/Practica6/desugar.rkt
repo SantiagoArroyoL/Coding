@@ -11,7 +11,9 @@
     [(numS n) (num n)]
     [(boolS b) (bool b)]
     [(opS f args) (op f (desugar-lis args))]
-    [(withS bindings body) (conv-a-app bindings (conv-a-fun bindings (desugar body)))] ;;tenemos que hacer funcion auxiliar para hacer desugar a lista d bindings
+    [(listS elems) (lisT (desugar-lis elems))]
+    [(recS bindings body) (conv-rec bindings body)]
+    [(withS bindings body) (conv-a-app bindings (conv-a-fun bindings (desugar body)))]
     [(withS* bindings body) (conv-app-fun bindings (desugar body))]
     [(funS params body) (conv-ff params (desugar body))]
     [(appS fun-expr args) (conv-aapp (desugar fun-expr) args)]
@@ -72,4 +74,14 @@
   (match (car cases)
     [(condition test-expr then-expr) (iF (desugar test-expr) (desugar then-expr) (conv-cond-if (cdr cases)))]
     [(else-cond else-expr) (desugar else-expr)]))
-      
+
+;; Funcion auxiliar que convierte expresiones de recS a with anidados (appS)
+;; Hace lo mismo que conv-a-fun con un map extra pero por alguna razon solo funciona si lo definimos en una funcion aparte
+;;  :)
+;; conv-rec: AST -> app
+(define (conv-rec bindings body)
+  (let f ([bind-des (map (lambda (a) (binding (binding-id a)
+                                               (appS (idS 'Y) (list (funS (list (binding-id a)) (binding-value a)))))) bindings)][bo (desugar body)])
+    (if (null? bind-des)
+        bo
+        (f (drop-right bind-des 1) (app (fun (get-b (last bind-des) "id") bo) (desugar(get-b (last bind-des) "sast")))))))

@@ -21,7 +21,6 @@
       [(exprV expr env) (strict (interp expr env))]
       [else expr]))
 
-
 ;; Análisis semántico
 ;; interp: AST Env → AST-Value
 (define (interp expr env)

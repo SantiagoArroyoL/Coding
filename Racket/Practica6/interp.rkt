@@ -21,6 +21,10 @@
       [(exprV expr env) (strict (interp expr env))]
       [else expr]))
 
+;; call-interp
+;; Dada una expresión, llamaa la función interp con el ambiente inicial.
+;; call-interp: AST -> AST-Value
+(define (call-interp expr) (interp expr (mtSub)))
 
 ;; Análisis semántico
 ;; interp: AST Env → AST-Value
@@ -31,12 +35,18 @@
    [(op f l) (nob (evalua-op f l env))]
    [(iF test-expr then-expr else-expr) then-expr]
    [(fun param body) (closureV param body env)]
+   [(lisT elems) (listV (interp-lista elems env))]
    [(app fun-exp arg)
     (let ([fun-val (interp fun-exp env)])
       (interp (get-e fun-val "body")
               (aSub (get-e fun-val "param")
                     (interp arg env)
                     (get-e fun-val "env"))))]))
+
+(define expr18
+  (app
+   (app
+    (fun 'p (fun 'q (iF (id 'p) (id 'p) (id 'q))))(bool #t)) (bool #f)))
 
 ;; Funcion auxiliar para interpretar operaciones
 ;; evalua-op: (listof Binding) symbol AST → (listof Binding)
@@ -125,3 +135,10 @@
                                  ["param" param]
                                  ["body" body]
                                  ["env" env])]))
+
+;; Funcion auxiliar que interpreta una lista de elems
+;; interp-lista: AST Env -> AST-Value
+(define (interp-lista expr env)
+  (if (empty? expr)
+      '()
+      (cons (interp (first expr) env) (interp-lista (cdr expr) env))))
