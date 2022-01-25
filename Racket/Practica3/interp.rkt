@@ -6,6 +6,11 @@
 ;; Algoritmo de sustitución.
 ;; subst: AST symbol AST → AST
 (define (subst expr sub-id value)
+<<<<<<< HEAD
+  "escribe aquí tu código")
+
+
+=======
   (match expr
     [(id i) (if (eq? i sub-id) value (id i))]
     [(num n) (num n)]
@@ -59,10 +64,15 @@
 (define (sust-ast bind sub-id value)
   (match bind
     [(binding id ast) (binding id (subst ast sub-id value))]))
+>>>>>>> 6e2f26b43cd0de96a071965e63b0233127a06f79
 
  ;;Análisis semántico
  ;;interp: AST → number
 (define (interp expr)
+<<<<<<< HEAD
+  "escribe aquí tu codigo")
+
+=======
  (match expr
    [(id i) (error 'interp "Variable libre")]
    [(num n) n]
@@ -102,3 +112,4 @@
   (if (null? l)
        '()
        (cons (car l) (bindings-with* (subst-bin (cdr l) (get-b (car l) "id") (get-b (car l) "ast"))))))
+>>>>>>> 6e2f26b43cd0de96a071965e63b0233127a06f79

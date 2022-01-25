@@ -18,6 +18,10 @@
 ;; Análisis sintáctico
 ;; parse: s-expression → AST
 (define (parse sexp)
+<<<<<<< HEAD
+  "escribe aquí tu codigo")
+ 
+=======
   (cond
     [(symbol? sexp) (id sexp)]
     [(number? sexp) (num sexp)]
@@ -42,3 +46,4 @@
    (if (null? bindings)
        '()
        (append (list (binding (first (first bindings)) (parse (second (first bindings))))) (parse-bin (cdr bindings)))))
+>>>>>>> 6e2f26b43cd0de96a071965e63b0233127a06f79
