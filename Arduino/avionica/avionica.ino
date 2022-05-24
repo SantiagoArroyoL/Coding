@@ -659,42 +659,15 @@ void revisaVuelo(){
  * Configuramos todo. Este código se corre al prender el Arduino 
  */
 void setup() {
-    // [--- BUZ, LED_RGB y MONITOR SERIAL---]
-    pinMode(3, OUTPUT);//buzzer
-    pinMode(red_light_pin, OUTPUT);
-    pinMode(green_light_pin, OUTPUT);
-    pinMode(blue_light_pin, OUTPUT);
     Serial.begin(9600);
-    
-    // [--- TARJETA SD---]
-    if(!SD.begin(PIN_SD))
-//        return;
-        buzzled(2, 3);
-        
-    // [--- CSV ---]
-    cuentaChiles();
-    archivo = SD.open("Datalog"+String(N_archivos)+".csv", FILE_WRITE);//abrimos o creamos el archivo
-    if(archivo) {
-        archivo.print("Segundos, Temperatura, Presion, Altitud, ");
-        archivo.println("gyroX, gyroY, gyroZ, acelX, acelY, acelZ, aT");
-        archivo.close();
-    } else {
-        buzzled(2, 3);
-    }
+    Serial.print("SETUP");
 
     // [--- MPU9250, AK8963 y BMP180 ---]
     Wire.begin();
-    if (!bmp.begin())
-//        return;
-        buzzled(2, 1);
-    calibracionAltura();
+//    calibracionAltura();
     MPUinit();
-    AK8963init();
-    calibracionAcel();
     // [--- INICIAMOS MELODIA Y ESCRIBIMOS EEPROM ---]
     estadoVUELO = 1;
-    EEPROM.write(DIR_ES_VUELO,estadoVUELO);
-    buzzled(1,1);
 }
 
 /*
@@ -704,54 +677,33 @@ void setup() {
  * El LED se encenderá en caso de error
  */
 void loop() {
-//    if(Serial.available() > 0){
-//        state = Serial.read();
-//    }
-////    while(!seguro){}
-//    if (state == '1') {
-//        seguro = false; 
-//        delay(4000);
-//    }
-//    if (state == '0') {
-//         seguro = true;
-//    }
-//    archivo = SD.open("Datalog"+String(N_archivos)+".csv", FILE_WRITE);//abrimos o creamos el archivo
+  Serial.print("LOOP");
     Temperatura = bmp.readTemperature();
     Presion = bmp.readPressure();
     Altitud = bmp.readAltitude();
     acelLectura();
     gyroLectura();
-    magnetLectura();
-//    if(archivo) {
-//        Serial.print(millis());
-//        Serial.print(",");
-//        Serial.print(Temperatura);
-//        Serial.print(",");
-//        Serial.print(Presion); 
-//        Serial.print(",");
-//        Serial.print(Altitud);
-//        Serial.print(",");
+    acelMedia();
+        Serial.print(millis());
+        Serial.print(",");
+        Serial.print(Temperatura);
+        Serial.print(",");
+        Serial.print(Presion); 
+        Serial.print(",");
+        Serial.print(Altitud);
+        Serial.print(",");
         Serial.print(mX);
         Serial.print(",");
         Serial.print(mY);
         Serial.print(",");
         Serial.print(mZ);
-//        Serial.print(",");
-//        Serial.print(aX);
-//        Serial.print(",");
-//        Serial.print(aY);
-//        Serial.print(",");
-//        Serial.print(aZ);
-//        Serial.print(",");
-//        Serial.println(aT);  
-//        Serial.close(); //cerramos el archivo
-//    } else {
-//        return;
-//        buzzled(2, 3); //Hacer la señal de error de la sd
-//    }
-    revisaVuelo();
-//    while(aT == 0.0){
-//        buzzled(3,1);      
-//    }  
+        Serial.print(",");
+        Serial.print(aX);
+        Serial.print(",");
+        Serial.print(aY);
+        Serial.print(",");
+        Serial.print(aZ);
+        Serial.print(",");
+        Serial.println(aT);  
 delay(3000);
 }
