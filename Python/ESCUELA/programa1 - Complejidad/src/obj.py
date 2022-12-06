@@ -58,136 +58,6 @@ class Vertice:
         
         def __str__(self):
             return str(self.elem)
-"""Clase Monticulo Minimo jaja
-
-La implementacion de un minHeap usando arreglos como representacion
-El orden de los elementos se rige por su elemento d (distancia actual), propiedad de cada vertice 
-
-Esta estructura de datos esta bien formada y a prueba de tontos, cada que se inserta o elimina un elemento reordenamos y verificamos
-"""
-class minHeap:
-    
-    #Creamos un arreglo nuevo con tamanio arbitrario
-    def __init__(self):
-        self.H = [None]*50
-        self.size = 0
-        
-    #Creamos un heap a aprtir de una instancia iterable
-    def creaHeap(self, iterable):
-        n = len(iterable)
-        self.H = [None]*n
-        self.size = n
-        c = 0
-        for elem in iterable:
-            self.H[c] = elem;
-            c += 1
-        limite = (n//2)-1;
-        for i in range(limite, -1, -1):
-            self.abajo(self.H[i]);
-    
-    def padre(self, i):
-        return (i - 1) // 2
-    
-    def izq(self, i):
-        return 2 * i + 1
-    
-    def der(self, i):
-        return 2 * i + 2
-        
-    """
-        movemos "hacia arriba" un elemento v en la cola de prioridades
-        heapifyUp
-    """    
-    def arriba(self, v):
-        if (not v):
-            return
-        index = v.get_indice()
-        padre = self.padre(v.get_indice())
-        if(index <= 0):
-            return
-        if (not self.H[padre]):
-            return
-        if (self.H[padre].get_d() < self.H[index].get_d()):
-            return
-        self.intercambia(index,padre)
-        self.arriba(self.H[padre])
-      
-    """
-        movemos "hacia abajo" un elemento v en la cola de prioridades
-        heapifyDown
-    """          
-    def abajo(self, v):
-        if (not v):
-            return
-        i = v.get_indice()
-        izq = self.izq(i)
-        der = self.der(i)
-        min = i
-        if (self.size <= i):
-            return
-        if izq < self.size and self.H[izq].get_d() < self.H[i].get_d():
-            min = izq
-        if der < self.size and self.H[der].get_d()  < self.H[min].get_d():
-            min = der
-        if (min == i):
-            return
-        self.intercambia(i,min);
-        self.abajo(self.H[min]);
-            
-    def inserta(self, v):
-        if len(self.H) == self.size:
-            temp = self.H;
-            self.H = [None]*(self.size*2)
-            for i in range(0, self.size):
-                self.H[i] = temp[i];
-        self.H[self.size] = v;
-        v.set_indice(self.size);
-        self.size += 1
-        self.arriba(v);
-    
-    #Eliminamos el elemento con d mas chico en el heap    
-    def eliminaMin(self):
-        temp = self.H[0]
-        self.elimina(temp)
-        return temp
-    
-    def elimina(self, elem):
-        if not elem:
-            return
-        i = elem.get_indice()
-        if (i < 0 or i >= self.size):
-            return
-        self.intercambia(i,self.size-1)
-        self.H[self.size-1] = None
-        self.size -= 1
-        self.arriba(self.H[i])
-        self.abajo(self.H[i])
-        elem.set_indice(-1)
-        return elem
-        
-    def reordena(self, v):
-        i = v.get_indice()
-        if (i < 0 or i >= self.size):
-            return
-        self.arriba(v);
-        self.abajo(v);
-    
-    def intercambia(self, x, y):  
-        self.H[x].set_indice(y);
-        self.H[y].set_indice(x);
-        temp = self.H[x];
-        self.H[x] = self.H[y];
-        self.H[y] = temp;
-        
-    def vacia(self):
-        return self.size <= 0
-    
-    def Print(self):
-        for i in self.H:
-            print(i)
-        
-
-
 """
 Una simple implementacion de una grafica dirigida.
 NO VERIFICA LOS METODOS
@@ -242,8 +112,70 @@ class Grafica:
     def Print(self):
         print("VERTICES:")
         for i in self.__vertices:
-            print(i)
-        print("ARISTAS:")
+            print(i, end=",")
+        print("\nARISTAS:")
         for (v,w) in self.__aristas:
             a = str(v), str(w)
-            print(a, self.__aristas[(v,w)]) 
+            print(a, self.__aristas[(v,w)])
+ 
+"""
+   Objeto que verifica si dado un ejemplar de SAT y una configuracion esta es valida      
+"""            
+class SAT_verificador:
+    
+    # Variables de clase    
+    __clausulas = dict()
+    __solucion = dict()
+    literales = 3 #Esto para que el codigo funcione para otros casos de SAT
+    
+    # Recibimos la cadena que representa SAT
+    def __init__(self, input:str):
+        input = input.replace(" ", "")
+        input = input.replace("(", "")
+        input = input.replace(")", "")
+        clausulas = input.split("AND")
+        i = 0
+        for c in clausulas:
+            if (c.count("OR") != self.literales-1): #si tiene el numero correcto de OR's entonces es un SAT bien formado
+                raise Exception("La clausula no esta bien formada!\nPor favor revisa la entrada")
+            self.__clausulas[i] = c.split("OR")
+            i += 1
+    
+    """
+        Metodo que verifica una solucion del SAT 
+    """
+    def verifica(self, input:str) -> bool:
+        input = input.replace(" ", "")
+        input = input.replace("(", "")
+        input = input.replace(")", "")
+        temp = input.split(",")
+        for i in temp:
+            x = i.split("=")
+            if x[1] == "1":
+                self.__solucion[x[0]] = True
+            else: 
+                self.__solucion[x[0]] = False
+        # Ahora si, revisemos si cumple el SAT
+        validezAND = True
+        for c in self.__clausulas.values():
+            validezC = False
+            for literal in c:
+                if "NOT" in literal:
+                    validezC = validezC or not self.__solucion[literal.replace("NOT", "")]
+                else:
+                    validezC = validezC or self.__solucion[literal]
+                # Si el OR es valido on tiene caso seguir recorriendo
+                if validezC:
+                    break
+            validezAND = validezAND and validezC
+            # Si el AND no es valido on tiene caso seguir recorriendo
+            if(not validezAND):
+                break
+        return validezAND
+    
+    def get_clausulas(self):
+        return self.__clausulas
+        
+        
+        
+    

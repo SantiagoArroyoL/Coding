@@ -81,5 +81,6 @@ Integrantes:
 
 ;; Función que devuelve el parse de una cadena 
 (define (lex-this lexer input) (lambda () (lexer input)))
+;;;;;;;;;;
 (let ([input (open-input-string "x:int = 3*(foo+foe)")])
   (compilelos-parser (lex-this compilelos-lexer input)))

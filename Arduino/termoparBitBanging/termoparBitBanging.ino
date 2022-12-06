@@ -22,7 +22,7 @@ void loop() {
 
 void termopar() { 
     digitalWrite(MAX6675_CS, LOW);
-    delay(1); //No sabemos cuanto dura un digitalWrite, 
+    delay(5); //No sabemos cuanto dura un digitalWrite, 
     // asi que un delay no hace daño
     
     // Lee 16 bits,
@@ -30,12 +30,13 @@ void termopar() {
     //  14..2 = 0.25 grado cuenta MSB Primero
     //  2     = 1 si el termopar es de circuito abierto (?)
     //  1..0  = status
+    // shiftIn(dataPin, clockPin, bitOrder)
     v = shiftIn(MAX6675_SO, MAX6675_SCK, MSBFIRST); // shiftIn: Desplaza un byte de datos un bit cada vez. Segundo parametro es donde comienza
     v <<= 8;
     v |= shiftIn(MAX6675_SO, MAX6675_SCK, MSBFIRST);
     digitalWrite(MAX6675_CS, HIGH);
     if (v & 0x4) {
-        // Bit 2 indica si el termopar esta desconectado
+        // Bit 4 indica si el termopar esta desconectado
         temperatura = NAN;
     }
     

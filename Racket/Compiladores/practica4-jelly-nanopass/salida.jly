@@ -1,2 +1,0 @@
-(main {(metodo 12)}) 
-(metodo [(stmt int) (stmt2 bool) (stmt3 int) (stmt4 int)] bool {(f 1 2 3 45)})

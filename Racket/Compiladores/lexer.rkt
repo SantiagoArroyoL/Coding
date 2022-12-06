@@ -24,7 +24,7 @@ Integrantes:
 ;; La cadena vacía (transicion epsilon)
 (define-lex-trans (epsilon stx)
   (syntax-case stx ()
-    [(_) #'""]))
+    [(_) #'""])) 
 
 (define compilelos-lexer
   (lexer

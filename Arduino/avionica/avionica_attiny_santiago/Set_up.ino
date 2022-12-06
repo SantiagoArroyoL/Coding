@@ -9,7 +9,7 @@ void setup() {
     // Salidas
     pinMode(PIN_PA7,OUTPUT);        //Carga de liberación
     digitalWrite(PIN_PA7,LOW);      //Desactivar MOSFET
-      
+    attachInterrupt(PIN_PA5);
     pinMode(PIN_PA3,OUTPUT);        //LED Azul
     pinMode(PIN_PA2,OUTPUT);        //LED Rojo
     pinMode(PIN_PA1,OUTPUT);        //LED Verde

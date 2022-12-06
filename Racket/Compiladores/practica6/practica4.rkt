@@ -1,6 +1,16 @@
+#|
+Compiladores 2023-1
+Equipo: Compilelos
+Integrantes:
+  Arroyo Lozano Santiago
+  Calvario González Berenice
+  Liera Montaño Miguel Ángel
+|#
 #lang nanopass
 (require  "ParserJly.rkt"
           "LexerJly.rkt")
+
+(provide (all-defined-out))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ejercicio 1 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -16,8 +26,9 @@
          [output (open-output-file "parse.jly" #:exists 'truncate)] ;; 13.1.4 File Ports docs.racket
          [AST (jelly-parser (lex-this jelly-lexer input))])
     (print AST output)
+    (display AST)
     (close-input-port input)
-    (close-output-port output))) 
+    (close-output-port output)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ejercicio 2 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -36,7 +47,7 @@
     [(main e1) (string-append "(main {"(expr->string e1) "})")]
     [(un-exp '- e1) (string-append "(- " (expr->string e1)")")]
     [(un-exp '! e1) (string-append "(! " (expr->string e1) ")")]
-    [(decl e1 e2) (string-append (expr->string e1) " " (expr->string e2))]
+    [(decl e1 e2) (string-append "(" (expr->string e1) " " (expr->string e2) ")")]
     [(llamada e1 e2) (string-append "(" (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '= e1 e2) (string-append "(= " (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '< e1 e2) (string-append "(< " (expr->string e1) " " (expr->string e2) ")")]
@@ -52,10 +63,10 @@
     [(bin-exp 'AND e1 e2) (string-append "(& " (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '== e1 e2) (string-append "(== " (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '!= e1 e2) (string-append "(!= " (expr->string e1) " " (expr->string e2) ")")]
-    [(while-exp e1 e2) (string-append "(while " (expr->string e1) " {" (map expr->string (flatten e2)) "})")]
+    [(while-exp e1 e2) (string-append "(while " (expr->string e1) " {" (string-join (map expr->string (flatten e2))) "})")]
     [(if-exp e1 e2 e3) (string-append "(if " (expr->string e1) " " (expr->string e2) " " (expr->string e2) ")")]
     [(metodo e1 e2 e3 e4) (string-append "(" (expr->string e1) " [" (string-join (map expr->string (flatten e2)) " ") "] " (expr->string e3) " {" (expr->string e4) "})")]
-    [else (string-join (map expr->string (flatten e)) " ")] ; APlasta los ultimos casos
+    [else (string-join (map expr->string (flatten e)) " ")] ; Aplasta los ultimos casos
     ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -73,21 +84,59 @@
                    (string->list (symbol->string x)))) #f))
 ; Lenguaje
 (define-language Jly
-  (terminals (id (i)) (tipo (t)) (constante (c)) (primitive  (p))) ; Nuestros simbolos terminales
+  (entry Programa)
+  (terminals
+   (void (v))
+   (id (i))
+   (tipo (t))
+   (boolean (b))
+   (number (n))
+   (constante (c))
+   (primitive  (p))) ; Nuestros simbolos terminales
   ; Clausulas no terminales:
-  (Programa (programa) (main_exp metodo* ...) (metodo* ...))
-  (MainExp (main_exp) (main bloque))
-  (Metodo (metodo) (i [declaracion* ...] t bloque))
-  (Bloque (bloque) {sentencia* ... sentencia})
-  (Sentencia (sentencia) while_exp if_exp exp declaracion)
-  (Exp (exp) c i ; Const, id
+  (Programa (programa)
+            (metodo* ...)
+            (main_exp metodo* ...)
+            )
+  (MainExp (main_exp)
+   (main bloque))
+  (Metodo (metodo)
+   (i [declaracion* ...] t bloque))
+  (Bloque (bloque)
+   {sentencia* ... sentencia})
+  (Sentencia (sentencia)
+             exp
+             while_exp
+             if_exp
+             declaracion)
+  (Exp (exp)
+       c i b n v; Const, id, boolean, number, void
     (p exp1 exp2) ; op - primitiva
     (= (i t) exp2) ; eq
     (= i exp2)  ; asig
-    (- exp) ; sub
-    (! exp) ; not
-    (return exp) ;return
-    (i (exp* ... exp))) ; decl 
-  (Declaracion (declaracion) (i t)) 
-  (IfExp (if_exp) (if exp1 exp2 exp3)) 
-  (WhileExp (while_exp) (while exp1 bloque)))
+    (- exp1) ; sub
+    (! exp1) ; not
+    (return exp1) ;return
+    (i (exp* ... exp))) ; llamada
+  (Declaracion (declaracion)
+               (i t)) 
+  (IfExp (if_exp)
+         (if exp1 exp2 exp3)) 
+  (WhileExp (while_exp)
+            (while exp1 bloque)))
+
+(define-parser parse-Jly Jly)
+
+(define (prueba-parse-Jly x)
+  (parse-Jly (quasiquote ((unquote x)))))
+
+(define ejemplo-1 '(gcd [(a int) (b int) (x int)] int {
+                        (while (!= a 0) {(if (< a b) (= b (- b a)) (= a (- a b)))})
+                        (return b)
+                    }))
+(define ejemplo-2 '(main {
+                         (while (!= a 0) {(if (< a b) (= b (- b a)) (= a (- a b)))})
+                         (return b)
+                          }))
+;(prueba-parse-Jly ejemplo-1)
+;(prueba-parse-Jly ejemplo-2)
