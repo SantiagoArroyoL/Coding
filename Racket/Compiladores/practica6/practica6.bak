@@ -153,28 +153,21 @@ Integrantes:
 
 
 ;; PRUEBAS
-
-(define ejemploAlfonso (string->symbol (expr->string temp)))
-
-;(parse-Jly ejemploAlfonso)
-
-(define ejemplo  '((main {(gdc 12)})
-              (gdc [(stmt int)
-                          (stmt2 bool)
-                          (stmt3 int)
-                          (stmt4 int)]
-                         bool {(f 1 2 3 45)})))
-
-(define (pruebaR e)
-  (let* ([parseado (parse-Jly e)])
-    (rename-var parseado)))
-
 (define (prueba e)
-  (let* ([parseado (parse-Jly e)]
+  (let* ([parseado (parse-Jly (quasiquote ((unquote e))))]
          [renombrado (rename-var parseado)]
          [simbolos (symbol-table renombrado)])
     (type-check renombrado simbolos)))
 
 
+(define ejemplo-3 '(function [(a int) (b int)] int {
+                        (while (!= a 0)
+                            {(return a) (b bool) (while (! b) {(return b)})})
+                        (return a)
+                   }))
+
+
 ;; Si no lanza error, significa que pasamos la verificación de tipos.
-(pruebaR ejemplo)
+(prueba ejemplo-3)
+(prueba ejemplo-1)
+;(prueba ejemplo-2)

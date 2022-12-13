@@ -1,0 +1,1 @@
+("8.2" ta6nt ("ff7a805b0bb991b95b9584c9b478005fda6555c4" . "8b01e13c860e0657fbce172b8765db2c772b57b6") #"C:\\Users\\santi\\Documents\\Coding\\Racket\\Compiladores\\practica6\\practica4.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"nanopass" #"lang" #"reader.rkt") (collects #"nanopass" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))

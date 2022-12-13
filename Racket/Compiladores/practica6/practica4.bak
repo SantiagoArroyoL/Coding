@@ -30,14 +30,6 @@ Integrantes:
     (close-input-port input)
     (close-output-port output)))
 
-(define temp (cons 
-	(main (llamada (id 'gdc) (num 12))) 
-	(metodo (id 'gdc) (list* (decl (id 'stmt) 'INT) 
-			(decl (id 'stmt2) 'BOOL) (decl (id 'stmt3) 'INT)
-                        (decl (id 'stmt4) 'INT)) 'BOOL 
-			(llamada (id 'f) (list* (num 1) (num 2) (num 3) (num 45)))
-	)))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ejercicio 2 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -71,12 +63,10 @@ Integrantes:
     [(bin-exp 'AND e1 e2) (string-append "(& " (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '== e1 e2) (string-append "(== " (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '!= e1 e2) (string-append "(!= " (expr->string e1) " " (expr->string e2) ")")]
-    [(while-exp e1 e2) (string-append "(while " (expr->string e1) " {" (expr->string e2) "})")]
+    [(while-exp e1 e2) (string-append "(while " (expr->string e1) " {" (string-join (map expr->string (flatten e2))) "})")]
     [(if-exp e1 e2 e3) (string-append "(if " (expr->string e1) " " (expr->string e2) " " (expr->string e2) ")")]
-    [(metodo e1 e2 e3 e4) (string-append "(" (expr->string e1) " [" (expr->string e2) "] " (expr->string e3) " {" (expr->string e4) "})")]
-    [(cons h t) (string-append (expr->string h) " " (expr->string t)) ]
-    [else e]
-    ;[else (string-join (map expr->string (flatten e)) " ")] ; Aplasta los ultimos casos
+    [(metodo e1 e2 e3 e4) (string-append "(" (expr->string e1) " [" (string-join (map expr->string (flatten e2)) " ") "] " (expr->string e3) " {" (expr->string e4) "})")]
+    [else (string-join (map expr->string (flatten e)) " ")] ; Aplasta los ultimos casos
     ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -105,10 +95,8 @@ Integrantes:
    (primitive  (p))) ; Nuestros simbolos terminales
   ; Clausulas no terminales:
   (Programa (programa)
+            (metodo* ...)
             (main_exp metodo* ...)
-            (metodo* ...) 
-            
-             
             )
   (MainExp (main_exp)
    (main bloque))
@@ -117,7 +105,6 @@ Integrantes:
   (Bloque (bloque)
    {sentencia* ... sentencia})
   (Sentencia (sentencia)
-             (i exp* ... exp)
              exp
              while_exp
              if_exp
@@ -139,3 +126,17 @@ Integrantes:
             (while exp1 bloque)))
 
 (define-parser parse-Jly Jly)
+
+(define (prueba-parse-Jly x)
+  (parse-Jly (quasiquote ((unquote x)))))
+
+(define ejemplo-1 '(gcd [(a int) (b int) (x int)] int {
+                        (while (!= a 0) {(if (< a b) (= b (- b a)) (= a (- a b)))})
+                        (return b)
+                    }))
+(define ejemplo-2 '(main {
+                         (while (!= a 0) {(if (< a b) (= b (- b a)) (= a (- a b)))})
+                         (return b)
+                          }))
+;(prueba-parse-Jly ejemplo-1)
+;(prueba-parse-Jly ejemplo-2)
