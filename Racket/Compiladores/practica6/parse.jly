@@ -1,1 +1,0 @@
-(cons (main (llamada (id 'metodo) (num 12))) (metodo (id 'metodo) (list* (decl (id 'stmt) 'INT) (decl (id 'stmt2) 'BOOL) (decl (id 'stmt3) 'INT) (decl (id 'stmt4) 'INT)) 'BOOL (llamada (id 'f) (list* (num 1) (num 2) (num 3) (num 45)))))

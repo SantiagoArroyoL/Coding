@@ -1,5 +1,7 @@
 #lang nanopass
 
+(provide (all-defined-out))
+
 (provide contenedores
          vacios
          jelly-lexer)
@@ -47,7 +49,7 @@
 ;Alternativa a las expresiones regulares en la definicion del lexer.
 (define-lex-trans (pas stx)
    (syntax-case stx ()
-     [(_) #'(:or "True" "False")]))
+     [(_) #'(:or "True" "False")])) 
 
 (define jelly-lexer
   (lexer

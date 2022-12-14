@@ -1,5 +1,6 @@
 #|
 Compiladores 2023-1
+Practica04 - jelly a nanopass
 Equipo: Compilelos
 Integrantes:
   Arroyo Lozano Santiago
@@ -26,17 +27,8 @@ Integrantes:
          [output (open-output-file "parse.jly" #:exists 'truncate)] ;; 13.1.4 File Ports docs.racket
          [AST (jelly-parser (lex-this jelly-lexer input))])
     (print AST output)
-    (display AST)
     (close-input-port input)
     (close-output-port output)))
-
-(define temp (cons 
-	(main (llamada (id 'gdc) (num 12))) 
-	(metodo (id 'gdc) (list* (decl (id 'stmt) 'INT) 
-			(decl (id 'stmt2) 'BOOL) (decl (id 'stmt3) 'INT)
-                        (decl (id 'stmt4) 'INT)) 'BOOL 
-			(llamada (id 'f) (list* (num 1) (num 2) (num 3) (num 45)))
-	)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Ejercicio 2 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -51,7 +43,7 @@ Integrantes:
     [(bool "True") "#t"]
     [(bool "False") "#f"]
     [(num n) (number->string n)] 
-    [(return e1) (string-append "return " (expr->string e1))]
+    [(return e1) (string-append "(return " (expr->string e1) ")")]
     [(main e1) (string-append "(main {"(expr->string e1) "})")]
     [(un-exp '- e1) (string-append "(- " (expr->string e1)")")]
     [(un-exp '! e1) (string-append "(! " (expr->string e1) ")")]
@@ -72,10 +64,10 @@ Integrantes:
     [(bin-exp '== e1 e2) (string-append "(== " (expr->string e1) " " (expr->string e2) ")")]
     [(bin-exp '!= e1 e2) (string-append "(!= " (expr->string e1) " " (expr->string e2) ")")]
     [(while-exp e1 e2) (string-append "(while " (expr->string e1) " {" (expr->string e2) "})")]
-    [(if-exp e1 e2 e3) (string-append "(if " (expr->string e1) " " (expr->string e2) " " (expr->string e2) ")")]
+    [(if-exp e1 e2 e3) (string-append "(if " (expr->string e1) " " (expr->string e2) " " (expr->string e3) ")")]
     [(metodo e1 e2 e3 e4) (string-append "(" (expr->string e1) " [" (expr->string e2) "] " (expr->string e3) " {" (expr->string e4) "})")]
     [(cons h t) (string-append (expr->string h) " " (expr->string t)) ]
-    [else e]
+    [else error "Hubo un error despues del parseo. Nanopass no acepta tu entrada"]
     ;[else (string-join (map expr->string (flatten e)) " ")] ; Aplasta los ultimos casos
     ))
 
@@ -87,7 +79,7 @@ Integrantes:
 (define (constante? x) (or (number? x) (boolean? x)))
 (define (reservada? x) (memq x '(return while if main)))
 (define (primitive? x) (memq x '(+ - * / AND OR % == != < > >= <= !)))
-(define (id? x)
+(define (idd? x)
   (if (symbol? x)
       (and (not (reservada? (symbol->string x)))
            (andmap (lambda (c) (or (char-numeric? c) (char-alphabetic? c) (eq? c #\_)))
@@ -97,7 +89,7 @@ Integrantes:
   (entry Programa)
   (terminals
    (void (v))
-   (id (i))
+   (idd (i))   ;Si, idd esta bien
    (tipo (t))
    (boolean (b))
    (number (n))
@@ -105,11 +97,8 @@ Integrantes:
    (primitive  (p))) ; Nuestros simbolos terminales
   ; Clausulas no terminales:
   (Programa (programa)
-            (main_exp metodo* ...)
-            (metodo* ...) 
-            
-             
-            )
+            (main_exp metodo* ...) ; Solo pasa este caso
+            (metodo* ...))
   (MainExp (main_exp)
    (main bloque))
   (Metodo (metodo)
@@ -117,8 +106,8 @@ Integrantes:
   (Bloque (bloque)
    {sentencia* ... sentencia})
   (Sentencia (sentencia)
-             (i exp* ... exp)
              exp
+             (i exp* ... exp) ; La llamada tambien debe vivir aqui porque (?)
              while_exp
              if_exp
              declaracion)
@@ -130,7 +119,7 @@ Integrantes:
     (- exp1) ; sub
     (! exp1) ; not
     (return exp1) ;return
-    (i (exp* ... exp))) ; llamada
+    (i exp* ... exp)) ; llamada de funcion
   (Declaracion (declaracion)
                (i t)) 
   (IfExp (if_exp)
