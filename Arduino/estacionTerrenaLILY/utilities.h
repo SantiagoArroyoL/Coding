@@ -28,7 +28,8 @@
 
 #define GPS_RX_PIN                  34
 #define GPS_TX_PIN                  12
-#define BUTTON_PIN                  38
+#define BUTTON_PIN                  38  
+
 #define BUTTON_PIN_MASK             GPIO_SEL_38
 #define I2C_SDA                     21
 #define I2C_SCL                     22
@@ -47,16 +48,16 @@
 #define LED_ON                      LOW
 #define LED_OFF                     HIGH
 
-#define GPS_BAUD_RATE               9600
+#define GPS_BAUD_RATE               115200
 #define HAS_GPS
 
 // Inicializamos el AXP192
 AXP20X_Class PMU;
 
 bool initPMU() {
-    if (PMU.begin(Wire, AXP192_SLAVE_ADDRESS) == AXP_FAIL) {
-        return false;
-    }
+    // if (PMU.begin(Wire, AXP192_SLAVE_ADDRESS) == AXP_FAIL) {
+    //     return false;
+    // }
     /*
      * Tiene un LED de carga pero no funciona
      * * * */
@@ -136,8 +137,37 @@ SPIClass SDSPI(HSPI);
 void initBoard() {
     Serial.begin(115200);
     SPI.begin(RADIO_SCLK_PIN, RADIO_MISO_PIN, RADIO_MOSI_PIN);
-    Wire.begin(I2C_SDA, I2C_SCL);
+    // Wire.begin(I2C_SDA, I2C_SCL);
     // Es un serial para el monitor y otro para el GPS
     Serial1.begin(GPS_BAUD_RATE, SERIAL_8N1, GPS_RX_PIN, GPS_TX_PIN);
     initPMU();
+}
+
+/**
+ * mapeo
+ * Dado una voltaje de entrada y un rango, deducimos la presion
+ * @param x Voltaje a mapear
+ * @param in_main valor minimo de voltaje de entrada [V]
+ * @param in_max valor maximo de voltaje de entrada  [V]
+ * @param out_min valor minimo de presion de salida  [MPa]
+ * @param out_max valor maximo de presion de salida  [MPa]
+ * @return Valor de presion en MPa
+ */
+float mapeo(float X, float in_min, float in_max, float out_min, float out_max)
+{
+  return out_min + ((X - in_min)*(out_max-out_min)/(in_max-in_min));
+}
+
+/**
+ * read_pressure
+ * Funcion para leer la presion en las entradas analogicas
+ */
+#define presionPin1  25
+unsigned long ADC_Presion_1;
+float presion1;
+
+void readPressure() {
+  ADC_Presion_1 = analogRead(presionPin1);
+  float voltage = (float) ADC_Presion_1 * (5.0/1023.0);
+  presion1 =  mapeo(voltage,0.5,4.5,0,6.8948);
 }

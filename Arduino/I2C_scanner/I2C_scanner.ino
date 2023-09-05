@@ -19,13 +19,13 @@ void setup() {
               count++;
               delay (1);
         } else {
-            Serial.print("Dirección vacía: ");
+            Serial.print("Direccion vacía: ");
             Serial.print (i, DEC);
             Serial.print (" (0x");
             Serial.print (i, HEX);
             Serial.println (")");
         }
-    } // end of for loop
+    } // end for loop
     Serial.println ("Done.");
     Serial.print ("Se encontraron ");
     Serial.print (count, DEC);

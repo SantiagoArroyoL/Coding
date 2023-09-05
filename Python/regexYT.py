@@ -15,3 +15,11 @@ if result:
   print("Search successful.")
 else:
   print("Search unsuccessful.")
+ 
+factorial = 1
+  
+
+for i in range(1,1):
+    factorial = factorial * i
+    
+print(factorial)

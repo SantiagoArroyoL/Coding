@@ -32,7 +32,7 @@ view.resize(1200, 700)
 
 # Objetos propios
 pop_up = PopUp(view)
-ser = Communication(pop_up.baudrate(), pop_up.puerto())
+ser = Communication(pop_up.baudrate(), "COM15")
 CSV = CSV()
 
 # Estilos y fuentes
@@ -115,11 +115,12 @@ def update():
         value_chain = ser.getData()
         tiempo.update(value_chain[0])
         altura.update(value_chain[1])
-        temp.update(value_chain[2])
-        presion.update(value_chain[3])
-        gyro.update(value_chain[4], value_chain[5], value_chain[6])
-        vel.update(value_chain[7], value_chain[8], value_chain[9])
-        acel.update(value_chain[7], value_chain[8], value_chain[9])
+        print("RSSI:", value_chain[2])
+        # temp.update(value_chain[2])
+        # presion.update(value_chain[3])
+        # gyro.update(value_chain[4], value_chain[5], value_chain[6])
+        # vel.update(value_chain[7], value_chain[8], value_chain[9])
+        # acel.update(value_chain[2], value_chain[3], value_chain[4])
         CSV.guardar(value_chain)
     except IndexError:
         print('perate mano, no funcionaaaa')
