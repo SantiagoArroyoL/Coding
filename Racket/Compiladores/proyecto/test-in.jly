@@ -1,0 +1,17 @@
+main{
+    gdc(12, True,3 ,4)
+}
+gdc(stmt:int, stmt2:bool, stmt3:int, stmt4:int):bool {
+    f(1,2,3)
+    return stmt2
+}
+f(stmt:int, b:int, x:int):int {
+    while (stmt != 0) {
+        if (stmt < b) {
+            b = b - stmt 
+        } else {
+            stmt = stmt - b
+        }
+    }
+    return b
+}
