@@ -1,0 +1,2697 @@
+D G "__PCH__" 0 28 ""5.115d""
+D G "__DEVICE__" 0 28 "4550"
+D G "__DATE__" 0 28 ""25-Jan-24""
+D G "__TIME__" 0 28 ""18:35:05""
+D G "_UNICODE" 0 28 ""?""
+D G "__EVAL" 0 28 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
+c L "set_tris_a" 2 3 6 "FUNCTION"
+F N "set_tris_a" 2 45 ""
+V L "value" 2 45 "int8" `55 
+F B "set_tris_a" 2 45 "void(int8 value)" `54 
+F N "set_tris_b" 2 46 ""
+V L "value" 2 46 "int8" `57 
+F B "set_tris_b" 2 46 "void(int8 value)" `56 
+F N "set_tris_c" 2 47 ""
+V L "value" 2 47 "int8" `59 
+F B "set_tris_c" 2 47 "void(int8 value)" `58 
+F N "set_tris_d" 2 48 ""
+V L "value" 2 48 "int8" `61 
+F B "set_tris_d" 2 48 "void(int8 value)" `60 
+F N "set_tris_e" 2 49 ""
+V L "value" 2 49 "int8" `63 
+F B "set_tris_e" 2 49 "void(int8 value)" `62 
+F N "get_tris_a" 2 50 ""
+F B "get_tris_a" 2 50 "int8()" `64 
+F N "get_tris_b" 2 51 ""
+F B "get_tris_b" 2 51 "int8()" `65 
+F N "get_tris_c" 2 52 ""
+F B "get_tris_c" 2 52 "int8()" `66 
+F N "get_tris_d" 2 53 ""
+F B "get_tris_d" 2 53 "int8()" `67 
+F N "get_tris_e" 2 54 ""
+F B "get_tris_e" 2 54 "int8()" `68 
+F N "output_a" 2 55 ""
+V L "value" 2 55 "int8" `70 
+F B "output_a" 2 55 "void(int8 value)" `69 
+F N "output_b" 2 56 ""
+V L "value" 2 56 "int8" `72 
+F B "output_b" 2 56 "void(int8 value)" `71 
+F N "output_c" 2 57 ""
+V L "value" 2 57 "int8" `74 
+F B "output_c" 2 57 "void(int8 value)" `73 
+F N "output_d" 2 58 ""
+V L "value" 2 58 "int8" `76 
+F B "output_d" 2 58 "void(int8 value)" `75 
+F N "output_e" 2 59 ""
+V L "value" 2 59 "int8" `78 
+F B "output_e" 2 59 "void(int8 value)" `77 
+F N "input_a" 2 60 ""
+F B "input_a" 2 60 "int8()" `79 
+F N "input_b" 2 61 ""
+F B "input_b" 2 61 "int8()" `80 
+F N "input_c" 2 62 ""
+F B "input_c" 2 62 "int8()" `81 
+F N "input_d" 2 63 ""
+F B "input_d" 2 63 "int8()" `82 
+F N "input_e" 2 64 ""
+F B "input_e" 2 64 "int8()" `83 
+F N "input_change_a" 2 65 ""
+F B "input_change_a" 2 65 "int8()" `84 
+F N "input_change_b" 2 66 ""
+F B "input_change_b" 2 66 "int8()" `85 
+F N "input_change_c" 2 67 ""
+F B "input_change_c" 2 67 "int8()" `86 
+F N "input_change_d" 2 68 ""
+F B "input_change_d" 2 68 "int8()" `87 
+F N "input_change_e" 2 69 ""
+F B "input_change_e" 2 69 "int8()" `88 
+F N "port_b_pullups" 2 70 ""
+V L "value" 2 70 "int8" `90 
+F B "port_b_pullups" 2 70 "void(int8 value)" `89 
+F N "port_d_pullups" 2 71 ""
+V L "value" 2 71 "int8" `92 
+F B "port_d_pullups" 2 71 "void(int8 value)" `91 
+F N "input" 2 72 ""
+V L "pin" 2 72 "int16" `94 
+F B "input" 2 72 "int8(int16 pin)" `93 
+F N "input_state" 2 73 ""
+V L "pin" 2 73 "int16" `96 
+F B "input_state" 2 73 "int8(int16 pin)" `95 
+F N "output_low" 2 74 ""
+V L "pin" 2 74 "int16" `98 
+F B "output_low" 2 74 "void(int16 pin)" `97 
+F N "output_high" 2 75 ""
+V L "pin" 2 75 "int16" `100 
+F B "output_high" 2 75 "void(int16 pin)" `99 
+F N "output_toggle" 2 76 ""
+V L "pin" 2 76 "int16" `102 
+F B "output_toggle" 2 76 "void(int16 pin)" `101 
+F N "output_bit" 2 77 ""
+V L "pin" 2 77 "int16" `104 
+V L "level" 2 77 "int8" `105 
+F B "output_bit" 2 77 "void(int16 pin,int8 level)" `103 
+F N "output_float" 2 78 ""
+V L "pin" 2 78 "int16" `107 
+F B "output_float" 2 78 "void(int16 pin)" `106 
+F N "output_drive" 2 79 ""
+V L "pin" 2 79 "int16" `109 
+F B "output_drive" 2 79 "void(int16 pin)" `108  "Constants used to identify pins in the above are:"
+D G "PIN_A0" 2 83 "31744"
+D G "PIN_A1" 2 84 "31745"
+D G "PIN_A2" 2 85 "31746"
+D G "PIN_A3" 2 86 "31747"
+D G "PIN_A4" 2 87 "31748"
+D G "PIN_A5" 2 88 "31749"
+D G "PIN_A6" 2 89 "31750"
+D G "PIN_B0" 2 91 "31752"
+D G "PIN_B1" 2 92 "31753"
+D G "PIN_B2" 2 93 "31754"
+D G "PIN_B3" 2 94 "31755"
+D G "PIN_B4" 2 95 "31756"
+D G "PIN_B5" 2 96 "31757"
+D G "PIN_B6" 2 97 "31758"
+D G "PIN_B7" 2 98 "31759"
+D G "PIN_C0" 2 100 "31760"
+D G "PIN_C1" 2 101 "31761"
+D G "PIN_C2" 2 102 "31762"
+D G "PIN_C4" 2 103 "31764"
+D G "PIN_C5" 2 104 "31765"
+D G "PIN_C6" 2 105 "31766"
+D G "PIN_C7" 2 106 "31767"
+D G "PIN_D0" 2 108 "31768"
+D G "PIN_D1" 2 109 "31769"
+D G "PIN_D2" 2 110 "31770"
+D G "PIN_D3" 2 111 "31771"
+D G "PIN_D4" 2 112 "31772"
+D G "PIN_D5" 2 113 "31773"
+D G "PIN_D6" 2 114 "31774"
+D G "PIN_D7" 2 115 "31775"
+D G "PIN_E0" 2 117 "31776"
+D G "PIN_E1" 2 118 "31777"
+D G "PIN_E2" 2 119 "31778"
+D G "PIN_E3" 2 120 "31779"
+D G "PIN_E7" 2 121 "31783"
+D G "FALSE" 2 124 "0"
+D G "TRUE" 2 125 "1"
+D G "BYTE" 2 127 "int8"
+D G "BOOLEAN" 2 128 "int1"
+D G "getc" 2 130 "getch"
+D G "fgetc" 2 131 "getch"
+D G "getchar" 2 132 "getch"
+D G "putc" 2 133 "putchar"
+D G "fputc" 2 134 "putchar"
+D G "fgets" 2 135 "gets"
+D G "fputs" 2 136 "puts"
+c L "output_drive" 2 3 3 "FUNCTION"
+F N "restart_cause" 2 141 ""
+F B "restart_cause" 2 141 "int8()" `110 
+F N "reset_cpu" 2 142 ""
+F B "reset_cpu" 2 142 "void()" `111 
+F N "sleep" 2 143 ""
+F B "sleep" 2 143 "void()" `112 
+F N "sleep" 2 144 ""
+V L "type" 2 144 "int8" `114 
+F B "sleep" 2 144 "void(int8 type)" `113  "Constants returned from RESTART_CAUSE() are:"
+D G "WDT_TIMEOUT" 2 146 "7"
+D G "MCLR_FROM_SLEEP" 2 147 "11"
+D G "MCLR_FROM_RUN" 2 148 "15"
+D G "NORMAL_POWER_UP" 2 149 "12"
+D G "BROWNOUT_RESTART" 2 150 "14"
+D G "WDT_FROM_SLEEP" 2 151 "3"
+D G "RESET_INSTRUCTION" 2 152 "0"
+D G "SLEEP_FULL" 2 155 "0" "Default"
+D G "SLEEP_IDLE" 2 156 "1" "Clock and peripherals don't stop"
+c L "sleep" 2 3 5 "FUNCTION"
+F N "setup_timer_0" 2 163 ""
+V L "mode" 2 163 "int8" `116 
+F B "setup_timer_0" 2 163 "void(int8 mode)" `115 
+F N "set_timer0" 2 164 ""
+V L "value" 2 164 "int16" `118 
+F B "set_timer0" 2 164 "void(int16 value)" `117 
+F N "get_timer0" 2 165 ""
+F B "get_timer0" 2 165 "int16()" `119 
+F N "setup_counters" 2 166 ""
+V L "mode" 2 166 "int8" `121 
+V L "prescaler" 2 166 "int8" `122 
+F B "setup_counters" 2 166 "void(int8 mode,int8 prescaler)" `120 
+F N "set_rtcc" 2 167 ""
+V L "value" 2 167 "int16" `124 
+F B "set_rtcc" 2 167 "void(int16 value)" `123 
+F N "get_rtcc" 2 168 ""
+F B "get_rtcc" 2 168 "int16()" `125  "Constants used for SETUP_TIMER_0() are:"
+D G "T0_INTERNAL" 2 170 "0"
+D G "T0_EXT_L_TO_H" 2 171 "32"
+D G "T0_EXT_H_TO_L" 2 172 "48"
+D G "T0_DIV_1" 2 174 "8"
+D G "T0_DIV_2" 2 175 "0"
+D G "T0_DIV_4" 2 176 "1"
+D G "T0_DIV_8" 2 177 "2"
+D G "T0_DIV_16" 2 178 "3"
+D G "T0_DIV_32" 2 179 "4"
+D G "T0_DIV_64" 2 180 "5"
+D G "T0_DIV_128" 2 181 "6"
+D G "T0_DIV_256" 2 182 "7"
+D G "T0_OFF" 2 184 "0x80"
+D G "T0_8_BIT" 2 186 "0x40"
+D G "RTCC_INTERNAL" 2 190 "0"
+D G "RTCC_EXT_L_TO_H" 2 191 "32"
+D G "RTCC_EXT_H_TO_L" 2 192 "48"
+D G "RTCC_DIV_1" 2 193 "8"
+D G "RTCC_DIV_2" 2 194 "0"
+D G "RTCC_DIV_4" 2 195 "1"
+D G "RTCC_DIV_8" 2 196 "2"
+D G "RTCC_DIV_16" 2 197 "3"
+D G "RTCC_DIV_32" 2 198 "4"
+D G "RTCC_DIV_64" 2 199 "5"
+D G "RTCC_DIV_128" 2 200 "6"
+D G "RTCC_DIV_256" 2 201 "7"
+D G "RTCC_OFF" 2 202 "0x80"
+D G "RTCC_8_BIT" 2 203 "0x40"
+c L "get_rtcc" 2 3 8 "FUNCTION"
+F N "setup_wdt" 2 214 ""
+V L "mode" 2 214 "int16" `127 
+F B "setup_wdt" 2 214 "void(int16 mode)" `126 
+F N "restart_wdt" 2 215 ""
+F B "restart_wdt" 2 215 "void()" `128  "Constants used for SETUP_WDT() are:"
+D G "WDT_ON" 2 217 "0x100"
+D G "WDT_OFF" 2 218 "0"
+D G "WDT_4MS" 2 220 "0x300"
+D G "WDT_8MS" 2 221 "0x500"
+D G "WDT_16MS" 2 222 "0x700"
+D G "WDT_32MS" 2 223 "0x900"
+D G "WDT_64MS" 2 224 "0xB00"
+D G "WDT_128MS" 2 225 "0xD00"
+D G "WDT_256MS" 2 226 "0xF00"
+D G "WDT_512MS" 2 227 "0x1100"
+D G "WDT_1S" 2 228 "0x1300"
+D G "WDT_2S" 2 229 "0x1500"
+D G "WDT_4S" 2 230 "0x1700"
+D G "WDT_8S" 2 231 "0x1900"
+D G "WDT_16S" 2 232 "0x1B00"
+D G "WDT_32S" 2 233 "0x1D00"
+D G "WDT_64S" 2 234 "0x1F00"
+D G "WDT_128S" 2 235 "0x2100"
+c L "restart_wdt" 2 3 3 "FUNCTION"
+F N "setup_timer_1" 2 240 ""
+V L "mode" 2 240 "int16" `130 
+F B "setup_timer_1" 2 240 "void(int16 mode)" `129 
+F N "get_timer1" 2 241 ""
+F B "get_timer1" 2 241 "int16()" `131 
+F N "set_timer1" 2 242 ""
+V L "value" 2 242 "int16" `133 
+F B "set_timer1" 2 242 "void(int16 value)" `132  "Constants used for SETUP_TIMER_1() are:"
+D G "T1_DISABLED" 2 245 "0"
+D G "T1_INTERNAL" 2 246 "0x85"
+D G "T1_EXTERNAL" 2 247 "0x87"
+D G "T1_EXTERNAL_SYNC" 2 248 "0x83"
+D G "T1_CLK_OUT" 2 250 "8"
+D G "T1_DIV_BY_1" 2 252 "0"
+D G "T1_DIV_BY_2" 2 253 "0x10"
+D G "T1_DIV_BY_4" 2 254 "0x20"
+D G "T1_DIV_BY_8" 2 255 "0x30"
+c L "set_timer1" 2 3 3 "FUNCTION"
+F N "setup_timer_2" 2 260 ""
+V L "mode" 2 260 "int8" `135 
+V L "period" 2 260 "int8" `136 
+V L "postscale" 2 260 "int8" `137 
+F B "setup_timer_2" 2 260 "void(int8 mode,int8 period,int8 postscale)" `134 
+F N "get_timer2" 2 261 ""
+F B "get_timer2" 2 261 "int8()" `138 
+F N "set_timer2" 2 262 ""
+V L "value" 2 262 "int8" `140 
+F B "set_timer2" 2 262 "void(int8 value)" `139  "Constants used for SETUP_TIMER_2() are:"
+D G "T2_DISABLED" 2 264 "0"
+D G "T2_DIV_BY_1" 2 265 "4"
+D G "T2_DIV_BY_4" 2 266 "5"
+D G "T2_DIV_BY_16" 2 267 "6"
+c L "set_timer2" 2 3 3 "FUNCTION"
+F N "setup_timer_3" 2 272 ""
+V L "mode" 2 272 "int16" `142 
+F B "setup_timer_3" 2 272 "void(int16 mode)" `141 
+F N "get_timer3" 2 273 ""
+F B "get_timer3" 2 273 "int16()" `143 
+F N "set_timer3" 2 274 ""
+V L "value" 2 274 "int16" `145 
+F B "set_timer3" 2 274 "void(int16 value)" `144  "Constants used for SETUP_TIMER_3() are:"
+D G "T3_DISABLED" 2 277 "0"
+D G "T3_INTERNAL" 2 278 "0x85"
+D G "T3_EXTERNAL" 2 279 "0x87"
+D G "T3_EXTERNAL_SYNC" 2 280 "0x83"
+D G "T3_DIV_BY_1" 2 282 "0"
+D G "T3_DIV_BY_2" 2 283 "0x10"
+D G "T3_DIV_BY_4" 2 284 "0x20"
+D G "T3_DIV_BY_8" 2 285 "0x30"
+D G "T3_CCP1_TO_2" 2 288 "0x48"
+D G "T3_CCP2" 2 289 "0x8"
+c L "set_timer3" 2 3 4 "FUNCTION"
+F N "setup_ccp1" 2 295 ""
+V L "mode" 2 295 "int32" `147 
+F B "setup_ccp1" 2 295 "void(int32 mode)" `146 
+F N "setup_ccp1" 2 296 ""
+V L "mode" 2 296 "int32" `149 
+V L "pwm" 2 296 "int8" `150 
+F B "setup_ccp1" 2 296 "void(int32 mode,int8 pwm)" `148 
+F N "set_pwm1_duty" 2 297 ""
+V L "value" 2 297 "int8" `152 
+F B "set_pwm1_duty" 2 297 "void(int8 value)" `151 
+F N "set_pwm1_duty" 2 298 ""
+V L "value" 2 298 "int16" `154 
+F B "set_pwm1_duty" 2 298 "void(int16 value)" `153  "Constants used for SETUP_CCPx() are:"
+D G "CCP_OFF" 2 300 "0"
+D G "CCP_CAPTURE_FE" 2 301 "0x04"
+D G "CCP_CAPTURE_RE" 2 302 "0x05"
+D G "CCP_CAPTURE_DIV_4" 2 303 "0x06"
+D G "CCP_CAPTURE_DIV_16" 2 304 "0x07"
+D G "CCP_COMPARE_SET_ON_MATCH" 2 305 "0x08"
+D G "CCP_COMPARE_CLR_ON_MATCH" 2 306 "0x09"
+D G "CCP_COMPARE_INT" 2 307 "0x0A"
+D G "CCP_COMPARE_INT_AND_TOGGLE" 2 308 "0x02"
+D G "CCP_COMPARE_RESET_TIMER" 2 309 "0x0B"
+D G "CCP_PWM" 2 310 "0x0C"
+D G "CCP_PWM_PLUS_1" 2 311 "0x1c"
+D G "CCP_PWM_PLUS_2" 2 312 "0x2c"
+D G "CCP_PWM_PLUS_3" 2 313 "0x3c"
+c L "set_pwm1_duty" 2 3 1 "FUNCTION"
+D G "CCP_PWM_H_H" 2 321 "0x0c"
+D G "CCP_PWM_H_L" 2 322 "0x0d"
+D G "CCP_PWM_L_H" 2 323 "0x0e"
+D G "CCP_PWM_L_L" 2 324 "0x0f"
+D G "CCP_PWM_FULL_BRIDGE" 2 326 "0x40"
+D G "CCP_PWM_FULL_BRIDGE_REV" 2 327 "0xC0"
+D G "CCP_PWM_HALF_BRIDGE" 2 328 "0x80"
+D G "CCP_SHUTDOWN_ON_COMP1" 2 330 "0x100000"
+D G "CCP_SHUTDOWN_ON_COMP2" 2 331 "0x200000"
+D G "CCP_SHUTDOWN_ON_COMP" 2 332 "0x300000"
+D G "CCP_SHUTDOWN_ON_INT0" 2 333 "0x400000"
+D G "CCP_SHUTDOWN_ON_COMP1_INT0" 2 334 "0x500000"
+D G "CCP_SHUTDOWN_ON_COMP2_INT0" 2 335 "0x600000"
+D G "CCP_SHUTDOWN_ON_COMP_INT0" 2 336 "0x700000"
+D G "CCP_SHUTDOWN_AC_L" 2 338 "0x000000"
+D G "CCP_SHUTDOWN_AC_H" 2 339 "0x040000"
+D G "CCP_SHUTDOWN_AC_F" 2 340 "0x080000"
+D G "CCP_SHUTDOWN_BD_L" 2 342 "0x000000"
+D G "CCP_SHUTDOWN_BD_H" 2 343 "0x010000"
+D G "CCP_SHUTDOWN_BD_F" 2 344 "0x020000"
+D G "CCP_SHUTDOWN_RESTART" 2 346 "0x80000000"
+c L "set_pwm1_duty" 2 3 1 "FUNCTION"
+F N "setup_ccp2" 2 349 ""
+V L "mode" 2 349 "int32" `159 
+F B "setup_ccp2" 2 349 "void(int32 mode)" `158 
+F N "setup_ccp2" 2 350 ""
+V L "mode" 2 350 "int32" `161 
+V L "pwm" 2 350 "int8" `162 
+F B "setup_ccp2" 2 350 "void(int32 mode,int8 pwm)" `160 
+F N "set_pwm2_duty" 2 351 ""
+V L "value" 2 351 "int8" `164 
+F B "set_pwm2_duty" 2 351 "void(int8 value)" `163 
+F N "set_pwm2_duty" 2 352 ""
+V L "value" 2 352 "int16" `166 
+F B "set_pwm2_duty" 2 352 "void(int16 value)" `165 
+c L "set_pwm2_duty" 2 3 5 "FUNCTION"
+F N "setup_psp" 2 362 ""
+V L "mode" 2 362 "int8" `171 
+F B "setup_psp" 2 362 "void(int8 mode)" `170 
+F N "psp_output_full" 2 363 ""
+F B "psp_output_full" 2 363 "int8()" `172 
+F N "psp_input_full" 2 364 ""
+F B "psp_input_full" 2 364 "int8()" `173 
+F N "psp_overflow" 2 365 ""
+F B "psp_overflow" 2 365 "int8()" `174  "Constants used in SETUP_PSP() are:"
+D G "PSP_ENABLED" 2 367 "0x10"
+D G "PSP_DISABLED" 2 368 "0"
+c L "psp_overflow" 2 3 3 "FUNCTION"
+F N "setup_spi" 2 375 ""
+V L "mode" 2 375 "int32" `177 
+F B "setup_spi" 2 375 "void(int32 mode)" `176 
+F N "spi_write" 2 376 ""
+V L "value" 2 376 "int8" `179 
+F B "spi_write" 2 376 "void(int8 value)" `178 
+F N "spi_write" 2 377 ""
+V L "wait" 2 377 "int8" `181 
+V L "value" 2 377 "int8" `182 
+F B "spi_write" 2 377 "void(int8 wait,int8 value)" `180 
+F N "spi_read" 2 378 ""
+F B "spi_read" 2 378 "int8()" `183 
+F N "spi_read" 2 379 ""
+V L "value" 2 379 "int8" `185 
+F B "spi_read" 2 379 "int8(int8 value)" `184 
+F N "spi_data_is_in" 2 380 ""
+F B "spi_data_is_in" 2 380 "int8()" `186 
+F N "setup_spi2" 2 381 ""
+V L "mode" 2 381 "int32" `188 
+F B "setup_spi2" 2 381 "void(int32 mode)" `187 
+F N "spi_write2" 2 382 ""
+V L "value" 2 382 "int8" `190 
+F B "spi_write2" 2 382 "void(int8 value)" `189 
+F N "spi_read2" 2 383 ""
+F B "spi_read2" 2 383 "int8()" `191 
+F N "spi_read2" 2 384 ""
+V L "value" 2 384 "int8" `193 
+F B "spi_read2" 2 384 "int8(int8 value)" `192 
+F N "spi_data_is_in2" 2 385 ""
+F B "spi_data_is_in2" 2 385 "int8()" `194  "Constants used in SETUP_SPI() are:"
+D G "SPI_DISABLED" 2 387 "0x00"
+D G "SPI_MASTER" 2 388 "0x20"
+D G "SPI_SLAVE" 2 389 "0x24"
+D G "SPI_SCK_IDLE_HIGH" 2 390 "0x10"
+D G "SPI_SCK_IDLE_LOW" 2 391 "0x00"
+D G "SPI_CLK_DIV_4" 2 392 "0x00"
+D G "SPI_CLK_DIV_16" 2 393 "0x01"
+D G "SPI_CLK_DIV_64" 2 394 "0x02"
+D G "SPI_CLK_T2" 2 395 "0x03"
+D G "SPI_SS_DISABLED" 2 396 "0x01"
+D G "SPI_XMIT_L_TO_H" 2 398 "0x4000"
+D G "SPI_XMIT_H_TO_L" 2 399 "0x0000"
+D G "SPI_SAMPLE_AT_MIDDLE" 2 401 "0x0000"
+D G "SPI_SAMPLE_AT_END" 2 402 "0x8000"
+D G "SPI_L_TO_H" 2 405 "SPI_SCK_IDLE_LOW"
+D G "SPI_H_TO_L" 2 406 "SPI_SCK_IDLE_HIGH"
+c L "spi_data_is_in2" 2 3 2 "FUNCTION"
+F N "setup_uart" 2 410 ""
+V L "baud" 2 410 "int32" `196 
+F B "setup_uart" 2 410 "void(int32 baud)" `195 
+F N "setup_uart" 2 411 ""
+V L "baud" 2 411 "int32" `198 
+V L "stream" 2 411 "int8" `199 
+F B "setup_uart" 2 411 "void(int32 baud,int8 stream)" `197 
+F N "setup_uart" 2 412 ""
+V L "baud" 2 412 "int32" `201 
+V L "stream" 2 412 "int8" `202 
+V L "clock" 2 412 "int32" `203 
+F B "setup_uart" 2 412 "void(int32 baud,int8 stream,int32 clock)" `200 
+F N "set_uart_speed" 2 413 ""
+V L "baud" 2 413 "int32" `205 
+F B "set_uart_speed" 2 413 "void(int32 baud)" `204 
+F N "set_uart_speed" 2 414 ""
+V L "baud" 2 414 "int32" `207 
+V L "stream" 2 414 "int8" `208 
+F B "set_uart_speed" 2 414 "void(int32 baud,int8 stream)" `206 
+F N "set_uart_speed" 2 415 ""
+V L "baud" 2 415 "int32" `210 
+V L "stream" 2 415 "int8" `211 
+V L "clock" 2 415 "int32" `212 
+F B "set_uart_speed" 2 415 "void(int32 baud,int8 stream,int32 clock)" `209  "Constants used in setup_uart() are:"
+D G "UART_ADDRESS" 2 419 "2"
+D G "UART_DATA" 2 420 "4"
+D G "UART_AUTODETECT" 2 421 "8"
+D G "UART_AUTODETECT_NOWAIT" 2 422 "9"
+D G "UART_WAKEUP_ON_RDA" 2 423 "10"
+D G "UART_SEND_BREAK" 2 424 "13"
+c L "set_uart_speed" 2 3 3 "FUNCTION"
+F N "setup_comparator" 2 429 ""
+V L "mode" 2 429 "int32" `214 
+F B "setup_comparator" 2 429 "void(int32 mode)" `213  "Constants used in setup_comparator() are:"
+D G "A0_A3_A1_A3" 2 431 "0xfff04"
+D G "A0_A3_A1_A2_OUT_ON_A4_A5" 2 432 "0xfcf03"
+D G "A0_A3_A1_A3_OUT_ON_A4_A5" 2 433 "0xbcf05"
+D G "NC_NC_NC_NC" 2 434 "0x0ff07"
+D G "A0_A3_A1_A2" 2 435 "0xfff02"
+D G "A0_A3_NC_NC_OUT_ON_A4" 2 436 "0x9ef01"
+D G "A0_VR_A1_VR" 2 437 "0x3ff06"
+D G "A3_VR_A2_VR" 2 438 "0xcff0e"
+D G "CP1_INVERT" 2 439 "0x0000010"
+D G "CP2_INVERT" 2 440 "0x0000020"
+c L "setup_comparator" 2 3 2 "FUNCTION"
+F N "setup_vref" 2 447 ""
+V L "mode" 2 447 "int8" `218 
+F B "setup_vref" 2 447 "void(int8 mode)" `217  "Constants used in setup_vref() are:"
+D G "VREF_LOW" 2 449 "0xa0"
+D G "VREF_HIGH" 2 450 "0x80"
+D G "VREF_F5" 2 452 "0x40"
+D G "VREF_COMP" 2 453 "0x10"
+c L "setup_vref" 2 3 2 "FUNCTION"
+F N "setup_low_volt_detect" 2 457 ""
+V L "mode" 2 457 "int8" `220 
+F B "setup_low_volt_detect" 2 457 "void(int8 mode)" `219  "Constants used in setup_low_volt_detect() are:"
+D G "LVD_LVDIN" 2 459 "0x1F"
+D G "LVD_45" 2 460 "0x1E"
+D G "LVD_42" 2 461 "0x1D"
+D G "LVD_40" 2 462 "0x1C"
+D G "LVD_38" 2 463 "0x1B"
+D G "LVD_36" 2 464 "0x1A"
+D G "LVD_35" 2 465 "0x19"
+D G "LVD_33" 2 466 "0x18"
+D G "LVD_30" 2 467 "0x17"
+D G "LVD_28" 2 468 "0x16"
+D G "LVD_27" 2 469 "0x15"
+D G "LVD_25" 2 470 "0x14"
+D G "LVD_24" 2 471 "0x13"
+D G "LVD_23" 2 472 "0x12"
+D G "LVD_22" 2 473 "0x11"
+D G "LVD_21" 2 474 "0x10"
+D G "LVD_TRIGGER_BELOW" 2 476 "0"
+D G "LVD_TRIGGER_ABOVE" 2 477 "0x80"
+c L "setup_low_volt_detect" 2 3 2 "FUNCTION"
+F N "setup_oscillator" 2 482 ""
+V L "mode" 2 482 "int16" `222 
+F B "setup_oscillator" 2 482 "int8(int16 mode)" `221 
+F N "setup_oscillator" 2 483 ""
+V L "mode" 2 483 "int16" `224 
+V L "tune" 2 483 "sint8" `225 
+F B "setup_oscillator" 2 483 "int8(int16 mode,sint8 tune)" `223  "Constants used in setup_oscillator() are:"
+D G "OSC_31KHZ" 2 486 "0"
+D G "OSC_125KHZ" 2 487 "0x10"
+D G "OSC_250KHZ" 2 488 "0x20"
+D G "OSC_500KHZ" 2 489 "0x30"
+D G "OSC_1MHZ" 2 490 "0x40"
+D G "OSC_2MHZ" 2 491 "0x50"
+D G "OSC_4MHZ" 2 492 "0x60"
+D G "OSC_8MHZ" 2 493 "0x70"
+D G "OSC_TIMER1" 2 495 "1"
+D G "OSC_INTRC" 2 496 "2"
+D G "OSC_NORMAL" 2 497 "0"
+D G "OSC_IDLE_MODE" 2 499 "0x80"
+D G "OSC_31250" 2 500 "0x8000"
+D G "OSC_STATE_STABLE" 2 504 "4"
+D G "OSC_STATE_EXT_RUNNING" 2 505 "8"
+c L "setup_oscillator" 2 3 4 "FUNCTION"
+F N "setup_adc" 2 512 ""
+V L "mode" 2 512 "int16" `227 
+F B "setup_adc" 2 512 "void(int16 mode)" `226 
+F N "read_adc" 2 513 ""
+F B "read_adc" 2 513 "int8()" `228 
+F N "read_adc" 2 514 ""
+V L "mode" 2 514 "int8" `230 
+F B "read_adc" 2 514 "int8(int8 mode)" `229 
+F N "read_adc" 2 515 ""
+f G "read_adc" 2 515 "int16()" `231 
+F N "read_adc" 2 516 ""
+V L "mode" 2 516 "int8" `232 
+f G "read_adc" 2 516 "int16(int8 mode,int8 pins)" `231 
+F N "adc_done" 2 517 ""
+F B "adc_done" 2 517 "int8(int8 mode,int8 pins)" `231  "Constants used for SETUP_ADC() are:"
+D G "ADC_OFF" 2 519 "0" "ADC Off"
+D G "ADC_CLOCK_DIV_2" 2 520 "0x100"
+D G "ADC_CLOCK_DIV_4" 2 521 "0x04"
+D G "ADC_CLOCK_DIV_8" 2 522 "0x01"
+D G "ADC_CLOCK_DIV_16" 2 523 "0x05"
+D G "ADC_CLOCK_DIV_32" 2 524 "0x02"
+D G "ADC_CLOCK_DIV_64" 2 525 "0x06"
+D G "ADC_CLOCK_INTERNAL" 2 526 "0x07" "Internal 2-6us"
+D G "ADC_TAD_MUL_0" 2 528 "0x00"
+D G "ADC_TAD_MUL_2" 2 529 "0x08"
+D G "ADC_TAD_MUL_4" 2 530 "0x10"
+D G "ADC_TAD_MUL_6" 2 531 "0x18"
+D G "ADC_TAD_MUL_8" 2 532 "0x20"
+D G "ADC_TAD_MUL_12" 2 533 "0x28"
+D G "ADC_TAD_MUL_16" 2 534 "0x30"
+D G "ADC_TAD_MUL_20" 2 535 "0x38"
+c L "adc_done" 2 3 1 "FUNCTION"
+F N "setup_adc_ports" 2 538 ""
+V L "pins" 2 538 "int8" `233 
+F B "setup_adc_ports" 2 538 "void(int8 pins)" `232 
+F N "setup_adc_ports" 2 539 ""
+V L "pins" 2 539 "int8" `235 
+V L "reference" 2 539 "int8" `236 
+F B "setup_adc_ports" 2 539 "void(int8 pins,int8 reference)" `234 
+F N "set_analog_pins" 2 540 ""
+V L "pins" 2 540 "int8" `238 
+F B "set_analog_pins" 2 540 "void(int8 pins)" `237 
+F N "set_analog_pins" 2 541 ""
+V L "pins" 2 541 "int8" `240 
+V L "reference" 2 541 "int8" `241 
+F B "set_analog_pins" 2 541 "void(int8 pins,int8 reference)" `239 
+F N "set_adc_channel" 2 542 ""
+V L "channel" 2 542 "int8" `243 
+F B "set_adc_channel" 2 542 "void(int8 channel)" `242  "Constants used in SETUP_ADC_PORTS() and SET_ANALOG_PINS() are:"
+D G "NO_ANALOGS" 2 545 "0x0F" "None"
+D G "ALL_ANALOG" 2 546 "0x00" "A0 A1 A2 A3 A5 E0 E1 E2 B2 B3 B1 B4 B0"
+D G "AN0_TO_AN11" 2 547 "0x03" "A0 A1 A2 A3 A5 E0 E1 E2 B2 B3 B1 B4"
+D G "AN0_TO_AN10" 2 548 "0x04" "A0 A1 A2 A3 A5 E0 E1 E2 B2 B3 B1"
+D G "AN0_TO_AN9" 2 549 "0x05" "A0 A1 A2 A3 A5 E0 E1 E2 B2 B3"
+D G "AN0_TO_AN8" 2 550 "0x06" "A0 A1 A2 A3 A5 E0 E1 E2 B2"
+D G "AN0_TO_AN7" 2 551 "0x07" "A0 A1 A2 A3 A5 E0 E1 E2"
+D G "AN0_TO_AN6" 2 552 "0x08" "A0 A1 A2 A3 A5 E0 E1"
+D G "AN0_TO_AN5" 2 553 "0x09" "A0 A1 A2 A3 A5 E0"
+D G "AN0_TO_AN4" 2 554 "0x0A" "A0 A1 A2 A3 A5"
+D G "AN0_TO_AN3" 2 555 "0x0B" "A0 A1 A2 A3"
+D G "AN0_TO_AN2" 2 556 "0x0C" "A0 A1 A2"
+D G "AN0_TO_AN1" 2 557 "0x0D" "A0 A1"
+D G "AN0" 2 558 "0x0E" "A0"
+D G "AN0_TO_AN11_ANALOG" 2 559 "0x03" "!old only provided for compatibility"
+D G "AN0_TO_AN10_ANALOG" 2 560 "0x04" "!old only provided for compatibility"
+D G "AN0_TO_AN9_ANALOG" 2 561 "0x05" "!old only provided for compatibility"
+D G "AN0_TO_AN8_ANALOG" 2 562 "0x06" "!old only provided for compatibility"
+D G "AN0_TO_AN7_ANALOG" 2 563 "0x07" "!old only provided for compatibility"
+D G "AN0_TO_AN6_ANALOG" 2 564 "0x08" "!old only provided for compatibility"
+D G "AN0_TO_AN5_ANALOG" 2 565 "0x09" "!old only provided for compatibility"
+D G "AN0_TO_AN4_ANALOG" 2 566 "0x0A" "!old only provided for compatibility"
+D G "AN0_TO_AN3_ANALOG" 2 567 "0x0B" "!old only provided for compatibility"
+D G "AN0_TO_AN2_ANALOG" 2 568 "0x0C" "!old only provided for compatibility"
+D G "AN0_TO_AN1_ANALOG" 2 569 "0x0D" "!old only provided for compatibility"
+D G "AN0_ANALOG" 2 570 "0x0E" "!old only provided for compatibility"
+D G "VSS_VDD" 2 573 "0x00" "Range 0-Vdd"
+D G "VREF_VREF" 2 574 "0x30" "Range VrefL-VrefH"
+D G "VREF_VDD" 2 575 "0x20" "Range VrefL-Vdd"
+D G "VSS_VREF" 2 576 "0x10" "Range 0-VrefH"
+D G "ADC_START_AND_READ" 2 579 "7" "This is the default if nothing is specified"
+D G "ADC_START_ONLY" 2 580 "1"
+D G "ADC_READ_ONLY" 2 581 "6"
+c L "set_adc_channel" 2 3 3 "FUNCTION"
+F N "abs" 2 587 ""
+V L "x" 2 587 "sint8" `245 
+F B "abs" 2 587 "sint8(sint8 x)" `244 
+F N "abs" 2 588 ""
+V L "x" 2 588 "sint16" `247 
+F B "abs" 2 588 "sint16(sint16 x)" `246 
+F N "abs" 2 589 ""
+V L "x" 2 589 "sint32" `249 
+F B "abs" 2 589 "sint32(sint32 x)" `248 
+F N "abs" 2 590 ""
+V L "x" 2 590 "float" `251 
+F B "abs" 2 590 "float(float x)" `250 
+F N "_mul" 2 591 ""
+V L "??65535" 2 591 "int8" `253 
+V L "??65535" 2 591 "int8" `254 
+F B "_mul" 2 591 "int16(int8 ,int8 )" `252 
+F N "_mul" 2 592 ""
+V L "??65535" 2 592 "sint8" `256 
+V L "??65535" 2 592 "sint8" `257 
+F B "_mul" 2 592 "sint16(sint8 ,sint8 )" `255 
+F N "_mul" 2 593 ""
+V L "??65535" 2 593 "int16" `259 
+V L "??65535" 2 593 "int16" `260 
+F B "_mul" 2 593 "int32(int16 ,int16 )" `258 
+F N "_mul" 2 594 ""
+V L "??65535" 2 594 "sint16" `262 
+V L "??65535" 2 594 "sint16" `263 
+F B "_mul" 2 594 "sint32(sint16 ,sint16 )" `261  "Memory Manipulation Prototypes:"
+F N "read_bank" 2 597 ""
+V L "bank" 2 597 "int8" `265 
+V L "offset" 2 597 "int8" `266 
+F B "read_bank" 2 597 "int8(int8 bank,int8 offset)" `264 
+F N "write_bank" 2 598 ""
+V L "bank" 2 598 "int8" `268 
+V L "offset" 2 598 "int8" `269 
+V L "value" 2 598 "int8" `270 
+F B "write_bank" 2 598 "void(int8 bank,int8 offset,int8 value)" `267 
+F N "strcpy" 2 599 ""
+V L "dest" 2 599 "*int8" `272 
+V L "src" 2 599 "*int8" `273 
+F B "strcpy" 2 599 "void(*int8 dest,*int8 src)" `271 
+F N "memset" 2 600 ""
+V L "destination" 2 600 "*int8" `275 
+V L "value" 2 600 "int8" `276 
+V L "num" 2 600 "int16" `277 
+F B "memset" 2 600 "void(*int8 destination,int8 value,int16 num)" `274 
+F N "memcpy" 2 601 ""
+V L "destination" 2 601 "*int8" `279 
+V L "source" 2 601 "*int8" `280 
+V L "num" 2 601 "int16" `281 
+F B "memcpy" 2 601 "void(*int8 destination,*int8 source,int16 num)" `278  "String Prototypes:"
+F N "toupper" 2 604 ""
+V L "cvalue" 2 604 "int8" `283 
+F B "toupper" 2 604 "int8(int8 cvalue)" `282 
+F N "tolower" 2 605 ""
+V L "cvalue" 2 605 "int8" `285 
+F B "tolower" 2 605 "int8(int8 cvalue)" `284 
+F N "sprintf" 2 606 ""
+V L "string" 2 606 "*int8" `287 
+V L "cstring" 2 606 "*int8" `288 
+F B "sprintf" 2 606 "void(*int8 string,*int8 cstring,*int8 _VA_LIST)" `286  "Data Manipulators Prototypes:"
+F N "shift_left" 2 609 ""
+V L "address" 2 609 "*int8" `291 
+V L "bytes" 2 609 "int8" `292 
+V L "value" 2 609 "int8" `293 
+F B "shift_left" 2 609 "int8(*int8 address,int8 bytes,int8 value)" `290 
+F N "shift_right" 2 610 ""
+V L "address" 2 610 "*int8" `295 
+V L "bytes" 2 610 "int8" `296 
+V L "value" 2 610 "int8" `297 
+F B "shift_right" 2 610 "int8(*int8 address,int8 bytes,int8 value)" `294 
+F N "rotate_left" 2 611 ""
+V L "address" 2 611 "*int8" `299 
+V L "bytes" 2 611 "int8" `300 
+F B "rotate_left" 2 611 "void(*int8 address,int8 bytes)" `298 
+F N "rotate_right" 2 612 ""
+V L "address" 2 612 "*int8" `302 
+V L "bytes" 2 612 "int8" `303 
+F B "rotate_right" 2 612 "void(*int8 address,int8 bytes)" `301 
+F N "swap" 2 613 ""
+V L "value" 2 613 "int8" `305 
+F B "swap" 2 613 "void(int8 value)" `304 
+F N "make8" 2 614 ""
+V L "var" 2 614 "int16" `307 
+V L "offset" 2 614 "int8" `308 
+F B "make8" 2 614 "int8(int16 var,int8 offset)" `306 
+F N "make8" 2 615 ""
+V L "var" 2 615 "int32" `310 
+V L "offset" 2 615 "int8" `311 
+F B "make8" 2 615 "int8(int32 var,int8 offset)" `309 
+F N "make16" 2 616 ""
+V L "varhigh" 2 616 "int8" `313 
+V L "varlow" 2 616 "int8" `314 
+F B "make16" 2 616 "int16(int8 varhigh,int8 varlow)" `312 
+F N "make32" 2 617 ""
+V L "var1" 2 617 "int16" `316 
+F B "make32" 2 617 "int32(int16 var1)" `315 
+F N "make32" 2 618 ""
+V L "var1" 2 618 "int16" `318 
+V L "var2" 2 618 "int16" `319 
+F B "make32" 2 618 "int32(int16 var1,int16 var2)" `317 
+F N "make32" 2 619 ""
+V L "var1" 2 619 "int16" `321 
+V L "var2" 2 619 "int8" `322 
+F B "make32" 2 619 "int32(int16 var1,int8 var2)" `320 
+F N "make32" 2 620 ""
+V L "var1" 2 620 "int16" `324 
+V L "var2" 2 620 "int8" `325 
+V L "var3" 2 620 "int8" `326 
+F B "make32" 2 620 "int32(int16 var1,int8 var2,int8 var3)" `323 
+F N "make32" 2 621 ""
+V L "var1" 2 621 "int8" `328 
+F B "make32" 2 621 "int32(int8 var1)" `327 
+F N "make32" 2 622 ""
+V L "var1" 2 622 "int8" `330 
+V L "var2" 2 622 "int8" `331 
+F B "make32" 2 622 "int32(int8 var1,int8 var2)" `329 
+F N "make32" 2 623 ""
+V L "var1" 2 623 "int8" `333 
+V L "var2" 2 623 "int8" `334 
+V L "var3" 2 623 "int8" `335 
+F B "make32" 2 623 "int32(int8 var1,int8 var2,int8 var3)" `332 
+F N "make32" 2 624 ""
+V L "var1" 2 624 "int8" `337 
+V L "var2" 2 624 "int8" `338 
+V L "var3" 2 624 "int8" `339 
+V L "var4" 2 624 "int8" `340 
+F B "make32" 2 624 "int32(int8 var1,int8 var2,int8 var3,int8 var4)" `336 
+F N "make32" 2 625 ""
+V L "var1" 2 625 "int8" `342 
+V L "var2" 2 625 "int16" `343 
+F B "make32" 2 625 "int32(int8 var1,int16 var2)" `341 
+F N "make32" 2 626 ""
+V L "var1" 2 626 "int8" `345 
+V L "var2" 2 626 "int16" `346 
+V L "var3" 2 626 "int8" `347 
+F B "make32" 2 626 "int32(int8 var1,int16 var2,int8 var3)" `344 
+F N "make32" 2 627 ""
+V L "var1" 2 627 "int8" `349 
+V L "var2" 2 627 "int8" `350 
+V L "var3" 2 627 "int16" `351 
+F B "make32" 2 627 "int32(int8 var1,int8 var2,int16 var3)" `348 
+F N "bit_set" 2 628 ""
+V L "var" 2 628 "int8" `353 
+V L "bit" 2 628 "int8" `354 
+F B "bit_set" 2 628 "void(int8 var,int8 bit)" `352 
+F N "bit_set" 2 629 ""
+V L "var" 2 629 "int16" `356 
+V L "bit" 2 629 "int8" `357 
+F B "bit_set" 2 629 "void(int16 var,int8 bit)" `355 
+F N "bit_set" 2 630 ""
+V L "var" 2 630 "int32" `359 
+V L "bit" 2 630 "int8" `360 
+F B "bit_set" 2 630 "void(int32 var,int8 bit)" `358 
+F N "bit_clear" 2 631 ""
+V L "var" 2 631 "int8" `362 
+V L "bit" 2 631 "int8" `363 
+F B "bit_clear" 2 631 "void(int8 var,int8 bit)" `361 
+F N "bit_clear" 2 632 ""
+V L "var" 2 632 "int16" `365 
+V L "bit" 2 632 "int8" `366 
+F B "bit_clear" 2 632 "void(int16 var,int8 bit)" `364 
+F N "bit_clear" 2 633 ""
+V L "var" 2 633 "int32" `368 
+V L "bit" 2 633 "int8" `369 
+F B "bit_clear" 2 633 "void(int32 var,int8 bit)" `367 
+F N "bit_test" 2 634 ""
+V L "var" 2 634 "int8" `371 
+V L "bit" 2 634 "int8" `372 
+F B "bit_test" 2 634 "int8(int8 var,int8 bit)" `370 
+F N "bit_test" 2 635 ""
+V L "var" 2 635 "int16" `374 
+V L "bit" 2 635 "int8" `375 
+F B "bit_test" 2 635 "int8(int16 var,int8 bit)" `373 
+F N "bit_test" 2 636 ""
+V L "var" 2 636 "int32" `377 
+V L "bit" 2 636 "int8" `378 
+F B "bit_test" 2 636 "int8(int32 var,int8 bit)" `376  "#use delay() Prototypes:"
+F N "delay_cycles" 2 639 ""
+V L "count" 2 639 "int8" `380 
+F B "delay_cycles" 2 639 "void(int8 count)" `379 
+F N "delay_ms" 2 640 ""
+V L "time" 2 640 "int16" `382 
+F B "delay_ms" 2 640 "void(int16 time)" `381 
+F N "delay_us" 2 641 ""
+V L "time" 2 641 "int16" `384 
+F B "delay_us" 2 641 "void(int16 time)" `383  "#use rs232() Prototypes:"
+F N "putchar" 2 644 ""
+V L "cdata" 2 644 "int8" `386 
+F B "putchar" 2 644 "void(int8 cdata)" `385 
+F N "putchar" 2 645 ""
+V L "cdata" 2 645 "int8" `388 
+V L "stream" 2 645 "int8" `389 
+F B "putchar" 2 645 "void(int8 cdata,int8 stream)" `387 
+F N "puts" 2 646 ""
+V L "string" 2 646 "*int8" `391 
+F B "puts" 2 646 "void(*int8 string)" `390 
+F N "puts" 2 647 ""
+V L "string" 2 647 "*int8" `393 
+V L "stream" 2 647 "int8" `394 
+F B "puts" 2 647 "void(*int8 string,int8 stream)" `392 
+F N "getch" 2 648 ""
+F B "getch" 2 648 "int8()" `395 
+F N "getch" 2 649 ""
+V L "stream" 2 649 "int8" `397 
+F B "getch" 2 649 "int8(int8 stream)" `396 
+F N "gets" 2 650 ""
+V L "string" 2 650 "*int8" `399 
+F B "gets" 2 650 "void(*int8 string)" `398 
+F N "gets" 2 651 ""
+V L "string" 2 651 "*int8" `401 
+V L "stream" 2 651 "int8" `402 
+F B "gets" 2 651 "void(*int8 string,int8 stream)" `400 
+F N "kbhit" 2 652 ""
+F B "kbhit" 2 652 "int8()" `403 
+F N "kbhit" 2 653 ""
+V L "stream" 2 653 "int8" `405 
+F B "kbhit" 2 653 "int8(int8 stream)" `404 
+F N "printf" 2 654 ""
+V L "string" 2 654 "*int8" `407 
+F B "printf" 2 654 "void(*int8 string,*int8 _VA_LIST)" `406 
+F N "fprintf" 2 655 ""
+V L "stream" 2 655 "int8" `410 
+V L "string" 2 655 "*int8" `411 
+F B "fprintf" 2 655 "void(int8 stream,*int8 string,*int8 _VA_LIST)" `409 
+F N "putc_send" 2 656 ""
+F B "putc_send" 2 656 "void()" `413 
+F N "fputc_send" 2 657 ""
+V L "stream" 2 657 "int8" `415 
+F B "fputc_send" 2 657 "void(int8 stream)" `414 
+F N "rcv_buffer_full" 2 658 ""
+F B "rcv_buffer_full" 2 658 "int8()" `416 
+F N "rcv_buffer_full" 2 659 ""
+V L "stream" 2 659 "int8" `418 
+F B "rcv_buffer_full" 2 659 "int8(int8 stream)" `417 
+F N "rcv_buffer_bytes" 2 660 ""
+F B "rcv_buffer_bytes" 2 660 "int16()" `419 
+F N "rcv_buffer_bytes" 2 661 ""
+V L "stream" 2 661 "int8" `421 
+F B "rcv_buffer_bytes" 2 661 "int16(int8 stream)" `420 
+F N "tx_buffer_full" 2 662 ""
+F B "tx_buffer_full" 2 662 "int8()" `422 
+F N "tx_buffer_full" 2 663 ""
+V L "stream" 2 663 "int8" `424 
+F B "tx_buffer_full" 2 663 "int8(int8 stream)" `423 
+F N "tx_buffer_bytes" 2 664 ""
+F B "tx_buffer_bytes" 2 664 "int16()" `425 
+F N "tx_buffer_bytes" 2 665 ""
+V L "stream" 2 665 "int8" `427 
+F B "tx_buffer_bytes" 2 665 "int16(int8 stream)" `426 
+F N "linbus_header" 2 666 ""
+V L "identifier" 2 666 "int8" `429 
+F B "linbus_header" 2 666 "int8(int8 identifier)" `428 
+F N "linbus_header" 2 667 ""
+V L "stream" 2 667 "int8" `431 
+V L "identifier" 2 667 "int8" `432 
+F B "linbus_header" 2 667 "int8(int8 stream,int8 identifier)" `430 
+F N "linbus_header_hit" 2 668 ""
+F B "linbus_header_hit" 2 668 "int8()" `433 
+F N "linbus_header_hit" 2 669 ""
+V L "stream" 2 669 "int8" `435 
+F B "linbus_header_hit" 2 669 "int8(int8 stream)" `434 
+F N "linbus_header_get" 2 670 ""
+F B "linbus_header_get" 2 670 "int8()" `436 
+F N "linbus_header_get" 2 671 ""
+V L "stream" 2 671 "int8" `438 
+F B "linbus_header_get" 2 671 "int8(int8 stream)" `437 
+F N "linbus_rx_response" 2 672 ""
+V L "DataPtr" 2 672 "*int8" `440 
+V L "count" 2 672 "int8" `441 
+F B "linbus_rx_response" 2 672 "int8(*int8 DataPtr,int8 count)" `439 
+F N "linbus_rx_response" 2 673 ""
+V L "stream" 2 673 "int8" `443 
+V L "DataPtr" 2 673 "*int8" `444 
+V L "count" 2 673 "int8" `445 
+F B "linbus_rx_response" 2 673 "int8(int8 stream,*int8 DataPtr,int8 count)" `442 
+F N "linbus_tx_response" 2 674 ""
+V L "DataPtr" 2 674 "*int8" `447 
+V L "count" 2 674 "int8" `448 
+F B "linbus_tx_response" 2 674 "void(*int8 DataPtr,int8 count)" `446 
+F N "linbus_tx_response" 2 675 ""
+V L "stream" 2 675 "int8" `450 
+V L "DataPtr" 2 675 "*int8" `451 
+V L "count" 2 675 "int8" `452 
+F B "linbus_tx_response" 2 675 "void(int8 stream,*int8 DataPtr,int8 count)" `449 
+F N "linbus_checksum_type" 2 676 ""
+V L "type" 2 676 "int8" `454 
+F B "linbus_checksum_type" 2 676 "void(int8 type)" `453 
+F N "linbus_checksum_type" 2 677 ""
+V L "stream" 2 677 "int8" `456 
+V L "type" 2 677 "int8" `457 
+F B "linbus_checksum_type" 2 677 "void(int8 stream,int8 type)" `455  "#use i2c() Prototypes:"
+F N "i2c_read" 2 680 ""
+F B "i2c_read" 2 680 "int8()" `458 
+F N "i2c_read" 2 681 ""
+V L "ack" 2 681 "int8" `460 
+F B "i2c_read" 2 681 "int8(int8 ack)" `459 
+F N "i2c_read" 2 682 ""
+V L "stream" 2 682 "int8" `462 
+V L "ack" 2 682 "int8" `463 
+F B "i2c_read" 2 682 "int8(int8 stream,int8 ack)" `461 
+F N "i2c_write" 2 683 ""
+V L "data" 2 683 "int8" `465 
+F B "i2c_write" 2 683 "int8(int8 data)" `464 
+F N "i2c_write" 2 684 ""
+V L "stream" 2 684 "int8" `467 
+V L "data" 2 684 "int8" `468 
+F B "i2c_write" 2 684 "int8(int8 stream,int8 data)" `466 
+F N "i2c_start" 2 685 ""
+F B "i2c_start" 2 685 "void()" `469 
+F N "i2c_start" 2 686 ""
+V L "stream" 2 686 "int8" `471 
+F B "i2c_start" 2 686 "void(int8 stream)" `470 
+F N "i2c_start" 2 687 ""
+V L "stream" 2 687 "int8" `473 
+V L "restart" 2 687 "int8" `474 
+F B "i2c_start" 2 687 "void(int8 stream,int8 restart)" `472 
+F N "i2c_stop" 2 688 ""
+F B "i2c_stop" 2 688 "void()" `475 
+F N "i2c_stop" 2 689 ""
+V L "stream" 2 689 "int8" `477 
+F B "i2c_stop" 2 689 "void(int8 stream)" `476 
+F N "i2c_isr_state" 2 690 ""
+F B "i2c_isr_state" 2 690 "int8()" `478 
+F N "i2c_slaveaddr" 2 691 ""
+V L "addr" 2 691 "int8" `480 
+F B "i2c_slaveaddr" 2 691 "void(int8 addr)" `479 
+F N "i2c_slaveaddr" 2 692 ""
+V L "stream" 2 692 "int8" `482 
+V L "addr" 2 692 "int8" `483 
+F B "i2c_slaveaddr" 2 692 "void(int8 stream,int8 addr)" `481 
+F N "i2c_poll" 2 693 ""
+F B "i2c_poll" 2 693 "int8()" `484 
+F N "i2c_poll" 2 694 ""
+V L "stream" 2 694 "int8" `486 
+F B "i2c_poll" 2 694 "int8(int8 stream)" `485 
+F N "i2c_init" 2 695 ""
+V L "baud" 2 695 "int32" `488 
+F B "i2c_init" 2 695 "void(int32 baud)" `487 
+F N "i2c_init" 2 696 ""
+V L "stream" 2 696 "int8" `490 
+V L "baud" 2 696 "int32" `491 
+F B "i2c_init" 2 696 "void(int8 stream,int32 baud)" `489 
+F N "i2c_transfer" 2 697 ""
+V L "address" 2 697 "int8" `493 
+V L "wData" 2 697 "*int8" `494 
+V L "wCount" 2 697 "int8" `495 
+F B "i2c_transfer" 2 697 "int8(int8 address,*int8 wData,int8 wCount)" `492 
+F N "i2c_transfer" 2 698 ""
+V L "address" 2 698 "int8" `497 
+V L "wData" 2 698 "*int8" `498 
+V L "wCount" 2 698 "int8" `499 
+V L "rData" 2 698 "*int8" `500 
+V L "rCount" 2 698 "*int8" `501 
+F B "i2c_transfer" 2 698 "int8(int8 address,*int8 wData,int8 wCount,*int8 rData,*int8 rCount)" `496 
+F N "i2c_transfer" 2 699 ""
+V L "stream" 2 699 "int8" `503 
+V L "address" 2 699 "int8" `504 
+V L "wData" 2 699 "*int8" `505 
+V L "wCount" 2 699 "int8" `506 
+F B "i2c_transfer" 2 699 "int8(int8 stream,int8 address,*int8 wData,int8 wCount)" `502 
+F N "i2c_transfer" 2 700 ""
+V L "stream" 2 700 "int8" `508 
+V L "address" 2 700 "int8" `509 
+V L "wData" 2 700 "*int8" `510 
+V L "wCount" 2 700 "int8" `511 
+V L "rData" 2 700 "*int8" `512 
+V L "rCount" 2 700 "*int8" `513 
+F B "i2c_transfer" 2 700 "int8(int8 stream,int8 address,*int8 wData,int8 wCount,*int8 rData,*int8 rCount)" `507 
+F N "i2c_transfer_out" 2 701 ""
+V L "address" 2 701 "int8" `515 
+V L "wData" 2 701 "*int8" `516 
+V L "wCount" 2 701 "int8" `517 
+F B "i2c_transfer_out" 2 701 "int8(int8 address,*int8 wData,int8 wCount)" `514 
+F N "i2c_transfer_out" 2 702 ""
+V L "stream" 2 702 "int8" `519 
+V L "address" 2 702 "int8" `520 
+V L "wData" 2 702 "*int8" `521 
+V L "wCount" 2 702 "int8" `522 
+F B "i2c_transfer_out" 2 702 "int8(int8 stream,int8 address,*int8 wData,int8 wCount)" `518 
+F N "i2c_transfer_in" 2 703 ""
+V L "address" 2 703 "int8" `524 
+V L "rData" 2 703 "*int8" `525 
+V L "rCount" 2 703 "int8" `526 
+F B "i2c_transfer_in" 2 703 "int8(int8 address,*int8 rData,int8 rCount)" `523 
+F N "i2c_transfer_in" 2 704 ""
+V L "stream" 2 704 "int8" `528 
+V L "address" 2 704 "int8" `529 
+V L "rData" 2 704 "*int8" `530 
+V L "rCount" 2 704 "int8" `531 
+F B "i2c_transfer_in" 2 704 "int8(int8 stream,int8 address,*int8 rData,int8 rCount)" `527  "#use spi() Prototypes:"
+F N "spi_xfer" 2 707 ""
+F B "spi_xfer" 2 707 "int8()" `532 
+F N "spi_xfer" 2 708 ""
+f G "spi_xfer" 2 708 "int16(int8 data)" `533 
+F N "spi_xfer" 2 709 ""
+f G "spi_xfer" 2 709 "int32(int8 data)" `533 
+F N "spi_xfer" 2 710 ""
+V L "data" 2 710 "int8" `534 
+F B "spi_xfer" 2 710 "int8(int8 data)" `533 
+F N "spi_xfer" 2 711 ""
+V L "data" 2 711 "int16" `536 
+F B "spi_xfer" 2 711 "int16(int16 data)" `535 
+F N "spi_xfer" 2 712 ""
+V L "data" 2 712 "int32" `538 
+F B "spi_xfer" 2 712 "int32(int32 data)" `537 
+F N "spi_xfer" 2 713 ""
+V L "stream" 2 713 "int8" `540 
+V L "data" 2 713 "int8" `541 
+F B "spi_xfer" 2 713 "int8(int8 stream,int8 data)" `539 
+F N "spi_xfer" 2 714 ""
+V L "stream" 2 714 "int8" `543 
+V L "data" 2 714 "int16" `544 
+F B "spi_xfer" 2 714 "int16(int8 stream,int16 data)" `542 
+F N "spi_xfer" 2 715 ""
+V L "stream" 2 715 "int8" `546 
+V L "data" 2 715 "int32" `547 
+F B "spi_xfer" 2 715 "int32(int8 stream,int32 data)" `545 
+F N "spi_xfer" 2 716 ""
+V L "stream" 2 716 "int8" `549 
+V L "data" 2 716 "int8" `550 
+V L "bits" 2 716 "int8" `551 
+F B "spi_xfer" 2 716 "int8(int8 stream,int8 data,int8 bits)" `548 
+F N "spi_xfer" 2 717 ""
+V L "stream" 2 717 "int8" `553 
+V L "data" 2 717 "int16" `554 
+V L "bits" 2 717 "int8" `555 
+F B "spi_xfer" 2 717 "int16(int8 stream,int16 data,int8 bits)" `552 
+F N "spi_xfer" 2 718 ""
+V L "stream" 2 718 "int8" `557 
+V L "data" 2 718 "int32" `558 
+V L "bits" 2 718 "int8" `559 
+F B "spi_xfer" 2 718 "int32(int8 stream,int32 data,int8 bits)" `556 
+F N "spi_init" 2 719 ""
+V L "baud" 2 719 "int32" `561 
+F B "spi_init" 2 719 "void(int32 baud)" `560 
+F N "spi_init" 2 720 ""
+V L "stream" 2 720 "int8" `563 
+V L "baud" 2 720 "int32" `564 
+F B "spi_init" 2 720 "void(int8 stream,int32 baud)" `562 
+F N "spi_speed" 2 721 ""
+V L "baud" 2 721 "int32" `566 
+F B "spi_speed" 2 721 "void(int32 baud)" `565 
+F N "spi_speed" 2 722 ""
+V L "stream" 2 722 "int8" `568 
+V L "baud" 2 722 "int32" `569 
+F B "spi_speed" 2 722 "void(int8 stream,int32 baud)" `567 
+F N "spi_speed" 2 723 ""
+V L "stream" 2 723 "int8" `571 
+V L "baud" 2 723 "int32" `572 
+V L "clock" 2 723 "int32" `573 
+F B "spi_speed" 2 723 "void(int8 stream,int32 baud,int32 clock)" `570 
+F N "spi_prewrite" 2 724 ""
+V L "data" 2 724 "int8" `575 
+F B "spi_prewrite" 2 724 "void(int8 data)" `574 
+F N "spi_prewrite" 2 725 ""
+V L "data" 2 725 "int16" `577 
+F B "spi_prewrite" 2 725 "void(int16 data)" `576 
+F N "spi_prewrite" 2 726 ""
+V L "data" 2 726 "int32" `579 
+F B "spi_prewrite" 2 726 "void(int32 data)" `578 
+F N "spi_prewrite" 2 727 ""
+V L "??65535" 2 727 "int8" `581 
+V L "data" 2 727 "int8" `582 
+F B "spi_prewrite" 2 727 "void(int8 ,int8 data)" `580 
+F N "spi_prewrite" 2 728 ""
+V L "??65535" 2 728 "int8" `584 
+V L "data" 2 728 "int16" `585 
+F B "spi_prewrite" 2 728 "void(int8 ,int16 data)" `583 
+F N "spi_prewrite" 2 729 ""
+V L "??65535" 2 729 "int8" `587 
+V L "data" 2 729 "int32" `588 
+F B "spi_prewrite" 2 729 "void(int8 ,int32 data)" `586 
+F N "spi_xfer_in" 2 730 ""
+F B "spi_xfer_in" 2 730 "int8()" `589 
+F N "spi_xfer_in" 2 731 ""
+f G "spi_xfer_in" 2 731 "int16(int8 bits)" `590 
+F N "spi_xfer_in" 2 732 ""
+f G "spi_xfer_in" 2 732 "int32(int8 bits)" `590 
+F N "spi_xfer_in" 2 733 ""
+V L "bits" 2 733 "int8" `591 
+F B "spi_xfer_in" 2 733 "int8(int8 bits)" `590 
+F N "spi_xfer_in" 2 734 ""
+V L "bits" 2 734 "int8" `593 
+f G "spi_xfer_in" 2 734 "int16(int8 bits,int8 bits)" `592 
+F N "spi_xfer_in" 2 735 ""
+V L "bits" 2 735 "int8" `593 
+f G "spi_xfer_in" 2 735 "int32(int8 bits,int8 bits)" `592 
+F N "spi_xfer_in" 2 736 ""
+V L "stream" 2 736 "int8" `593 
+V L "bits" 2 736 "int8" `594 
+F B "spi_xfer_in" 2 736 "int8(int8 stream,int8 bits)" `592 
+F N "spi_xfer_in" 2 737 ""
+V L "stream" 2 737 "int8" `593 
+V L "bits" 2 737 "int8" `597 
+f G "spi_xfer_in" 2 737 "int16(int8 stream,int8 bits,int16 count)" `595 
+F N "spi_xfer_in" 2 738 ""
+V L "stream" 2 738 "int8" `593 
+V L "bits" 2 738 "int8" `597 
+f G "spi_xfer_in" 2 738 "int32(int8 stream,int8 bits,int16 count)" `595 
+F N "spi_transfer" 2 739 ""
+V L "wData" 2 739 "*int8" `596 
+V L "rData" 2 739 "*int8" `597 
+V L "count" 2 739 "int16" `598 
+F B "spi_transfer" 2 739 "void(*int8 wData,*int8 rData,int16 count)" `595 
+F N "spi_transfer" 2 740 ""
+V L "stream" 2 740 "int8" `600 
+V L "wData" 2 740 "*int8" `601 
+V L "rData" 2 740 "*int8" `602 
+V L "count" 2 740 "int16" `603 
+F B "spi_transfer" 2 740 "void(int8 stream,*int8 wData,*int8 rData,int16 count)" `599 
+F N "spi_transfer_write" 2 741 ""
+V L "wData" 2 741 "*int8" `605 
+V L "count" 2 741 "int16" `606 
+F B "spi_transfer_write" 2 741 "void(*int8 wData,int16 count)" `604 
+F N "spi_transfer_write" 2 742 ""
+V L "stream" 2 742 "int8" `608 
+V L "wData" 2 742 "*int8" `609 
+V L "count" 2 742 "int16" `610 
+F B "spi_transfer_write" 2 742 "void(int8 stream,*int8 wData,int16 count)" `607 
+F N "spi_transfer_read" 2 743 ""
+V L "rData" 2 743 "*int8" `612 
+V L "count" 2 743 "int16" `613 
+F B "spi_transfer_read" 2 743 "void(*int8 rData,int16 count)" `611 
+F N "spi_transfer_read" 2 744 ""
+V L "stream" 2 744 "int8" `615 
+V L "rData" 2 744 "*int8" `616 
+V L "count" 2 744 "int16" `617 
+F B "spi_transfer_read" 2 744 "void(int8 stream,*int8 rData,int16 count)" `614  "#use rtos() Prototypes:"
+F N "rtos_run" 2 747 ""
+F B "rtos_run" 2 747 "void()" `618 
+F N "rtos_yield" 2 748 ""
+F B "rtos_yield" 2 748 "void()" `619 
+F N "rtos_enable" 2 749 ""
+V L "task" 2 749 "int8" `621 
+F B "rtos_enable" 2 749 "void(int8 task)" `620 
+F N "rtos_disable" 2 750 ""
+V L "task" 2 750 "int8" `623 
+F B "rtos_disable" 2 750 "void(int8 task)" `622 
+F N "rtos_terminate" 2 751 ""
+F B "rtos_terminate" 2 751 "void()" `624 
+F N "rtos_await" 2 752 ""
+V L "flag" 2 752 "int8" `626 
+F B "rtos_await" 2 752 "void(int8 flag)" `625 
+F N "rtos_wait" 2 753 ""
+V L "sem" 2 753 "int8" `628 
+F B "rtos_wait" 2 753 "void(int8 sem)" `627 
+F N "rtos_signal" 2 754 ""
+V L "sem" 2 754 "int8" `630 
+F B "rtos_signal" 2 754 "void(int8 sem)" `629 
+F N "rtos_msg_send" 2 755 ""
+V L "task" 2 755 "int8" `632 
+V L "msg" 2 755 "int8" `633 
+F B "rtos_msg_send" 2 755 "void(int8 task,int8 msg)" `631 
+F N "rtos_msg_read" 2 756 ""
+F B "rtos_msg_read" 2 756 "int8()" `634 
+F N "rtos_msg_poll" 2 757 ""
+F B "rtos_msg_poll" 2 757 "int8()" `635 
+F N "rtos_overrun" 2 758 ""
+V L "task" 2 758 "int8" `637 
+F B "rtos_overrun" 2 758 "int8(int8 task)" `636 
+F N "rtos_stats" 2 759 ""
+V L "task" 2 759 "int8" `639 
+V L "stat" 2 759 "*int8" `640 
+F B "rtos_stats" 2 759 "void(int8 task,*int8 stat)" `638  "#use timer() Prototypes:"
+F N "get_ticks" 2 762 ""
+F B "get_ticks" 2 762 "int8()" `641 
+F N "get_ticks" 2 763 ""
+f G "get_ticks" 2 763 "int16(int8 stream)" `642 
+F N "get_ticks" 2 764 ""
+f G "get_ticks" 2 764 "int32(int8 stream)" `642 
+F N "get_ticks" 2 765 ""
+V L "stream" 2 765 "int8" `643 
+F B "get_ticks" 2 765 "int8(int8 stream)" `642 
+F N "get_ticks" 2 766 ""
+V L "stream" 2 766 "int8" `645 
+f G "get_ticks" 2 766 "int16(int8 stream)" `644 
+F N "get_ticks" 2 767 ""
+V L "stream" 2 767 "int8" `645 
+f G "get_ticks" 2 767 "int32(int8 stream)" `644 
+F N "set_ticks" 2 768 ""
+V L "value" 2 768 "int8" `645 
+F B "set_ticks" 2 768 "void(int8 value)" `644 
+F N "set_ticks" 2 769 ""
+V L "value" 2 769 "int16" `647 
+F B "set_ticks" 2 769 "void(int16 value)" `646 
+F N "set_ticks" 2 770 ""
+V L "value" 2 770 "int32" `649 
+F B "set_ticks" 2 770 "void(int32 value)" `648 
+F N "set_ticks" 2 771 ""
+V L "stream" 2 771 "int8" `651 
+V L "value" 2 771 "int8" `652 
+F B "set_ticks" 2 771 "void(int8 stream,int8 value)" `650 
+F N "set_ticks" 2 772 ""
+V L "stream" 2 772 "int8" `654 
+V L "value" 2 772 "int16" `655 
+F B "set_ticks" 2 772 "void(int8 stream,int16 value)" `653 
+F N "set_ticks" 2 773 ""
+V L "stream" 2 773 "int8" `657 
+V L "value" 2 773 "int32" `658 
+F B "set_ticks" 2 773 "void(int8 stream,int32 value)" `656  "#use pwm() Prototypes:"
+F N "pwm_on" 2 776 ""
+F B "pwm_on" 2 776 "void()" `659 
+F N "pwm_on" 2 777 ""
+V L "stream" 2 777 "int8" `661 
+F B "pwm_on" 2 777 "void(int8 stream)" `660 
+F N "pwm_off" 2 778 ""
+F B "pwm_off" 2 778 "void()" `662 
+F N "pwm_off" 2 779 ""
+V L "stream" 2 779 "int8" `664 
+F B "pwm_off" 2 779 "void(int8 stream)" `663 
+F N "pwm_set_duty" 2 780 ""
+V L "duty" 2 780 "int16" `666 
+F B "pwm_set_duty" 2 780 "void(int16 duty)" `665 
+F N "pwm_set_duty" 2 781 ""
+V L "stream" 2 781 "int8" `668 
+V L "duty" 2 781 "int16" `669 
+F B "pwm_set_duty" 2 781 "void(int8 stream,int16 duty)" `667 
+F N "pwm_set_duty_percent" 2 782 ""
+V L "percent" 2 782 "int16" `671 
+F B "pwm_set_duty_percent" 2 782 "void(int16 percent)" `670 
+F N "pwm_set_duty_percent" 2 783 ""
+V L "stream" 2 783 "int8" `673 
+V L "percent" 2 783 "int16" `674 
+F B "pwm_set_duty_percent" 2 783 "void(int8 stream,int16 percent)" `672 
+F N "pwm_set_frequency" 2 784 ""
+V L "frequency" 2 784 "int32" `676 
+F B "pwm_set_frequency" 2 784 "void(int32 frequency)" `675 
+F N "pwm_set_frequency" 2 785 ""
+V L "stream" 2 785 "int8" `678 
+V L "frequency" 2 785 "int32" `679 
+F B "pwm_set_frequency" 2 785 "void(int8 stream,int32 frequency)" `677 
+F N "pwm_get_duty_period" 2 786 ""
+F B "pwm_get_duty_period" 2 786 "int16()" `680 
+F N "pwm_get_duty_period" 2 787 ""
+V L "stream" 2 787 "int8" `682 
+F B "pwm_get_duty_period" 2 787 "int16(int8 stream)" `681  "#use capture() Prototypes:"
+F N "get_capture_time" 2 790 ""
+F B "get_capture_time" 2 790 "int16()" `683 
+F N "get_capture_time" 2 791 ""
+V L "stream" 2 791 "int8" `685 
+F B "get_capture_time" 2 791 "int16(int8 stream)" `684 
+F N "get_capture_event" 2 792 ""
+F B "get_capture_event" 2 792 "int8()" `686 
+F N "get_capture_event" 2 793 ""
+V L "stream" 2 793 "int8" `688 
+F B "get_capture_event" 2 793 "int8(int8 stream)" `687  "Enviroment Prototypes:"
+c L "get_capture_event" 2 3 2 "FUNCTION"
+F N "goto_address" 2 806 ""
+V L "address" 2 806 "int16" `690 
+F B "goto_address" 2 806 "void(int16 address)" `689 
+F N "label_address" 2 807 ""
+V L "label" 2 807 "int16" `692 
+F B "label_address" 2 807 "int16(int16 label)" `691  "Program Memory Read Prototypes:"
+F N "read_program_memory" 2 810 ""
+V L "address" 2 810 "int16" `694 
+V L "DataPtr" 2 810 "*int8" `695 
+V L "count" 2 810 "int16" `696 
+F B "read_program_memory" 2 810 "void(int16 address,*int8 DataPtr,int16 count)" `693 
+F N "read_program_eeprom" 2 811 ""
+V L "address" 2 811 "int16" `698 
+F B "read_program_eeprom" 2 811 "int16(int16 address)" `697  "Program Memory Write Prototypes:"
+F N "erase_program_eeprom" 2 814 ""
+V L "address" 2 814 "int16" `700 
+F B "erase_program_eeprom" 2 814 "void(int16 address)" `699 
+F N "write_program_memory" 2 815 ""
+V L "address" 2 815 "int16" `702 
+V L "DataPtr" 2 815 "*int8" `703 
+V L "count" 2 815 "int16" `704 
+F B "write_program_memory" 2 815 "void(int16 address,*int8 DataPtr,int16 count)" `701 
+F N "write_program_eeprom" 2 816 ""
+V L "address" 2 816 "int16" `706 
+V L "data" 2 816 "int16" `707 
+F B "write_program_eeprom" 2 816 "void(int16 address,int16 data)" `705  "EEPROM Prototypes:"
+D G "__EEADDRESS__" 2 823 "unsigned int8"
+F N "read_eeprom" 2 826 ""
+V L "address" 2 826 "int8" `709 
+F B "read_eeprom" 2 826 "int8(int8 address)" `708 
+F N "write_eeprom" 2 827 ""
+V L "address" 2 827 "int8" `711 
+V L "value" 2 827 "int8" `712 
+F B "write_eeprom" 2 827 "void(int8 address,int8 value)" `710  "INT"
+c L "write_eeprom" 2 3 4 "FUNCTION"
+F N "enable_interrupts" 2 834 ""
+V L "interrupt" 2 834 "int32" `714 
+F B "enable_interrupts" 2 834 "void(int32 interrupt)" `713 
+F N "disable_interrupts" 2 835 ""
+V L "interrupt" 2 835 "int32" `716 
+F B "disable_interrupts" 2 835 "void(int32 interrupt)" `715 
+F N "clear_interrupt" 2 836 ""
+V L "interrupt" 2 836 "int32" `718 
+F B "clear_interrupt" 2 836 "void(int32 interrupt)" `717 
+F N "interrupt_active" 2 837 ""
+V L "interrupt" 2 837 "int32" `720 
+F B "interrupt_active" 2 837 "int8(int32 interrupt)" `719 
+F N "interrupt_enabled" 2 838 ""
+V L "interrupt" 2 838 "int32" `722 
+F B "interrupt_enabled" 2 838 "int8(int32 interrupt)" `721 
+F N "ext_int_edge" 2 839 ""
+V L "source" 2 839 "int8" `724 
+V L "edge" 2 839 "int8" `725 
+F B "ext_int_edge" 2 839 "void(int8 source,int8 edge)" `723 
+F N "jump_to_isr" 2 840 ""
+V L "address" 2 840 "int16" `727 
+F B "jump_to_isr" 2 840 "void(int16 address)" `726  "Constants used in EXT_INT_EDGE() are:"
+D G "L_TO_H" 2 842 "0x40"
+D G "H_TO_L" 2 843 "0"
+D G "GLOBAL" 2 845 "0xF2C0"
+D G "PERIPH" 2 846 "0xF240"
+D G "INT_RTCC" 2 847 "0x00F220"
+D G "INT_TIMER0" 2 848 "0x00F220"
+D G "INT_TIMER1" 2 849 "0x009D01"
+D G "INT_TIMER2" 2 850 "0x009D02"
+D G "INT_TIMER3" 2 851 "0x00A002"
+D G "INT_EXT_L2H" 2 852 "0x5000F210"
+D G "INT_EXT_H2L" 2 853 "0x6000F210"
+D G "INT_EXT" 2 854 "0x00F210"
+D G "INT_EXT1_L2H" 2 855 "0x5001F008"
+D G "INT_EXT1_H2L" 2 856 "0x6001F008"
+D G "INT_EXT1" 2 857 "0x00F008"
+D G "INT_EXT2_L2H" 2 858 "0x5002F010"
+D G "INT_EXT2_H2L" 2 859 "0x6002F010"
+D G "INT_EXT2" 2 860 "0x00F010"
+D G "INT_RB" 2 861 "0x00FFF208"
+D G "INT_AD" 2 862 "0x009D40"
+D G "INT_RDA" 2 863 "0x009D20"
+D G "INT_TBE" 2 864 "0x009D10"
+D G "INT_SSP" 2 865 "0x009D08"
+D G "INT_CCP1" 2 866 "0x009D04"
+D G "INT_CCP2" 2 867 "0x00A001"
+D G "INT_BUSCOL" 2 868 "0x00A008"
+D G "INT_LOWVOLT" 2 869 "0x00A004"
+D G "INT_COMP" 2 870 "0x00A040"
+D G "INT_EEPROM" 2 871 "0x00A010"
+D G "INT_OSCF" 2 872 "0x00A080"
+D G "INT_SPP" 2 873 "0x009D80"
+D G "INT_USB" 2 874 "0x00A020"
+D G "LED" 1 8 "PIN_A0"
+D G "DELAY" 1 9 "500"
+D G "USB_CABLE_IS_ATTACHED" 1 12 "()  input(PIN_A1)"
+D G "USB_CONFIG_BUS_POWER" 1 13 "500"
+D G "USB_STRINGS_OVERWRITTEN" 1 14 ""
+V G "USB_STRING_DESC_OFFSET" 1 16 "int8[1]" `732 
+V G "USB_STRING_DESC" 1 18 "[1]" `734  "string 0 - language"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 1 20 2 "FUNCTION"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 1 20 1 "FUNCTION"
+C L "jump_to_isr" 3 2 294 "FUNCTION"
+F N "get_float_usb" 3 300 ""
+f G "get_float_usb" 3 300 "float()" `736 
+F N "get_long_usb" 3 301 ""
+f G "get_long_usb" 3 301 "sint16()" `737 
+F N "get_int_usb" 3 302 ""
+f G "get_int_usb" 3 302 "sint8()" `738 
+F N "get_string_usb" 3 303 ""
+V L "s" 3 303 "*int8" `740 
+V L "max" 3 303 "int8" `741 
+f G "get_string_usb" 3 303 "void(*int8 s,int8 max)" `739 
+F N "gethex_usb" 3 304 ""
+f G "gethex_usb" 3 304 "int8()" `742 
+F N "gethex1_usb" 3 305 ""
+f G "gethex1_usb" 3 305 "int8()" `743 
+D G "usb_cdc_kbhit" 3 310 "() (usb_cdc_get_buffer_status.got)"
+D G "usb_cdc_putempty" 3 311 "() ((usb_cdc_put_buffer_nextin==0) && usb_cdc_put_buffer_free())"
+D G "usb_cdc_putready" 3 312 "() (sizeof(usb_cdc_put_buffer)-usb_cdc_put_buffer_nextin)"
+D G "usb_cdc_connected" 3 313 "() (usb_cdc_got_set_line_coding)"
+F N "usb_cdc_putc_fast" 3 314 ""
+V L "c" 3 314 "int8" `745 
+f G "usb_cdc_putc_fast" 3 314 "void(int8 c)" `744 
+F N "usb_cdc_getc" 3 315 ""
+f G "usb_cdc_getc" 3 315 "int8()" `746 
+F N "usb_cdc_putc" 3 316 ""
+V L "c" 3 316 "int8" `748 
+f G "usb_cdc_putc" 3 316 "void(int8 c)" `747 
+F N "usb_cdc_get_discard" 3 317 ""
+f G "usb_cdc_get_discard" 3 317 "void()" `749  "functions automatically called by USB handler code"
+F N "usb_isr_tkn_cdc" 3 320 ""
+f G "usb_isr_tkn_cdc" 3 320 "void()" `750 
+F N "usb_cdc_init" 3 321 ""
+f G "usb_cdc_init" 3 321 "void()" `751 
+F N "usb_isr_tok_out_cdc_control_dne" 3 322 ""
+f G "usb_isr_tok_out_cdc_control_dne" 3 322 "void()" `752 
+F N "usb_isr_tok_in_cdc_data_dne" 3 323 ""
+f G "usb_isr_tok_in_cdc_data_dne" 3 323 "void()" `753 
+F N "usb_isr_tok_out_cdc_data_dne" 3 324 ""
+f G "usb_isr_tok_out_cdc_data_dne" 3 324 "void()" `754 
+F N "usb_cdc_flush_tx_buffer" 3 326 ""
+f G "usb_cdc_flush_tx_buffer" 3 326 "void()" `755  "Include the CCS USB Libraries.  See the comments at the top of these"
+D G "__USB_PIC_PERIF__" 3 335 "1"
+D G "__PIC18_USB_H__" 4 136 ""
+D G "__USB_HARDWARE__" 4 138 ""
+D G "__PIC__" 4 141 "1"
+D G "USB_USE_FULL_SPEED" 4 144 "1"
+D G "USB_MAX_EP0_PACKET_LENGTH" 4 157 "64"
+D G "__USB_HW_LAYER_H__" 5 34 ""
+E G "USB_DTS_DATA1" 5 36 "1" `769 
+E G "USB_DTS_TOGGLE" 5 36 "2" `770 
+E G "USB_DTS_DATA0" 5 37 "0" `771 
+E G "USB_DTS_STALL" 5 37 "3" `772 
+E G "USB_DTS_USERX" 5 37 "4" `773 
+V G "" 5 37 "" "USER LEVEL FUNCTIONS:"
+C L "usb_cdc_flush_tx_buffer" 5 2 5 "FUNCTION"
+F N "usb_init" 5 48 ""
+f G "usb_init" 5 48 "void()" `774  "/* usb_init_cs()"
+C L "usb_init" 5 2 4 "FUNCTION"
+F N "usb_init_cs" 5 56 ""
+f G "usb_init_cs" 5 56 "void()" `775  "/* usb_task()"
+C L "usb_init_cs" 5 2 4 "FUNCTION"
+F N "usb_task" 5 64 ""
+f G "usb_task" 5 64 "void()" `776  "/* usb_attach()"
+C L "usb_task" 5 2 11 "FUNCTION"
+F N "usb_attach" 5 79 ""
+f G "usb_attach" 5 79 "void()" `777  "/* usb_detach()"
+C L "usb_attach" 5 2 14 "FUNCTION"
+F N "usb_detach" 5 97 ""
+f G "usb_detach" 5 97 "void()" `778  "/* usb_put_packet()"
+C L "usb_detach" 5 2 27 "FUNCTION"
+F N "usb_put_packet" 5 128 ""
+V L "endpoint" 5 128 "int8" `780 
+V L "ptr" 5 128 "*int8" `781 
+V L "len" 5 128 "int16" `782 
+V L "tgl" 5 128 "USB_DTS_BIT" `783 
+f G "usb_put_packet" 5 128 "int8(int8 endpoint,*int8 ptr,int16 len,USB_DTS_BIT tgl)" `779  "/* usb_get_packet(endpoint, *ptr, max)"
+C L "usb_put_packet" 5 2 22 "FUNCTION"
+F N "usb_get_packet" 5 154 ""
+V L "endpoint" 5 154 "int8" `785 
+V L "ptr" 5 154 "*int8" `786 
+V L "max" 5 154 "int16" `787 
+f G "usb_get_packet" 5 154 "int16(int8 endpoint,*int8 ptr,int16 max)" `784  "/* usb_kbhit(endpoint)"
+C L "usb_get_packet" 5 2 12 "FUNCTION"
+F N "usb_kbhit" 5 170 ""
+V L "en" 5 170 "int8" `789 
+f G "usb_kbhit" 5 170 "int8(int8 en)" `788  "/* usb_tbe(endpoint)"
+C L "usb_kbhit" 5 2 13 "FUNCTION"
+F N "usb_tbe" 5 187 ""
+V L "en" 5 187 "int8" `791 
+f G "usb_tbe" 5 187 "int8(int8 en)" `790  "END USER LEVEL FUNCTIONS /////////////////////////////////////"
+C L "usb_tbe" 5 2 16 "FUNCTION"
+F N "usb_stall_ep" 5 212 ""
+V L "endpoint" 5 212 "int8" `793 
+f G "usb_stall_ep" 5 212 "void(int8 endpoint)" `792  "/* usb_unstall_ep(endpoint, direction)"
+C L "usb_stall_ep" 5 2 10 "FUNCTION"
+F N "usb_unstall_ep" 5 227 ""
+V L "endpoint" 5 227 "int8" `795 
+f G "usb_unstall_ep" 5 227 "void(int8 endpoint)" `794  "/* usb_endpoint_stalled()"
+C L "usb_unstall_ep" 5 2 15 "FUNCTION"
+F N "usb_endpoint_stalled" 5 246 ""
+V L "endpoint" 5 246 "int8" `797 
+f G "usb_endpoint_stalled" 5 246 "int8(int8 endpoint)" `796  "/* usb_set_address(address)"
+C L "usb_endpoint_stalled" 5 2 7 "FUNCTION"
+F N "usb_set_address" 5 257 ""
+V L "address" 5 257 "int8" `799 
+f G "usb_set_address" 5 257 "void(int8 address)" `798  "/* usb_set_configured()"
+C L "usb_set_address" 5 2 10 "FUNCTION"
+F N "usb_set_configured" 5 271 ""
+V L "config" 5 271 "int8" `801 
+f G "usb_set_configured" 5 271 "void(int8 config)" `800  "/* usb_disable_endpoints()"
+C L "usb_set_configured" 5 2 4 "FUNCTION"
+F N "usb_disable_endpoints" 5 279 ""
+f G "usb_disable_endpoints" 5 279 "void()" `802  "/* usb_disable_endpoint()"
+C L "usb_disable_endpoints" 5 2 6 "FUNCTION"
+F N "usb_disable_endpoint" 5 290 ""
+V L "en" 5 290 "int8" `804 
+f G "usb_disable_endpoint" 5 290 "void(int8 en)" `803  "/* usb_request_send_response(len)"
+C L "usb_disable_endpoint" 5 2 28 "FUNCTION"
+F N "usb_request_send_response" 5 322 ""
+V L "len" 5 322 "int8" `806 
+f G "usb_request_send_response" 5 322 "void(int8 len)" `805 
+F N "usb_request_get_data" 5 323 ""
+f G "usb_request_get_data" 5 323 "void()" `807 
+F N "usb_request_stall" 5 324 ""
+f G "usb_request_stall" 5 324 "void()" `808  "EXTRA USER FUNCTIONS /////////////////////////////////"
+C L "usb_request_stall" 4 178 15 "FUNCTION"
+F N "usb_flush_in" 4 194 ""
+V L "endpoint" 4 194 "int8" `810 
+V L "len" 4 194 "int16" `811 
+V L "tgl" 4 194 "USB_DTS_BIT" `812 
+f G "usb_flush_in" 4 194 "int8(int8 endpoint,int16 len,USB_DTS_BIT tgl)" `809  "/* usb_flush_out()"
+C L "usb_flush_in" 4 178 13 "FUNCTION"
+F N "usb_flush_out" 4 211 ""
+V L "endpoint" 4 211 "int8" `814 
+V L "tgl" 4 211 "USB_DTS_BIT" `815 
+f G "usb_flush_out" 4 211 "void(int8 endpoint,USB_DTS_BIT tgl)" `813  "/* usb_rx_packet_size()"
+C L "usb_flush_out" 4 178 10 "FUNCTION"
+F N "usb_rx_packet_size" 4 225 ""
+V L "endpoint" 4 225 "int8" `817 
+f G "usb_rx_packet_size" 4 225 "int16(int8 endpoint)" `816  "usb_desc_cdc.h                            ////"
+D G "__USB_DESCRIPTORS__" 6 42 ""
+D G "USB_CONFIG_PID" 6 46 "0x000b"
+D G "USB_CONFIG_VID" 6 49 "0x2405"
+D G "USB_CONFIG_VERSION" 6 55 "0x0100" "01.00  //range is 00.00 to 99.99"
+C L "usb_rx_packet_size" 6 3 1 "FUNCTION"
+D G "__STDBOOL_H__" 7 18 ""
+C L "usb_rx_packet_size" 7 2 2 "FUNCTION"
+T G "bool" 7 33 "int1" `818 
+D G "true" 7 34 "1"
+D G "false" 7 35 "0"
+D G "__bool_true_false_are_defined" 7 36 "1"
+D G "USB_HID_DEVICE" 6 61 "false"
+D G "USB_CDC_DEVICE" 6 62 "true"
+D G "USB_CDC_COMM_IN_ENDPOINT" 6 64 "1"
+D G "USB_CDC_COMM_IN_SIZE" 6 66 "11"
+D G "USB_EP1_TX_ENABLE" 6 68 "USB_ENABLE_INTERRUPT"
+D G "USB_EP1_TX_SIZE" 6 69 "USB_CDC_COMM_IN_SIZE"
+D G "USB_CDC_DATA_IN_ENDPOINT" 6 72 "2"
+D G "USB_CDC_DATA_IN_SIZE" 6 74 "64"
+D G "USB_EP2_TX_ENABLE" 6 76 "USB_ENABLE_BULK"
+D G "USB_EP2_TX_SIZE" 6 77 "USB_CDC_DATA_IN_SIZE"
+D G "USB_CDC_DATA_OUT_ENDPOINT" 6 80 "2"
+D G "USB_CDC_DATA_OUT_SIZE" 6 82 "64"
+D G "USB_EP2_RX_ENABLE" 6 84 "USB_ENABLE_BULK"
+D G "USB_EP2_RX_SIZE" 6 85 "USB_CDC_DATA_OUT_SIZE"
+D G "__USB_PROTOTYPES__" 8 301 ""
+C L "usb_rx_packet_size" 7 2 12 "FUNCTION"
+D G "USB_HID_BOOT_PROTOCOL" 8 313 "false"
+D G "USB_HID_IDLE" 8 317 "false"
+D G "USB_OPT_FOR_ROM" 8 331 "true"
+C L "usb_rx_packet_size" 8 305 9 "FUNCTION"
+F N "usb_enumerated" 8 350 ""
+f G "usb_enumerated" 8 350 "int8()" `819  "/* usb_wait_for_enumeration()"
+C L "usb_enumerated" 8 305 6 "FUNCTION"
+F N "usb_wait_for_enumeration" 8 360 ""
+f G "usb_wait_for_enumeration" 8 360 "void()" `820  "/* usb_gets(endpoint, ptr, max, timeout)"
+C L "usb_wait_for_enumeration" 8 305 14 "FUNCTION"
+F N "usb_gets" 8 378 ""
+V L "endpoint" 8 378 "int8" `822 
+V L "ptr" 8 378 "*int8" `823 
+V L "max" 8 378 "int16" `824 
+V L "timeout" 8 378 "int16" `825 
+f G "usb_gets" 8 378 "int16(int8 endpoint,*int8 ptr,int16 max,int16 timeout)" `821  "/* usb_puts()"
+C L "usb_gets" 8 305 16 "FUNCTION"
+F N "usb_puts" 8 398 ""
+V L "endpoint" 8 398 "int8" `827 
+V L "ptr" 8 398 "*int8" `828 
+V L "len" 8 398 "int16" `829 
+V L "timeout" 8 398 "int8" `830 
+f G "usb_puts" 8 398 "int8(int8 endpoint,*int8 ptr,int16 len,int8 timeout)" `826  "/* usb_attached()"
+D G "usb_attached" 8 408 "() USB_CABLE_IS_ATTACHED()"
+C L "usb_puts" 8 305 10 "FUNCTION"
+F N "usb_endpoint_is_valid" 8 424 ""
+V L "endpoint" 8 424 "int8" `832 
+f G "usb_endpoint_is_valid" 8 424 "int8(int8 endpoint)" `831  "END USER-LEVEL API /////////////////////////////////////////////////////"
+C L "usb_endpoint_is_valid" 8 305 1 "FUNCTION"
+E G "GET_DESCRIPTOR" 8 432 "1" `834 
+E G "SET_ADDRESS" 8 432 "2" `835 
+E G "NONE" 8 432 "0" `836 
+V G "" 8 432 ""
+E G "USB_GETDESC_CONFIG_TYPE" 8 434 "0" `838 
+E G "USB_GETDESC_HIDREPORT_TYPE" 8 434 "1" `839 
+E G "USB_GETDESC_STRING_TYPE" 8 434 "2" `840 
+E G "USB_GETDESC_DEVICE_TYPE" 8 434 "3" `841 
+V G "" 8 434 ""
+C L "usb_endpoint_is_valid" 8 305 1 "FUNCTION"
+C L "usb_endpoint_is_valid" 8 305 1 "FUNCTION"
+C L "usb_endpoint_is_valid" 8 305 1 "FUNCTION"
+C L "usb_endpoint_is_valid" 8 305 1 "FUNCTION"
+T G "TYPE_USB_STACK_STATUS" 8 442 "{USB_STATES dev_req,int8 curr_config,int8 status_device,USB_GETDESC_TYPES getdesc_type}" `847 
+V G "USB_stack_status" 8 452 "TYPE_USB_STACK_STATUS" `848  "/* usb_token_reset()"
+C L "usb_endpoint_is_valid" 8 305 5 "FUNCTION"
+F N "usb_token_reset" 8 461 ""
+f G "usb_token_reset" 8 461 "void()" `849  "/* usb_isr_tok_setup_dne()"
+C L "usb_token_reset" 8 305 31 "FUNCTION"
+F N "usb_isr_tok_setup_dne" 8 496 ""
+f G "usb_isr_tok_setup_dne" 8 496 "void()" `850  "/* usb_isr_tok_out_dne()"
+C L "usb_isr_tok_setup_dne" 8 305 10 "FUNCTION"
+F N "usb_isr_tok_out_dne" 8 510 ""
+V L "endpoint" 8 510 "int8" `852 
+f G "usb_isr_tok_out_dne" 8 510 "void(int8 endpoint)" `851  "/* usb_isr_tok_in_dne(endpoint)"
+C L "usb_isr_tok_out_dne" 8 305 10 "FUNCTION"
+F N "usb_isr_tok_in_dne" 8 524 ""
+V L "endpoint" 8 524 "int8" `854 
+f G "usb_isr_tok_in_dne" 8 524 "void(int8 endpoint)" `853  "END STACK-LEVEL API USED BY HW DRIVERS /////////////////////////////////"
+D G "USB_NUM_CONFIGURATIONS" 8 530 "1" "DO NOT CHANGE"
+D G "PID_IN" 8 533 "0x09" "device to host transactions"
+D G "PID_OUT" 8 534 "0x01" "host to device transactions"
+D G "PID_SETUP" 8 535 "0x0D" "host to device setup transaction"
+D G "PID_ACK" 8 536 "0x02" "receiver accepts error-free data packet"
+D G "PID_DATA0" 8 537 "0x03" "data packet with even sync bit"
+D G "PID_SOF" 8 538 "0x05" "start of framer marker and frame number"
+D G "PID_NAK" 8 539 "0x0A" "receiver can't accept data or sender cant send data or has no data to transmit"
+D G "PID_DATA1" 8 540 "0x0B" "data packet with odd sync bit"
+D G "PID_PRE" 8 541 "0x0C" "preamble issued by host.  enables downstream traffic to low-speed device"
+D G "PID_STALL" 8 542 "0x0E" "a control request isnt supported or the endpoint is halted"
+D G "USB_DESC_DEVICE_TYPE" 8 545 "0x01" "#DEFINE USB_DEVICE_DESC_KEY      0x01"
+D G "USB_DESC_CONFIG_TYPE" 8 546 "0x02" "#DEFINE USB_CONFIG_DESC_KEY      0x02"
+D G "USB_DESC_STRING_TYPE" 8 547 "0x03" "#DEFINE USB_STRING_DESC_KEY      0x03"
+D G "USB_DESC_INTERFACE_TYPE" 8 548 "0x04" "#DEFINE USB_INTERFACE_DESC_KEY   0x04"
+D G "USB_DESC_ENDPOINT_TYPE" 8 549 "0x05" "#DEFINE USB_ENDPOINT_DESC_KEY    0x05"
+D G "USB_DESC_CLASS_TYPE" 8 550 "0x21" "#DEFINE USB_CLASS_DESC_KEY       0x21"
+D G "USB_DESC_HIDREPORT_TYPE" 8 551 "0x22"
+D G "USB_DESC_IAD_TYPE" 8 552 "0x0b"
+D G "USB_DESC_DEVICE_LEN" 8 555 "18" "#DEFINE USB_DEVICE_DESC_LEN      18"
+D G "USB_DESC_CONFIG_LEN" 8 556 "9" "#DEFINE USB_CONFIG_DESC_LEN      9"
+D G "USB_DESC_INTERFACE_LEN" 8 557 "9" "#DEFINE USB_INTERFACE_DESC_LEN   9"
+D G "USB_DESC_CLASS_LEN" 8 558 "9" "#DEFINE USB_CLASS_DESC_LEN       9"
+D G "USB_DESC_ENDPOINT_LEN" 8 559 "7" "#DEFINE USB_ENDPOINT_DESC_LEN    7"
+D G "USB_DESC_IAD_LEN" 8 560 "8"
+D G "USB_STANDARD_REQUEST_GET_STATUS" 8 563 "0x00"
+D G "USB_STANDARD_REQUEST_CLEAR_FEATURE" 8 564 "0x01"
+D G "USB_STANDARD_REQUEST_SET_FEATURE" 8 565 "0x03"
+D G "USB_STANDARD_REQUEST_SET_ADDRESS" 8 566 "0x05"
+D G "USB_STANDARD_REQUEST_GET_DESCRIPTOR" 8 567 "0x06"
+D G "USB_STANDARD_REQUEST_SET_DESCRIPTOR" 8 568 "0x07"
+D G "USB_STANDARD_REQUEST_GET_CONFIGURATION" 8 569 "0x08"
+D G "USB_STANDARD_REQUEST_SET_CONFIGURATION" 8 570 "0x09"
+D G "USB_STANDARD_REQUEST_GET_INTERFACE" 8 571 "0x0A"
+D G "USB_STANDARD_REQUEST_SET_INTERFACE" 8 572 "0x0B"
+D G "USB_STANDARD_REQUEST_SYNCH_FRAME" 8 573 "0x0C"
+D G "USB_HID_REQUEST_GET_REPORT" 8 576 "0x01"
+D G "USB_HID_REQUEST_GET_IDLE" 8 577 "0x02"
+D G "USB_HID_REQUEST_GET_PROTOCOL" 8 578 "0x03"
+D G "USB_HID_REQUEST_SET_REPORT" 8 579 "0x09"
+D G "USB_HID_REQUEST_SET_IDLE" 8 580 "0x0A"
+D G "USB_HID_REQUEST_SET_PROTOCOL" 8 581 "0x0B"
+D G "USB_ENDPOINT_TYPE_CONTROL" 8 584 "0x00"
+D G "USB_ENDPOINT_TYPE_ISOCHRONOUS" 8 585 "0x01"
+D G "USB_ENDPOINT_TYPE_BULK" 8 586 "0x02"
+D G "USB_ENDPOINT_TYPE_INTERRUPT" 8 587 "0x03"
+D G "USB_ENABLE_DISABLED" 8 590 "-1"
+D G "USB_ENABLE_BULK" 8 591 "USB_ENDPOINT_TYPE_BULK"
+D G "USB_ENABLE_ISOCHRONOUS" 8 592 "USB_ENDPOINT_TYPE_ISOCHRONOUS"
+D G "USB_ENABLE_INTERRUPT" 8 593 "USB_ENDPOINT_TYPE_INTERRUPT"
+D G "USB_ENABLE_CONTROL" 8 594 "USB_ENDPOINT_TYPE_CONTROL"
+D G "USB_EP0_TX_ENABLE" 8 599 "USB_ENABLE_CONTROL"
+D G "USB_EP0_RX_ENABLE" 8 600 "USB_ENABLE_CONTROL"
+D G "USB_EP0_RX_SIZE" 8 601 "USB_MAX_EP0_PACKET_LENGTH" "endpoint 0 is setup, and should always be the MAX_PACKET_LENGTH.  Slow speed specifies 8"
+D G "USB_EP0_TX_SIZE" 8 602 "USB_MAX_EP0_PACKET_LENGTH" "endpoint 0 is setup, and should always be the MAX_PACKET_LENGTH.  Slow speed specifies 8"
+D G "USB_EP1_RX_ENABLE" 8 609 "USB_ENABLE_DISABLED"
+D G "USB_EP1_RX_SIZE" 8 616 "0"
+D G "USB_EP3_TX_ENABLE" 8 668 "USB_ENABLE_DISABLED"
+D G "USB_EP3_RX_ENABLE" 8 671 "USB_ENABLE_DISABLED"
+D G "USB_EP3_RX_SIZE" 8 678 "0"
+D G "USB_EP3_TX_SIZE" 8 689 "0"
+D G "USB_EP4_TX_ENABLE" 8 699 "USB_ENABLE_DISABLED"
+D G "USB_EP4_RX_ENABLE" 8 702 "USB_ENABLE_DISABLED"
+D G "USB_EP4_RX_SIZE" 8 709 "0"
+D G "USB_EP4_TX_SIZE" 8 720 "0"
+D G "USB_EP5_TX_ENABLE" 8 730 "USB_ENABLE_DISABLED"
+D G "USB_EP5_RX_ENABLE" 8 733 "USB_ENABLE_DISABLED"
+D G "USB_EP5_RX_SIZE" 8 740 "0"
+D G "USB_EP5_TX_SIZE" 8 751 "0"
+D G "USB_EP6_TX_ENABLE" 8 761 "USB_ENABLE_DISABLED"
+D G "USB_EP6_RX_ENABLE" 8 764 "USB_ENABLE_DISABLED"
+D G "USB_EP6_RX_SIZE" 8 771 "0"
+D G "USB_EP6_TX_SIZE" 8 782 "0"
+D G "USB_EP7_TX_ENABLE" 8 792 "USB_ENABLE_DISABLED"
+D G "USB_EP7_RX_ENABLE" 8 795 "USB_ENABLE_DISABLED"
+D G "USB_EP7_RX_SIZE" 8 802 "0"
+D G "USB_EP7_TX_SIZE" 8 813 "0"
+D G "USB_EP8_TX_ENABLE" 8 823 "USB_ENABLE_DISABLED"
+D G "USB_EP8_RX_ENABLE" 8 826 "USB_ENABLE_DISABLED"
+D G "USB_EP8_RX_SIZE" 8 833 "0"
+D G "USB_EP8_TX_SIZE" 8 844 "0"
+D G "USB_EP9_TX_ENABLE" 8 854 "USB_ENABLE_DISABLED"
+D G "USB_EP9_RX_ENABLE" 8 857 "USB_ENABLE_DISABLED"
+D G "USB_EP9_RX_SIZE" 8 864 "0"
+D G "USB_EP9_TX_SIZE" 8 875 "0"
+D G "USB_EP10_TX_ENABLE" 8 885 "USB_ENABLE_DISABLED"
+D G "USB_EP10_RX_ENABLE" 8 888 "USB_ENABLE_DISABLED"
+D G "USB_EP10_RX_SIZE" 8 895 "0"
+D G "USB_EP10_TX_SIZE" 8 906 "0"
+D G "USB_EP11_TX_ENABLE" 8 916 "USB_ENABLE_DISABLED"
+D G "USB_EP11_RX_ENABLE" 8 919 "USB_ENABLE_DISABLED"
+D G "USB_EP11_RX_SIZE" 8 926 "0"
+D G "USB_EP11_TX_SIZE" 8 937 "0"
+D G "USB_EP12_TX_ENABLE" 8 947 "USB_ENABLE_DISABLED"
+D G "USB_EP12_RX_ENABLE" 8 950 "USB_ENABLE_DISABLED"
+D G "USB_EP12_RX_SIZE" 8 957 "0"
+D G "USB_EP12_TX_SIZE" 8 968 "0"
+D G "USB_EP13_TX_ENABLE" 8 978 "USB_ENABLE_DISABLED"
+D G "USB_EP13_RX_ENABLE" 8 981 "USB_ENABLE_DISABLED"
+D G "USB_EP13_RX_SIZE" 8 988 "0"
+D G "USB_EP13_TX_SIZE" 8 999 "0"
+D G "USB_EP14_TX_ENABLE" 8 1009 "USB_ENABLE_DISABLED"
+D G "USB_EP14_RX_ENABLE" 8 1012 "USB_ENABLE_DISABLED"
+D G "USB_EP14_RX_SIZE" 8 1019 "0"
+D G "USB_EP14_TX_SIZE" 8 1030 "0"
+D G "USB_EP15_TX_ENABLE" 8 1040 "USB_ENABLE_DISABLED"
+D G "USB_EP15_RX_ENABLE" 8 1043 "USB_ENABLE_DISABLED"
+D G "USB_EP15_RX_SIZE" 8 1050 "0"
+D G "USB_EP15_TX_SIZE" 8 1061 "0"
+V G "usb_ep_tx_type" 8 1068 "[16]" `856 
+V G "usb_ep_rx_type" 8 1077 "[16]" `859 
+V G "usb_ep_tx_size" 8 1086 "[16]" `862 
+V G "usb_ep_rx_size" 8 1095 "[16]" `865 
+D G "USB_TOTAL_CONFIG_LEN" 6 97 "67" "config+interface+class+endpoint+endpoint (2 endpoints)"
+V G "USB_CONFIG_DESC" 6 99 "[1]" `868  "IN ORDER TO COMPLY WITH WINDOWS HOSTS, THE ORDER OF THIS ARRAY MUST BE:"
+C L "usb_isr_tok_in_dne" 6 91 5 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 91 1 "FUNCTION"
+D G "USB_MAX_NUM_INTERFACES" 6 200 "2"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+V G "USB_NUM_INTERFACES" 6 203 "[1]" `871 
+C L "usb_isr_tok_in_dne" 6 194 5 "FUNCTION"
+V G "USB_CLASS_DESCRIPTORS" 6 210 "[1][2][4]" `874  "config 1"
+C L "usb_isr_tok_in_dne" 6 194 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 2 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+V G "USB_DEVICE_DESC" 6 232 "[18]" `879  "starts of with device configuration. only one possible"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 6 194 5 "FUNCTION"
+V G "usb_cdc_get_buffer_status" 3 362 "{int1 got,int8 len,int8 index}" `885  "usb.c                                 ////"
+D G "__USB_DRIVER__" 9 168 ""
+D G "debug_usb_control" 9 171 "(a,b,c,d,e,f,g,h,i,j,k,l,m,n)"
+D G "debug_usb_token" 9 175 "(a,b,c,d,e,f,g,h,i,j,k,l,m,n)"
+D G "debug_usb_packet" 9 179 "(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o)"
+D G "debug_display_ram" 9 180 "(len,ptr)"
+D G "debug_usb" 9 193 "(a,b,c,d,e,f,g,h,i,j,k,l)"
+C L "usb_isr_tok_in_dne" 8 2 294 "FUNCTION"
+D G "_STDINT" 10 19 ""
+C L "usb_isr_tok_in_dne" 10 2 1 "FUNCTION"
+T G "int8_t" 10 23 "sint8" `886 
+T G "uint8_t" 10 24 "int8" `887 
+T G "int16_t" 10 25 "sint16" `888 
+T G "uint16_t" 10 26 "int16" `889 
+T G "int32_t" 10 27 "sint32" `890 
+T G "uint32_t" 10 28 "int32" `891 
+D G "INT8_MAX" 10 37 " (127)"
+D G "INT8_MIN" 10 38 " (-128)"
+D G "UINT8_MAX" 10 39 " (255)"
+D G "INT16_MAX" 10 41 " (32767)"
+D G "INT16_MIN" 10 42 " (-32768)"
+D G "UINT16_MAX" 10 43 " (65535)"
+D G "INT32_MAX" 10 45 " (2147483647)"
+D G "INT32_MIN" 10 46 " (-2147483648)"
+D G "UINT32_MAX" 10 47 " (4294967295)"
+C L "usb_isr_tok_in_dne" 10 2 1 "FUNCTION"
+T G "int_least8_t" 10 61 "sint8" `892 
+T G "uint_least8_t" 10 62 "int8" `893 
+T G "int_least16_t" 10 63 "sint16" `894 
+T G "uint_least16_t" 10 64 "int16" `895 
+T G "int_least32_t" 10 65 "sint32" `896 
+T G "uint_least32_t" 10 66 "int32" `897 
+D G "INT_LEAST8_MAX" 10 75 " (127)"
+D G "INT_LEAST8_MIN" 10 76 " (-128)"
+D G "UINT_LEAST8_MAX" 10 77 " (255)"
+D G "INT_LEAST16_MAX" 10 79 " (32767)"
+D G "INT_LEAST16_MIN" 10 80 " (-32768)"
+D G "UINT_LEAST16_MAX" 10 81 " (65535)"
+D G "INT_LEAST32_MAX" 10 83 " (2147483647)"
+D G "INT_LEAST32_MIN" 10 84 " (-2147483648)"
+D G "UINT_LEAST32_MAX" 10 85 " (4294967295)"
+C L "usb_isr_tok_in_dne" 10 2 1 "FUNCTION"
+T G "int_fast8_t" 10 112 "sint8" `898 
+T G "uint_fast8_t" 10 113 "int8" `899 
+D G "INT_FAST8_MAX" 10 114 " (127)"
+D G "INT_FAST8_MIN" 10 115 " (-128)"
+D G "UINT_FAST8_MAX" 10 116 " (255)"
+T G "int_fast16_t" 10 117 "sint16" `900 
+T G "uint_fast16_t" 10 118 "int16" `901 
+T G "int_fast32_t" 10 121 "sint32" `902 
+T G "uint_fast32_t" 10 122 "int32" `903 
+D G "INT_FAST16_MAX" 10 124 " (32767)"
+D G "INT_FAST16_MIN" 10 125 " (-32768)"
+D G "UINT_FAST16_MAX" 10 126 " (65535)"
+D G "INT_FAST32_MAX" 10 128 " (2147483647)"
+D G "INT_FAST32_MIN" 10 129 " (-2147483648)"
+D G "UINT_FAST32_MAX" 10 130 " (4294967295)"
+C L "usb_isr_tok_in_dne" 10 2 1 "FUNCTION"
+T G "uintptr_t" 10 148 "int16" `904 
+T G "intptr_t" 10 149 "sint16" `905 
+D G "INT8_C" 10 152 "(val) ((int8_t)val)"
+D G "UINT8_C" 10 153 "(val) ((uint8_t)val)"
+D G "INT16_C" 10 154 "(val) ((int16_t)val)"
+D G "UINT16_C" 10 155 "(val) ((uint16_t)val)"
+D G "INT32_C" 10 156 "(val) ((int32_t)val)"
+D G "UINT32_C" 10 157 "(val) ((uint32_t)val)"
+C L "usb_isr_tok_in_dne" 10 2 3 "FUNCTION"
+T G "intmax_t" 10 181 "sint32" `906 
+T G "uintmax_t" 10 182 "int32" `907 
+D G "INTMAXN_MAX" 10 184 " (2147483647)"
+D G "INTMAXN_MIN" 10 185 " (-2147483648)"
+D G "UINTMAXN_MAX" 10 186 " (4294967295)"
+D G "INTMAX_C" 10 188 "(value) ((signed int32)val)"
+D G "UINTMAX_C" 10 189 "(value) ((unsigned int32)val)"
+D G "__PIC18_USB_C__" 11 133 ""
+D G "__STALL_ON_UEP_ERRATA__" 11 138 ""
+D G "__UIDLE_JAM_ERRATA__" 11 139 ""
+C L "usb_isr_tok_in_dne" 8 2 294 "FUNCTION"
+C L "usb_isr_tok_in_dne" 7 2 12 "FUNCTION"
+D G "USB_IGNORE_RX_DTS" 11 163 "false"
+D G "USB_IGNORE_TX_DTS" 11 167 "false"
+D G "__USB_4550__" 11 232 ""
+D G "USB_TOTAL_RAM_SPACE" 11 233 " ((unsigned int16)0x400)"
+D G "USB_RAM_START" 11 234 "0x400"
+D G "USB_NUM_UEP" 11 235 "16"
+D G "USB_LAST_ALLOWED_ENDPOINT" 11 236 "16"
+D G "USB_LAST_DEFINED_ENDPOINT" 11 294 "2"
+D G "USB_CONTROL_REGISTER_SIZE" 11 301 " ((USB_LAST_DEFINED_ENDPOINT+1)*8)"
+D G "USB_DATA_BUFFER_NEEDED" 11 303 " (USB_EP0_TX_SIZE+USB_EP0_RX_SIZE+USB_EP1_TX_SIZE+Š                           USB_EP1_RX_SIZE+USB_EP2_TX_SIZE+USB_EP2_RX_SIZE+Š                           USB_EP3_TX_SIZE+USB_EP3_RX_SIZE+USB_EP4_TX_SIZE+Š                           USB_EP4_RX_SIZE+USB_EP5_TX_SIZE+USB_EP5_RX_SIZE+Š                           USB_EP6_TX_SIZE+USB_EP6_RX_SIZE+USB_EP7_TX_SIZE+Š                           USB_EP7_RX_SIZE+USB_EP8_TX_SIZE+USB_EP8_RX_SIZE+Š                           USB_EP9_TX_SIZE+USB_EP9_RX_SIZE+USB_EP10_TX_SIZE+Š                           USB_EP10_RX_SIZE+USB_EP11_TX_SIZE+USB_EP11_RX_SIZE+Š                           USB_EP12_TX_SIZE+USB_EP12_RX_SIZE+USB_EP13_TX_SIZE+Š                           USB_EP13_RX_SIZE+USB_EP14_TX_SIZE+USB_EP14_RX_SIZE+Š                           USB_EP15_TX_SIZE+USB_EP15_RX_SIZE)"
+T G "STRUCT_BD" 11 324 "{int8 stat,int8 cnt,int16 addr}" `1001 
+C L "usb_isr_tok_in_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 11 159 1 "FUNCTION"
+V G "g_USBRAM" 11 363 "{{STRUCT_BD out,STRUCT_BD in} bd,{{int8[64] ep0_rx_buffer,int8[64] ep0_tx_buffer,int8[11] ep1_tx_buffer,int8[64] ep2_rx_buffer,int8[64] ep2_tx_buffer} general} buffer}" `1016 
+D G "USB_DATA_BUFFER_LOCATION" 11 365 " ((int8*)&g_USBRAM.buffer)"
+D G "g_USBBDT" 11 369 "g_USBRAM.bd"
+D G "usb_ep0_rx_buffer" 11 419 "g_USBRAM.buffer.ep0_rx_buffer"
+D G "usb_ep0_tx_buffer" 11 420 "g_USBRAM.buffer.ep0_tx_buffer"
+D G "usb_ep1_rx_buffer" 11 423 "g_USBRAM.buffer.ep1_rx_buffer"
+D G "usb_ep1_tx_buffer" 11 424 "g_USBRAM.buffer.ep1_tx_buffer"
+D G "usb_ep2_rx_buffer" 11 425 "g_USBRAM.buffer.ep2_rx_buffer"
+D G "usb_ep2_tx_buffer" 11 426 "g_USBRAM.buffer.ep2_tx_buffer"
+D G "USB_USE_ERROR_COUNTER" 11 431 "false"
+D G "USB_PING_PONG_MODE_OFF" 11 434 "0" "no ping pong"
+D G "USB_PING_PONG_MODE_E0" 11 435 "1" "ping pong endpoint 0 only"
+D G "USB_PING_PONG_MODE_ON" 11 436 "2" "ping pong all endpoints"
+D G "USB_PING_PONG_MODE" 11 440 "USB_PING_PONG_MODE_OFF"
+C L "usb_isr_tok_in_dne" 11 159 1 "FUNCTION"
+D G "UEP0_LOC" 11 459 "0xF70"
+V G "USTATCopy" 11 509 "int8" `1027 
+V G "g_UEP" 11 511 "int8[16]" `1028 
+D G "UEP" 11 517 "(x) g_UEP[x]"
+D G "BIT_SOF" 11 519 "6"
+D G "BIT_STALL" 11 520 "5"
+D G "BIT_IDLE" 11 521 "4"
+D G "BIT_TRN" 11 522 "3"
+D G "BIT_ACTV" 11 523 "2"
+D G "BIT_UERR" 11 524 "1"
+D G "BIT_URST" 11 525 "0"
+D G "EP_BDxST_O" 11 553 "(x)    g_USBBDT[x].out.stat"
+D G "EP_BDxCNT_O" 11 554 "(x)   g_USBBDT[x].out.cnt"
+D G "EP_BDxADR_O" 11 555 "(x)   g_USBBDT[x].out.addr"
+D G "EP_BDxST_I" 11 556 "(x)    g_USBBDT[x].in.stat"
+D G "EP_BDxCNT_I" 11 557 "(x)   g_USBBDT[x].in.cnt"
+D G "EP_BDxADR_I" 11 558 "(x)   g_USBBDT[x].in.addr"
+D G "ENDPT_DISABLED" 11 564 "0x00" "endpoint not used"
+D G "ENDPT_IN_ONLY" 11 565 "0x02" "endpoint supports IN transactions only"
+D G "ENDPT_OUT_ONLY" 11 566 "0x04" "endpoint supports OUT transactions only"
+D G "ENDPT_CONTROL" 11 567 "0x06" "Supports IN, OUT and CONTROL transactions - Only use with EP0"
+D G "ENDPT_NON_CONTROL" 11 568 "0x0E" "Supports both IN and OUT transactions"
+C L "usb_isr_tok_in_dne" 11 159 1 "FUNCTION"
+E G "USB_STATE_DETACHED" 11 571 "0" `1050 
+E G "USB_STATE_ATTACHED" 11 571 "1" `1051 
+E G "USB_STATE_POWERED" 11 571 "2" `1052 
+E G "USB_STATE_DEFAULT" 11 572 "3" `1053 
+E G "USB_STATE_ADDRESS" 11 572 "4" `1054 
+E G "USB_STATE_CONFIGURED" 11 572 "5" `1055 
+V G "usb_state" 11 572 "" `1056  "--BDendST has their PIDs upshifed 2"
+D G "USB_PIC_PID_IN" 11 575 "0x24" "device to host transactions"
+D G "USB_PIC_PID_OUT" 11 576 "0x04" "host to device transactions"
+D G "USB_PIC_PID_SETUP" 11 577 "0x34" "host to device setup transaction"
+D G "USTAT_IN_E0" 11 579 "4"
+D G "USTAT_OUT_SETUP_E0" 11 580 "0"
+D G "__USB_UIF_RESET" 11 582 "0x01"
+D G "__USB_UIF_ERROR" 11 583 "0x02"
+D G "__USB_UIF_ACTIVE" 11 584 "0x04"
+D G "__USB_UIF_TOKEN" 11 585 "0x08"
+D G "__USB_UIF_IDLE" 11 586 "0x10"
+D G "__USB_UIF_STALL" 11 587 "0x20"
+D G "__USB_UIF_SOF" 11 588 "0x40"
+D G "STANDARD_INTS" 11 593 "__USB_UIF_STALL|__USB_UIF_IDLE|__USB_UIF_TOKEN|__USB_UIF_ACTIVE|__USB_UIF_RESET"
+D G "__USB_UCFG_UTEYE" 11 596 "0x80"
+D G "__USB_UCFG_UOEMON" 11 598 "0x40"
+D G "__USB_UCFG_UPUEN" 11 600 "0x10"
+D G "__USB_UCFG_UTRDIS" 11 602 "0x08"
+D G "__USB_UCFG_FSEN" 11 604 "0x04"
+D G "__USB_UCFG_MY_UPUEN" 11 615 "__USB_UCFG_UPUEN"
+D G "__UCFG_VAL_ENABLED__" 11 619 " (__USB_UCFG_MY_UPUEN | __USB_UCFG_FSEN | USB_PING_PONG_MODE)"
+D G "__UCFG_VAL_DISABLED__" 11 625 "__USB_UCFG_UTRDIS"
+V G "__setup_0_tx_size" 11 631 "int8" `1057  "interrupt handler, specific to PIC18Fxx5x peripheral only"
+F N "usb_handle_interrupt" 11 634 ""
+f G "usb_handle_interrupt" 11 634 "void()" `1058 
+F N "usb_isr_rst" 11 635 ""
+f G "usb_isr_rst" 11 635 "void()" `1059 
+F N "usb_isr_uerr" 11 636 ""
+f G "usb_isr_uerr" 11 636 "void()" `1060 
+F N "usb_isr_sof" 11 637 ""
+f G "usb_isr_sof" 11 637 "void()" `1061 
+F N "usb_isr_activity" 11 638 ""
+f G "usb_isr_activity" 11 638 "void()" `1062 
+F N "usb_isr_uidle" 11 639 ""
+f G "usb_isr_uidle" 11 639 "void()" `1063 
+F N "usb_isr_tok_dne" 11 640 ""
+f G "usb_isr_tok_dne" 11 640 "void()" `1064 
+F N "usb_isr_stall" 11 641 ""
+f G "usb_isr_stall" 11 641 "void()" `1065 
+F N "usb_init_ep0_setup" 11 642 ""
+f G "usb_init_ep0_setup" 11 642 "void()" `1066  "BEGIN User Functions:"
+C L "usb_init_ep0_setup" 11 159 1 "FUNCTION"
+F N "usb_kbhit" 11 651 ""
+V L "en" 11 651 "int8" `1068 
+F G "usb_kbhit" 11 652 "int8(int8 en)" `788 
+C L "usb_tbe" 11 159 1 "FUNCTION"
+F N "usb_tbe" 11 657 ""
+V L "en" 11 657 "int8" `1071 
+F G "usb_tbe" 11 658 "int8(int8 en)" `790 
+C L "usb_detach" 11 159 1 "FUNCTION"
+F N "usb_detach" 11 663 ""
+F G "usb_detach" 11 664 "void()" `778 
+C L "usb_detach" 11 159 1 "FUNCTION"
+C L "usb_detach" 11 159 1 "FUNCTION"
+C L "usb_detach" 11 159 1 "FUNCTION"
+C L "usb_detach" 11 159 2 "FUNCTION"
+C L "usb_attach" 11 159 1 "FUNCTION"
+F N "usb_attach" 11 689 ""
+F G "usb_attach" 11 690 "void()" `777 
+C L "usb_attach" 11 159 1 "FUNCTION"
+C L "usb_attach" 11 159 1 "FUNCTION"
+C L "usb_attach" 11 159 1 "FUNCTION"
+C L "usb_init_cs" 11 159 1 "FUNCTION"
+F N "usb_init_cs" 11 706 ""
+F G "usb_init_cs" 11 707 "void()" `775 
+C L "usb_task" 11 159 1 "FUNCTION"
+F N "usb_task" 11 712 ""
+F G "usb_task" 11 713 "void()" `776 
+C L "usb_task" 11 159 1 "FUNCTION"
+C L "usb_init" 11 159 1 "FUNCTION"
+F N "usb_init" 11 763 ""
+F G "usb_init" 11 764 "void()" `774 
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+F N "usb_flush_in" 11 775 ""
+V L "endpoint" 11 775 "int8" `810 
+V L "len" 11 775 "int16" `811 
+V L "tgl" 11 775 "USB_DTS_BIT" `1073 
+F G "usb_flush_in" 11 776 "int8(int8 endpoint,int16 len,USB_DTS_BIT tgl)" `809 
+V L "i" 11 777 "int8" `1070 
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+C L "usb_flush_in" 11 159 4 "FUNCTION"
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+C L "usb_flush_in" 11 159 2 "FUNCTION"
+C L "usb_flush_in" 11 159 1 "FUNCTION"
+C L "usb_put_packet" 11 159 1 "FUNCTION"
+F N "usb_put_packet" 11 835 ""
+V L "endpoint" 11 835 "int8" `780 
+V L "ptr" 11 835 "*int8" `781 
+V L "len" 11 835 "int16" `782 
+V L "tgl" 11 835 "USB_DTS_BIT" `1075 
+F G "usb_put_packet" 11 836 "int8(int8 endpoint,*int8 ptr,int16 len,USB_DTS_BIT tgl)" `779 
+V L "buff_add" 11 837 "*int8" `1071 
+C L "usb_put_packet" 11 159 2 "FUNCTION"
+C L "usb_flush_out" 11 159 1 "FUNCTION"
+F N "usb_flush_out" 11 857 ""
+V L "endpoint" 11 857 "int8" `814 
+V L "tgl" 11 857 "USB_DTS_BIT" `1074 
+F G "usb_flush_out" 11 858 "void(int8 endpoint,USB_DTS_BIT tgl)" `813 
+V L "i" 11 859 "int8" `1072 
+V L "len" 11 860 "int16" `1073 
+C L "usb_flush_out" 11 159 1 "FUNCTION"
+C L "usb_flush_out" 11 159 1 "FUNCTION"
+C L "usb_flush_out" 11 159 1 "FUNCTION"
+C L "usb_flush_out" 11 159 1 "FUNCTION"
+C L "usb_flush_out" 11 159 1 "FUNCTION"
+C L "usb_flush_out" 11 159 2 "FUNCTION"
+C L "usb_rx_packet_size" 11 159 1 "FUNCTION"
+F N "usb_rx_packet_size" 11 903 ""
+V L "endpoint" 11 903 "int8" `1075 
+F G "usb_rx_packet_size" 11 904 "int16(int8 endpoint)" `816 
+C L "usb_get_packet_buffer" 11 159 17 "FUNCTION"
+F N "usb_get_packet_buffer" 11 929 ""
+V L "endpoint" 11 929 "int8" `1075 
+V L "ptr" 11 929 "*int8" `1076 
+V L "max" 11 929 "int16" `1077 
+F G "usb_get_packet_buffer" 11 930 "int16(int8 endpoint,*int8 ptr,int16 max)" `1074 
+V L "al" 11 931 "*int8" `1078 
+V L "st" 11 932 "int8" `1079 
+V L "i" 11 933 "int16" `1080 
+C L "usb_get_packet_buffer" 11 159 1 "FUNCTION"
+C L "usb_get_packet" 11 159 1 "FUNCTION"
+F N "usb_get_packet" 11 951 ""
+V L "endpoint" 11 951 "int8" `785 
+V L "ptr" 11 951 "*int8" `786 
+V L "max" 11 951 "int16" `1084 
+F G "usb_get_packet" 11 952 "int16(int8 endpoint,*int8 ptr,int16 max)" `784 
+C L "usb_stall_ep" 11 159 1 "FUNCTION"
+F N "usb_stall_ep" 11 960 ""
+V L "endpoint" 11 960 "int8" `1082 
+F G "usb_stall_ep" 11 961 "void(int8 endpoint)" `792 
+V L "direction" 11 962 "int1" `1081 
+C L "usb_unstall_ep" 11 159 1 "FUNCTION"
+F N "usb_unstall_ep" 11 980 ""
+V L "endpoint" 11 980 "int8" `1083 
+F G "usb_unstall_ep" 11 981 "void(int8 endpoint)" `794 
+V L "direction" 11 982 "int1" `1082 
+C L "usb_endpoint_stalled" 11 159 1 "FUNCTION"
+F N "usb_endpoint_stalled" 11 1008 ""
+V L "endpoint" 11 1008 "int8" `1084 
+F G "usb_endpoint_stalled" 11 1009 "int8(int8 endpoint)" `796 
+V L "direction" 11 1010 "int1" `1083 
+V L "st" 11 1011 "int8" `1084 
+C L "usb_set_address" 11 159 1 "FUNCTION"
+F N "usb_set_address" 11 1029 ""
+V L "address" 11 1029 "int8" `1086 
+F G "usb_set_address" 11 1030 "void(int8 address)" `798 
+C L "usb_set_configured" 11 159 1 "FUNCTION"
+F N "usb_set_configured" 11 1044 ""
+V L "config" 11 1044 "int8" `1086 
+F G "usb_set_configured" 11 1045 "void(int8 config)" `800 
+V L "en" 11 1046 "int8" `1085 
+V L "addy" 11 1047 "int16" `1086 
+V L "new_uep" 11 1048 "int8" `1087 
+V L "len" 11 1049 "int16" `1088 
+V L "i" 11 1050 "int8" `1089 
+C L "usb_set_configured" 11 159 1 "FUNCTION"
+C L "usb_set_configured" 11 159 1 "FUNCTION"
+C L "usb_set_configured" 11 159 1 "FUNCTION"
+C L "usb_disable_endpoint" 11 159 1 "FUNCTION"
+F N "usb_disable_endpoint" 11 1100 ""
+V L "en" 11 1100 "int8" `1091 
+F G "usb_disable_endpoint" 11 1101 "void(int8 en)" `803 
+C L "usb_disable_endpoint" 11 159 1 "FUNCTION"
+C L "usb_disable_endpoint" 11 159 1 "FUNCTION"
+C L "usb_disable_endpoints" 11 159 1 "FUNCTION"
+F N "usb_disable_endpoints" 11 1112 ""
+F G "usb_disable_endpoints" 11 1113 "void()" `802 
+V L "i" 11 1114 "int8" `1090 
+C L "usb_disable_endpoints" 11 159 1 "FUNCTION"
+C L "usb_clear_trn" 11 159 2 "FUNCTION"
+F N "usb_clear_trn" 11 1127 ""
+F G "usb_clear_trn" 11 1128 "void()" `1091  "UIR_TRN = 0;"
+C L "usb_clear_trn" 11 159 1 "FUNCTION"
+F N "usb_isr" 11 1151 ""
+F G "usb_isr" 11 1152 "void()" `1092 
+V L "TRNAttempts" 11 1153 "int8" `1093 
+C L "usb_isr" 11 159 1 "FUNCTION"
+C L "usb_isr" 11 159 2 "FUNCTION"
+C L "usb_isr" 11 159 1 "FUNCTION"
+C L "usb_isr" 11 159 1 "FUNCTION"
+C L "usb_isr" 11 159 1 "FUNCTION"
+C L "usb_isr" 11 159 1 "FUNCTION"
+C L "usb_isr_sof" 11 159 1 "FUNCTION"
+F N "usb_isr_sof" 11 1201 ""
+F G "usb_isr_sof" 11 1202 "void()" `1061  "debug_usb(debug_putc, "\r\nSOF");"
+C L "usb_isr_sof" 11 159 1 "FUNCTION"
+C L "usb_isr_rst" 11 159 6 "FUNCTION"
+F N "usb_isr_rst" 11 1216 ""
+F G "usb_isr_rst" 11 1217 "void()" `1059 
+C L "usb_isr_rst" 11 159 1 "FUNCTION"
+C L "usb_isr_rst" 11 159 1 "FUNCTION"
+C L "usb_init_ep0_setup" 11 159 5 "FUNCTION"
+F N "usb_init_ep0_setup" 11 1257 ""
+F G "usb_init_ep0_setup" 11 1258 "void()" `1066 
+C L "usb_init_ep0_setup" 11 159 1 "FUNCTION"
+C L "usb_isr_uerr" 11 159 7 "FUNCTION"
+F N "usb_isr_uerr" 11 1279 ""
+F G "usb_isr_uerr" 11 1280 "void()" `1060 
+C L "usb_isr_uerr" 11 159 1 "FUNCTION"
+C L "usb_isr_uidle" 11 159 5 "FUNCTION"
+F N "usb_isr_uidle" 11 1345 ""
+F G "usb_isr_uidle" 11 1346 "void()" `1063 
+C L "usb_isr_uidle" 11 159 2 "FUNCTION"
+C L "usb_isr_uidle" 11 159 1 "FUNCTION"
+C L "usb_isr_activity" 11 159 6 "FUNCTION"
+F N "usb_isr_activity" 11 1369 ""
+F G "usb_isr_activity" 11 1370 "void()" `1062 
+C L "usb_isr_activity" 11 159 1 "FUNCTION"
+C L "usb_isr_activity" 11 159 1 "FUNCTION"
+C L "usb_isr_activity" 11 159 1 "FUNCTION"
+C L "usb_isr_activity" 11 159 1 "FUNCTION"
+C L "usb_isr_stall" 11 159 5 "FUNCTION"
+F N "usb_isr_stall" 11 1394 ""
+F G "usb_isr_stall" 11 1395 "void()" `1065 
+C L "usb_isr_stall" 11 159 1 "FUNCTION"
+C L "usb_request_send_response" 11 159 1 "FUNCTION"
+F N "usb_request_send_response" 11 1410 ""
+V L "len" 11 1410 "int8" `1095 
+F G "usb_request_send_response" 11 1410 "void(int8 len)" `805 
+F N "usb_request_get_data" 11 1411 ""
+F G "usb_request_get_data" 11 1411 "void()" `807 
+F N "usb_request_stall" 11 1412 ""
+F G "usb_request_stall" 11 1412 "void()" `808 
+C L "usb_isr_tok_dne" 11 159 13 "FUNCTION"
+F N "usb_isr_tok_dne" 11 1428 ""
+F G "usb_isr_tok_dne" 11 1429 "void()" `1064 
+V L "en" 11 1430 "int8" `1094 
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+V L "pidKey" 11 1439 "int8" `1095  "debug_usb(debug_putc,"%X ", EP_BDxST_O(0));"
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 3 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 4 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 2 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 2 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 2 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+C L "usb_isr_tok_dne" 11 159 1 "FUNCTION"
+D G "USB_ISO_PACKET_MAX_SIZE" 9 225 "1023"
+D G "USB_NONISO_PACKET_MAX_SIZE" 9 226 "64"
+V G "USB_stack_status" 9 531 "TYPE_USB_STACK_STATUS" `848 
+V G "USB_address_pending" 9 533 "int8" `1096  "save previous state because packets can take several isrs"
+V G "usb_getdesc_ptr" 9 534 "int16" `1097 
+V G "usb_getdesc_len" 9 534 "int16" `1098  "for reading string and config descriptors"
+F N "usb_match_registers" 9 540 ""
+V L "endpoint" 9 540 "int8" `1100 
+V L "status" 9 540 "*int16" `1101 
+V L "buffer" 9 540 "*int16" `1102 
+V L "size" 9 540 "*int8" `1103 
+f G "usb_match_registers" 9 540 "void(int8 endpoint,*int16 status,*int16 buffer,*int8 size)" `1099 
+F N "usb_isr_tkn_setup_StandardEndpoint" 9 542 ""
+f G "usb_isr_tkn_setup_StandardEndpoint" 9 542 "void()" `1104 
+F N "usb_isr_tkn_setup_StandardDevice" 9 543 ""
+f G "usb_isr_tkn_setup_StandardDevice" 9 543 "void()" `1105 
+F N "usb_isr_tkn_setup_StandardInterface" 9 544 ""
+f G "usb_isr_tkn_setup_StandardInterface" 9 544 "void()" `1106 
+F N "usb_Get_Descriptor" 9 548 ""
+f G "usb_Get_Descriptor" 9 548 "void()" `1107 
+F N "usb_copy_desc_seg_to_ep" 9 549 ""
+f G "usb_copy_desc_seg_to_ep" 9 549 "void()" `1108 
+F N "usb_finish_set_address" 9 550 ""
+f G "usb_finish_set_address" 9 550 "void()" `1109 
+V G "USB_Interface" 9 552 "int8[2]" `1110  "config state for all of our interfaces, NUM_INTERFACES defined with descriptors"
+C L "usb_finish_set_address" 9 232 2 "FUNCTION"
+F N "usb_enumerated" 9 557 ""
+F G "usb_enumerated" 9 558 "int8()" `819 
+C L "usb_wait_for_enumeration" 9 232 1 "FUNCTION"
+F N "usb_wait_for_enumeration" 9 563 ""
+F G "usb_wait_for_enumeration" 9 564 "void()" `820 
+C L "usb_puts" 9 232 1 "FUNCTION"
+F N "usb_puts" 9 569 ""
+V L "endpoint" 9 569 "int8" `827 
+V L "ptr" 9 569 "*int8" `828 
+V L "len" 9 569 "int16" `829 
+V L "timeout" 9 569 "int8" `1115 
+F G "usb_puts" 9 569 "int8(int8 endpoint,*int8 ptr,int16 len,int8 timeout)" `826 
+V L "i" 9 570 "int16" `1111 
+V L "res" 9 571 "int1" `1112 
+V L "this_packet_len" 9 572 "int16" `1113 
+V L "packet_size" 9 573 "int16" `1114 
+V L "timeout_1us" 9 574 "int32" `1115 
+C L "usb_puts" 9 232 2 "FUNCTION"
+C L "usb_puts" 9 232 1 "FUNCTION"
+C L "usb_puts" 9 232 2 "FUNCTION"
+C L "usb_puts" 9 232 1 "FUNCTION"
+C L "usb_puts" 9 232 1 "FUNCTION"
+C L "usb_puts" 9 232 1 "FUNCTION"
+C L "usb_gets" 9 232 1 "FUNCTION"
+F N "usb_gets" 9 618 ""
+V L "endpoint" 9 618 "int8" `822 
+V L "ptr" 9 618 "*int8" `823 
+V L "max" 9 618 "int16" `824 
+V L "timeout" 9 618 "int16" `1123 
+F G "usb_gets" 9 618 "int16(int8 endpoint,*int8 ptr,int16 max,int16 timeout)" `821 
+V L "ret" 9 619 "int16" `1119 
+V L "to" 9 620 "int16" `1120 
+V L "len" 9 621 "int16" `1121 
+V L "packet_size" 9 622 "int16" `1122 
+V L "this_packet_max" 9 623 "int16" `1123 
+C L "usb_token_reset" 9 232 3 "FUNCTION"
+F N "usb_token_reset" 9 655 ""
+F G "usb_token_reset" 9 656 "void()" `849 
+V L "i" 9 657 "int8" `1124 
+C L "usb_token_reset" 9 232 1 "FUNCTION"
+C L "usb_token_reset" 9 232 1 "FUNCTION"
+C L "usb_token_reset" 9 232 1 "FUNCTION"
+C L "usb_token_reset" 9 232 1 "FUNCTION"
+D G "usb_put_0len_0" 9 681 "() usb_request_send_response(0)"
+C L "usb_endpoint_is_valid" 9 232 10 "FUNCTION"
+F N "usb_endpoint_is_valid" 9 694 ""
+V L "endpoint" 9 694 "int8" `1126 
+F G "usb_endpoint_is_valid" 9 695 "int8(int8 endpoint)" `831 
+V L "direction" 9 696 "int1" `1125 
+C L "usb_endpoint_is_valid" 9 232 1 "FUNCTION"
+C L "usb_endpoint_is_valid" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 9 232 1 "FUNCTION"
+F N "usb_isr_tok_in_dne" 9 714 ""
+V L "endpoint" 9 714 "int8" `1127 
+F G "usb_isr_tok_in_dne" 9 714 "void(int8 endpoint)" `853 
+C L "usb_isr_tok_in_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_in_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_out_dne" 9 232 1 "FUNCTION"
+F N "usb_isr_tok_out_dne" 9 727 ""
+V L "endpoint" 9 727 "int8" `1127 
+F G "usb_isr_tok_out_dne" 9 728 "void(int8 endpoint)" `851  "TODO:"
+C L "usb_isr_tok_out_dne" 9 232 2 "FUNCTION"
+C L "usb_isr_tok_out_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_out_dne" 9 232 2 "FUNCTION"
+C L "usb_isr_tok_setup_dne" 9 232 2 "FUNCTION"
+F N "usb_isr_tok_setup_dne" 9 752 ""
+F G "usb_isr_tok_setup_dne" 9 753 "void()" `850 
+C L "usb_isr_tok_setup_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_setup_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_setup_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_setup_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_setup_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tok_setup_dne" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 10 "FUNCTION"
+F N "usb_isr_tkn_setup_StandardDevice" 9 813 ""
+F G "usb_isr_tkn_setup_StandardDevice" 9 813 "void()" `1105 
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardDevice" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardInterface" 9 232 10 "FUNCTION"
+F N "usb_isr_tkn_setup_StandardInterface" 9 892 ""
+F G "usb_isr_tkn_setup_StandardInterface" 9 892 "void()" `1106 
+V L "curr_config" 9 893 "int8" `1126 
+C L "usb_isr_tkn_setup_StandardInterface" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardInterface" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardInterface" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardInterface" 9 232 1 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardInterface" 9 232 3 "FUNCTION"
+C L "usb_isr_tkn_setup_StandardEndpoint" 9 232 10 "FUNCTION"
+F N "usb_isr_tkn_setup_StandardEndpoint" 9 952 ""
+F G "usb_isr_tkn_setup_StandardEndpoint" 9 952 "void()" `1104 
+C L "usb_Get_Descriptor" 9 232 26 "FUNCTION"
+F N "usb_Get_Descriptor" 9 1050 ""
+F G "usb_Get_Descriptor" 9 1050 "void()" `1107 
+V L "i" 9 1051 "int8" `1127 
+C L "usb_Get_Descriptor" 9 232 1 "FUNCTION"
+C L "usb_Get_Descriptor" 9 232 1 "FUNCTION"
+C L "usb_Get_Descriptor" 9 232 1 "FUNCTION"
+C L "usb_Get_Descriptor" 9 232 1 "FUNCTION"
+C L "usb_Get_Descriptor" 9 232 1 "FUNCTION"
+C L "usb_Get_Descriptor" 9 232 5 "FUNCTION"
+C L "usb_Get_Descriptor" 9 232 3 "FUNCTION"
+C L "usb_finish_set_address" 9 232 11 "FUNCTION"
+F N "usb_finish_set_address" 9 1135 ""
+F G "usb_finish_set_address" 9 1135 "void()" `1109 
+C L "usb_finish_set_address" 9 232 1 "FUNCTION"
+C L "usb_finish_set_address" 9 232 1 "FUNCTION"
+C L "usb_copy_desc_seg_to_ep" 9 232 3 "FUNCTION"
+F N "usb_copy_desc_seg_to_ep" 9 1152 ""
+F G "usb_copy_desc_seg_to_ep" 9 1152 "void()" `1108 
+V L "i" 9 1153 "int8" `1128 
+V L "c" 9 1154 "int8" `1129  "debug_usb(debug_putc, "!%LX! ", &usb_ep0_tx_buffer[0]);"
+C L "usb_copy_desc_seg_to_ep" 9 232 1 "FUNCTION"
+V G "usb_cdc_line_coding" 3 385 "_packed {int32 dwDTERrate,int8 bCharFormat,int8 bParityType,int8 bDataBits}" `1135  "length of time, in ms, of break signal as we received in a SendBreak message."
+V G "usb_cdc_break" 3 389 "int16" `1136 
+V G "usb_cdc_put_buffer" 3 392 "int8[63]" `1137 
+D G "usb_cdc_put_buffer_free" 3 397 "()  usb_tbe(USB_CDC_DATA_IN_ENDPOINT)"
+T G "usb_cdc_tx_t" 3 402 "int8" `1138 
+V G "usb_cdc_put_buffer_nextin" 3 405 "usb_cdc_tx_t" `1139  "#locate usb_cdc_put_buffer_nextin=0x1800"
+D G "usb_cdc_get_buffer_status_buffer" 3 410 "usb_ep2_rx_buffer"
+V G "usb_cdc_got_set_line_coding" 3 415 "int1" `1140 
+V G "usb_cdc_carrier" 3 421 "{int1 dte_present,int1 active,int6 reserved}" `1145 
+E G "USB_CDC_OUT_NOTHING" 3 423 "0" `1147 
+E G "USB_CDC_OUT_COMMAND" 3 423 "1" `1148 
+E G "USB_CDC_OUT_LINECODING" 3 423 "2" `1149 
+E G "USB_CDC_WAIT_0LEN" 3 423 "3" `1150 
+V G "__usb_cdc_state" 3 423 "" `1151  "#if defined(__PCH__)"
+C L "usb_isr_tok_out_cdc_control_dne" 3 368 6 "FUNCTION"
+F N "usb_isr_tok_out_cdc_control_dne" 3 439 ""
+F G "usb_isr_tok_out_cdc_control_dne" 3 440 "void()" `752 
+C L "usb_isr_tok_out_cdc_control_dne" 3 368 1 "FUNCTION"
+C L "usb_isr_tok_out_cdc_control_dne" 3 368 2 "FUNCTION"
+C L "usb_isr_tok_out_cdc_control_dne" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+F N "usb_isr_tkn_cdc" 3 474 ""
+F G "usb_isr_tkn_cdc" 3 474 "void()" `750 
+V L "wLen" 3 475 "int16" `1152  "make sure the request goes to a CDC interface"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tkn_cdc" 3 368 1 "FUNCTION"
+C L "usb_isr_tok_out_cdc_data_dne" 3 368 1 "FUNCTION"
+F N "usb_isr_tok_out_cdc_data_dne" 3 525 ""
+F G "usb_isr_tok_out_cdc_data_dne" 3 525 "void()" `754 
+C L "usb_isr_tok_out_cdc_data_dne" 3 368 4 "FUNCTION"
+C L "usb_isr_tok_in_cdc_data_dne" 3 368 1 "FUNCTION"
+F N "usb_isr_tok_in_cdc_data_dne" 3 549 ""
+F G "usb_isr_tok_in_cdc_data_dne" 3 550 "void()" `753 
+D G "_STRING" 12 12 ""
+D G "_STDDEF" 13 13 ""
+D G "ptrdiff_t" 13 18 "unsigned int16"
+D G "size_t" 13 24 "unsigned int16"
+D G "wchar_t" 13 26 "unsigned char"
+D G "NULL" 13 27 "0"
+D G "offsetof" 13 29 "(s,f) (offsetofbit(s,f)/8)"
+D G "_CTYPE" 14 12 ""
+D G "islower" 14 14 "(x)  isamong(x,"abcdefghijklmnopqrstuvwxyz")"
+D G "isupper" 14 15 "(x)  isamong(x,"ABCDEFGHIJKLMNOPQRSTUVWXYZ")"
+D G "isalnum" 14 16 "(x)  isamong(x,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")"
+D G "isalpha" 14 17 "(x)  isamong(x,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")"
+D G "isdigit" 14 18 "(x)  isamong(x,"0123456789")"
+D G "isspace" 14 19 "(x)  ((x)==' ')"
+D G "isxdigit" 14 20 "(x) isamong(x,"0123456789ABCDEFabcdef")"
+D G "iscntrl" 14 21 "(x)  ((x)<' ')"
+D G "isprint" 14 22 "(x)  ((x)>=' ')"
+D G "isgraph" 14 23 "(x)  ((x)>' ')"
+D G "ispunct" 14 24 "(x)  (((x)>' ')&&!isalnum(x))"
+F N "memmove" 12 34 ""
+V L "s1" 12 34 "*void" `1154 
+V L "s2" 12 34 "*void" `1155 
+V L "n" 12 34 "int16" `1156 
+F G "memmove" 12 35 "*int8(*void s1,*void s2,int16 n)" `1153 
+V L "sc1" 12 36 "*int8" `1157 
+V L "sc2" 12 37 "*int8" `1158 
+D G "strcopy" 12 54 "strcpy"
+C L "strncpy" 12 19 4 "FUNCTION"
+F N "strncpy" 12 61 ""
+V L "s1" 12 61 "*int8" `1160 
+V L "s2" 12 61 "*int8" `1161 
+V L "n" 12 61 "int16" `1162 
+F G "strncpy" 12 62 "*int8(*int8 s1,*int8 s2,int16 n)" `1159 
+V L "s" 12 63 "*int8" `1163 
+C L "strcat" 12 19 3 "FUNCTION"
+F N "strcat" 12 78 ""
+V L "s1" 12 78 "*int8" `1165 
+V L "s2" 12 78 "*int8" `1166 
+F G "strcat" 12 79 "*int8(*int8 s1,*int8 s2)" `1164 
+V L "s" 12 80 "*int8" `1167 
+C L "strncat" 12 19 2 "FUNCTION"
+F N "strncat" 12 96 ""
+V L "s1" 12 96 "*int8" `1169 
+V L "s2" 12 96 "*int8" `1170 
+V L "n" 12 96 "int16" `1171 
+F G "strncat" 12 97 "*int8(*int8 s1,*int8 s2,int16 n)" `1168 
+V L "s" 12 98 "*int8" `1172 
+C L "memcmp" 12 19 3 "FUNCTION"
+F N "memcmp" 12 120 ""
+V L "s1" 12 120 "*void" `1174 
+V L "s2" 12 120 "*void" `1175 
+V L "n" 12 120 "int16" `1176 
+F G "memcmp" 12 121 "sint8(*void s1,*void s2,int16 n)" `1173 
+V L "su1" 12 122 "*int8" `1177 
+V L "su2" 12 122 "*int8" `1178 
+C L "strcmp" 12 19 2 "FUNCTION"
+F N "strcmp" 12 134 ""
+V L "s1" 12 134 "*int8" `1180 
+V L "s2" 12 134 "*int8" `1181 
+F G "strcmp" 12 135 "sint8(*int8 s1,*int8 s2)" `1179 
+C L "strcoll" 12 19 2 "FUNCTION"
+F N "strcoll" 12 144 ""
+V L "s1" 12 144 "*int8" `1183 
+V L "s2" 12 144 "*int8" `1184 
+F G "strcoll" 12 145 "sint8(*int8 s1,*int8 s2)" `1182 
+C L "strncmp" 12 19 4 "FUNCTION"
+F N "strncmp" 12 157 ""
+V L "s1" 12 157 "*int8" `1186 
+V L "s2" 12 157 "*int8" `1187 
+V L "n" 12 157 "int16" `1188 
+F G "strncmp" 12 158 "sint8(*int8 s1,*int8 s2,int16 n)" `1185 
+C L "strxfrm" 12 19 4 "FUNCTION"
+F N "strxfrm" 12 170 ""
+V L "s1" 12 170 "*int8" `1190 
+V L "s2" 12 170 "*int8" `1191 
+V L "n" 12 170 "int16" `1192 
+F G "strxfrm" 12 171 "int16(*int8 s1,*int8 s2,int16 n)" `1189 
+V L "c" 12 172 "int8" `1193 
+V L "n1" 12 173 "int16" `1194 
+C L "strxfrm" 12 19 1 "FUNCTION"
+C L "memchr" 12 19 3 "FUNCTION"
+F N "memchr" 12 201 ""
+V L "s" 12 201 "*void" `1196 
+V L "c" 12 201 "int8" `1197 
+V L "n" 12 201 "int16" `1198 
+F G "memchr" 12 202 "*int8(*void s,int8 c,int16 n)" `1195 
+V L "uc" 12 203 "int8" `1199 
+V L "su" 12 204 "*int8" `1200 
+C L "strchr" 12 19 2 "FUNCTION"
+F N "strchr" 12 215 ""
+V L "s" 12 215 "*int8" `1202 
+V L "c" 12 215 "int8" `1203 
+F G "strchr" 12 216 "*int8(*int8 s,int8 c)" `1201 
+C L "strcspn" 12 19 4 "FUNCTION"
+F N "strcspn" 12 227 ""
+V L "s1" 12 227 "*int8" `1205 
+V L "s2" 12 227 "*int8" `1206 
+F G "strcspn" 12 228 "int16(*int8 s1,*int8 s2)" `1204 
+V L "sc1" 12 229 "*int8" `1207 
+V L "sc2" 12 229 "*int8" `1208 
+C L "strpbrk" 12 19 4 "FUNCTION"
+F N "strpbrk" 12 242 ""
+V L "s1" 12 242 "*int8" `1210 
+V L "s2" 12 242 "*int8" `1211 
+F G "strpbrk" 12 243 "*int8(*int8 s1,*int8 s2)" `1209 
+V L "sc1" 12 244 "*int8" `1212 
+V L "sc2" 12 244 "*int8" `1213 
+C L "strrchr" 12 19 2 "FUNCTION"
+F N "strrchr" 12 257 ""
+V L "s" 12 257 "*int8" `1215 
+V L "c" 12 257 "int8" `1216 
+F G "strrchr" 12 258 "*int8(*int8 s,int8 c)" `1214 
+V L "p" 12 259 "*int8" `1217 
+C L "strspn" 12 19 2 "FUNCTION"
+F N "strspn" 12 272 ""
+V L "s1" 12 272 "*int8" `1219 
+V L "s2" 12 272 "*int8" `1220 
+F G "strspn" 12 273 "int16(*int8 s1,*int8 s2)" `1218 
+V L "sc1" 12 274 "*int8" `1221 
+V L "sc2" 12 274 "*int8" `1222 
+C L "strstr" 12 19 6 "FUNCTION"
+F N "strstr" 12 291 ""
+V L "s1" 12 291 "*int8" `1224 
+V L "s2" 12 291 "*int8" `1225 
+F G "strstr" 12 292 "*int8(*int8 s1,*int8 s2)" `1223 
+V L "s" 12 293 "*int8" `1226 
+V L "t" 12 293 "*int8" `1227 
+C L "strlen" 12 19 2 "FUNCTION"
+F N "strlen" 12 318 ""
+V L "s" 12 318 "*int8" `1229 
+F G "strlen" 12 319 "int16(*int8 s)" `1228 
+V L "sc" 12 320 "*int8" `1230 
+C L "strtok" 12 19 13 "FUNCTION"
+F N "strtok" 12 341 ""
+V L "s1" 12 341 "*int8" `1232 
+V L "s2" 12 341 "*int8" `1233 
+F G "strtok" 12 342 "*int8(*int8 s1,*int8 s2)" `1231 
+V L "beg" 12 343 "*int8" `1234 
+V L "end" 12 343 "*int8" `1235 
+V L "save" 12 344 "*int8" `1236 
+C L "stricmp" 12 19 6 "FUNCTION"
+F N "stricmp" 12 392 ""
+V L "s1" 12 392 "*int8" `1238 
+V L "s2" 12 392 "*int8" `1239 
+F G "stricmp" 12 393 "sint8(*int8 s1,*int8 s2)" `1237 
+C L "strlwr" 12 19 3 "FUNCTION"
+F N "strlwr" 12 406 ""
+V L "s" 12 406 "*int8" `1243 
+F G "strlwr" 12 407 "*int8(*int8 s)" `1242 
+V L "p" 12 408 "*int8" `1244 
+C L "strupr" 12 19 3 "FUNCTION"
+F N "strupr" 12 420 ""
+V L "s" 12 420 "*int8" `1246 
+F G "strupr" 12 421 "*int8(*int8 s)" `1245 
+V L "p" 12 422 "*int8" `1247 
+F N "usb_cdc_flush_tx_buffer" 3 556 ""
+F G "usb_cdc_flush_tx_buffer" 3 557 "void()" `755 
+F N "usb_cdc_init" 3 583 ""
+F G "usb_cdc_init" 3 584 "void()" `751 
+T G "cdc_serial_state_t" 3 612 "{int1 bRxCarrier,int1 bTxCarrier,int1 bBreak,int1 bRingSignal,int1 bFraming,int1 bParity,int1 bOverRun,int1 reserved0,int8 reserved1}" `1258  "Send SERIAL_STATE notification to the host.  This contains DSR, DCD, Ring,"
+C L "usb_cdc_serial_state" 3 597 4 "FUNCTION"
+F N "usb_cdc_serial_state" 3 621 ""
+V L "state" 3 621 "cdc_serial_state_t" `1260 
+F G "usb_cdc_serial_state" 3 622 "int8(cdc_serial_state_t state)" `1259 
+D G "CDC_EP1_NOTIFY_BUFFER" 3 624 "usb_ep1_tx_buffer"
+C L "usb_cdc_serial_state" 3 597 1 "FUNCTION"
+C L "usb_cdc_serial_state" 3 597 2 "FUNCTION"
+C L "usb_cdc_serial_state" 3 597 2 "FUNCTION"
+C L "usb_cdc_serial_state" 3 597 1 "FUNCTION"
+C L "usb_cdc_serial_state" 3 597 1 "FUNCTION"
+C L "usb_cdc_serial_state" 3 597 1 "FUNCTION"
+C L "usb_cdc_serial_state" 3 597 1 "FUNCTION"
+F N "usb_cdc_get_discard" 3 659 ""
+F G "usb_cdc_get_discard" 3 660 "void()" `749 
+F N "usb_cdc_getc" 3 665 ""
+F G "usb_cdc_getc" 3 666 "int8()" `746 
+V L "c" 3 667 "int8" `1261 
+D G "__USB_PAUSE_ISR" 3 690 "()  int1 old_usbie; old_usbie = USBIE; USBIE = 0"
+D G "__USB_RESTORE_ISR" 3 691 "() if (old_usbie) USBIE = 1"
+F N "_usb_cdc_putc_fast_noflush" 3 694 ""
+V L "c" 3 694 "int8" `1263 
+F G "_usb_cdc_putc_fast_noflush" 3 695 "void(int8 c)" `1262 
+V L "old_usbie" 3 696 "int1" `1264 
+C L "_usb_cdc_putc_fast_noflush" 3 597 1 "FUNCTION"
+F N "usb_cdc_putc_fast" 3 714 ""
+V L "c" 3 714 "int8" `1266 
+F G "usb_cdc_putc_fast" 3 715 "void(int8 c)" `744 
+C L "usb_cdc_putc_fast" 3 597 1 "FUNCTION"
+C L "usb_cdc_putc_fast" 3 597 1 "FUNCTION"
+C L "usb_cdc_putc_fast" 3 597 1 "FUNCTION"
+F N "usb_cdc_putc" 3 737 ""
+V L "c" 3 737 "int8" `1266 
+F G "usb_cdc_putc" 3 738 "void(int8 c)" `747 
+F N "usb_cdc_putd" 3 755 ""
+V L "ptr" 3 755 "*int8" `1266 
+V L "len" 3 755 "int8" `1267 
+F G "usb_cdc_putd" 3 756 "int8(*int8 ptr,int8 len)" `1265 
+V L "i" 3 760 "int8" `1268 
+V L "c" 3 762 "int8" `1269 
+F N "usb_cdc_puts" 3 782 ""
+V L "ptr" 3 782 "*int8" `1271 
+F G "usb_cdc_puts" 3 783 "int8(*int8 ptr)" `1270 
+V L "len" 3 784 "int8" `1272 
+C L "gethex1_usb" 3 597 1 "FUNCTION"
+C L "gethex1_usb" 14 2 7 "FUNCTION"
+F N "gethex1_usb" 3 795 ""
+F G "gethex1_usb" 3 796 "int8()" `743 
+V L "digit" 3 797 "int8" `1273 
+F N "gethex_usb" 3 809 ""
+F G "gethex_usb" 3 809 "int8()" `742 
+V L "lo" 3 810 "int8" `1274 
+V L "hi" 3 810 "int8" `1275 
+F N "get_string_usb" 3 820 ""
+V L "s" 3 820 "*int8" `740 
+V L "max" 3 820 "int8" `1278 
+F G "get_string_usb" 3 820 "void(*int8 s,int8 max)" `739 
+V L "len" 3 821 "int8" `1276 
+V L "c" 3 822 "int8" `1277 
+C L "get_string_usb" 3 828 1 "FUNCTION"
+C L "MAIN" 3 828 2 "FUNCTION"
+C L "MAIN" 0 3 5 "FUNCTION"
+F N "MAIN" 0 9 ""
+F G "MAIN" 0 10 "void()" `1278 
+C L "MAIN" 0 3 1 "FUNCTION"
+F B "reset_cpu" 0 0
+F B "abs" 1 0
+F B "sleep" 0 1
+F B "delay_cycles" 1 0
+F B "read_bank" 2 0
+F B "write_bank" 3 0
+F B "shift_left" 2 2
+F B "shift_right" 2 2
+F B "rotate_left" 2 0
+F B "rotate_right" 2 0
+F B "_mul" 2 0
+F B "memset" 3 0
+F B "isamoung" 2 0
+F B "isamong" 2 0
+F B "bit_set" 2 0
+F B "bit_clear" 2 0
+F B "bit_test" 2 0
+F B "toupper" 1 0
+F B "tolower" 1 0
+F B "swap" 1 0
+F B "printf" 1 255
+F B "fprintf" 1 255
+F B "sprintf" 1 255
+F B "scanf" 1 255
+F B "fscanf" 1 255
+F B "make8" 2 0
+F B "make16" 2 0
+F B "make32" 1 255
+F B "label_address" 1 1
+F B "goto_address" 1 0
+F B "_va_arg" 1 0
+F B "offsetofbit" 2 2
+F B "_iosctrl" 1 2
+F B "profileout" 1 2
+F B "enable_interrupts" 1 0
+F B "disable_interrupts" 1 0
+F B "interrupt_active" 1 0
+F B "clear_interrupt" 1 0
+F B "interrupt_enabled" 1 0
+F B "jump_to_isr" 1 0
+F B "ext_int_edge" 1 2
+F B "read_eeprom" 1 0
+F B "write_eeprom" 2 0
+F B "read_program_eeprom" 1 0
+F B "write_program_eeprom" 2 0
+F B "write_program_memory" 3 0
+F B "read_program_memory" 3 0
+F B "read_rom_memory" 3 0
+F B "erase_program_eeprom" 1 0
+F B "write_configuration_memory" 2 3
+F B "read_configuration_memory" 2 3
+F B "strcpy" 2 0
+F B "memcpy" 3 0
+F B "strstr100" 2 0
+F B "output_high" 1 0
+F B "output_low" 1 0
+F B "input" 1 0
+F B "input_state" 1 0
+F B "output_float" 1 0
+F B "output_drive" 1 0
+F B "output_bit" 1 1
+F B "output_toggle" 1 0
+F B "output_a" 1 0
+F B "output_b" 1 0
+F B "output_c" 1 0
+F B "output_d" 1 0
+F B "output_e" 1 0
+F B "input_a" 0 0
+F B "input_b" 0 0
+F B "input_c" 0 0
+F B "input_d" 0 0
+F B "input_e" 0 0
+F B "set_tris_a" 1 0
+F B "set_tris_b" 1 0
+F B "set_tris_c" 1 0
+F B "set_tris_d" 1 0
+F B "set_tris_e" 1 0
+F B "get_tris_a" 0 0
+F B "get_tris_b" 0 0
+F B "get_tris_c" 0 0
+F B "get_tris_d" 0 0
+F B "get_tris_e" 0 0
+F B "input_change_a" 0 0
+F B "input_change_b" 0 0
+F B "input_change_c" 0 0
+F B "input_change_d" 0 0
+F B "input_change_e" 0 0
+F B "port_b_pullups" 1 0
+F B "port_d_pullups" 1 0
+F B "setup_counters" 2 0
+F B "setup_wdt" 1 0
+F B "restart_cause" 0 0
+F B "restart_wdt" 0 0
+F B "get_rtcc" 0 0
+F B "set_rtcc" 1 0
+F B "get_timer0" 0 0
+F B "set_timer0" 1 0
+F B "setup_comparator" 1 0
+F B "setup_port_a" 1 2
+F B "setup_adc_ports" 1 2
+F B "get_adc_ports" 0 0
+F B "setup_adc" 1 0
+F B "set_adc_channel" 1 0
+F B "read_adc" 0 1
+F B "adc_done" 0 0
+F B "set_analog_pins" 1 2
+F B "get_capture" 0 1
+F B "set_compare_time" 1 2
+F B "setup_timer_0" 1 0
+F B "setup_vref" 1 0
+F B "setup_timer_1" 1 0
+F B "get_timer1" 0 0
+F B "set_timer1" 1 0
+F B "setup_timer_2" 3 0
+F B "get_timer2" 0 0
+F B "set_timer2" 1 0
+F B "setup_timer_3" 1 0
+F B "set_timer3" 1 0
+F B "get_timer3" 0 0
+F B "setup_ccp1" 1 2
+F B "set_pwm1_duty" 1 0
+F B "setup_ccp2" 1 0
+F B "set_pwm2_duty" 1 0
+F B "setup_low_volt_detect" 1 0
+F B "setup_oscillator" 0 2
+F B "pll_locked" 0 0
+F B "setup_psp" 1 0
+F B "psp_output_full" 0 0
+F B "psp_input_full" 0 0
+F B "psp_overflow" 0 0
+F B "setup_spi" 1 0
+F B "spi_read" 0 1
+F B "spi_write" 1 2
+F B "spi_data_is_in" 0 0
+F B "setup_spi2" 1 0
+F B "spi_read2" 0 1
+F B "spi_write2" 1 2
+F B "spi_data_is_in2" 0 0
+F B "brownout_enable" 1 0
+F B "delay_ms" 1 0
+F B "delay_us" 1 0

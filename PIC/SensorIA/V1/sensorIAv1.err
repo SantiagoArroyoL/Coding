@@ -1,0 +1,6 @@
+Compiling C:\Users\santi\Documents\Coding\PIC\SensorIA\V1\sensorIAv1 on 25-ene.-24 at 18:35
+>>> Warning 216 "C:\Users\santi\Documents\Coding\PIC\SensorIA\V1\sensorIAv1.c" Line 26(1,2): Interrupts disabled during call to prevent re-entrancy:  (usb_token_reset)
+>>> Warning 202 "C:\Users\santi\Documents\Coding\PIC\SensorIA\V1\sensorIAv1.h" Line 16(6,28): Variable never used:   USB_STRING_DESC_OFFSET
+      Memory usage:   ROM=13%      RAM=20% - 22%
+      0 Errors,  2 Warnings.
+Build Successful.

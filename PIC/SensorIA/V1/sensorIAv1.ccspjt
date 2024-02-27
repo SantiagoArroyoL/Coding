@@ -1,0 +1,45 @@
+[PROJECT]
+Target=sensorIAv1.hex
+Processor_Text=PIC18F4550
+CCSVerions=5.115d
+Compiler=PCH
+CCSVersion=5.115d
+[Target Data]
+FileList=sensorIAv1.c
+[Directories]
+Include=
+[C:\Users\santi\Documents\Coding\PIC\SensorIA\V1\sensorIAv1]
+Type=4
+[mru-list]
+1=sensorIAv1.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=25-01-2024
+D1_L=4
+D1_L1=[66283]Project Opened.
+D1_L2=[66878]Started Editing.
+D1_L3=[67203]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L4=[68519]Project Closed.
+
+[Opened Files]
+1=sensorIAv1.c
+t1=1
+2=sensorIAv1.h
+t2=1
+Count=2
+
+[defines]
+buildcount=2
+[sensorIAv1.c]
+Type=4
+[Units]
+Count=1
+1=sensorIAv1 (main)
