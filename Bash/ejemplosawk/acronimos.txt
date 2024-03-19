@@ -1,0 +1,4 @@
+UNAM=Universidad Nacional Autonoma de Mexico
+IPN=Instituto Politecnico Nacional
+FCA=Facultad de Contaduria y Administracion
+ESIME=Escuela superior de Ingenieria Mecanica y Electrica

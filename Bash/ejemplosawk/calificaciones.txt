@@ -1,0 +1,4 @@
+Ana 90 85 95
+Griselda 80 92 88
+Eduardo 75 78 82
+Lenin 88 90 85

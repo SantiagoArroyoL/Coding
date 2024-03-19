@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+target
+latex/description.log
+latex/description.out
+latex/description.pdf
+latex/description.synctex.gz
+src/test/resources/output_image_processing/*

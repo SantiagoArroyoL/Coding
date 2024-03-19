@@ -1,0 +1,9 @@
+target
+.idea
+practica02.iml
+practica03.iml
+latex/description.aux
+latex/description.log
+latex/description.out
+latex/description.pdf
+latex/description.synctex.gz

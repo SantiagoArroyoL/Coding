@@ -1,0 +1,260 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{tipa}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color,graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{dsfont}
+
+\definecolor{mypink}{HTML}{F9F2F4}
+
+\setlength{\headheight}{14pt}
+\linespread{1.2}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	stepnumber=0,
+	numbersep=10pt,
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false}
+
+
+\newcommand{\nemph}[1] { \textbf{\emph{#1}}}
+\newcommand{\redbox}[1] { \colorbox{mypink}{\textcolor{red}{#1}}}
+
+\title{COMPUTACIÓN CONCURRENTE \\ {\Large PRÁCTICA 1}}
+\author{
+	Prof. Manuel Alcántara Juárez \\
+	\texttt{manuelalcantara52@ciencias.unam.mx}
+	\and
+	Ricchy Alain Pérez Chevanier \\
+	\texttt{alain.chevanier@ciencias.unam.mx}
+}
+\date{Fecha de Entrega: 19 de Marzo de 2021 a las 23:59}
+
+\begin{document}
+	\maketitle
+
+	\section{Objetivo}
+	Revisar algunos ejemplos para mostrar la ventaja(o desventaja) de usar programas concurrentes. Para medir la mejora obtenida al usar operaciones de forma concurrente, se compara con la mejora obtenida a partir de la \verb|Ley de Amdahl|.
+
+	\section{Indicaciones generales}
+	Los ejercicios describen un problema a resolver mediante un programa que puede implementarse de forma secuencial y concurrente sin necesidad de primitivas de sincronización. En cada ejercicio se hará una comparación entre los tiempos de ejecución de la forma secuencial(1 hilo) y la forma concurrente(2, 4 y 8 hilos). Además, se analizará la aceleración obtenida en la solución concurrente, la cual será comparada contra lo que nos dice la \verb|Ley de Amdahl|.
+
+	Para hacer las comparaciones, en cada ejercicio realizarás una tabla y una gráfica. \\
+
+	La tabla debe de tener el siguiente formato:
+
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\# hilos & Aceleración teórica & Aceleración obtenida & \% Código paralelo \\
+			\hline
+		\end{tabular}
+	\end{center}
+	Donde anotarás la aceleración calculada con la \verb|Ley de Amdahl|, la aceleración que obtuvo tu programa concurrente y el porcentaje de código paralelo de tu programa, también calculado con la \verb|Ley de Amdahl|. \\
+
+	La gráfica debe de comparar el tiempo de ejecución del algoritmo para cada configuración de hilos disponibles [1,2,4,8], generando una gráfica para cada tamaño de entrada. Es decir, en el eje $X$ vamos a representar el número de hilos disponible y el eje $Y$ el tiempo en segundos obtenido al ejecutar la prueba. La gráfica contendrá 3 funciones, una para cada tamaño de entrada. Agregar el número de ejecuciones que hicieron para obtener el promedio de ejecución y el \% paralelo teórico.
+
+	\verb|NOTA|: Si la versión concurrente es más lenta argumenta algunas de las posibles razones de por qué está sucediendo de esa manera.
+
+	\section{Desarrollo}
+	En esta práctica trabajarás con una base de código construida con Java 9\footnote{De nuevo puedes utilizar cualquier versión de java que sea mayor o igual a Java 9 simplemente ajustando el archivo pom.xml}  y Maven 3, también proveemos pruebas unitarias escritas con la biblioteca \verb|Junit 5.5.1| que te darán retrospectiva inmediata sobre el correcto funcionamiento de tu implementación\footnote{Bajo los casos que vamos a evaluar, mas estas no aseguran que tu es implementación es correcta con rigor formal} . \\
+	Para ejecutar las pruebas unitarias necesitas ejecutar el siguiente comando: \\
+
+	\begin{tcolorbox}
+		\begin{lstlisting}
+$ mvn test
+		\end{lstlisting}
+	\end{tcolorbox}
+
+	Para ejecutar las pruebas unitarias contenidas en una única clase de pruebas, utiliza un comando como el siguiente: \\
+
+	\begin{tcolorbox}
+		\begin{lstlisting}
+$ mvn -Dtest=MyClassTest test
+		\end{lstlisting}
+	\end{tcolorbox}
+
+	En el código que recibirás la clase \verb|App| tiene un método \emph{main} que puedes ejecutar como cualquier programa escrito en \emph{Java}. Para eso primero tienes que empaquetar la aplicación y finalmente ejecutar el jar generado. Utiliza un comando como el que sigue: \\
+
+	\begin{tcolorbox}
+		\begin{lstlisting}
+$ mvn package
+... 
+...
+$ java -jar target/practica01.jar
+		\end{lstlisting}
+	\end{tcolorbox}
+
+	\section{Problemas}
+
+	\subsection{Multiplicación de matrices}
+	Es posible realizar el producto de dos matrices usando varios hilos de forma independiente. Primero recordemos cómo se obtiene el producto de dos matrices:
+
+	Sean $ A = (a_{ij}) $ una matriz de $ n\times r $ y $ B = (b_{ij}) $ una matriz de $ r \times m $. La matriz producto $ C = A B $ es una matriz de tamaño $ n \times m $ que está definida por las entradas
+	\[ c_{ij} = \sum_{k=1}^{r} a_{ik} \cdot b_{kj}, \]
+	es decir, el elemento $ c_{ij} $ es igual al producto punto entre la $ i $-ésima fila de $ A $ y la $ j $-ésima columna de $ B $.
+	Directamente de esta definición obtenemos un algoritmo secuencial para calcular $ AB $, donde el cálculo principal es el producto punto, que se vería similar al siguiente código: \\
+	\begin{tcolorbox}
+		\begin{lstlisting}
+for(k = 0; k < r; k++)
+    C[i][j] += A[i][k] * B[k][j]
+		\end{lstlisting}
+	\end{tcolorbox}
+
+
+	Para calcular el producto de forma concurrente usando varios hilos de ejecución, podemos asignar cada hilo a una fila de la primer matriz y ejecutar la operación por las segunda matriz de manera independiente a otro hilo.
+
+	Hagamos un ejemplo con dos hilos:
+	\[C=
+	\begin{bmatrix}
+		c_{11} & c_{12} \\
+		c_{21} & c_{22}
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		2 & 6 \\
+		3 & 4
+	\end{bmatrix}
+	\begin{bmatrix}
+		1 & 0 \\
+		5 & 3
+	\end{bmatrix}
+	\]
+
+	El primero se encarga de la fila compuesta por las entradas  $ c_{11},\, c_{12} $, el segundo hilos de las entradas $ c_{21},\, c_{22} $, sin embargo no necesariamente se debe cumplir que el número de hilos corresponda con el número de filas.
+
+	\subsubsection*{Especificación del programa}
+	Crea un programa que obtenga el \textbf{cuadrado} de una matriz $ A $ de tamaño $ n \times n $ (puedes suponer que $ n $ es par!).
+	\begin{enumerate}
+		\item En la forma secuencial se calculan las entradas $ c_{ij} $ de $ A^2 $ usando tres ciclos anidados.
+		\item En la forma concurrente usarás \textbf{n} hilos de ejecución. Para esto hay que dividir la matriz en \textbf{n} bloques, y cada hilo obtendrá los coeficientes de un bloque. Cada hilo puede realizar su cálculo de forma independiente, sin tener que esperar alguna operación de otro hilo.
+
+		\item Para comparar los tiempos de ejecución deberás utilizar 1, 2, 4 y 8 hilos, graficar resultados.
+	\end{enumerate}
+
+
+	Recuerda que debes obtener el tiempo de ejecución para poder elaborar tus gráficas.
+
+	\subsubsection*{Compara tus soluciones}
+	Apóyate de las pruebas unitarias para ir corroborando que tus resultados sean correctos
+	Anexa tu comparación con la ley de Amdahl.
+
+	\subsection{Sopa de letras}
+	En este ejercicio tendrás que escribir un algoritmo para resolver el problema de la sopas de letra. A partir de un tablero como el siguiente
+
+	\begin{verbatim}
+O I U Q W E J A A D C
+A S D A S D C W E E H
+O I M O I O D P F I O
+I E P E R R O V N C L
+C N J D K D M C L D A
+A R O D A T U P M O C
+	\end{verbatim}
+
+	Y una lista de palabras como esta:
+
+	\begin{verbatim}
+PERRO
+COMPUTADORA
+HOLA
+ROCA
+KEMS
+	\end{verbatim}
+
+	Tu algoritmo deberá encontrar la posición donde empieza cada palabra, junto con la dirección que siguen las letras para formarla.
+
+	Para indicar las direcciones usaremos las letras N, S, E, O, NE, NO, SE, SO (de Norte, Sur, Este, etc.). Con estas convenciones, la solución del ejemplo anterior se vería así:
+	\begin{verbatim}
+COMPUTADORA (5,10) O
+HOLA (1,10) S
+KEMS (4,4) NO
+PERRO (3,2) E
+ROCA (3,4) NE
+	\end{verbatim}
+
+	Para encontrar las palabras vamos a utilizar el siguiente algoritmo:
+
+	\begin{enumerate}
+		\item Vamos a hacer cuatro barridos sobre la matriz uno para las columnas, uno para los renglones, uno para las diagonales inclinadas hacia la derecha y otra para las diagonales inclinadas hacia la izquierda. En cualquier caso no referiremos al segmento de la matriz que estamos analizando como renglón.
+
+		\item Lo que tenemos que hacer es que el renglón actual lo convertimos en una cadena, y en esa cadena por medio de expresiones regulares buscamos cada palabra. Es importante considerar que las palabras pueden estar escritas directamente o al revés, por ejemplo el renglón \verb|I E O R R E P V N C L| contiene la palabra perro pero al revés.
+
+		\item Para paralelizar este algoritmo dividimos los renglones que va a examinar cada posible tarea entre el número de hilos que vamos a utilizar para realizar la ejecución, y hacemos los siguiente:
+		el hilo $ t_i $ va a procesar todos los renglones $ t_i * T $ donde $ T $ es el número total de hilos utilizados para la ejecución.
+
+		\item Cada hilo crea sus propio conjunto de resultados, y lo deposita en el arreglo de resultados.
+
+		\item Finalmente el hilo principal espera que los demás hilos terminen y colectará los resultados producidos por cada hilo, los ordenará lexicográficamente y regresará eso como respuesta completa de la búsqueda.
+
+	\end{enumerate}
+
+	\emph{Nota}: El orden lexicográfico implica que los resultados de la búsqueda primero se ordenan alfabéticamente y luego por la posición en la que inician.\\
+
+	En la base del código, tendremos 2 elementos para resolver este problema, primero una interfaz llamada \verb|WordSearch| con la definición de la firma del método que tenemos que implementar para resolver el problema, y luego una clase llamada \verb|MultiThreadedWordSearch| que implementa dicha interfaz y que al momento de ser instanciada toma como parámetro el número de hilos que utilizará para realizar la ejecución.
+
+	\subsubsection*{Comparación de las ejecuciones}
+	Ejecuta las pruebas unitarias y con ellas podrás encontrar los tiempos de ejecución obtenidos utilizando un número distinto de hilos. Grafica los tiempos de ejecución y haz la comparación con la ley de Amdahl como hiciste con el ejercicio anterior.
+
+	\begin{tcolorbox}
+		\begin{lstlisting}
+interface WordSearch {
+  List<WordSearchAnswer> 
+  solve(char[][] board, List<String> words) 
+  throws InterruptedException;
+}
+
+class MultiThreadedWordSearch 
+    implements WordSearch {
+
+  private int threads;
+
+  public MultiThreadedWordSearch() {
+    this(1);
+  }
+
+  /* 
+   * Recibe como parametro el numero de hilos que
+   * utilizara para realizar la busqueda
+   */
+  public MultiThreadedWordSearch(int threads) {
+    this.threads = threads;
+  }
+  ...
+}
+		\end{lstlisting}
+	\end{tcolorbox}
+
+
+
+
+\end{document}
